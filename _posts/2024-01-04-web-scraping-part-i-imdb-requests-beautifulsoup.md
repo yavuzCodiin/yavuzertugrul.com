@@ -55,19 +55,13 @@ If we want to extract the data, first we need to know the basics of html to scra
 - : Contains the visible page content.
 
 ```
-      Title        
-
-## Heading
-
-    Paragraph.
-
-  
+<!DOCTYPE html><html>  <head>    <title>Title</title>  </head>  <body>    <h1>Heading</h1>    <p>Paragraph.</p>  </body></html>
 ```
 
 **Links: **Links are created with <a> tag and **href **attribute specifies the link’s destination
 
 ```
-[Visit Example.com](https://example.com)
+<a href="https://example.com">Visit Example.com</a>
 ```
 
 **Parameter:** Parameters, often referred to as attributes, provide additional information about HTML elements. For instance, in the link example, **href** is a parameter.
@@ -75,7 +69,7 @@ If we want to extract the data, first we need to know the basics of html to scra
 **Tables: **Tables are defined with <table>, with rows (<tr>) and cells (<td> for data or <th> for headers).
 
 ```
-      Header 1    Header 2        Data 1    Data 2  
+<table>  <tr>    <th>Header 1</th>    <th>Header 2</th>  </tr>  <tr>    <td>Data 1</td>    <td>Data 2</td>  </tr></table>
 ```
 
 So this is the basic html structure, for more detailed structure you need to analyze for yourself, most of the page are dynamic which makes our job harder. BeautifulSoup is great for scraping static content but for dynamic pages we need little help from other tools.

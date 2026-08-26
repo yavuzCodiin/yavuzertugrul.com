@@ -105,7 +105,15 @@ df[df["Reviews"]>80]
 </figure>
 
 ```
-df[ (df["Menu_Price"]We can also subset by using isin()
+df[ (df["Menu_Price"]<45) & (df["Cuisine_Type"]=="Italian") ]
+```
+
+<figure>
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-09.png' | relative_url }}" alt="Subsetting menu prices less than 45 and italian cuisines" loading="lazy">
+  <figcaption>Subsetting menu prices less than 45 and italian cuisines</figcaption>
+</figure>
+
+We can also subset by using isin()
 
 ```
 df[df["Cuisine_Type"].isin(["Italian","American"])]
