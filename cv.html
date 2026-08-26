@@ -37,7 +37,7 @@ description: Robotics Software Engineer — edge AI, SLAM, sensor fusion.
   </div>
   </div>
 
-  <h6 class="cv__section-title"><span class="u-desktop">Professional experience</span><span class="u-mobile">Experience</span></h6>
+  <h6 class="cv__section-title">Professional experience</h6>
   <div class="cv__rule" style="margin-bottom:16px"></div>
   {%- for job in cv.experience %}
   <div class="cv__job">
@@ -45,13 +45,16 @@ description: Robotics Software Engineer — edge AI, SLAM, sensor fusion.
       <h3>{{ job.title }}</h3>
       <span class="cv__dates">{{ job.dates }}</span>
     </div>
-    <div class="cv__loc"><span class="u-mobile">{{ job.dates }} · </span><span class="u-desktop">{{ job.location }}</span><span class="u-mobile">{{ job.location_short | default: job.location }}</span></div>
-    <ul class="bullets u-desktop">
+    <div class="cv__loc">{{ job.location }}</div>
+    {%- comment -%}
+      A CV is read on phones more than anywhere else, so nothing here is hidden
+      by viewport — narrow screens restack it, they do not drop content.
+    {%- endcomment -%}
+    <ul class="bullets">
       {%- for b in job.bullets %}
       <li><span>{{ b }}</span></li>
       {%- endfor %}
     </ul>
-    {%- if job.summary %}<p class="cv__summary u-mobile">{{ job.summary }}</p>{%- endif %}
   </div>
   {%- endfor %}
 

@@ -24,8 +24,6 @@ experience:
   - title: Robotics Software Engineer — Kindhelm
     dates: Apr 2024 — Present
     location: Istanbul, Türkiye
-    location_short: Istanbul
-    summary: "Edge AI on Jetson & Myriad (4-5 ms detection), AI surveillance at 30-60 FPS, RTK VINS devices, sub-µs camera-IMU sync, VPS & geotagging, ROS/ROS2 pipelines."
     bullets:
       - "<strong>AI &amp; Edge AI Development:</strong> AI-powered robotics applications on NVIDIA Jetson (Orin NX/Nano), custom NVIDIA-based boards and Quectel edge devices. Converted custom-trained PyTorch models for 90-class traffic sign detection to ONNX, deployed directly on a Myriad Vision Processor (1.4 TOPS) — 4-5 ms detection latency without a host PC."
       - "<strong>AI Surveillance System:</strong> People counting expanded to age, gender and emotion detection, queue management and an alert timeline console. Multi-model approach with lightweight task-specific models raised performance from 1-10 FPS to 30-60 FPS."
@@ -38,8 +36,6 @@ experience:
   - title: Robotics Application Engineer — ACROME Robotics
     dates: Feb 2023 — Oct 2023
     location: Istanbul, Türkiye
-    location_short: Istanbul
-    summary: "SMD product family, Python GUIs, ROS development, LiDAR mobile robot with SLAM, AWS simulation, technical content."
     bullets:
       - "Product development of the first R&amp;D device family, SMD (Smart Motion Devices); Python GUI to manipulate, control, analyze and monitor motors, incl. a synchronized motor-driving application."
       - "Embedded systems, RS-485 and I2C, sensors, control theory; ROS and Python development, monolithic architecture, refactoring, clean code."
