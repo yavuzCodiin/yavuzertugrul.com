@@ -1,0 +1,67 @@
+# CV — source of truth is notes/cv_en.txt from the handoff.
+# The public page deliberately carries NO phone number and NO location line
+# (see SECURITY_AUDIT.md §4); export the public cv.pdf the same way.
+
+role: Robotics Software Engineer
+
+skills:
+  - key: Robotics & Software
+    value: ROS/ROS2, Docker, Linux, Python, C++, Bash scripting, OOP
+  - key: AI & Computer Vision
+    value: PyTorch, YOLO, OpenCV, Hugging Face, custom model training & deployment, Edge AI optimization
+  - key: Edge & Embedded
+    value: NVIDIA Jetson (Orin NX/Nano), Myriad Vision Processor, Quectel/NVIDIA RTK VINS, Raspberry Pi, STM32MP257F-DK
+  - key: Sensor Fusion & Calibration
+    value: Camera-IMU synchronization (sub-millisecond and sub-microsecond), Velodyne LiDAR, RealSense D435i, OAK-D Wide, AR0234, IMX477
+  - key: SLAM & Navigation
+    value: ORB-SLAM2/3, Visual Positioning Systems (VPS), Visual-Inertial Odometry (VIO), real-time localization & mapping
+  - key: Simulation & Tools
+    value: Gazebo, RViz2, Qt/PyQt5, Leaflet, OpenStreetMap
+  - key: Other
+    value: Web data collection (Scrapy), UI/GUI development, SSH & remote operations, Git, Slack and Atlassian tools (Jira, Confluence, Bitbucket)
+
+experience:
+  - title: Robotics Software Engineer — Kindhelm
+    dates: Apr 2024 — Present
+    location: Istanbul, Türkiye
+    location_short: Istanbul
+    summary: "Edge AI on Jetson & Myriad (4-5 ms detection), AI surveillance at 30-60 FPS, RTK VINS devices, sub-µs camera-IMU sync, VPS & geotagging, ROS/ROS2 pipelines."
+    bullets:
+      - "<strong>AI &amp; Edge AI Development:</strong> AI-powered robotics applications on NVIDIA Jetson (Orin NX/Nano), custom NVIDIA-based boards and Quectel edge devices. Converted custom-trained PyTorch models for 90-class traffic sign detection to ONNX, deployed directly on a Myriad Vision Processor (1.4 TOPS) — 4-5 ms detection latency without a host PC."
+      - "<strong>AI Surveillance System:</strong> People counting expanded to age, gender and emotion detection, queue management and an alert timeline console. Multi-model approach with lightweight task-specific models raised performance from 1-10 FPS to 30-60 FPS."
+      - "<strong>RTK VINS Devices:</strong> Optimization for low-spec Android Quectel devices, headless SSH work, same-network video streaming, ORB-SLAM on device. Systems engineering with teams in Taiwan, China, Vietnam and Finland."
+      - "<strong>Sensor Fusion &amp; Temporal Calibration:</strong> Camera-IMU calibration (AR0234, IMX477, RealSense D435i, Velodyne LiDAR) with Kalibr, ROS1 Bridge and custom sync tools — sub-millisecond sync; 1 µs camera/IMU sync with a custom STM board."
+      - "<strong>VPS &amp; Geotagging:</strong> Edge plugin tests on Quectel and NVIDIA RTK VINS with near-identical real-time localization; PPS-triggered IMU/depth data and u-blox ZED-F9R configuration."
+      - "<strong>Connectivity Box:</strong> Yocto-based STM32MP257F-DK — networking and hardware-level work, NTRIP caster/server/client; Python 3 + FastAPI backend, HTML/CSS/JS frontend."
+      - "<strong>ROS/ROS2:</strong> Image pipelines with Isaac ROS Argus, Image Proc, V4L2; ROS1 Bridge between legacy and modern systems; SLAM and perception layers as ROS2 components."
+      - "<strong>Simulation &amp; GUI:</strong> RViz2 and Gazebo simulation; PyQt5 + Leaflet command/control tools; OpenStreetMap for VPS-based navigation."
+  - title: Robotics Application Engineer — ACROME Robotics
+    dates: Feb 2023 — Oct 2023
+    location: Istanbul, Türkiye
+    location_short: Istanbul
+    summary: "SMD product family, Python GUIs, ROS development, LiDAR mobile robot with SLAM, AWS simulation, technical content."
+    bullets:
+      - "Product development of the first R&amp;D device family, SMD (Smart Motion Devices); Python GUI to manipulate, control, analyze and monitor motors, incl. a synchronized motor-driving application."
+      - "Embedded systems, RS-485 and I2C, sensors, control theory; ROS and Python development, monolithic architecture, refactoring, clean code."
+      - "Mobile robot with LiDAR: SLAM mapping and real-world obstacle avoidance; AWS via riders.ai simulation, Docker image with gzWeb and Eclipse Theia."
+      - "Content work: user manuals, growth marketing, how-to videos and technical blog posts about SMD products."
+
+secondary:
+  - title: R&D Intern — ACROME Robotics
+    dates: Jul — Aug 2022
+    text: Stewart Pro 6-DOF and Delta 3-DOF parallel robots; OpenCV image processing, inverse kinematics, Linux, Bash, SSH, Raspberry Pi, MyRIO, ROS, Python.
+  - title: Robotics Intern — İnovasyon Mühendislik
+    dates: Jul — Aug 2021
+    text: Embedded programming with ROS, RViz, Gazebo and Python; obstacle-avoidance robot with an object-oriented structure.
+  - title: DX Intern — Microsoft
+    dates: Jul — Aug 2017
+    text: Projects with Azure, Chatbot Framework and Cognitive Services.
+  - title: Technical writing
+    dates: ongoing
+    text: "yavuzertugrul.com · Medium @yavuzertugrul · Level Up Coding (GitConnected) · ACROME blog."
+
+education:
+  title: "BS, Electrical & Electronics Engineering"
+  school: Middle East Technical University, Northern Cyprus Campus
+awards: Honor Student — Spring 2020-2021
+volunteering: "IEEE METU: Instructor, RAS Chair, AESS Chair · IEEEXtreme 11.0 Student Ambassador"

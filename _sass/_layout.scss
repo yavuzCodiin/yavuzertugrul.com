@@ -1,0 +1,207 @@
+// ── Global shell ─────────────────────────────────────────────────────────────
+// Desktop (≥1024px): 280px | 1fr. Mobile (<1024px): sticky top bar + overlay menu.
+
+.shell {
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  min-height: 100vh;
+}
+
+.shell__main { min-width: 0; }
+
+// ── Sidebar (desktop) ────────────────────────────────────────────────────────
+.sidebar {
+  border-right: 2px solid var(--color-divider);
+}
+.sidebar__inner {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.brand {
+  display: block;
+  text-decoration: none;
+  color: var(--color-text);
+}
+.brand:hover { color: var(--color-text); }
+.brand__name {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1.1;
+}
+.brand__kicker {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-700);
+  margin-top: 8px;
+}
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 15px;
+}
+.sidebar__nav a {
+  text-decoration: none;
+  padding: 6px 0;
+  color: var(--color-text);
+}
+.sidebar__nav a:hover { color: var(--color-accent-600); }
+.sidebar__nav a[aria-current="page"] {
+  color: var(--color-accent);
+  border-left: 3px solid var(--color-accent);
+  padding-left: 12px;
+  margin-left: -15px;
+}
+.sidebar__foot {
+  margin-top: auto;
+  font-size: 13px;
+  color: #{$ink-55};
+}
+
+// ── Content column ───────────────────────────────────────────────────────────
+.content {
+  padding: var(--content-pad-y) var(--content-pad-x);
+}
+// Home pushes its footer to the bottom of the viewport.
+.content--sticky-foot {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+// ── Top bar + full-screen menu (mobile) ──────────────────────────────────────
+.topbar { display: none; }
+.topbar {
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 2px solid var(--color-divider);
+  position: sticky;
+  top: 0;
+  background: var(--color-bg);
+  z-index: 50;
+}
+.topbar__brand { text-decoration: none; color: var(--color-text); }
+.topbar__brand .brand__name,
+.menu__head .brand__name { font-size: 17px; }
+.topbar__brand .brand__kicker { font-size: 10px; margin-top: 1px; }
+.topbar__actions { display: flex; align-items: center; gap: 6px; }
+.topbar__btn {
+  padding: 12px 10px;
+  display: inline-flex;
+  background: none;
+  border: 0;
+  color: var(--color-text);
+  cursor: pointer;
+}
+.topbar__burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 22px;
+  padding: 12px 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.topbar__burger span { display: block; height: 2px; background: var(--color-text); }
+
+.menu {
+  position: fixed;
+  inset: 0;
+  background: var(--color-bg);
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+}
+.menu.is-open { display: flex; }
+body.menu-open,
+body.dialog-open,
+body.lightbox-open,
+body.booknote-open { overflow: hidden; }
+
+.menu__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 2px solid var(--color-divider);
+}
+.menu__close {
+  font-size: 22px;
+  line-height: 1;
+  padding: 8px 10px;
+  background: none;
+  border: 0;
+  color: var(--color-text);
+  cursor: pointer;
+}
+.menu__nav {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 20px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 21px;
+  overflow: auto;
+}
+.menu__nav a {
+  text-decoration: none;
+  color: var(--color-text);
+  padding: 10px 0;
+  border-bottom: 1px solid #{$ink-15};
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.menu__nav a:last-child { border-bottom: 0; }
+.menu__nav a[aria-current="page"] { color: var(--color-accent); }
+.menu__nav a[aria-current="page"]::after { content: "●"; font-size: 11px; }
+.menu__foot {
+  margin-top: auto;
+  padding: 16px 20px;
+  border-top: 2px solid var(--color-divider);
+  display: flex;
+  gap: 18px;
+  font-size: 13px;
+}
+.menu__foot a { text-decoration: none; color: var(--color-text); }
+.menu__foot .menu__copy { margin-left: auto; color: #{$ink-55}; }
+
+// ── Page footer ──────────────────────────────────────────────────────────────
+.site-foot { margin-top: auto; padding-top: 32px; }
+.site-foot__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-top: 16px;
+}
+.site-foot__copy { font-size: 13px; color: #{$ink-70}; }
+.site-foot__links { display: flex; gap: 24px; font-size: 13px; flex-wrap: wrap; }
+.site-foot__links a { text-decoration: none; color: var(--color-text); }
+.site-foot__links a:hover { color: var(--color-accent-600); }
+
+// ── Breakpoint ───────────────────────────────────────────────────────────────
+@media (max-width: 1023px) {
+  .shell { grid-template-columns: 1fr; }
+  .sidebar { display: none; }
+  .topbar { display: flex; }
+  .content { padding: 24px 20px 32px; min-height: 0; }
+  // Hero-style pages (Home, About, Whoami, Contact) get a 28px top pad.
+  .content--hero { padding-top: 28px; }
+  .site-foot { margin-top: 32px; }
+  .site-foot__row { flex-direction: column; align-items: flex-start; gap: 12px; }
+}

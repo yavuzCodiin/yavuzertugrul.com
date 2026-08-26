@@ -1,0 +1,41 @@
+---
+layout: default
+section: gallery
+---
+{%- assign collection = site.data.albums | where: "slug", page.collection_slug | first -%}
+{%- assign album = collection.albums | where: "slug", page.album_slug | first -%}
+
+<main class="content" id="main">
+  <a class="kicker" href="{{ '/gallery/' | relative_url }}" style="margin-bottom:20px">← Gallery / {{ collection.title }}</a>
+  <h1 class="page-title page-title--album">{{ album.title }}</h1>
+  <p class="page-intro" style="max-width:60ch;margin-bottom:8px">{{ album.description }}</p>
+  {%- if album.placeholder_note %}
+  <p class="page-intro text-muted" style="font-size:14px;line-height:23px;max-width:60ch">{{ album.placeholder_note }}</p>
+  {%- endif %}
+  <div class="rule" style="margin:0 0 24px"></div>
+
+  <div class="frames">
+    {%- for frame in album.frames %}
+    <figure class="frame{% if frame.wide %} frame--wide{% endif %}{% if frame.tall %} frame--tall{% endif %}">
+      <div class="frame__box">
+        <img src="{{ frame.src | relative_url }}" alt="{{ frame.alt | default: 'Frame' }} {{ forloop.index }}"
+             data-lightbox="{{ frame.src | relative_url }}" role="button" tabindex="0"
+             aria-label="Open frame {{ forloop.index }} full size" loading="lazy">
+      </div>
+      <figcaption class="plaque">
+        <span class="plaque__title">FRAME {{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+        <span class="plaque__date">{{ frame.year }}</span>
+      </figcaption>
+    </figure>
+    {%- endfor %}
+  </div>
+
+  {%- if album.related %}
+  <div class="album__related">
+    <span>Related albums:</span>
+    {%- for r in album.related %}
+    <a href="{{ '/gallery/' | append: collection.slug | append: '/' | relative_url }}">{{ r }} →</a>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+</main>

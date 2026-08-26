@@ -1,0 +1,101 @@
+---
+layout: page
+section: home
+sticky_foot: true
+hero_pad: true
+title: Home
+---
+{%- assign h = site.data.home -%}
+{%- assign longform = site.posts | where: "type", "post" -%}
+{%- assign latest = longform | first -%}
+{%- assign second = longform | where: "slug", h.second_post | first -%}
+{%- if second == null or second.slug == latest.slug -%}
+  {%- assign second = longform | slice: 1, 1 | first -%}
+{%- endif -%}
+{%- assign notes = site.posts | where: "type", "note" -%}
+{%- assign art_cover = site.art | sort: "order" | where_exp: "a", "a.span == 'feature'" | first -%}
+{%- assign books_total = 0 -%}
+{%- for shelf in site.data.books.shelves -%}{%- assign books_total = books_total | plus: shelf.books.size -%}{%- endfor -%}
+
+<div class="page-head page-head--baseline">
+  <span class="kicker">{{ h.kicker }}</span>
+  {% include search.html %}
+</div>
+
+<h1 class="home__title">{{ h.title }}</h1>
+<p class="home__intro">{{ h.intro }}</p>
+
+<div class="home__grid">
+  {%- if latest %}
+  <a class="card home__latest" href="{{ latest.url | relative_url }}">
+    <div class="home__latest-body">
+      <div class="card-kicker">Latest post — {{ latest.date | date: "%d %b %Y" }}</div>
+      <div class="card-title">{{ latest.short_title | default: latest.title }}</div>
+      <p class="card-body">{{ latest.description | default: latest.excerpt | strip_html | truncate: 160 }}</p>
+      <div class="card-meta">
+        {%- for t in latest.tags -%}
+          {%- if forloop.first %}{% include tag.html label=t variant="accent" %}
+          {%- else %}{% include tag.html label=t variant="neutral" %}{% endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+    <figure>
+      <img src="{{ latest.image | default: '/images/visual_thoughts/mesh.jpg' | relative_url }}" alt="{{ latest.image_alt | default: latest.title }}">
+    </figure>
+  </a>
+  {%- endif %}
+
+  {%- if second %}
+  <a class="card home__second" href="{{ second.url | relative_url }}">
+    <div class="card-kicker">{{ second.date | date: "%d %b %Y" }}</div>
+    <div class="card-title">{{ second.short_title | default: second.title }}</div>
+    <p class="card-body">{{ second.description | default: second.excerpt | strip_html | truncate: 120 }}</p>
+    <div class="card-meta">
+      {%- for t in second.tags %}{% include tag.html label=t variant="neutral" %}{% endfor -%}
+    </div>
+  </a>
+  {%- endif %}
+
+  <div class="card home__thoughts">
+    <div class="card-kicker">Notes — my short-form feed</div>
+    <h6 class="u-mobile">Notes</h6>
+    <div class="home__quotes">
+      {%- for q in notes limit: 2 %}
+      <p class="home__quote">{{ q.content | strip_html | strip | truncate: 150 }} <span class="home__quote-date">{{ q.date | date: "%d %b %Y" }}</span></p>
+      {%- unless forloop.last %}<div class="rule"></div>{% endunless %}
+      {%- endfor %}
+      <a class="more-link" href="{{ '/writing/' | relative_url }}">All notes →</a>
+    </div>
+  </div>
+
+  <div class="home__bottom">
+    <a class="card home__art" href="{{ '/sketches/' | relative_url }}">
+      <figure><img src="{{ art_cover.image | relative_url }}" alt="{{ art_cover.title }}"></figure>
+      <div class="home__art-body">
+        <div class="card-kicker">Sketches</div>
+        <div class="card-title">Digital art — {{ site.art | size }} pieces</div>
+      </div>
+    </a>
+
+    <div class="home__panel">
+      <h6>Currently</h6>
+      <ul class="bullets">
+        {%- for line in h.currently %}
+        <li><span>{{ line }}</span></li>
+        {%- endfor %}
+      </ul>
+    </div>
+
+    <div class="home__panel home__stat">
+      <h6>In numbers</h6>
+      <div class="stats home__stats-grid">
+        <div class="stat"><span class="stat__label">Entries</span><span class="stat__value">{{ site.posts | size }}</span></div>
+        <div class="stat"><span class="stat__label">Notes</span><span class="stat__value">{{ notes | size }}</span></div>
+        <div class="stat"><span class="stat__label">Artworks</span><span class="stat__value">{{ site.art | size }}</span></div>
+        <div class="stat"><span class="stat__label">Books<span class="u-desktop"> read</span></span><span class="stat__value">{{ books_total }}</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include site-footer.html %}

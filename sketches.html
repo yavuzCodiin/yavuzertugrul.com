@@ -1,0 +1,48 @@
+---
+layout: page
+section: sketches
+permalink: /sketches/
+title: Sketches
+description: Digital art, drawn on the iPad. Click any tile for full size.
+extra_js: [/assets/js/filters.js]
+---
+{%- assign pieces = site.art | sort: "order" -%}
+{%- assign total = pieces | size -%}
+{%- assign visible = 8 -%}
+{%- assign categories = pieces | group_by: "category" | sort: "name" -%}
+
+<div class="page-head">
+  <h1 class="page-title">Sketches.</h1>
+  {% include search.html %}
+</div>
+<p class="page-intro page-intro--20"><span class="u-desktop">Digital art, drawn on the iPad — {{ total }} pieces. Click any tile for full size.</span><span class="u-mobile">Digital art — {{ total }} pieces. Tap a tile for full size.</span></p>
+
+{%- comment -%} Placeholder taxonomy — the owner finalises the categories. {%- endcomment -%}
+<div class="chips chips--scroll chips--24" data-filter-group="#mosaic">
+  <button type="button" class="tag tag-solid" data-filter="all" aria-pressed="true">All · {{ total }}</button>
+  {%- for cat in categories %}
+  <button type="button" class="tag tag-outline" data-filter="{{ cat.name }}" aria-pressed="false">{{ cat.name }} · {{ cat.items | size }}</button>
+  {%- endfor %}
+</div>
+
+<div class="mosaic" id="mosaic">
+  {%- for piece in pieces %}
+  <figure class="tile{% if piece.span == 'feature' %} tile--feature{% elsif piece.span == 'tall' %} tile--tall{% endif %}{% if forloop.index > visible %} is-hidden{% endif %}"
+          data-tags="{{ piece.category }}"
+          data-lightbox="{{ piece.image | relative_url }}"
+          role="button" tabindex="0" aria-label="{{ piece.title }} — open full size">
+    <div class="tile__frame">
+      <img src="{{ piece.image | relative_url }}" alt="{{ piece.title }}"{% if piece.position %} style="object-position:{{ piece.position }}"{% endif %} loading="lazy">
+    </div>
+    <figcaption class="plaque">
+      <span class="plaque__title">{{ piece.order | prepend: '0' | slice: -2, 2 }} — {{ piece.title | upcase }}</span>
+      <span class="plaque__date">{{ piece.date | date: "%d %b %Y" }}</span>
+    </figcaption>
+  </figure>
+  {%- endfor %}
+</div>
+
+<div class="mosaic-foot">
+  <span class="mosaic-foot__count" data-shown-count>{% if total < visible %}{{ total }}{% else %}{{ visible }}{% endif %} / {{ total }} shown</span>
+  <a class="more-link" href="#" data-load-more="#mosaic" data-step="8"{% if total <= visible %} hidden{% endif %}>Load more →</a>
+</div>

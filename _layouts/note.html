@@ -1,0 +1,43 @@
+---
+layout: default
+section: writing
+---
+{%- assign topic = site.data.topics | where: "slug", page.topic | first -%}
+{%- capture raw_url -%}https://raw.githubusercontent.com/{{ site.repository }}/{{ site.repository_branch }}/{{ page.path }}{%- endcapture -%}
+
+<main class="content" id="main">
+  <div class="post-head">
+    <a class="kicker" href="{{ '/writing/' | append: page.topic | append: '/' | relative_url }}">← Writing / {{ topic.name }}</a>
+    {% include search.html %}
+  </div>
+
+  <article class="note-detail">
+    <h1 class="note-detail__title">{{ page.title }}</h1>
+    <div class="post__meta">
+      <span class="post__date">{{ page.date | date: "%d %b %Y" }}</span>
+      {% include tag.html label="note" variant="outline" %}
+      {% include tag.html label=topic.name variant="neutral" topic=page.topic %}
+    </div>
+
+    {%- if page.image %}
+    {%- comment -%} Own photography stays in colour per the photography rule. {%- endcomment -%}
+    <figure class="note-detail__figure">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+    </figure>
+    {%- endif %}
+
+    {%- if page.parts %}
+    {%- for part in page.parts %}
+    <div class="note-detail__part">
+      <span class="note-detail__part-label">{{ part.label }}</span>
+      <p class="note-detail__text">{{ part.text }}</p>
+    </div>
+    {%- endfor %}
+    {%- else %}
+    <div class="prose note-detail__text">{{ content }}</div>
+    {%- endif %}
+  </article>
+
+  <div class="rule" style="margin:40px 0 20px;max-width:760px"></div>
+  <a class="more-link" href="{{ '/writing/' | relative_url }}">← Back to the stream</a>
+</main>

@@ -1,0 +1,72 @@
+# ── Site ──────────────────────────────────────────────────────────────────────
+title: Yavuz Ertuğrul
+tagline: Robotics · AI
+description: >-
+  Field notes on robotics, AI and everything on the bench — posts, short-form
+  thoughts, digital art, a bookshelf and a gallery.
+url: https://yavuzertugrul.com
+baseurl: ""
+lang: en
+
+author:
+  name: Yavuz Ertuğrul
+  # One public address only (see SECURITY notes in README).
+  email: yavuz_ertugrul@protonmail.com
+
+# ── Identity / links ──────────────────────────────────────────────────────────
+social:
+  github: yavuzCodiin
+  github_url: https://github.com/yavuzCodiin
+  linkedin_name: Yavuz Ertugrul
+  linkedin_url: https://www.linkedin.com/in/yavuzertugrul/
+  medium_name: "@yavuzertugrul"
+  medium_url: https://medium.com/@yavuzertugrul
+  linktree: linktr.ee/yavuzertugrul
+  linktree_url: https://linktr.ee/yavuzertugrul
+
+# Source repo — used only for the owner-mode "post.md ↓" raw link.
+repository: yavuzCodiin/yavuzertugrul.com
+repository_branch: main
+
+# ── Build ─────────────────────────────────────────────────────────────────────
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  auto_ids: true          # H2/H3 anchors — the TOC scroll-spy needs these
+sass:
+  sass_dir: _sass
+  style: compressed
+
+permalink: /:title
+
+collections:
+  # Notes are not a collection any more — they live in _posts with `type: note`
+  # so posts and notes share one stream (see README "Writing").
+  art:
+    output: false          # rendered as a gallery on /sketches/, not per-page
+
+defaults:
+  - scope: { path: "", type: posts }
+    values:
+      layout: post
+      type: post
+      extra_js: [/assets/js/tocspy.js]
+      # `type: note` entries override layout to `note` in their own front matter.
+  - scope: { path: "", type: art }
+    values:
+      type: art
+  - scope: { path: "" }
+    values:
+      layout: page
+
+exclude:
+  - _templates
+  - bin
+  - README.md
+  - SECURITY.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jekyll-cache
+  - node_modules

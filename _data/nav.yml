@@ -1,0 +1,30 @@
+# Sidebar / mobile-menu navigation (9 items). `section` is matched against
+# page.section for the active state — post and note pages report `writing`,
+# album pages report `gallery`.
+- name: Home
+  url: /
+  section: home
+- name: Writing
+  url: /writing/
+  section: writing
+- name: Sketches
+  url: /sketches/
+  section: sketches
+- name: Bookshelf
+  url: /bookshelf/
+  section: bookshelf
+- name: Gallery
+  url: /gallery/
+  section: gallery
+- name: CV
+  url: /cv/
+  section: cv
+- name: About
+  url: /about/
+  section: about
+- name: Whoami
+  url: /whoami/
+  section: whoami
+- name: Contact
+  url: /contact/
+  section: contact

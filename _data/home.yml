@@ -1,0 +1,14 @@
+# Home page copy that is curated rather than derived from content.
+kicker: Field notes — robotics, AI, and everything on the bench
+title: Curious. Builder. Dreamer.
+intro: >-
+  Notes, thoughts, learning experiences, research and projects — from SLAM
+  pipelines on Jetson boards to book covers and digital sketches.
+
+currently:
+  - Robotics SWE at Kindhelm — edge AI, SLAM, sensor fusion.
+  - "On the shelf: Dönüşüm — Franz Kafka."
+  - "Building: Obsidian-driven publishing for this blog."
+
+# The second card on the home grid — pick any post by slug.
+second_post: asr-research-test

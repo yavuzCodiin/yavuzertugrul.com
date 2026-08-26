@@ -1,0 +1,20 @@
+---
+permalink: /posts/
+layout: null
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting to Writing</title>
+  <link rel="canonical" href="{{ '/writing/' | absolute_url }}">
+  <meta http-equiv="refresh" content="0; url={{ '/writing/' | relative_url }}">
+  <meta name="robots" content="noindex">
+  <script>location.replace({{ '/writing/' | relative_url | jsonify }});</script>
+</head>
+<body>
+  <p>Posts, Thoughts and Archive are one stream now —
+     <a href="{{ '/writing/' | relative_url }}">continue to Writing</a>.</p>
+</body>
+</html>

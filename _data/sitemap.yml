@@ -1,0 +1,13 @@
+# The numbered site map on /about/ (4 rows since the Writing merge).
+- name: Writing
+  url: /writing/
+  description: long posts and short notes — one stream, by topic
+- name: Sketches
+  url: /sketches/
+  description: digital art, drawn on the iPad
+- name: Bookshelf
+  url: /bookshelf/
+  description: what I read, year by year
+- name: Gallery
+  url: /gallery/
+  description: photography, gaming, AI-generated — albums

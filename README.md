@@ -1,0 +1,269 @@
+# yavuzertugrul.com
+
+Personal site of Yavuz Ertuğrul — Jekyll, GitHub Pages compatible, no JS framework.
+Built to the "Modernist" design system from the redesign handoff: **Ioskeley Mono**
+throughout, red-on-paper palette, visible 2px rules, zero border radius, sidebar
+navigation.
+
+**Information architecture:** posts, Medium pieces and short notes are ONE stream at
+`/writing/`, sliced by eight topics. There is no separate Posts, Thoughts or Archive
+page — `/posts/`, `/thoughts/` and `/archive/` redirect to `/writing/`.
+
+This is a **fresh repository**. The previous repo must not be carried over as-is —
+see [SECURITY.md](SECURITY.md).
+
+---
+
+## Running it
+
+With Homebrew Ruby (`brew install ruby`, any 3.x/4.x):
+
+```bash
+bundle install
+bundle exec jekyll serve      # http://localhost:4000
+```
+
+On macOS's stock system Ruby (2.6), Bundler cannot resolve modern gems — use the fallback
+script instead, which runs a user-installed Jekyll directly:
+
+```bash
+./bin/serve
+```
+
+**Why the Gemfile doesn't use `github-pages`:** GitHub Pages' classic build ignores this
+Gemfile entirely and builds server-side with its own pinned set (Jekyll 3.10, Ruby 3.3) —
+the Gemfile exists only for local preview. The `github-pages` gem itself cannot install on
+Ruby ≥ 4.0 (its `commonmarker` dependency caps Ruby at < 4.0), and older versions of it
+crash at runtime (`liquid 4.0.3` → `tainted?` removed in Ruby 3.2). So the Gemfile mirrors
+the parts of the Pages environment this site actually uses: `jekyll ~> 3.10`,
+`kramdown-parser-gfm`, plus the stdlib gems (`csv`, `base64`, `bigdecimal`, `logger`) that
+left Ruby's default set in 3.4+.
+
+One environment note: Ruby Sass reads sources as US-ASCII unless the locale says otherwise,
+and the stylesheet comments contain em dashes — a non-UTF-8 shell fails with
+`Invalid US-ASCII character "\xE2"`. If you hit that:
+
+```bash
+export LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
+```
+
+## Structure
+
+```
+_config.yml            collections (art), permalinks, defaults
+_layouts/              default · page · post · note · topic · album · collection
+_includes/             sidebar · topbar+menu · search pill · search dialog
+                       lightbox · book-note · owner-box · tag · icon · site-footer
+_sass/                 _tokens · _base · _layout · _components · _pages
+assets/css/main.scss   the only stylesheet
+assets/js/             menu · search · tocspy · lightbox · booknote · owner · filters
+_posts/                ALL writing — long posts AND notes (`type: post|note`)
+_art/                  sketch metadata (output: false — rendered on /sketches/)
+_data/                 topics · books · albums · cv · nav · sitemap · home
+writing.html           the stream;  writing/<topic>.html  one stub per topic
+fonts/                 Ioskeley Mono woff2 (400/500/700/800), self-hosted
+bin/new                create an entry;  bin/sync-vault  mirror an Obsidian vault
+_templates/            front-matter templates for post and note
+images/                curated assets
+search.json            build-time search index
+atom.xml               everything;  feed-longform.xml  long-form only
+```
+
+### Type
+
+The whole site is set in **Ioskeley Mono** — a free Berkeley Mono clone (OFL 1.1,
+github.com/ahatem/IoskeleyMono), self-hosted from `fonts/` in four weights, so the site
+makes no third-party font request. Archivo is gone.
+
+Mono sets ~15% wider per character, so the display sizes step down from the Archivo
+original and letter-spacing never goes negative. The steps live in `_sass/_tokens.scss`
+as `--type-display` (40px page H1), `--type-hero` (40px About/Contact), `--type-post`
+(32px post H1) and `--type-whoami` (34px) — retune them in one place.
+
+### Design tokens
+
+`_sass/_tokens.scss` is the port of the handoff's
+`_ds/modernist-*/styles.css`. Two values differ from that sheet, because the handoff
+README states them explicitly as the final decision — both are commented in the file:
+
+| Token | Token sheet | Here |
+| --- | --- | --- |
+| `--color-surface` | `#eae9e9` | `#ffffff` |
+| `--color-divider` | `color-mix(#201e1d 40%)` | `#201e1d` (full-ink 2px rules) |
+
+Revert those two lines if you prefer the softer sheet values — nothing else changes.
+
+### Photography rule
+
+Editorial / hero photos get the `.grayscale` wrapper. **Always in colour:** your own
+artwork (sketches, gallery frames, thought images), book covers, the whoami photo, and
+technical diagrams / screenshots. On a post, set `image_color: true` in the front matter
+to keep the hero in colour.
+
+### CV
+
+There is **no cv.pdf download** — owner decision. The CV exists only as the `/cv/` page,
+which deliberately shows no phone number and no location (see SECURITY.md).
+
+---
+
+## Adding content
+
+**A post** — `_posts/YYYY-MM-DD-slug.md`:
+
+```yaml
+---
+title: Full title as published
+short_title: Shorter title for list rows   # optional
+date: 2025-01-16
+type: post                                 # post | note
+topic: robotics                            # one of the eight — drives the breadcrumb
+tags: [Robotics, ROS2]                     # free-form, shown on the entry row
+origin: medium                             # optional — adds the outline "medium" chip
+description: One line for cards, search and social previews.
+image: /images/post-10/Post_IMAGE.png
+image_color: true                          # optional — skip the grayscale wrapper
+date_display: "—"                          # optional — for Medium posts with no known date
+notes:                                     # optional — numbered end matter
+  - Tested on ROS2 Humble.
+related: [asr-research-test]               # optional — post slugs
+---
+```
+
+The table of contents builds itself from the `##` / `###` headings — no config needed.
+
+**A note** — same `_posts/` folder, shorter body:
+
+```yaml
+---
+title: "Back to Routine"
+date: 2025-03-18
+type: note
+topic: life
+layout: note
+image: /images/visual_thoughts/routine.png   # optional
+parts:                                       # optional — labelled sections
+  - label: Rejection
+    text: …
+---
+Body text of the note.
+```
+
+Or just run `./bin/new note "Back to routine"` (or `./bin/new post "Title"`) — it writes
+the file with today's date, a slug and the right front matter, then opens `$EDITOR`.
+
+**Topics.** Every entry carries exactly one `topic:` from `_data/topics.yml`
+(robotics · ai · power · linux · scraping · life · mind · notes), so the tile grid on
+`/writing/` partitions the whole stream and its counts always add up. Adding a topic =
+one entry in that file, a `writing/<slug>.html` stub, and a glyph in
+`_includes/icon.html`.
+
+**A sketch** — `_art/NN-slug.md`, front matter only:
+
+```yaml
+---
+order: 9
+title: Piece name
+date: 2025-02-01
+image: /images/sketch-library/file.jpg
+category: Characters
+span: feature | tall                       # optional mosaic span
+position: 50% 30%                          # optional object-position
+---
+```
+
+**A book** — add to `_data/books.yml`. **An album** — add to `_data/albums.yml`, then
+create a stub page (`gallery/<collection>/<album>.html`) with `layout: album` and the two
+slugs; four lines of front matter, no body.
+
+---
+
+## Interactions
+
+| Behaviour | File |
+| --- | --- |
+| Mobile full-screen menu, scroll lock | `assets/js/menu.js` |
+| ⌘K / Ctrl-K search over `search.json` | `assets/js/search.js` |
+| TOC scroll-spy (IntersectionObserver) | `assets/js/tocspy.js` |
+| Sketch / frame lightbox, zoom 50–300% | `assets/js/lightbox.js` |
+| Book-note modal | `assets/js/booknote.js` |
+| Sketch chip filtering, "Load more" | `assets/js/filters.js` |
+| Owner mode | `assets/js/owner.js` |
+
+Every overlay closes on ESC and on backdrop click. Nothing scrolls the page on load.
+
+### Owner mode — obscurity, not security
+
+The per-post markdown download is hidden behind `localStorage.owner === '1'`, set by
+visiting any page with `?owner=1` (or pressing **Shift+O** three times). `?owner=0` clears it.
+
+**This is progressive disclosure, not authentication.** The site is static: anyone can read
+the page source, flip the flag, and see the box. It only keeps owner-facing controls out of a
+visitor's way. Anything genuinely private must never be committed to this repository at all.
+
+---
+
+## Content status
+
+Everything from the old repository is migrated and now lives in one stream: **77 entries**
+— 21 long-form posts (10 with full bodies and their old URLs preserved via explicit
+`permalink:` — `/Lidar_part_1`, `/WSL`, … — plus 11 Medium pieces with real publication
+dates and a "read on Medium ↗" link) and 56 notes. Also **23 sketches** and **42 books**.
+All counts on the site are computed from this content, so the topic tiles always add up.
+
+Old individual thought URLs (`/thoughts/2024-03-19-pain` style) were **not** preserved —
+those pages were broken on the old site (the layout rendered every thought on every page)
+and nothing linked to them; notes now live at root-level `/<slug>` like every other entry.
+
+## Still to do (owner)
+
+- [ ] **Medium full texts** — the 11 `origin: medium` entries in `_posts/` are marked
+      `migrated: false` and link out to Medium. Paste each article's body in and drop the
+      note + flag. (The Atomik Alışkanlıklar entry also needs its real publish date —
+      Medium blocked the date lookup; it shows "—" until then.)
+- [ ] **Topics** — every entry carries a best-effort `topic:` from the eight-topic set.
+      The mapping was mechanical (post tag / old thought topic → tile); skim `_posts/`
+      and move entries where the guess is off. The tile counts follow automatically.
+- [ ] **Note excerpts** — the stream auto-truncates the note body for the one-line
+      excerpt. Add a `description:` to any entry whose opening sentence reads badly
+      cut off.
+- [ ] **Sketch dates & categories** — all 23 pieces are in `_art/`; dates and the
+      Characters/Pixel art/Scenes/Abstract taxonomy are placeholders (the 15 newly added
+      ones are marked with a TODO comment). Set the real ones.
+- [ ] **Books** — fill `rating:` (0–5) and `note:` per entry in `_data/books.yml` (they feed
+      the book-note modal), fix the few `TODO(owner)` title/author guesses, and replace the
+      two placeholder `want_to_read` lines.
+- [ ] **Gallery** — replace the stand-in frames in `_data/albums.yml` with the real album
+      photos and descriptions; build out the Gaming and AI Generated collections.
+- [ ] **Repository name** — `_config.yml → repository` is used only for the owner-mode raw
+      markdown link. Point it at the new repo.
+
+---
+
+## Editor pipeline
+
+The goal is arslan.io's "managing friction" argument: every step between writing and
+publishing costs writing. The flow this repo is built for:
+
+1. **Obsidian** holds the vault; **word-smith** (github.com/sadsnake1/word-smith) sits on
+   top as the distraction-free editor. Entries are plain markdown with Jekyll front matter.
+2. Point the vault at the repo so there is no copy step — a symlink is the whole
+   integration:
+   ```bash
+   ln -s ~/Obsidian/Site/entries  _posts
+   ln -s ~/Obsidian/Site/images   images
+   ```
+   If you would rather keep them separate, `./bin/sync-vault ~/Obsidian/Site` mirrors
+   `entries/` → `_posts/` and `images/` → `images/`.
+3. **Publish = commit + push.** The obsidian-git plugin can do it on a timer; GitHub Pages
+   builds. No local Jekyll run is needed for routine publishing.
+4. `_templates/post.md` and `_templates/note.md` double as Obsidian Templater templates,
+   so a new entry never means remembering front matter.
+
+Templates and layouts are deliberately stable: writing should never require touching
+layout code.
+
+## Deploying
+
+GitHub Pages, `CNAME` → `yavuzertugrul.com`. Push to the default branch and enable Pages on
+it. `Gemfile` pins `github-pages` so a local build matches what Pages runs.

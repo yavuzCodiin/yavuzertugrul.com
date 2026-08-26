@@ -1,0 +1,74 @@
+# ── Build output ──────────────────────────────────────────────────────────────
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# ── Dependencies ──────────────────────────────────────────────────────────────
+vendor/
+.bundle/
+Gemfile.lock
+node_modules/
+
+# ── Secrets & credentials ─────────────────────────────────────────────────────
+# GitHub Pages serves EVERYTHING in this repo publicly and git history keeps
+# deleted files retrievable, so anything matched here must never be committed.
+.env
+.env.*
+*.env
+secrets.yml
+_config.local.yml
+credentials*
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+id_rsa*
+id_ed25519*
+*.ppk
+.netrc
+.npmrc
+.htpasswd
+*service-account*.json
+*client_secret*.json
+.aws/
+.ssh/
+
+# ── Private / personal material ───────────────────────────────────────────────
+# Research notes, scans and CV exports live outside the repo. If one has to sit
+# in the working tree, it stays ignored — see SECURITY.md.
+private/
+drafts/
+*.pdf
+!assets/*.pdf          # only a deliberately exported, phone-free CV may be committed
+*.docx
+*.pages
+*.numbers
+*.xlsx
+
+# ── Environments (the old repo committed a whole venv) ────────────────────────
+website/
+.venv/
+venv/
+env/
+__pycache__/
+*.egg-info/
+*.pyc
+
+# ── Design handoff material — never part of the site ──────────────────────────
+design_handoff*/
+*.dc.html
+support.js
+_ds/
+
+# ── OS / editor ───────────────────────────────────────────────────────────────
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*~

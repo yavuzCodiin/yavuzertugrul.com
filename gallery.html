@@ -1,0 +1,33 @@
+---
+layout: page
+section: gallery
+permalink: /gallery/
+title: Gallery
+description: "A collection of visual albums — general to specific: gallery → album → frame."
+---
+<div class="page-head">
+  <h1 class="page-title">Gallery.</h1>
+  {% include search.html %}
+</div>
+<p class="page-intro page-intro--36"><span class="u-desktop">A collection of visual albums — each one a different journey. General to specific: gallery → album → frame.</span><span class="u-mobile">Visual albums — general to specific.</span></p>
+
+<div class="collections">
+  {%- for c in site.data.albums %}
+  {%- assign first_album = c.albums | first -%}
+  {%- if first_album -%}
+    {%- capture href %}/gallery/{{ c.slug }}/{{ first_album.slug }}/{% endcapture -%}
+  {%- else -%}
+    {%- capture href %}/gallery/{{ c.slug }}/{% endcapture -%}
+  {%- endif -%}
+  <a class="collection" href="{{ href | relative_url }}">
+    <div class="collection__frame">
+      <img src="{{ c.cover | relative_url }}" alt="{{ c.title }}" loading="lazy">
+    </div>
+    <div class="collection__row">
+      <span class="collection__title">{{ c.title }}</span>
+      <span class="collection__meta">{{ c.meta }}</span>
+    </div>
+    <p class="collection__desc">{{ c.description }}</p>
+  </a>
+  {%- endfor %}
+</div>

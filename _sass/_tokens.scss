@@ -1,0 +1,137 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// Modernist — design tokens.
+// Ported from the handoff design system:
+//   _ds/modernist-9d3989ab-4520-4f26-ab66-caa92d8763b3/styles.css
+// Everything below is verbatim from that sheet except the two values marked
+// "handoff override", where README.md states the final decision explicitly.
+// Never hard-code a hex, font or shadow that lives here.
+// ─────────────────────────────────────────────────────────────────────────────
+
+:root {
+  --color-bg: #f3f2f2;
+  // handoff override — token sheet says #eae9e9, README specifies white surface
+  --color-surface: #ffffff;
+  --color-surface-alt: #eae9e9;
+  --color-text: #201e1d;
+  --color-accent: #ec3013;
+  --color-accent-2: #e15b47;
+  // handoff override — token sheet says color-mix(#201e1d 40%), README specifies
+  // full-ink 2px rules ("Divider --color-divider: #201e1d")
+  --color-divider: #201e1d;
+  // 1px secondary row rules
+  --color-rule: #{"color-mix(in srgb, var(--color-text) 15%, transparent)"};
+
+  // Tonal ramps — generated in OKLCH on one shared lightness scale, so the
+  // same step of any role matches the others in visual value.
+  --color-neutral-100: #f8f4f4;
+  --color-neutral-200: #eae7e7;
+  --color-neutral-300: #d7d3d3;
+  --color-neutral-400: #bab6b6;
+  --color-neutral-500: #9b9797;
+  --color-neutral-600: #7d7979;
+  --color-neutral-700: #605d5d;
+  --color-neutral-800: #444141;
+  --color-neutral-900: #2d2b2b;
+
+  --color-accent-100: #fff2ef;
+  --color-accent-200: #ffe0d9;
+  --color-accent-300: #ffc4b8;
+  --color-accent-400: #ff9783;
+  --color-accent-500: #ff563c;
+  --color-accent-600: #dd2b0f;
+  --color-accent-700: #ae1800;
+  --color-accent-800: #7c1405;
+  --color-accent-900: #4d170e;
+
+  --color-accent-2-100: #fff2ef;
+  --color-accent-2-200: #ffe0da;
+  --color-accent-2-300: #ffc4b9;
+  --color-accent-2-400: #ff9784;
+  --color-accent-2-500: #ef6853;
+  --color-accent-2-600: #c94b39;
+  --color-accent-2-700: #9e3526;
+  --color-accent-2-800: #71261b;
+  --color-accent-2-900: #471d16;
+
+  // The whole site is set in Ioskeley Mono (free Berkeley Mono clone, OFL 1.1 —
+  // github.com/ahatem/IoskeleyMono), self-hosted from fonts/. Archivo is dropped.
+  --font-heading: "Ioskeley Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-heading-weight: 800;
+  --font-body: "Ioskeley Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-mono: "Ioskeley Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --space-1: 4.0px;
+  --space-2: 8.0px;
+  --space-3: 12.0px;
+  --space-4: 16.0px;
+  --space-6: 24.0px;
+  --space-8: 32.0px;
+
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+
+  // Elevation — derived from the ground: soft ink-tinted shadows on a
+  // light theme, a hairline edge + ambient darkness on a dark one.
+  --shadow-sm: 0 1px 2px #{"color-mix(in srgb, #2d2b2b 14%, transparent)"};
+  --shadow-md: 0 3px 10px #{"color-mix(in srgb, #2d2b2b 16%, transparent)"};
+  --shadow-lg: 0 12px 32px #{"color-mix(in srgb, #2d2b2b 22%, transparent)"};
+
+  // ── Type scale ────────────────────────────────────────────────────────────
+  // Mono sets ~15% wider per character, so the display sizes step down from the
+  // Archivo original; the Writing screen's scale is the reference.
+  --type-display: 40px;   // page H1 (was 46px)
+  --type-hero: 40px;      // About / Contact statement H1 (was 52px)
+  --type-post: 32px;      // post detail H1 (was 38px)
+  --type-whoami: 34px;    // whoami statement (was 44px)
+
+  // ── Layout metrics (from README "Global Layout") ───────────────────────────
+  --sidebar-w: 280px;
+  --content-pad-y: 48px;
+  --content-pad-x: 56px;
+
+  // ── Topic tag colours, oklch pairs ────────────────────────────────────────
+  // The five hues in the handoff token list (tech 250 / life 150 / mind 310 /
+  // ai 60 / work 200) cover only the old thought topics. The Writing merge
+  // introduced an eight-topic taxonomy, so the remaining four are generated on
+  // the same lightness/chroma scheme; `notes` is the deliberately quiet
+  // catch-all and stays near-neutral.
+  --topic-robotics-bg: #{"oklch(0.93 0.05 250)"};
+  --topic-robotics-fg: #{"oklch(0.4 0.12 250)"};
+  --topic-ai-bg: #{"oklch(0.93 0.05 60)"};
+  --topic-ai-fg: #{"oklch(0.42 0.1 60)"};
+  --topic-power-bg: #{"oklch(0.93 0.06 30)"};
+  --topic-power-fg: #{"oklch(0.42 0.14 30)"};
+  --topic-linux-bg: #{"oklch(0.93 0.05 200)"};
+  --topic-linux-fg: #{"oklch(0.4 0.1 200)"};
+  --topic-scraping-bg: #{"oklch(0.93 0.05 280)"};
+  --topic-scraping-fg: #{"oklch(0.4 0.12 280)"};
+  --topic-life-bg: #{"oklch(0.93 0.05 150)"};
+  --topic-life-fg: #{"oklch(0.4 0.1 150)"};
+  --topic-mind-bg: #{"oklch(0.93 0.05 310)"};
+  --topic-mind-fg: #{"oklch(0.4 0.12 310)"};
+  --topic-notes-bg: #{"oklch(0.93 0.015 60)"};
+  --topic-notes-fg: #{"oklch(0.42 0.03 60)"};
+  // kept so any lingering markup from the old taxonomy still resolves
+  --topic-tech-bg: var(--topic-robotics-bg);
+  --topic-tech-fg: var(--topic-robotics-fg);
+  --topic-work-bg: var(--topic-linux-bg);
+  --topic-work-fg: var(--topic-linux-fg);
+
+  // Archive type tags — post gets its own hue, thought = mind, art = ai.
+  --type-post-bg: #{"oklch(0.93 0.06 30)"};
+  --type-post-fg: #{"oklch(0.42 0.14 30)"};
+  --type-thought-bg: var(--topic-mind-bg);
+  --type-thought-fg: var(--topic-mind-fg);
+  --type-art-bg: var(--topic-ai-bg);
+  --type-art-fg: var(--topic-ai-fg);
+}
+
+// Text tints used all over the prototypes.
+$ink-04: "color-mix(in srgb, var(--color-text) 4%, transparent)";
+$ink-07: "color-mix(in srgb, var(--color-text) 7%, transparent)";
+$ink-15: "color-mix(in srgb, var(--color-text) 15%, transparent)";
+$ink-45: "color-mix(in srgb, var(--color-text) 45%, transparent)";
+$ink-55: "color-mix(in srgb, var(--color-text) 55%, transparent)";
+$ink-70: "color-mix(in srgb, var(--color-text) 70%, transparent)";
+$ink-78: "color-mix(in srgb, var(--color-text) 78%, transparent)";

@@ -1,0 +1,14 @@
+{%- comment -%}
+  A single tag chip.
+  include.label   — text
+  include.variant — accent | neutral | outline | solid  (default: neutral)
+  include.topic   — tech | life | mind | ai | work | post | thought | art
+  include.url     — optional, renders an <a>
+{%- endcomment -%}
+{%- assign variant = include.variant | default: "neutral" -%}
+{%- capture cls -%}tag tag-{{ variant }}{% if include.topic %} tag--{{ include.topic }}{% endif %}{%- endcapture -%}
+{%- if include.url -%}
+<a class="{{ cls }}" href="{{ include.url | relative_url }}">{{ include.label }}</a>
+{%- else -%}
+<span class="{{ cls }}">{{ include.label }}</span>
+{%- endif -%}

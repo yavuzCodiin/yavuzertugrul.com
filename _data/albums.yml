@@ -1,0 +1,48 @@
+# Gallery — collections → albums → frames. Everything is hosted on-site.
+#
+# TODO (owner): the frames below reuse existing site images as stand-ins, exactly
+# as in the prototype ("Fotoğraflar temsili"). Drop the real album photos into
+# images/ggallery/<collection>/<album>/ and replace `src` + `year` per frame.
+
+- slug: photography
+  title: Photography
+  cover: /images/ggallery/photography.png
+  meta: "3 albums"
+  description: Travels and everyday frames, album by album.
+  albums:
+    - slug: album-01
+      title: Album 01.
+      description: >-
+        Each album gets a short description like this — where it was shot, what
+        defines it — so the page carries context, not just a grid.
+      placeholder_note: Photos are stand-ins — the real album goes here.
+      frames:
+        - src: /images/ggallery/photography.png
+          year: "2024"
+        - src: /images/visual_thoughts/sacred.jpg
+          year: "2024"
+        - src: /images/visual_thoughts/direction.jpeg
+          year: "2024"
+        - src: /images/visual_thoughts/mesh.jpg
+          year: "2025"
+          wide: true
+        - src: /images/visual_thoughts/phases.jpg
+          year: "2025"
+          tall: true
+      related:
+        - Album 02
+        - Album 03
+
+- slug: gaming
+  title: Gaming
+  cover: /images/ggallery/gaming.png
+  meta: "2025"
+  description: Virtual tales — in-game shots.
+  albums: []
+
+- slug: ai-generated
+  title: AI Generated
+  cover: /images/ggallery/ai_gen.png
+  meta: "2024"
+  description: Renaissance reboot — generative pieces.
+  albums: []

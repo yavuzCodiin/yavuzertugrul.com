@@ -1,0 +1,157 @@
+# Bookshelf — the full library from the old site, in shelf order (newest first).
+# Titles/authors were identified from the covers; entries marked TODO need the
+# owner's confirmation. `rating` (0-5) and `note` feed the book-note modal and
+# are still owner placeholders throughout.
+
+meta:
+  intro_lead: "Thousands books to read, thousands lives to live — welcome to my library."
+  mobile_tap_hint: "Tap a cover for the note."
+
+currently_reading:
+  title: Dönüşüm
+  author: Franz Kafka
+  cover: /images/bookshelf_library/2025/dönüsüm.jpg
+
+want_to_read:
+  - The first book you queue up
+  - "…listed in your reading order"
+
+shelves:
+  - year: "2025"
+    books:
+      - title: "Atatürk'ün Son 100 Günü"
+        author: Cevat Şenol
+        cover: /images/bookshelf_library/2025/ataturkun_100_gunu.jpeg
+      - title: Bilinmeyen Bir Kadının Mektubu
+        author: Stefan Zweig
+        cover: /images/bookshelf_library/2025/bi-cli-cnmeyen-bi-cr-kadinin-mektubu.jpg
+      - title: Dönüşüm
+        author: Franz Kafka
+        cover: /images/bookshelf_library/2025/dönüsüm.jpg
+        status: reading
+      - title: Karabibik
+        author: Nabizade Nâzım
+        cover: /images/bookshelf_library/2025/Karabibik.jpg
+      - title: Vatan Yahut Silistre
+        author: Namık Kemal
+        cover: /images/bookshelf_library/2025/vatan-yahut-silistre.jpg
+
+  - year: "2024"
+    books:
+      - title: Atomic Habits
+        author: James Clear
+        cover: /images/bookshelf_library/read_2024/atomic_habits.jpg
+      - title: Rise of the Robots
+        author: Martin Ford
+        cover: /images/bookshelf_library/read_2024/rise_of_robots.jpg
+      - title: Power and Progress
+        author: Daron Acemoğlu & Simon Johnson
+        cover: /images/bookshelf_library/read_2024/power_and_progress.jpg
+      - title: Ikigai
+        author: Héctor García & Francesc Miralles
+        cover: /images/bookshelf_library/read_2024/ikigai.jpg
+      - title: Norse Myths
+        author: R.I. Page
+        cover: /images/bookshelf_library/read_2024/Norse_Myths_R.I_Page.jpg
+
+  - year: "2023"
+    books:
+      - title: Eski Çağın Büyük Komutanları
+        author: ""  # TODO(owner): author
+        cover: /images/bookshelf_library/read_2023/eski_cagın_buyuk_komutanları.jpeg
+      - title: "Tesla: Portrait with Masks"
+        author: Vladimir Pištalo
+        cover: /images/bookshelf_library/read_2023/tesla_portrait_with_masks.png
+      - title: How Google Works  # TODO(owner): verify title
+        author: Eric Schmidt & Jonathan Rosenberg
+        cover: /images/bookshelf_library/read_2023/google_smart_book.jpg
+      - title: Artificial Intelligence (HBR Insights)  # TODO(owner): verify title
+        author: Harvard Business Review
+        cover: /images/bookshelf_library/read_2023/ai_harvard.jpg
+      - title: The Quest for Artificial Intelligence
+        author: Nils J. Nilsson
+        cover: /images/bookshelf_library/read_2023/quest_for_ai.jpg
+      - title: Prometheus Bound
+        author: Aeschylus
+        cover: /images/bookshelf_library/read_2023/Prometheus_Bound.jpg
+      - title: Geleceği Görenler
+        author: ""  # TODO(owner): author
+        cover: /images/bookshelf_library/read_2023/gelecegi_görenler.jpg
+      - title: Permanent Record
+        author: Edward Snowden
+        cover: /images/bookshelf_library/read_2023/snowden.jpeg
+      - title: Elon Musk
+        author: Ashlee Vance  # TODO(owner): or the Walter Isaacson biography?
+        cover: /images/bookshelf_library/read_2023/elon_musk.jpg
+
+  - year: "Before 2023"
+    books:
+      - title: Chess Story
+        author: Stefan Zweig
+        cover: /images/bookshelf_library/read_before_2023/chess_story.jpg
+      - title: "Tesla: Aforizmalar"
+        author: Nikola Tesla
+        cover: /images/bookshelf_library/read_before_2023/tesla_aforizmalar.jpg
+      - title: The Art of War
+        author: Sun Tzu
+        cover: /images/bookshelf_library/read_before_2023/the_art_of_war.jpg
+      - title: TED Talks
+        author: Chris Anderson
+        cover: /images/bookshelf_library/read_before_2023/ted.jpg
+      - title: Origin
+        author: Dan Brown
+        cover: /images/bookshelf_library/read_before_2023/origin.jpg
+      - title: Angels & Demons
+        author: Dan Brown
+        cover: /images/bookshelf_library/read_before_2023/angels_and_demons.jpg
+      - title: Digital Fortress
+        author: Dan Brown
+        cover: /images/bookshelf_library/read_before_2023/digital_fortress.jpg
+      - title: Harry Potter and the Goblet of Fire
+        author: J.K. Rowling
+        cover: /images/bookshelf_library/read_before_2023/harry_potter_and_goblet_fire.jpg
+      - title: The Alchemist
+        author: Paulo Coelho
+        cover: /images/bookshelf_library/read_before_2023/the_alchemist.jpg
+      - title: Outliers
+        author: Malcolm Gladwell
+        cover: /images/bookshelf_library/read_before_2023/outliers.jpg
+      - title: Animal Farm
+        author: George Orwell
+        cover: /images/bookshelf_library/read_before_2023/AnimalFarm.jpg
+      - title: The Last Day of a Condemned Man
+        author: Victor Hugo
+        cover: /images/bookshelf_library/read_before_2023/the_last_day_of_a_condemned_man.jpg
+      - title: The Little Prince
+        author: Antoine de Saint-Exupéry
+        cover: /images/bookshelf_library/read_before_2023/little_prince.jpg
+      - title: Buyology
+        author: Martin Lindstrom
+        cover: /images/bookshelf_library/read_before_2023/buyology.jpg
+      - title: The Da Vinci Code
+        author: Dan Brown
+        cover: /images/bookshelf_library/read_before_2023/davinci_code.jpg
+      - title: The Roman Empire and Its Germanic Peoples
+        author: Herwig Wolfram
+        cover: /images/bookshelf_library/read_before_2023/the_roman_empire_and_its_germanic_people.jpg
+      - title: Avrupa Tarihi Üzerine Yazılar
+        author: ""  # TODO(owner): author
+        cover: /images/bookshelf_library/read_before_2023/avrupa_tarihi_üzerine_yazılar.jpeg
+      - title: Inferno
+        author: Dan Brown
+        cover: /images/bookshelf_library/read_before_2023/inferno.jpg
+      - title: The Fourth Industrial Revolution
+        author: Klaus Schwab
+        cover: /images/bookshelf_library/read_before_2023/fourth_ındustrıal_revolutıon.jpg
+      - title: The Lost Symbol
+        author: Dan Brown
+        cover: /images/bookshelf_library/read_before_2023/lost_symbol.jpg
+      - title: Les Misérables
+        author: Victor Hugo
+        cover: /images/bookshelf_library/read_before_2023/les_misarables.jpg
+      - title: "1984"
+        author: George Orwell
+        cover: /images/bookshelf_library/read_before_2023/1984.jpg
+      - title: Brave New World
+        author: Aldous Huxley
+        cover: /images/bookshelf_library/read_before_2023/brave_new_world.jpg

@@ -1,0 +1,38 @@
+# The eight topics of the Writing stream. Every entry in _posts/ carries exactly
+# one `topic:` from this list, so the tile grid partitions the whole stream and
+# the counts always add up to the entry total.
+#
+# `glyph` names an icon in _includes/icon.html (Lucide, stroke-width 2).
+
+- slug: robotics
+  name: Robotics
+  glyph: bot
+  description: Field notes from robots, sensors and the benches they live on.
+- slug: ai
+  name: AI
+  glyph: sparkle
+  description: Models, edge hardware and what the technology can actually do yet.
+- slug: power
+  name: Power
+  glyph: zap
+  description: Power electronics, converters and control systems.
+- slug: linux
+  name: Linux
+  glyph: terminal
+  description: The tooling underneath everything else.
+- slug: scraping
+  name: Scraping
+  glyph: globe
+  description: Pulling data off the web and making something of it.
+- slug: life
+  name: Life
+  glyph: sun
+  description: Short notes on days, habits, films and everything around the work.
+- slug: mind
+  name: Mind
+  glyph: moon
+  description: Thinking about thinking — patience, purpose and the long game.
+- slug: notes
+  name: Notes
+  glyph: pen
+  description: Everything else that was worth writing down.

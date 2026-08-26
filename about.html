@@ -1,0 +1,22 @@
+---
+layout: page
+section: about
+permalink: /about/
+hero_pad: true
+title: About
+description: This site is all about me and my journey.
+---
+<span class="kicker kicker--page">About</span>
+<h1 class="about__title">This site is all about me and my journey.</h1>
+<p class="about__intro">You'll find my notes, thoughts, learning experiences, research, and projects here.</p>
+
+<div class="rule about__rule"></div>
+<div class="sitemap">
+  {%- for entry in site.data.sitemap %}
+  <a class="sitemap__row" href="{{ entry.url | relative_url }}">
+    <span class="sitemap__n">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+    <span class="sitemap__name">{{ entry.name }}</span>
+    <span class="sitemap__desc">{{ entry.description }}</span>
+  </a>
+  {%- endfor %}
+</div>

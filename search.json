@@ -1,0 +1,20 @@
+---
+layout: null
+permalink: /search.json
+---
+{%- comment -%}
+  Static search index: every writing entry (posts and notes) + artwork.
+  Consumed by assets/js/search.js. `sep` keeps the JSON valid if a source is empty.
+{%- endcomment -%}
+{%- assign sep = "" -%}
+[
+{%- for post in site.posts -%}
+{{ sep }}{"type":{{ post.type | jsonify }},"title":{{ post.short_title | default: post.title | jsonify }},"url":{{ post.url | relative_url | jsonify }},"date":{{ post.date | date: "%d %b %Y" | jsonify }},"tags":{{ post.tags | jsonify }},"excerpt":{{ post.description | default: post.excerpt | strip_html | normalize_whitespace | strip | truncate: 180 | jsonify }}}
+{%- assign sep = "," -%}
+{%- endfor -%}
+{%- assign pieces = site.art | sort: "order" -%}
+{%- for a in pieces -%}
+{{ sep }}{"type":"art","title":{{ a.title | jsonify }},"url":{{ "/sketches/" | relative_url | jsonify }},"date":{{ a.date | date: "%d %b %Y" | jsonify }},"tags":{{ a.category | default: "" | split: "," | jsonify }},"excerpt":{{ a.category | default: "" | jsonify }}}
+{%- assign sep = "," -%}
+{%- endfor -%}
+]

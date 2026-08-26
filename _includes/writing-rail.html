@@ -1,0 +1,28 @@
+{%- assign all = site.posts -%}
+{%- assign longform = all | where: "type", "post" -%}
+{%- assign notes = all | where: "type", "note" -%}
+<aside class="rail writing__rail">
+  <div>
+    <h6>In numbers</h6>
+    <div class="stats">
+      <div class="stat"><span class="stat__label">Entries</span><span class="stat__value">{{ all | size }}</span></div>
+      <div class="stat"><span class="stat__label">Long-form</span><span class="stat__value">{{ longform | size }}</span></div>
+      <div class="stat"><span class="stat__label">Notes</span><span class="stat__value">{{ notes | size }}</span></div>
+    </div>
+  </div>
+
+  <div>
+    <h6>How it works</h6>
+    <p class="rail__text">A note is just a short entry — same stream, same tags, no separate section. The old Thoughts page lives on as the Notes tile; Archive is gone because the stream is the archive.</p>
+  </div>
+
+  <div>
+    <h6>Feeds</h6>
+    <div class="count-rows">
+      <a class="count-row" href="{{ '/atom.xml' | relative_url }}"><span>Everything</span><span>RSS</span></a>
+      <a class="count-row" href="{{ '/feed-longform.xml' | relative_url }}"><span>Long-form only</span><span>RSS</span></a>
+    </div>
+  </div>
+
+  {% include owner-box.html %}
+</aside>

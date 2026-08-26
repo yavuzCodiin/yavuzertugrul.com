@@ -1,0 +1,84 @@
+---
+layout: page
+section: cv
+permalink: /cv/
+title: CV
+description: Robotics Software Engineer — edge AI, SLAM, sensor fusion.
+---
+{%- assign cv = site.data.cv -%}
+
+<div class="cv">
+  {%- comment -%} No cv.pdf download — owner decision; the CV lives only as this page. {%- endcomment -%}
+  <div class="cv__head">
+    <div>
+      <h1 class="page-title" style="margin-bottom:8px">Yavuz Ertuğrul</h1>
+      <span class="kicker">{{ cv.role }}</span>
+    </div>
+  </div>
+
+  {%- comment -%} No phone, no location — see SECURITY_AUDIT.md §4. {%- endcomment -%}
+  <p class="cv__contact">
+    <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> ·
+    <a href="{{ site.social.linkedin_url }}">LinkedIn</a> ·
+    <a href="{{ site.social.github_url }}">GitHub</a> ·
+    <a href="{{ site.url }}">Website</a>
+  </p>
+
+  <div class="cv__skills">
+  <h6 class="cv__section-title">Skills</h6>
+  <div class="cv__rule"></div>
+  <div class="cv__rows">
+    {%- for row in cv.skills %}
+    <div class="cv__row">
+      <span class="cv__row-key">{{ row.key }}</span>
+      <span class="cv__row-val">{{ row.value }}</span>
+    </div>
+    {%- endfor %}
+  </div>
+  </div>
+
+  <h6 class="cv__section-title"><span class="u-desktop">Professional experience</span><span class="u-mobile">Experience</span></h6>
+  <div class="cv__rule" style="margin-bottom:16px"></div>
+  {%- for job in cv.experience %}
+  <div class="cv__job">
+    <div class="cv__job-head">
+      <h3>{{ job.title }}</h3>
+      <span class="cv__dates">{{ job.dates }}</span>
+    </div>
+    <div class="cv__loc"><span class="u-mobile">{{ job.dates }} · </span><span class="u-desktop">{{ job.location }}</span><span class="u-mobile">{{ job.location_short | default: job.location }}</span></div>
+    <ul class="bullets u-desktop">
+      {%- for b in job.bullets %}
+      <li><span>{{ b }}</span></li>
+      {%- endfor %}
+    </ul>
+    {%- if job.summary %}<p class="cv__summary u-mobile">{{ job.summary }}</p>{%- endif %}
+  </div>
+  {%- endfor %}
+
+  <div class="cv__pair">
+    {%- for item in cv.secondary %}
+    <div>
+      <div class="cv__job-head">
+        <h4>{{ item.title }}</h4>
+        <span class="cv__dates">{{ item.dates }}</span>
+      </div>
+      <p>{{ item.text }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <div class="cv__triple">
+    <div>
+      <h6>Education</h6>
+      <p><strong>{{ cv.education.title }}</strong><br>{{ cv.education.school }}</p>
+    </div>
+    <div>
+      <h6>Awards</h6>
+      <p>{{ cv.awards }}</p>
+    </div>
+    <div>
+      <h6>Volunteering</h6>
+      <p>{{ cv.volunteering }}</p>
+    </div>
+  </div>
+</div>

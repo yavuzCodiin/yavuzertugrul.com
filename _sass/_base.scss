@@ -1,0 +1,100 @@
+// ── Base — element defaults from the Modernist token sheet ───────────────────
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  line-height: 1.12;
+  margin: 0 0 var(--space-2);
+}
+h1 { font-size: 42px; }
+h2 { font-size: 32px; }
+h3 { font-size: 25px; }
+h4 { font-size: 20px; }
+h5 { font-size: 16px; }
+h6 {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+p { margin: 0 0 var(--space-3); }
+a { color: var(--color-accent); text-underline-offset: 3px; transition: color 0.15s ease; }
+a:hover { color: var(--color-accent-600); }
+
+// JS hides elements via the `hidden` attribute (filter chips, Load more, year
+// groups); author display rules (.row { display: grid } etc.) would otherwise
+// defeat the UA [hidden] style, so restore it explicitly.
+[hidden] { display: none !important; }
+// Media never escapes its column: legacy content carries width/height attributes
+// and videos have a large intrinsic size, both of which would otherwise overflow
+// the article column and slide under the sticky rail.
+img { display: block; max-width: 100%; height: auto; }
+video, iframe, embed, object { display: block; max-width: 100%; height: auto; }
+figure { margin: 0; }
+figcaption {
+  font-size: 11px;
+  margin-top: var(--space-1);
+  color: #{$ink-55};
+}
+hr { height: 2px; border: 0; margin: var(--space-4) 0; background: var(--color-divider); }
+
+:focus { outline: none; }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+::selection { background: #{"color-mix(in srgb, var(--color-accent) 30%, transparent)"}; }
+
+// Numbers everywhere use tabular figures.
+.tnum { font-feature-settings: 'tnum' 1; }
+
+// Photography rule: editorial / hero photos print in black and white.
+// Exceptions (always colour): own artwork, gallery frames, thought images,
+// book covers, the whoami photo, technical diagrams and screenshots.
+.grayscale { filter: grayscale(1) contrast(1.08); }
+
+.text-muted { color: #{$ink-55}; }
+
+// Copy that differs between breakpoints (labels, shortened intros).
+.u-mobile { display: none !important; }
+@media (max-width: 1023px) {
+  .u-desktop { display: none !important; }
+  .u-mobile { display: revert !important; }
+}
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 1200;
+  background: var(--color-accent); color: #fff; padding: 10px 16px;
+  font-family: var(--font-heading); font-weight: 800; font-size: 14px;
+  text-decoration: none;
+}
+.skip-link:focus { left: 0; color: #fff; }
+
+// ── Rules ────────────────────────────────────────────────────────────────────
+.rule      { height: 2px; background: var(--color-divider); }
+.rule-thin { height: 1px; background: #{$ink-15}; }
+
+// ── Kickers ──────────────────────────────────────────────────────────────────
+.kicker {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-700);
+}
+a.kicker { text-decoration: none; }

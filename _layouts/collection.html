@@ -1,0 +1,31 @@
+---
+layout: default
+section: gallery
+---
+{%- assign collection = site.data.albums | where: "slug", page.collection_slug | first -%}
+
+<main class="content" id="main">
+  <a class="kicker" href="{{ '/gallery/' | relative_url }}" style="margin-bottom:20px">← Gallery</a>
+  <h1 class="page-title">{{ collection.title }}.</h1>
+  <p class="page-intro">{{ collection.description }}</p>
+
+  {%- if collection.albums and collection.albums.size > 0 %}
+  <div class="collections">
+    {%- for album in collection.albums %}
+    <a class="collection" href="{{ '/gallery/' | append: collection.slug | append: '/' | append: album.slug | append: '/' | relative_url }}">
+      <div class="collection__frame">
+        <img src="{{ album.frames[0].src | default: collection.cover | relative_url }}" alt="{{ album.title }}" loading="lazy">
+      </div>
+      <div class="collection__row">
+        <span class="collection__title">{{ album.title }}</span>
+        <span class="collection__meta">{{ album.frames | size }} frames</span>
+      </div>
+      <p class="collection__desc">{{ album.description | truncate: 110 }}</p>
+    </a>
+    {%- endfor %}
+  </div>
+  {%- else %}
+  <div class="rule"></div>
+  <p class="page-intro" style="margin-top:20px">No albums published yet — this collection is being put together.</p>
+  {%- endif %}
+</main>

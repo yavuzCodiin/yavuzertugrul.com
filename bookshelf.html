@@ -1,0 +1,97 @@
+---
+layout: page
+section: bookshelf
+permalink: /bookshelf/
+title: Bookshelf
+description: Thousands books to read, thousands lives to live — welcome to my library.
+extra_js: [/assets/js/booknote.js]
+---
+{%- assign meta = site.data.books.meta -%}
+{%- assign shelves = site.data.books.shelves -%}
+{%- assign reading = site.data.books.currently_reading -%}
+{%- assign total_read = 0 -%}
+{%- for shelf in shelves -%}{%- assign total_read = total_read | plus: shelf.books.size -%}{%- endfor -%}
+
+<div class="page-head">
+  <h1 class="page-title">Bookshelf.</h1>
+  {% include search.html %}
+</div>
+<p class="page-intro"><span class="u-desktop">{{ meta.intro_lead }} {{ total_read }} read so far.</span><span class="u-mobile">{{ total_read }} read so far. {{ meta.mobile_tap_hint }}</span></p>
+
+<div class="with-rail with-rail--book">
+  <div>
+    {%- for shelf in shelves %}
+    <section class="shelf">
+      <div class="shelf__head">
+        <h4>{{ shelf.year }}</h4>
+        <span class="shelf__count">{{ shelf.books | size }} books</span>
+      </div>
+      <div class="shelf__rows">
+        <div class="shelf__row">
+        {%- for book in shelf.books %}
+        <button type="button" class="book"
+                data-book
+                data-title="{{ book.title | escape }}"
+                data-author="{{ book.author | escape }}"
+                data-cover="{{ book.cover | relative_url }}"
+                data-rating="{{ book.rating }}"
+                data-note="{{ book.note | escape }}"
+                aria-label="{{ book.title | escape }} — book note">
+          <span class="book__pages" aria-hidden="true"></span>
+          <img class="book__cover" src="{{ book.cover | relative_url }}" alt="{{ book.title | escape }}" loading="lazy">
+        </button>
+        {%- assign chunk = forloop.index | modulo: 3 %}
+        {%- if chunk == 0 and forloop.last != true %}
+        </div>
+        <div class="rule shelf__rule--m"></div>
+        <div class="shelf__row">
+        {%- endif %}
+        {%- endfor %}
+        </div>
+        <div class="rule shelf__rule--m"></div>
+      </div>
+      <div class="shelf__rule"></div>
+    </section>
+    {%- endfor %}
+  </div>
+
+  <aside class="rail rail--ruled">
+    {%- if reading %}
+    <div class="rail__block rail__block--reading">
+      <h6>Currently reading</h6>
+      <div class="reading">
+        <img src="{{ reading.cover | relative_url }}" alt="{{ reading.title }}">
+        <div>
+          <div class="reading__title">{{ reading.title }}</div>
+          <div class="reading__author">{{ reading.author }}</div>
+          <span class="tag tag-accent">in progress</span>
+        </div>
+      </div>
+    </div>
+    {%- endif %}
+
+    <div class="rail__block rail__block--byyear">
+      <h6>By year</h6>
+      <div class="count-rows">
+        {%- for shelf in shelves %}
+        <div class="count-row"><span>{{ shelf.year }}</span><span class="count-row__n">{{ shelf.books | size }}</span></div>
+        {%- endfor %}
+      </div>
+    </div>
+
+    <div class="rail__block rail__block--queue">
+      <h6>Want to read</h6>
+      <div class="queue">
+        {%- for item in site.data.books.want_to_read %}
+        <div class="queue__item">
+          <span class="queue__n">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+          <span class="queue__title">{{ item }}</span>
+        </div>
+        {%- endfor %}
+      </div>
+      <a class="btn btn-ghost btn-ghost--sm" href="https://github.com/{{ site.repository }}/edit/{{ site.repository_branch }}/_data/books.yml">+ Add to queue</a>
+    </div>
+  </aside>
+</div>
+
+{% include book-note.html %}

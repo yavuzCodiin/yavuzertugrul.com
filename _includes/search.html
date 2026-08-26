@@ -1,0 +1,6 @@
+{%- comment -%} The ⌘K pill. Hidden from the mobile top bar (that has its own icon). {%- endcomment -%}
+<button type="button" class="search-pill" data-search-open>
+  {% include icon.html name="search" size="13" %}
+  <span class="u-desktop">Search</span><span class="u-mobile">{{ include.mobile_label | default: "Search" }}</span>
+  <span class="search-pill__key">⌘K</span>
+</button>

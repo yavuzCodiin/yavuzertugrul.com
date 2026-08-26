@@ -1,0 +1,31 @@
+---
+layout: default
+section: writing
+---
+{%- assign topic = site.data.topics | where: "slug", page.topic_slug | first -%}
+{%- assign entries = site.posts | where: "topic", page.topic_slug -%}
+
+<main class="content" id="main">
+  <div class="page-head">
+    <div>
+      <a class="kicker" href="{{ '/writing/' | relative_url }}">← Writing</a>
+      <h1 class="page-title" style="margin-top:14px">{{ topic.name }}.</h1>
+    </div>
+    {% include search.html %}
+  </div>
+  <p class="page-intro">{{ topic.description }} — {{ entries | size }} {% if entries.size == 1 %}entry{% else %}entries{% endif %}.</p>
+
+  {% include topic-tiles.html active=page.topic_slug %}
+
+  <div class="writing">
+    <div class="writing__stream">
+      {%- if entries.size > 0 %}
+      {% include stream.html entries=entries %}
+      {%- else %}
+      <div class="rule"></div>
+      <p class="page-intro" style="margin-top:20px">Nothing filed under this topic yet.</p>
+      {%- endif %}
+    </div>
+    {% include writing-rail.html %}
+  </div>
+</main>

@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# Local preview without Bundler.
+#
+# macOS ships Ruby 2.6, which the current `github-pages` dependency chain (ffi,
+# i18n, public_suffix) no longer supports — so `bundle install` fails there.
+# This script runs the Jekyll that is installed in your user gem directory
+# instead. It is a preview convenience only: GitHub Pages builds the real site
+# server-side from the Gemfile.
+#
+#   ./bin/serve            → http://localhost:4000
+#   ./bin/serve 4111       → another port
+#
+# For a toolchain that matches Pages exactly, install a modern Ruby
+# (`brew install ruby`) and use `bundle exec jekyll serve` instead.
+
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+PORT="${1:-4000}"
+
+# Ruby Sass reads sources as US-ASCII unless the locale says otherwise, and the
+# stylesheets contain em dashes in comments.
+export LANG="${LANG:-en_US.UTF-8}"
+export LC_ALL="${LC_ALL:-en_US.UTF-8}"
+
+# Skip Bundler so the Gemfile's github-pages pin is not resolved locally.
+export JEKYLL_NO_BUNDLER_REQUIRE=true
+export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
+if ! command -v jekyll >/dev/null 2>&1; then
+  echo "jekyll not found. Install it into your user gem dir:" >&2
+  echo "  gem install --user-install jekyll -v 3.9.5 kramdown-parser-gfm" >&2
+  echo "(on Ruby 2.6 you may first need: gem install --user-install ffi -v 1.15.5 i18n -v 1.14.1 public_suffix -v 5.1.1)" >&2
+  exit 1
+fi
+
+exec jekyll serve --port "$PORT" --livereload

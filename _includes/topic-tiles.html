@@ -1,0 +1,19 @@
+{%- comment -%}
+  The 2×4 topic tile grid. Each tile is a real link to its topic page, so the
+  grid works without JavaScript and every topic has a shareable URL.
+  include.active — slug of the topic currently being viewed (optional)
+{%- endcomment -%}
+<nav class="topics" aria-label="Topics">
+  {%- for topic in site.data.topics %}
+  {%- assign count = site.posts | where: "topic", topic.slug | size -%}
+  <a class="topic{% if include.active == topic.slug %} topic--active{% endif %}"
+     href="{{ '/writing/' | append: topic.slug | append: '/' | relative_url }}"
+     {% if include.active == topic.slug %}aria-current="page"{% endif %}>
+    <span class="topic__glyph">{% include icon.html name=topic.glyph size="20" %}</span>
+    <span class="topic__row">
+      <span class="topic__name">{{ topic.name }}</span>
+      <span class="topic__count">{{ count }}</span>
+    </span>
+  </a>
+  {%- endfor %}
+</nav>

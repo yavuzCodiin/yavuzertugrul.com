@@ -1,0 +1,26 @@
+{%- comment -%}
+  Owner-only download box — progressive disclosure, NOT security.
+  Shown when localStorage.owner === '1' (set once via ?owner=1 or the hidden
+  shortcut, see assets/js/owner.js). Anything genuinely private must simply
+  not be committed.
+
+  include.raw_url — optional link to the post's markdown source
+{%- endcomment -%}
+<div class="owner-box">
+  <div class="owner-box__head">
+    <h6>Download</h6>
+    <span class="tag tag-outline">only me</span>
+  </div>
+  {%- if include.compact != true %}
+  <p>Posts as plain markdown. Visitors don't see this — you switch it on when signed in as owner.</p>
+  {%- endif %}
+  <div class="owner-box__toggle-row">
+    <button type="button" class="owner-toggle" data-owner-toggle aria-pressed="false" aria-label="Public download">
+      <span class="owner-toggle__knob"></span>
+    </button>
+    <span class="owner-box__state" data-owner-state>Public download — off</span>
+  </div>
+  {%- if include.raw_url %}
+  <a class="owner-box__dl more-link" href="{{ include.raw_url }}">post.md ↓</a>
+  {%- endif %}
+</div>

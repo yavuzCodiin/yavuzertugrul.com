@@ -1,0 +1,51 @@
+{%- comment -%}
+  The Writing stream — year groups of clipping rows.
+  include.entries — a list of _posts documents (already sorted, newest first)
+  include.limit   — optional cap; when set, a "Show all N →" link follows
+{%- endcomment -%}
+{%- assign entries = include.entries -%}
+{%- assign total = entries | size -%}
+{%- if include.limit -%}
+  {%- assign shown = entries | slice: 0, include.limit -%}
+{%- else -%}
+  {%- assign shown = entries -%}
+{%- endif -%}
+{%- assign years = shown | group_by_exp: "e", "e.date | date: '%Y'" -%}
+
+{%- for year in years %}
+<section class="year-group">
+  <h4 class="year-head">{{ year.name }}</h4>
+  <div class="rule"></div>
+  {%- for e in year.items %}
+  {%- assign topic = site.data.topics | where: "slug", e.topic | first -%}
+  <a class="entry" href="{{ e.url | relative_url }}">
+    {%- if e.image %}
+    <img class="entry__cover{% if e.type == 'post' and e.image_color != true %} grayscale{% endif %}"
+         src="{{ e.image | relative_url }}" alt="{{ e.image_alt | default: e.title }}" loading="lazy">
+    {%- else %}
+    {%- comment -%} No image: a neutral plate carrying the topic glyph. {%- endcomment -%}
+    <span class="entry__plate" aria-hidden="true">{% include icon.html name=topic.glyph size="30" %}</span>
+    {%- endif %}
+    <span class="entry__body">
+      <span class="entry__title">{{ e.short_title | default: e.title }}</span>
+      <span class="entry__excerpt">{{ e.description | default: e.excerpt | strip_html | normalize_whitespace | strip | truncate: 130 }}</span>
+      <span class="entry__meta">
+        <span class="entry__date">{{ e.date | date: "%d %b, %y" }}</span>
+        {%- if e.type == "note" %}{% include tag.html label="note" variant="outline" %}{% endif -%}
+        {%- if e.type == "note" -%}
+          {% include tag.html label=topic.name variant="neutral" topic=e.topic %}
+        {%- else -%}
+          {%- for t in e.tags limit: 2 %}{% include tag.html label=t variant="neutral" %}{% endfor -%}
+        {%- endif -%}
+        {%- if e.origin == "medium" %}{% include tag.html label="medium" variant="outline" %}{% endif -%}
+      </span>
+    </span>
+  </a>
+  {%- endfor %}
+</section>
+{%- endfor %}
+
+{%- if include.limit and total > include.limit %}
+<div class="rule"></div>
+<a class="more-link" href="{{ '/writing/' | relative_url }}">Show all {{ total }} →</a>
+{%- endif %}

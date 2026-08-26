@@ -1,0 +1,24 @@
+---
+layout: page
+section: writing
+permalink: /writing/
+title: Writing
+description: Long posts and short notes — one stream, by topic.
+---
+{%- assign entries = site.posts -%}
+{%- assign first_year = entries | last -%}
+
+<div class="page-head">
+  <h1 class="page-title">Writing.</h1>
+  {% include search.html mobile_label="Search writing" %}
+</div>
+<p class="page-intro">Long posts and short notes — one stream, {{ entries | size }} entries since {{ first_year.date | date: "%Y" }}.</p>
+
+{% include topic-tiles.html %}
+
+<div class="writing">
+  <div class="writing__stream">
+    {% include stream.html entries=entries %}
+  </div>
+  {% include writing-rail.html %}
+</div>

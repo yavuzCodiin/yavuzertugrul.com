@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Mirror an Obsidian vault folder into _posts/ and images/.
+#
+# The friction target (arslan.io, "managing friction"): write in the vault,
+# publish with a commit. Run this only if you keep the vault outside the repo —
+# a symlink is simpler and needs no script:
+#
+#   ln -s ~/Obsidian/Site/entries  _posts
+#   ln -s ~/Obsidian/Site/images   images
+#
+# Usage: ./bin/sync-vault ~/Obsidian/Site
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+VAULT="${1:-}"
+[ -d "${VAULT:-}" ] || { echo "usage: ./bin/sync-vault /path/to/vault" >&2; exit 1; }
+[ -d "$VAULT/entries" ] || { echo "no $VAULT/entries directory" >&2; exit 1; }
+
+rsync -a --delete --prune-empty-dirs \
+      --include='*/' --include='*.md' --exclude='*' \
+      "$VAULT/entries/" _posts/
+[ -d "$VAULT/images" ] && rsync -a "$VAULT/images/" images/
+
+echo "synced. entries: $(ls _posts/*.md | wc -l | tr -d ' ')"
+git status --short _posts images | head -20

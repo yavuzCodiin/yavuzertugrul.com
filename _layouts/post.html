@@ -1,0 +1,96 @@
+---
+layout: default
+section: writing
+---
+{%- assign primary_tag = page.tags | first -%}
+{%- capture raw_url -%}https://raw.githubusercontent.com/{{ site.repository }}/{{ site.repository_branch }}/{{ page.path }}{%- endcapture -%}
+
+<main class="content" id="main">
+  <div class="post-head">
+{%- assign topic = site.data.topics | where: "slug", page.topic | first -%}
+    <a class="kicker" href="{{ '/writing/' | append: page.topic | append: '/' | relative_url }}">← Writing / {{ topic.name }}</a>
+    {% include search.html %}
+  </div>
+
+  <h1 class="post__title">{{ page.title }}</h1>
+
+  <div class="post__meta">
+    <span class="post__date">{{ page.date | date: "%d %b %Y" }}</span>
+    {%- for t in page.tags -%}
+      {%- if forloop.first -%}
+        {% include tag.html label=t variant="accent" %}
+      {%- else -%}
+        {% include tag.html label=t variant="neutral" %}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- if page.origin == "medium" %}{% include tag.html label="medium" variant="outline" %}{% endif -%}
+  </div>
+
+  <div class="post-grid">
+    <article>
+      <!-- Mobile TOC — collapsible, above the hero -->
+      <div class="toc-mobile" data-toc-mobile aria-expanded="true">
+        <button type="button" class="toc-mobile__toggle" data-toc-toggle>
+          <span>On this page</span><span data-toc-arrow>▴</span>
+        </button>
+        <div class="toc-mobile__body">
+          <nav class="toc" data-toc-target aria-label="On this page (mobile)"></nav>
+        </div>
+      </div>
+
+      {%- if page.image %}
+      <figure class="post__hero{% unless page.image_color %} grayscale{% endunless %}">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+        {%- if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}
+      </figure>
+      {%- endif %}
+
+      <div class="prose" id="post-body">
+        {{ content }}
+      </div>
+
+      {%- if page.notes or page.related %}
+      <div class="rule rule--endmatter" style="margin:32px 0 24px"></div>
+      <div class="endmatter">
+        {%- if page.notes %}
+        <div>
+          <h6>Notes</h6>
+          <div class="notes">
+            {%- for n in page.notes %}
+            <div class="note">
+              <span class="note__n">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+              <span class="note__text">{{ n }}</span>
+            </div>
+            {%- endfor %}
+          </div>
+        </div>
+        {%- endif %}
+        {%- if page.related %}
+        <div>
+          <h6>Related reading</h6>
+          <div class="related">
+            {%- for slug in page.related %}
+            {%- assign rel = site.posts | where: "slug", slug | first %}
+            {%- if rel %}
+            <a href="{{ rel.url | relative_url }}">
+              <span>{{ rel.title }}</span>
+              <span class="related__year">{{ rel.date | date: "%Y" }}</span>
+            </a>
+            {%- endif %}
+            {%- endfor %}
+          </div>
+        </div>
+        {%- endif %}
+      </div>
+      {%- endif %}
+    </article>
+
+    <aside class="toc-rail">
+      <div class="rail__block">
+        <h6>On this page</h6>
+        <nav class="toc" data-toc-target aria-label="On this page"></nav>
+      </div>
+      {% include owner-box.html compact=true raw_url=raw_url %}
+    </aside>
+  </div>
+</main>

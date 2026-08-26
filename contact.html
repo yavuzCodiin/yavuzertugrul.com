@@ -1,0 +1,35 @@
+---
+layout: page
+section: contact
+permalink: /contact/
+hero_pad: true
+title: Contact
+description: Say hi — I read everything.
+---
+<span class="kicker kicker--page">Contact</span>
+<h1 class="contact__title">Say hi — I read everything.</h1>
+
+<div class="contact__poster">
+  <div class="contact__poster-kicker">Email — the fastest way</div>
+  <a class="contact__email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+  <p>Projects, questions, corrections, book recommendations — all welcome.</p>
+</div>
+
+<div class="contact__rows">
+  <div class="rule"></div>
+  <a class="contact__row" href="{{ site.social.github_url }}">
+    <span class="contact__label">GitHub</span>
+    <span class="contact__value">{{ site.social.github }}</span>
+    <span class="contact__arrow">↗</span>
+  </a>
+  <a class="contact__row" href="{{ site.social.linkedin_url }}">
+    <span class="contact__label">LinkedIn</span>
+    <span class="contact__value">{{ site.social.linkedin_name }}</span>
+    <span class="contact__arrow">↗</span>
+  </a>
+  <a class="contact__row" href="{{ site.social.linktree_url }}">
+    <span class="contact__label">Everything else</span>
+    <span class="contact__value">{{ site.social.linktree }}</span>
+    <span class="contact__arrow">↗</span>
+  </a>
+</div>

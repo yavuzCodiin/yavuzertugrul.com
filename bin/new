@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Start a new entry without thinking about paths or front matter.
+#   ./bin/new post "Getting started with X"
+#   ./bin/new note "Back to routine"
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+KIND="${1:-note}"; TITLE="${2:-}"
+[ -n "$TITLE" ] || { echo "usage: ./bin/new <post|note> \"Title\"" >&2; exit 1; }
+[ -f "_templates/$KIND.md" ] || { echo "unknown kind: $KIND (post|note)" >&2; exit 1; }
+
+DATE=$(date +%F)
+SLUG=$(printf '%s' "$TITLE" | tr '[:upper:]' '[:lower:]' \
+       | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g')
+FILE="_posts/${DATE}-${SLUG}.md"
+[ -e "$FILE" ] && { echo "already exists: $FILE" >&2; exit 1; }
+
+sed -e "s/{{date:YYYY-MM-DD}}/$DATE/" -e "s/^title: \"\"/title: \"$TITLE\"/" \
+    "_templates/$KIND.md" > "$FILE"
+echo "$FILE"
+[ -n "${EDITOR:-}" ] && "$EDITOR" "$FILE"
