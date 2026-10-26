@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+"""Turn an animated GIF into a short looping MP4 that stands in for it.
+
+    ./bin/clip images/post-1/pathfinding_demo.gif [more.gif ...]
+
+GIF is the worst format for anything longer than a few frames: the pathfinding
+screen recording was 7.4 MB as a GIF and is 0.7 MB as H.264 with no visible
+difference (animated WebP came out larger than the GIF). Next to each GIF this
+writes
+
+    <name>.mp4           H.264, at most 1280 px wide, no audio, fast start
+    <name>.poster.webp   the first frame, shown until the clip scrolls into view
+
+and prints the include to put where the <img> was. _includes/clip.html plays it
+like a GIF — silent, looping, inline — but only while it is on screen.
+
+The GIF itself is left alone. Needs ffmpeg (brew install ffmpeg) and Pillow.
+"""
+import os
+import shutil
+import subprocess
+import sys
+
+try:
+    from PIL import Image
+except ImportError:
+    sys.exit("Pillow is missing — run:  python3 -m pip install --user pillow")
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MAX_WIDTH = 1280
+CRF = 26          # x264 quality — lower is sharper and bigger; 26 matched the GIFs
+
+
+def web(path):
+    return "/" + os.path.relpath(path, ROOT).replace(os.sep, "/")
+
+
+def kb(path):
+    return os.path.getsize(path) // 1024
+
+
+def clip(path):
+    src = os.path.abspath(path)
+    base = os.path.splitext(src)[0]
+    mp4, poster = base + ".mp4", base + ".poster.webp"
+    with Image.open(src) as im:
+        w, h = im.size
+        tw = min(w, MAX_WIDTH) // 2 * 2            # H.264 wants even sizes
+        th = round(h * tw / w / 2) * 2
+        frame = im.convert("RGB")
+        if (tw, th) != (w, h):
+            frame = frame.resize((tw, th), Image.LANCZOS)
+        frame.save(poster, "WEBP", quality=70, method=6)
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", src,
+                    "-vf", f"scale={tw}:{th}:flags=lanczos,format=yuv420p",
+                    "-c:v", "libx264", "-preset", "slow", "-crf", str(CRF),
+                    "-movflags", "+faststart", "-an", mp4], check=True)
+    print(f"{web(src)}: {kb(src)} KB → {kb(mp4)} KB video + {kb(poster)} KB poster")
+    print(f'  {{% include clip.html src="{web(mp4)}" poster="{web(poster)}" '
+          f'width="{tw}" height="{th}" alt="…" %}}')
+
+
+def main():
+    if len(sys.argv) < 2:
+        sys.exit(__doc__.split("\n\n")[1])
+    if not shutil.which("ffmpeg"):
+        sys.exit("ffmpeg is missing — run:  brew install ffmpeg")
+    for path in sys.argv[1:]:
+        clip(path)
+
+
+if __name__ == "__main__":
+    main()

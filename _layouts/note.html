@@ -22,7 +22,8 @@ section: writing
     {%- if page.image %}
     {%- comment -%} Own photography stays in colour per the photography rule. {%- endcomment -%}
     <figure class="note-detail__figure">
-      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+      {%- assign fig_alt = page.image_alt | default: page.title -%}
+      {% include img.html src=page.image alt=fig_alt eager=true sizes="(max-width: 1023px) calc(100vw - 40px), 760px" %}
     </figure>
     {%- endif %}
 
@@ -34,7 +35,8 @@ section: writing
     </div>
     {%- endfor %}
     {%- else %}
-    <div class="prose note-detail__text">{{ content }}</div>
+    <div class="prose note-detail__text">
+      {% include body.html content=content sizes="(max-width: 1023px) calc(100vw - 40px), 760px" %}</div>
     {%- endif %}
   </article>
 

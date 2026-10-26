@@ -2,11 +2,9 @@
 # Mirror an Obsidian vault folder into _posts/ and images/.
 #
 # The friction target (arslan.io, "managing friction"): write in the vault,
-# publish with a commit. Run this only if you keep the vault outside the repo —
-# a symlink is simpler and needs no script:
-#
-#   ln -s ~/Obsidian/Site/entries  _posts
-#   ln -s ~/Obsidian/Site/images   images
+# publish with a commit. Only needed when the vault lives outside the repo.
+# Don't symlink _posts/ or images/ to the vault instead: git commits a symlink
+# as a link, not the files behind it, so GitHub Pages would publish no posts.
 #
 # Usage: ./bin/sync-vault ~/Obsidian/Site
 set -euo pipefail

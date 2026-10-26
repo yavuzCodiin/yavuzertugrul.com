@@ -2,7 +2,7 @@
 title: "The First Turkish State"
 date: 2024-07-30
 type: note
-topic: life
+topic: notes
 layout: note
 image: /images/visual_thoughts/the_first_turkish_state.png
 image_alt: "The First Turkish State"

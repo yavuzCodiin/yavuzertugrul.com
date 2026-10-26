@@ -13,7 +13,4 @@ permalink: /sitemap.xml
   {%- for post in site.posts %}
   <url><loc>{{ post.url | absolute_url }}</loc><lastmod>{{ post.date | date_to_xmlschema }}</lastmod></url>
   {%- endfor %}
-  {%- for t in site.thoughts %}
-  <url><loc>{{ t.url | absolute_url }}</loc><lastmod>{{ t.date | date_to_xmlschema }}</lastmod></url>
-  {%- endfor %}
 </urlset>

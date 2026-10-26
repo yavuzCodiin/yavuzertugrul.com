@@ -40,7 +40,9 @@ title: Home
       </div>
     </div>
     <figure>
-      <img src="{{ latest.image | default: '/images/visual_thoughts/mesh.jpg' | relative_url }}" alt="{{ latest.image_alt | default: latest.title }}">
+      {%- assign latest_img = latest.image | default: '/images/visual_thoughts/mesh.jpg' -%}
+      {%- assign latest_alt = latest.image_alt | default: latest.title -%}
+      {% include img.html src=latest_img alt=latest_alt eager=true sizes="(max-width: 1023px) 100vw, (max-width: 1279px) calc(100vw - 392px), calc(50vw - 220px)" %}
     </figure>
   </a>
   {%- endif %}
@@ -70,7 +72,7 @@ title: Home
 
   <div class="home__bottom">
     <a class="card home__art" href="{{ '/sketches/' | relative_url }}">
-      <figure><img src="{{ art_cover.image | relative_url }}" alt="{{ art_cover.title }}"></figure>
+      <figure>{% include img.html src=art_cover.image alt=art_cover.title sizes="(max-width: 1279px) calc(100vw - 392px), 30vw" %}</figure>
       <div class="home__art-body">
         <div class="card-kicker">Sketches</div>
         <div class="card-title">Digital art — {{ site.art | size }} pieces</div>

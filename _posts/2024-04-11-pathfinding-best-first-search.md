@@ -2,7 +2,7 @@
 title: "Pathfinding with Best First Search Algorithm"
 date: 2024-04-11
 type: post
-topic: scraping
+topic: robotics
 tags: [Algorithms]
 origin: medium
 permalink: "/Pathfinding-Algorithm-BFS"
@@ -879,4 +879,4 @@ So here we have two method/function one of them for controlling steps to find sh
 
 ## Demo
 
-<img src="/images/post-1/pathfinding_demo.gif" width="1150" height="450" alt="Demo"/>
+{% include clip.html src="/images/post-1/pathfinding_demo.mp4" poster="/images/post-1/pathfinding_demo.poster.webp" width="1280" height="720" alt="Demo" %}

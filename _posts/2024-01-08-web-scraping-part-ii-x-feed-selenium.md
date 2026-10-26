@@ -8,10 +8,10 @@ origin: medium
 medium_url: https://levelup.gitconnected.com/web-scraping-series-part-ii-x-feed-selenium-c10ceb4b1a12
 image: /images/medium_images/x_feed_selenium.png
 image_color: true
+hero: false
 description: "When the page renders in JavaScript, requests stops being enough — driving an X feed with Selenium."
 ---
 
-## Web Scraping Series Part II — X Feed & Selenium
 
 Welcome back to our Web Scraping Series. In second part, we’re focusing on X, a platform with up-to-minute information. With the help of **Selenium**, we will explore the techniques and tools needed to efficiently scrape data from X. This project will provide practical insights into handling dynamic web content, enabling us to extract valuable data from one of the world’s most active online communities. Whether you’re an engineer trying to learn scraping dynamic data or just trying to scrape data from web for fun purposes this guide is designed for you to navigate the vast and ever-changing data ocean of X.
 

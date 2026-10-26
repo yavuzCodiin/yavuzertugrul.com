@@ -312,7 +312,7 @@ if __name__ == "__main__":
 ### Output(vosk on jetson orin nx 8 gb)
 
 <div class="video-container">
-    <video src="/images/post-9/asr_voskrealtime_test.mp4" controls></video>
+    <video src="/images/post-9/asr_voskrealtime_test.mp4" controls preload="metadata"></video>
 </div>
 
 

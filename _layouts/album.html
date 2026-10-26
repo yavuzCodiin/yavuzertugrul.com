@@ -18,9 +18,10 @@ section: gallery
     {%- for frame in album.frames %}
     <figure class="frame{% if frame.wide %} frame--wide{% endif %}{% if frame.tall %} frame--tall{% endif %}">
       <div class="frame__box">
-        <img src="{{ frame.src | relative_url }}" alt="{{ frame.alt | default: 'Frame' }} {{ forloop.index }}"
-             data-lightbox="{{ frame.src | relative_url }}" role="button" tabindex="0"
-             aria-label="Open frame {{ forloop.index }} full size" loading="lazy">
+        {%- capture frame_alt %}{{ frame.alt | default: 'Frame' }} {{ forloop.index }}{% endcapture -%}
+        {%- capture frame_attrs %}data-lightbox="{{ frame.src | relative_url }}" role="button" tabindex="0" aria-label="Open frame {{ forloop.index }} full size"{% endcapture -%}
+        {%- if frame.wide or frame.tall -%}{%- assign frame_sizes = "(max-width: 1279px) 100vw, 66vw" -%}{%- else -%}{%- assign frame_sizes = "(max-width: 1279px) 50vw, 33vw" -%}{%- endif -%}
+        {% include img.html src=frame.src alt=frame_alt sizes=frame_sizes attrs=frame_attrs %}
       </div>
       <figcaption class="plaque">
         <span class="plaque__title">FRAME {{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>

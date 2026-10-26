@@ -1,0 +1,14 @@
+{%- comment -%}
+  A short silent loop standing in for an animated GIF — bin/clip makes the MP4
+  and its poster from the GIF and prints this include ready to paste.
+  assets/js/clip.js (loaded by _includes/body.html) plays it only while it is on
+  screen; preload="none" means nothing downloads until it gets close. Visitors
+  who ask for reduced motion get the poster and a play button instead.
+
+  include.src     the .mp4
+  include.poster  still frame shown until it plays
+  include.width   pixel size of the clip — with height it reserves the space,
+  include.height  so the page does not jump when the poster arrives
+  include.alt     what the clip shows
+{%- endcomment -%}
+<video class="clip" src="{{ include.src | relative_url }}" poster="{{ include.poster | relative_url }}" width="{{ include.width }}" height="{{ include.height }}" style="aspect-ratio: {{ include.width }} / {{ include.height }}" muted loop playsinline preload="none" aria-label="{{ include.alt | escape }}" data-clip></video>

@@ -20,8 +20,9 @@
   {%- assign topic = site.data.topics | where: "slug", e.topic | first -%}
   <a class="entry" href="{{ e.url | relative_url }}">
     {%- if e.image %}
-    <img class="entry__cover{% if e.type == 'post' and e.image_color != true %} grayscale{% endif %}"
-         src="{{ e.image | relative_url }}" alt="{{ e.image_alt | default: e.title }}" loading="lazy">
+    {%- capture cover_class %}entry__cover{% if e.type == 'post' and e.image_color != true %} grayscale{% endif %}{% endcapture -%}
+    {%- assign cover_alt = e.image_alt | default: e.title -%}
+    {% include img.html src=e.image alt=cover_alt class=cover_class sizes="(max-width: 400px) 72px, (max-width: 1023px) 84px, 120px" %}
     {%- else %}
     {%- comment -%} No image: a neutral plate carrying the topic glyph. {%- endcomment -%}
     <span class="entry__plate" aria-hidden="true">{% include icon.html name=topic.glyph size="30" %}</span>

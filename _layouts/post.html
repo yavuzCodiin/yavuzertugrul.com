@@ -38,15 +38,21 @@ section: writing
         </div>
       </div>
 
-      {%- if page.image %}
+      {%- comment -%}
+        `hero: false` — the image is already the first figure of the body, so the
+        hero would show it twice. The front-matter image still drives the stream
+        thumbnail and the social preview.
+      {%- endcomment -%}
+      {%- if page.image and page.hero != false %}
+      {%- assign hero_alt = page.image_alt | default: page.title -%}
       <figure class="post__hero{% unless page.image_color %} grayscale{% endunless %}">
-        <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+        {% include img.html src=page.image alt=hero_alt eager=true sizes="(max-width: 1023px) calc(100vw - 40px), (max-width: 1279px) calc(100vw - 392px), calc(100vw - 680px)" %}
         {%- if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}
       </figure>
       {%- endif %}
 
       <div class="prose" id="post-body">
-        {{ content }}
+        {% include body.html content=content sizes="(max-width: 1023px) calc(100vw - 40px), (max-width: 1279px) calc(100vw - 392px), calc(100vw - 680px)" %}
       </div>
 
       {%- if page.notes or page.related %}

@@ -1,0 +1,57 @@
+#!/usr/bin/env python3
+"""Subset Ioskeley Mono for the web:  ./bin/fonts
+
+The full fonts (≈95 KB each, 1300+ code points incl. Cyrillic) live in
+_fonts-src/ — the leading underscore keeps them out of the published site.
+This writes subsets to fonts/ covering Latin (Turkish included), Greek,
+punctuation, arrows, maths, box drawing and geometric shapes: everything the
+site uses today plus room for future posts. Glyphs outside the subset fall back
+to the next font in the stack (ui-monospace), never to tofu.
+
+Only the OpenType features browsers switch on by default are kept (calt, ccmp,
+locl, kern, mark, …), so the rendering is unchanged. What goes is Iosevka's
+opt-in ligature sets for specific languages (APLF, CLIK, …) and dlig, frac,
+onum, zero — about half the glyphs, none of which this site can display
+without a font-feature-settings rule it does not have.
+Every name record is kept: the OFL 1.1 licence text and the copyright line
+travel with each file.
+Ioskeley Mono declares no Reserved Font Name, so subsetting is permitted.
+
+Needs fontTools + brotli:  python3 -m pip install --user fonttools brotli
+"""
+import glob, os, sys
+try:
+    from fontTools import subset
+except ImportError:
+    sys.exit("fontTools missing — run:  python3 -m pip install --user fonttools brotli")
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+RANGES = [
+    (0x0020, 0x007E),  # Basic Latin
+    (0x00A0, 0x024F),  # Latin-1 Supplement, Latin Extended-A/B (ğ ş ı İ ç ö ü …)
+    (0x02B0, 0x036F),  # spacing modifiers, combining diacritics
+    (0x0370, 0x03FF),  # Greek (α π Ω in technical posts)
+    (0x2000, 0x20CF),  # punctuation (— ‘ ” …), super/subscripts, currency (€)
+    (0x2100, 0x214F),  # letterlike symbols
+    (0x2190, 0x23FF),  # arrows, maths operators, misc technical
+    (0x2500, 0x25FF),  # box drawing, block elements, geometric shapes (● ▴ ▾)
+    (0xFFFD, 0xFFFD),  # replacement character
+]
+unicodes = [cp for lo, hi in RANGES for cp in range(lo, hi + 1)]
+
+os.makedirs(os.path.join(ROOT, "fonts"), exist_ok=True)
+for src in sorted(glob.glob(os.path.join(ROOT, "_fonts-src", "*.woff2"))):
+    dst = os.path.join(ROOT, "fonts", os.path.basename(src))
+    opts = subset.Options()
+    opts.flavor = "woff2"
+    # fontTools' default list is exactly the default-on set: ccmp, locl, calt,
+    # liga, kern, mark, mkmk, curs, rlig, rclt, …
+    opts.name_IDs = ["*"]
+    opts.name_languages = ["*"]
+    opts.notdef_outline = True
+    font = subset.load_font(src, opts)
+    sub = subset.Subsetter(opts)
+    sub.populate(unicodes=unicodes)
+    sub.subset(font)
+    subset.save_font(font, dst, opts)
+    print(f"{os.path.basename(src):32s} {os.path.getsize(src)/1024:6.1f} KB → {os.path.getsize(dst)/1024:6.1f} KB")

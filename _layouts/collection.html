@@ -14,7 +14,8 @@ section: gallery
     {%- for album in collection.albums %}
     <a class="collection" href="{{ '/gallery/' | append: collection.slug | append: '/' | append: album.slug | append: '/' | relative_url }}">
       <div class="collection__frame">
-        <img src="{{ album.frames[0].src | default: collection.cover | relative_url }}" alt="{{ album.title }}" loading="lazy">
+        {%- assign album_cover = album.frames[0].src | default: collection.cover -%}
+        {% include img.html src=album_cover alt=album.title sizes="(max-width: 1023px) 100vw, (max-width: 1279px) 50vw, 33vw" %}
       </div>
       <div class="collection__row">
         <span class="collection__title">{{ album.title }}</span>

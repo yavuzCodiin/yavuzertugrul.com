@@ -2,37 +2,42 @@
 # one `topic:` from this list, so the tile grid partitions the whole stream and
 # the counts always add up to the entry total.
 #
-# `glyph` names an icon in _includes/icon.html (Lucide, stroke-width 2).
+# A topic is the SUBJECT of an entry, independent of its type: a short note about
+# AI goes under `ai` next to the long AI posts, so someone who opens a tile gets
+# everything on that subject. Life / Mind / Notes are the personal subjects.
+#
+# `description` doubles as the intro line on /writing/<slug>/ and as the rule for
+# filing a new entry. `glyph` names an icon in _includes/icon.html (Lucide).
 
 - slug: robotics
   name: Robotics
   glyph: bot
-  description: Field notes from robots, sensors and the benches they live on.
+  description: Robots, sensors, path planning and the benches they live on
 - slug: ai
   name: AI
   glyph: sparkle
-  description: Models, edge hardware and what the technology can actually do yet.
+  description: Models, AI products and what the technology can actually do yet
 - slug: power
   name: Power
   glyph: zap
-  description: Power electronics, converters and control systems.
+  description: Power electronics, converters and control systems
 - slug: linux
   name: Linux
   glyph: terminal
-  description: The tooling underneath everything else.
+  description: Linux, the terminal and the tooling underneath everything else
 - slug: scraping
   name: Scraping
   glyph: globe
-  description: Pulling data off the web and making something of it.
+  description: Pulling data in — scraping, APIs, pandas, SQLite — and making something of it
 - slug: life
   name: Life
   glyph: sun
-  description: Short notes on days, habits, films and everything around the work.
+  description: Days, habits, health, films, series and games — everything around the work
 - slug: mind
   name: Mind
   glyph: moon
-  description: Thinking about thinking — patience, purpose and the long game.
+  description: Thinking about thinking — purpose, patience, discipline and the long game
 - slug: notes
   name: Notes
   glyph: pen
-  description: Everything else that was worth writing down.
+  description: Gear, setups, opinions and everything else worth writing down

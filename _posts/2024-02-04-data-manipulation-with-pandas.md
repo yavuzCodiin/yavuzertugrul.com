@@ -8,13 +8,14 @@ origin: medium
 medium_url: https://levelup.gitconnected.com/data-manipulation-with-pandas-d1be327c1096
 image: /images/medium_images/data_manipulation_w_pandas.png
 image_color: true
+hero: false
 description: "Selecting, filtering, grouping and reshaping — the pandas operations that carry most day-to-day analysis."
 ---
 
 In today’s world, there’s a resource more important than oil, with the power to shape the future at our fingertips — data. This invaluable asset unlocks the potential to decode human behavior, innovate autonomous vehicles, and pioneer advanced robotics. The principle is straightforward: the more data we harness, the more intelligent our systems become.
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-01.gif' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
+  {% include clip.html src="/images/medium_posts/data-manipulation-with-pandas-01.mp4" poster="/images/medium_posts/data-manipulation-with-pandas-01.poster.webp" width="640" height="640" alt="created with Dall-E 3 by author with ❤" %}
   <figcaption>created with Dall-E 3 by author with ❤</figcaption>
 </figure>
 

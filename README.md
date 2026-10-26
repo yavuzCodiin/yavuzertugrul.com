@@ -54,17 +54,21 @@ _config.yml            collections (art), permalinks, defaults
 _layouts/              default · page · post · note · topic · album · collection
 _includes/             sidebar · topbar+menu · search pill · search dialog
                        lightbox · book-note · owner-box · tag · icon · site-footer
+                       img (responsive <img>) · body (post/note body) · clip
 _sass/                 _tokens · _base · _layout · _components · _pages
 assets/css/main.scss   the only stylesheet
-assets/js/             menu · search · tocspy · lightbox · booknote · owner · filters
+assets/js/             menu · search · tocspy · lightbox · booknote · owner · filters · clip
 _posts/                ALL writing — long posts AND notes (`type: post|note`)
 _art/                  sketch metadata (output: false — rendered on /sketches/)
 _data/                 topics · books · albums · cv · nav · sitemap · home
+                       images.json — written by bin/images, never by hand
 writing.html           the stream;  writing/<topic>.html  one stub per topic
-fonts/                 Ioskeley Mono woff2 (400/500/700/800), self-hosted
+fonts/                 Ioskeley Mono woff2 (400/500/700/800), subset by bin/fonts
+_fonts-src/            the full fonts bin/fonts subsets from (not published)
+images/                curated assets;  images/sized/  WebP copies from bin/images
 bin/new                create an entry;  bin/sync-vault  mirror an Obsidian vault
+bin/images · bin/clip · bin/fonts   the speed tools — see "Speed" below
 _templates/            front-matter templates for post and note
-images/                curated assets
 search.json            build-time search index
 atom.xml               everything;  feed-longform.xml  long-form only
 ```
@@ -73,7 +77,8 @@ atom.xml               everything;  feed-longform.xml  long-form only
 
 The whole site is set in **Ioskeley Mono** — a free Berkeley Mono clone (OFL 1.1,
 github.com/ahatem/IoskeleyMono), self-hosted from `fonts/` in four weights, so the site
-makes no third-party font request. Archivo is gone.
+makes no third-party font request. Archivo is gone. The files in `fonts/` are subsets
+(see "Speed"); the full originals stay in `_fonts-src/`.
 
 Mono sets ~15% wider per character, so the display sizes step down from the Archivo
 original and letter-spacing never goes negative. The steps live in `_sass/_tokens.scss`
@@ -123,6 +128,9 @@ origin: medium                             # optional — adds the outline "medi
 description: One line for cards, search and social previews.
 image: /images/post-10/Post_IMAGE.png
 image_color: true                          # optional — skip the grayscale wrapper
+hero: false                                # optional — the image is already the first figure
+                                           #   of the body: keep it for the list thumbnail and
+                                           #   social card, don't show it twice on the page
 date_display: "—"                          # optional — for Medium posts with no known date
 notes:                                     # optional — numbered end matter
   - Tested on ROS2 Humble.
@@ -154,8 +162,12 @@ the file with today's date, a slug and the right front matter, then opens `$EDIT
 
 **Topics.** Every entry carries exactly one `topic:` from `_data/topics.yml`
 (robotics · ai · power · linux · scraping · life · mind · notes), so the tile grid on
-`/writing/` partitions the whole stream and its counts always add up. Adding a topic =
-one entry in that file, a `writing/<slug>.html` stub, and a glyph in
+`/writing/` partitions the whole stream and its counts always add up. A topic is the
+**subject**, not the type: a short note about AI goes under `ai`, next to the long AI
+posts. Of the personal three, `life` is days, habits, health, films and games; `mind` is
+thinking about thinking — purpose, patience, discipline; `notes` is gear, setups,
+opinions and everything else. Each topic's `description` in that file is the filing rule.
+Adding a topic = one entry in that file, a `writing/<slug>.html` stub, and a glyph in
 `_includes/icon.html`.
 
 **A sketch** — `_art/NN-slug.md`, front matter only:
@@ -178,6 +190,38 @@ slugs; four lines of front matter, no body.
 
 ---
 
+## Speed
+
+Images are most of a page's weight, so a visitor never downloads the original file when
+a lighter one will look the same.
+
+**After adding or changing images, run `./bin/images` and commit what it writes**
+(`images/sized/` and `_data/images.json`). It makes WebP copies at 320 / 720 / 1440 px of
+every cover, tile, hero and body image — never upscaled, and only what changed is redone.
+`_includes/img.html` (templates) and `_includes/body.html` (post bodies) turn the index
+into `srcset`, so each screen gets the smallest copy that is still sharp. The markdown is
+never rewritten: keep writing `<img src="/images/…">` or `![](…)` as usual. Forgetting the
+run costs speed, never correctness — an image missing from the index is served as the
+original. `./bin/images --clean` also deletes copies nothing uses any more.
+
+**Animated GIF → `./bin/clip images/…/name.gif`.** A screen-recording GIF is the heaviest
+thing a page can carry (the pathfinding demo: 7.4 MB as GIF, 0.75 MB as MP4, and animated
+WebP came out larger than the GIF). The script writes `name.mp4` and `name.poster.webp`
+next to the GIF and prints the `{% include clip.html … %}` line to put where the `<img>`
+was. The clip loops silently like the GIF, but downloads nothing until it scrolls near
+and pauses off-screen; reduced-motion visitors get a play button instead.
+
+**Fonts.** `./bin/fonts` rebuilds `fonts/` from `_fonts-src/`: Latin (with Turkish), Greek,
+punctuation, arrows, math and box drawing, keeping only the OpenType features that are on
+by default — 94 KB → 66 KB per weight, rendering pixel-identical. Run it only after
+changing a font file or if a post needs a script outside those ranges.
+
+The tools need Python 3 with `python3 -m pip install --user pillow fonttools brotli`, and
+ffmpeg (`brew install ffmpeg`) for clips. GitHub Pages never runs them — their output is
+committed.
+
+---
+
 ## Interactions
 
 | Behaviour | File |
@@ -189,6 +233,7 @@ slugs; four lines of front matter, no body.
 | Book-note modal | `assets/js/booknote.js` |
 | Sketch chip filtering, "Load more" | `assets/js/filters.js` |
 | Owner mode | `assets/js/owner.js` |
+| GIF-style clips: load near view, play on screen | `assets/js/clip.js` |
 
 Every overlay closes on ESC and on backdrop click. Nothing scrolls the page on load.
 
@@ -206,10 +251,10 @@ visitor's way. Anything genuinely private must never be committed to this reposi
 ## Content status
 
 Everything from the old repository is migrated and now lives in one stream: **77 entries**
-— 21 long-form posts (10 with full bodies and their old URLs preserved via explicit
-`permalink:` — `/Lidar_part_1`, `/WSL`, … — plus 11 Medium pieces with real publication
-dates and a "read on Medium ↗" link) and 56 notes. Also **23 sketches** and **42 books**.
-All counts on the site are computed from this content, so the topic tiles always add up.
+— 21 long-form posts, all with full bodies (old URLs such as `/Lidar_part_1` and `/WSL`
+are kept via explicit `permalink:`; the 12 that first appeared on Medium carry the
+outline "medium" chip), and 56 notes. Also **23 sketches** and **42 books**. All counts on
+the site are computed from this content, so the topic tiles always add up.
 
 Old individual thought URLs (`/thoughts/2024-03-19-pain` style) were **not** preserved —
 those pages were broken on the old site (the layout rendered every thought on every page)
@@ -217,13 +262,6 @@ and nothing linked to them; notes now live at root-level `/<slug>` like every ot
 
 ## Still to do (owner)
 
-- [ ] **Medium full texts** — the 11 `origin: medium` entries in `_posts/` are marked
-      `migrated: false` and link out to Medium. Paste each article's body in and drop the
-      note + flag. (The Atomik Alışkanlıklar entry also needs its real publish date —
-      Medium blocked the date lookup; it shows "—" until then.)
-- [ ] **Topics** — every entry carries a best-effort `topic:` from the eight-topic set.
-      The mapping was mechanical (post tag / old thought topic → tile); skim `_posts/`
-      and move entries where the guess is off. The tile counts follow automatically.
 - [ ] **Note excerpts** — the stream auto-truncates the note body for the one-line
       excerpt. Add a `description:` to any entry whose opening sentence reads badly
       cut off.
@@ -235,8 +273,6 @@ and nothing linked to them; notes now live at root-level `/<slug>` like every ot
       two placeholder `want_to_read` lines.
 - [ ] **Gallery** — replace the stand-in frames in `_data/albums.yml` with the real album
       photos and descriptions; build out the Gaming and AI Generated collections.
-- [ ] **Repository name** — `_config.yml → repository` is used only for the owner-mode raw
-      markdown link. Point it at the new repo.
 
 ---
 
@@ -247,14 +283,11 @@ publishing costs writing. The flow this repo is built for:
 
 1. **Obsidian** holds the vault; **word-smith** (github.com/sadsnake1/word-smith) sits on
    top as the distraction-free editor. Entries are plain markdown with Jekyll front matter.
-2. Point the vault at the repo so there is no copy step — a symlink is the whole
-   integration:
-   ```bash
-   ln -s ~/Obsidian/Site/entries  _posts
-   ln -s ~/Obsidian/Site/images   images
-   ```
-   If you would rather keep them separate, `./bin/sync-vault ~/Obsidian/Site` mirrors
-   `entries/` → `_posts/` and `images/` → `images/`.
+2. **Write inside the repository**, so there is no copy step. Do **not** symlink
+   `_posts/` or `images/` to a folder outside it: git commits a symlink as a link, not the
+   files behind it, so GitHub Pages would build the site with no posts at all. If you
+   would rather keep the vault separate, `./bin/sync-vault ~/Obsidian/Site` mirrors
+   `entries/` → `_posts/` and `images/` → `images/` before you commit.
 3. **Publish = commit + push.** The obsidian-git plugin can do it on a timer; GitHub Pages
    builds. No local Jekyll run is needed for routine publishing.
 4. `_templates/post.md` and `_templates/note.md` double as Obsidian Templater templates,
@@ -265,5 +298,8 @@ layout code.
 
 ## Deploying
 
-GitHub Pages, `CNAME` → `yavuzertugrul.com`. Push to the default branch and enable Pages on
-it. `Gemfile` pins `github-pages` so a local build matches what Pages runs.
+GitHub Pages builds the `main` branch of `yavuzCodiin/yavuzertugrul.com` (classic build,
+custom domain from `CNAME`, HTTPS enforced). Publishing = pushing to `main`; the build
+takes about a minute. Pages runs its own pinned Jekyll and ignores the Gemfile — that is
+only for local preview (see "Running it") — and it never runs the `bin/` tools, so their
+output must be committed.

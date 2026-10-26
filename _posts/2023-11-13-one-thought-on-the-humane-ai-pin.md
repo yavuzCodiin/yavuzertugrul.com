@@ -8,10 +8,10 @@ origin: medium
 medium_url: https://yavuzertugrul.medium.com/one-thought-on-the-hu-ma-ne-ai-pin-3c77938973f5
 image: /images/medium_images/humane.png
 image_color: true
+hero: false
 description: "A hardware launch that promised a post-phone future, and why the demo did not convince me."
 ---
 
-## One Thought on the Hu.Ma.Ne AI Pin
 
 <figure>
   <img src="{{ '/images/medium_posts/one-thought-on-the-humane-ai-pin-01.png' | relative_url }}" alt="hu.ma.ne ai pin" loading="lazy">

@@ -1,0 +1,36 @@
+{%- comment -%}
+  Responsive <img> for every template-rendered image.
+
+  include.src    original web path, e.g. /images/sketch-library/city.jpg  (required)
+  include.alt    alt text
+  include.sizes  the `sizes` attribute — how wide the image renders (default 100vw)
+  include.class  class attribute
+  include.style  inline style (object-position and the like)
+  include.eager  true for the page's largest above-the-fold image (LCP):
+                 loads immediately with fetchpriority=high instead of lazily
+  include.attrs  extra raw attributes (data-*, role, tabindex…)
+
+  Reads _data/images.json, which bin/images writes alongside the WebP
+  derivatives. An image that is not in the index — added from another machine
+  without running bin/images — is served as the plain original: a forgotten run
+  makes a page slower, never broken.
+{%- endcomment -%}
+{%- assign _img_src = include.src -%}
+{%- assign _img_meta = site.data.images[_img_src] -%}
+{%- if include.eager -%}
+  {%- capture _img_load %}loading="eager" fetchpriority="high"{% endcapture -%}
+{%- else -%}
+  {%- capture _img_load %}loading="lazy"{% endcapture -%}
+{%- endif -%}
+{%- if _img_meta -%}
+  {%- assign _img_rel = _img_src | remove_first: '/images/' -%}
+  {%- capture _img_set -%}
+    {%- for _img_pair in _img_meta.r -%}
+      {{ '/images/sized/' | append: _img_pair[0] | append: '/' | append: _img_rel | append: '.webp' | relative_url }} {{ _img_pair[1] }}w{% unless forloop.last %}, {% endunless %}
+    {%- endfor -%}
+  {%- endcapture -%}
+  {%- if _img_meta.r["720"] -%}{%- assign _img_best = "720" -%}{%- else -%}{%- assign _img_best = "320" -%}{%- endif -%}
+<img src="{{ '/images/sized/' | append: _img_best | append: '/' | append: _img_rel | append: '.webp' | relative_url }}" srcset="{{ _img_set }}" sizes="{{ include.sizes | default: '100vw' }}" width="{{ _img_meta.w }}" height="{{ _img_meta.h }}" alt="{{ include.alt | escape }}"{% if include.class %} class="{{ include.class }}"{% endif %}{% if include.style %} style="{{ include.style }}"{% endif %} {{ _img_load }} decoding="async"{% if include.attrs %} {{ include.attrs }}{% endif %}>
+{%- else -%}
+<img src="{{ _img_src | relative_url }}" alt="{{ include.alt | escape }}"{% if include.class %} class="{{ include.class }}"{% endif %}{% if include.style %} style="{{ include.style }}"{% endif %} {{ _img_load }} decoding="async"{% if include.attrs %} {{ include.attrs }}{% endif %}>
+{%- endif -%}

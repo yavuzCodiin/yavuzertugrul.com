@@ -2,7 +2,7 @@
 title: "Child Licence"
 date: 2024-09-10
 type: note
-topic: life
+topic: notes
 layout: note
 image: /images/visual_thoughts/child_licence.png
 image_alt: "Child Licence"

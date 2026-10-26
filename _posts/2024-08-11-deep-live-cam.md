@@ -59,7 +59,7 @@ I combined all the outputs together in the first image, and in the second image 
 <br>
 
 <div class="image-container" style="text-align: center;">
-    <img src="/images/post-8/test_deep_live_cam.gif" alt="live_demo" loading="lazy" />
+    {% include clip.html src="/images/post-8/test_deep_live_cam.mp4" poster="/images/post-8/test_deep_live_cam.poster.webp" width="1280" height="720" alt="live_demo" %}
 </div>
 
 <br>

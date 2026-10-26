@@ -8,6 +8,7 @@ origin: medium
 medium_url: https://levelup.gitconnected.com/currency-converter-app-with-apilayers-fixer-api-and-pyqt-framework-43b2e4292d09
 image: /images/medium_images/currency_converter_app.png
 image_color: true
+hero: false
 description: "A desktop currency converter on APILayer's Fixer API, with a PyQt front end."
 ---
 

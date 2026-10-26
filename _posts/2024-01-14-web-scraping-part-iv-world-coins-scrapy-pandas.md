@@ -11,7 +11,6 @@ image_color: true
 description: "Scrapy for the crawl, pandas for the analysis — antique coin data from collection to chart."
 ---
 
-## Web Scraping Series Part IV — World Coins with Scrapy & Data Analysis with Pandas
 
 As an enthusiastic collector of antique coins, I have always been fascinated by the rich history each piece embodies. These coins are not only currency, but also links to our past. Some may have been used in times of war, others for everyday transactions like buying food, book, clothes or acquiring a new home. Each coin holds a story, a glimpse into the lives and times of those who once held them.
 
@@ -49,7 +48,7 @@ First of all I will use python virtual environment to compile my project and I w
 ## Virtual Environment
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-02.gif' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
+  {% include clip.html src="/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-02.mp4" poster="/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-02.poster.webp" width="640" height="640" alt="created with Dall-E 3 by author with ❤" %}
   <figcaption>created with Dall-E 3 by author with ❤</figcaption>
 </figure>
 
@@ -179,7 +178,7 @@ That’s it for now for more information you can check documentation I gave abov
 ## What is Pandas?
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-06.gif' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
+  {% include clip.html src="/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-06.mp4" poster="/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-06.poster.webp" width="640" height="640" alt="created with Dall-E 3 by author with ❤" %}
   <figcaption>created with Dall-E 3 by author with ❤</figcaption>
 </figure>
 

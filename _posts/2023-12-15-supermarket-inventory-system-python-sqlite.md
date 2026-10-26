@@ -8,10 +8,10 @@ origin: medium
 medium_url: https://levelup.gitconnected.com/building-a-simple-supermarket-inventory-system-with-python-and-sqlite-4382fbd6c596
 image: /images/medium_images/sqlite_market_inventory.png
 image_color: true
+hero: false
 description: "Building a small inventory system end to end with Python and SQLite — schema, CRUD and the CLI around it."
 ---
 
-## Building a Simple Supermarket Inventory System with Python and SQLite
 
 <figure>
   <img src="{{ '/images/medium_posts/supermarket-inventory-system-python-sqlite-01.png' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">

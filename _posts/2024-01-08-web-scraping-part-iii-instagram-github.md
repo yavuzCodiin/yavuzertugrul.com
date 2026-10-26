@@ -8,6 +8,7 @@ origin: medium
 medium_url: https://levelup.gitconnected.com/web-scraping-series-part-iii-practice-with-instagram-github-99359590198f
 image: /images/medium_images/github_instagram_selenium.png
 image_color: true
+hero: false
 description: "Two practical Selenium targets: an Instagram non-follower finder and a GitHub repository scraper."
 ---
 

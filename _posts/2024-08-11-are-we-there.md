@@ -2,7 +2,7 @@
 title: "Are We There?"
 date: 2024-08-11
 type: note
-topic: notes
+topic: ai
 layout: note
 image: /images/visual_thoughts/are_we_there.png
 image_alt: "Are We There?"

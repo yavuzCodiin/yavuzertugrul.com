@@ -8,10 +8,10 @@ origin: medium
 medium_url: https://levelup.gitconnected.com/web-scraping-series-part-i-imdbs-most-popular-movies-with-requests-and-beautifulsoup-19dfcc0f524a
 image: /images/medium_images/BeautifulSoup_imdb.png
 image_color: true
+hero: false
 description: "Scraping IMDb's most popular movies with requests and BeautifulSoup — the series starts with static pages."
 ---
 
-## Web Scraping Series Part I — IMDb’s Most Popular Movies with Requests and BeautifulSoup
 
 So, if you ask me about the most important skill of this century, I would definitely tell you it’s data literacy. Understanding data is crucial because when you manage to comprehend and make it meaningful, that’s where you stand out.
 

@@ -1,0 +1,2940 @@
+{
+"/images/bookshelf_library/2025/Karabibik.jpg": {
+"h": 936,
+"r": {
+"320": 320
+},
+"w": 601
+},
+"/images/bookshelf_library/2025/ataturkun_100_gunu.jpeg": {
+"h": 1244,
+"r": {
+"320": 320
+},
+"w": 800
+},
+"/images/bookshelf_library/2025/bi-cli-cnmeyen-bi-cr-kadinin-mektubu.jpg": {
+"h": 362,
+"r": {
+"320": 231
+},
+"w": 231
+},
+"/images/bookshelf_library/2025/dönüsüm.jpg": {
+"h": 700,
+"r": {
+"320": 320
+},
+"w": 428
+},
+"/images/bookshelf_library/2025/vatan-yahut-silistre.jpg": {
+"h": 600,
+"r": {
+"320": 320
+},
+"w": 385
+},
+"/images/bookshelf_library/read_2023/Prometheus_Bound.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 625
+},
+"/images/bookshelf_library/read_2023/ai_harvard.jpg": {
+"h": 500,
+"r": {
+"320": 320
+},
+"w": 333
+},
+"/images/bookshelf_library/read_2023/elon_musk.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 662
+},
+"/images/bookshelf_library/read_2023/eski_cagın_buyuk_komutanları.jpeg": {
+"h": 779,
+"r": {
+"320": 320
+},
+"w": 500
+},
+"/images/bookshelf_library/read_2023/gelecegi_görenler.jpg": {
+"h": 600,
+"r": {
+"320": 320
+},
+"w": 385
+},
+"/images/bookshelf_library/read_2023/google_smart_book.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 634
+},
+"/images/bookshelf_library/read_2023/quest_for_ai.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 667
+},
+"/images/bookshelf_library/read_2023/snowden.jpeg": {
+"h": 278,
+"r": {
+"320": 181
+},
+"w": 181
+},
+"/images/bookshelf_library/read_2023/tesla_portrait_with_masks.png": {
+"h": 275,
+"r": {
+"320": 183
+},
+"w": 183
+},
+"/images/bookshelf_library/read_2024/Norse_Myths_R.I_Page.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 706
+},
+"/images/bookshelf_library/read_2024/atomic_habits.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 663
+},
+"/images/bookshelf_library/read_2024/ikigai.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 715
+},
+"/images/bookshelf_library/read_2024/power_and_progress.jpg": {
+"h": 500,
+"r": {
+"320": 320
+},
+"w": 323
+},
+"/images/bookshelf_library/read_2024/rise_of_robots.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 667
+},
+"/images/bookshelf_library/read_before_2023/1984.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 696
+},
+"/images/bookshelf_library/read_before_2023/AnimalFarm.jpg": {
+"h": 1493,
+"r": {
+"320": 320
+},
+"w": 980
+},
+"/images/bookshelf_library/read_before_2023/angels_and_demons.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 644
+},
+"/images/bookshelf_library/read_before_2023/avrupa_tarihi_üzerine_yazılar.jpeg": {
+"h": 779,
+"r": {
+"320": 320
+},
+"w": 500
+},
+"/images/bookshelf_library/read_before_2023/brave_new_world.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 650
+},
+"/images/bookshelf_library/read_before_2023/buyology.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 649
+},
+"/images/bookshelf_library/read_before_2023/chess_story.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 623
+},
+"/images/bookshelf_library/read_before_2023/davinci_code.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 641
+},
+"/images/bookshelf_library/read_before_2023/digital_fortress.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 550
+},
+"/images/bookshelf_library/read_before_2023/fourth_ındustrıal_revolutıon.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 667
+},
+"/images/bookshelf_library/read_before_2023/harry_potter_and_goblet_fire.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 688
+},
+"/images/bookshelf_library/read_before_2023/inferno.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 657
+},
+"/images/bookshelf_library/read_before_2023/les_misarables.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 652
+},
+"/images/bookshelf_library/read_before_2023/little_prince.jpg": {
+"h": 640,
+"r": {
+"320": 320
+},
+"w": 456
+},
+"/images/bookshelf_library/read_before_2023/lost_symbol.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 660
+},
+"/images/bookshelf_library/read_before_2023/origin.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 661
+},
+"/images/bookshelf_library/read_before_2023/outliers.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 630
+},
+"/images/bookshelf_library/read_before_2023/ted.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 612
+},
+"/images/bookshelf_library/read_before_2023/tesla_aforizmalar.jpg": {
+"h": 600,
+"r": {
+"320": 320
+},
+"w": 384
+},
+"/images/bookshelf_library/read_before_2023/the_alchemist.jpg": {
+"h": 1000,
+"r": {
+"320": 320
+},
+"w": 652
+},
+"/images/bookshelf_library/read_before_2023/the_art_of_war.jpg": {
+"h": 2120,
+"r": {
+"320": 320
+},
+"w": 1400
+},
+"/images/bookshelf_library/read_before_2023/the_last_day_of_a_condemned_man.jpg": {
+"h": 1915,
+"r": {
+"320": 320
+},
+"w": 1200
+},
+"/images/bookshelf_library/read_before_2023/the_roman_empire_and_its_germanic_people.jpg": {
+"h": 350,
+"r": {
+"320": 233
+},
+"w": 233
+},
+"/images/ggallery/ai_gen.png": {
+"h": 500,
+"r": {
+"320": 320,
+"720": 489
+},
+"w": 489
+},
+"/images/ggallery/gaming.png": {
+"h": 301,
+"r": {
+"320": 320,
+"720": 412
+},
+"w": 412
+},
+"/images/ggallery/photography.png": {
+"h": 641,
+"r": {
+"320": 320,
+"720": 533
+},
+"w": 533
+},
+"/images/medium_images/Atomik_Alışkanlıklar.png": {
+"h": 556,
+"r": {
+"320": 320,
+"720": 559
+},
+"w": 559
+},
+"/images/medium_images/BeautifulSoup_imdb.png": {
+"h": 1024,
+"r": {
+"1440": 1024,
+"320": 320,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_images/World_Coins_with_Scrapy_&_Data_Analysis_with_Pandas.png": {
+"h": 677,
+"r": {
+"320": 320,
+"720": 682
+},
+"w": 682
+},
+"/images/medium_images/alphago.png": {
+"h": 668,
+"r": {
+"320": 320,
+"720": 668
+},
+"w": 668
+},
+"/images/medium_images/currency_converter_app.png": {
+"h": 1024,
+"r": {
+"1440": 1024,
+"320": 320,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_images/data_manipulation_w_pandas.png": {
+"h": 527,
+"r": {
+"320": 320,
+"720": 526
+},
+"w": 526
+},
+"/images/medium_images/github_instagram_selenium.png": {
+"h": 1024,
+"r": {
+"1440": 1024,
+"320": 320,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_images/humane.png": {
+"h": 587,
+"r": {
+"320": 320,
+"720": 670
+},
+"w": 670
+},
+"/images/medium_images/learning_types_in_ml.png": {
+"h": 638,
+"r": {
+"320": 320,
+"720": 672
+},
+"w": 672
+},
+"/images/medium_images/sqlite_market_inventory.png": {
+"h": 659,
+"r": {
+"320": 320,
+"720": 665
+},
+"w": 665
+},
+"/images/medium_images/x_feed_selenium.png": {
+"h": 671,
+"r": {
+"320": 320,
+"720": 672
+},
+"w": 672
+},
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-01.png": {
+"h": 700,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-02.png": {
+"h": 487,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-03.png": {
+"h": 317,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-04.png": {
+"h": 360,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-05.png": {
+"h": 402,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-06.png": {
+"h": 328,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-07.png": {
+"h": 345,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-08.png": {
+"h": 321,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-09.png": {
+"h": 392,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-10.png": {
+"h": 309,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-01.png": {
+"h": 560,
+"r": {
+"720": 564
+},
+"w": 564
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-02.jpg": {
+"h": 363,
+"r": {
+"720": 459
+},
+"w": 459
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-03.png": {
+"h": 319,
+"r": {
+"720": 376
+},
+"w": 376
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-04.png": {
+"h": 933,
+"r": {
+"1440": 940,
+"720": 720
+},
+"w": 940
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-05.jpeg": {
+"h": 1369,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-06.jpeg": {
+"h": 1369,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-07.jpeg": {
+"h": 720,
+"r": {
+"1440": 960,
+"720": 720
+},
+"w": 960
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-08.jpeg": {
+"h": 768,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-09.jpeg": {
+"h": 766,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-10.jpeg": {
+"h": 766,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-11.png": {
+"h": 854,
+"r": {
+"1440": 827,
+"720": 720
+},
+"w": 827
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-12.png": {
+"h": 269,
+"r": {
+"720": 350
+},
+"w": 350
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-13.png": {
+"h": 290,
+"r": {
+"720": 268
+},
+"w": 268
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-14.png": {
+"h": 718,
+"r": {
+"1440": 957,
+"720": 720
+},
+"w": 957
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-15.png": {
+"h": 501,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-16.png": {
+"h": 549,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-17.png": {
+"h": 569,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-18.png": {
+"h": 494,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-19.png": {
+"h": 238,
+"r": {
+"720": 476
+},
+"w": 476
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-20.png": {
+"h": 540,
+"r": {
+"720": 592
+},
+"w": 592
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-21.png": {
+"h": 555,
+"r": {
+"720": 557
+},
+"w": 557
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-22.png": {
+"h": 582,
+"r": {
+"720": 698
+},
+"w": 698
+},
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-23.png": {
+"h": 178,
+"r": {
+"720": 448
+},
+"w": 448
+},
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-01.png": {
+"h": 1024,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-02.png": {
+"h": 891,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-03.png": {
+"h": 894,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-04.png": {
+"h": 819,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-05.png": {
+"h": 238,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-06.png": {
+"h": 609,
+"r": {
+"1440": 749,
+"720": 720
+},
+"w": 749
+},
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-07.png": {
+"h": 870,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-08.jpg": {
+"h": 918,
+"r": {
+"1440": 974,
+"720": 720
+},
+"w": 974
+},
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-09.png": {
+"h": 306,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-10.png": {
+"h": 942,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-11.png": {
+"h": 392,
+"r": {
+"720": 697
+},
+"w": 697
+},
+"/images/medium_posts/data-manipulation-with-pandas-02.png": {
+"h": 329,
+"r": {
+"1440": 850,
+"720": 720
+},
+"w": 850
+},
+"/images/medium_posts/data-manipulation-with-pandas-03.png": {
+"h": 423,
+"r": {
+"1440": 849,
+"720": 720
+},
+"w": 849
+},
+"/images/medium_posts/data-manipulation-with-pandas-05.png": {
+"h": 260,
+"r": {
+"1440": 984,
+"720": 720
+},
+"w": 984
+},
+"/images/medium_posts/data-manipulation-with-pandas-07.png": {
+"h": 269,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/data-manipulation-with-pandas-08.png": {
+"h": 343,
+"r": {
+"1440": 888,
+"720": 720
+},
+"w": 888
+},
+"/images/medium_posts/data-manipulation-with-pandas-09.png": {
+"h": 354,
+"r": {
+"1440": 824,
+"720": 720
+},
+"w": 824
+},
+"/images/medium_posts/data-manipulation-with-pandas-10.png": {
+"h": 329,
+"r": {
+"1440": 897,
+"720": 720
+},
+"w": 897
+},
+"/images/medium_posts/data-manipulation-with-pandas-11.png": {
+"h": 172,
+"r": {
+"1440": 932,
+"720": 720
+},
+"w": 932
+},
+"/images/medium_posts/data-manipulation-with-pandas-12.png": {
+"h": 144,
+"r": {
+"720": 286
+},
+"w": 286
+},
+"/images/medium_posts/data-manipulation-with-pandas-13.png": {
+"h": 128,
+"r": {
+"720": 357
+},
+"w": 357
+},
+"/images/medium_posts/data-manipulation-with-pandas-14.png": {
+"h": 181,
+"r": {
+"720": 414
+},
+"w": 414
+},
+"/images/medium_posts/data-manipulation-with-pandas-15.png": {
+"h": 390,
+"r": {
+"720": 434
+},
+"w": 434
+},
+"/images/medium_posts/data-manipulation-with-pandas-16.png": {
+"h": 240,
+"r": {
+"1440": 900,
+"720": 720
+},
+"w": 900
+},
+"/images/medium_posts/data-manipulation-with-pandas-17.png": {
+"h": 387,
+"r": {
+"720": 227
+},
+"w": 227
+},
+"/images/medium_posts/data-manipulation-with-pandas-19.png": {
+"h": 506,
+"r": {
+"1440": 1011,
+"720": 720
+},
+"w": 1011
+},
+"/images/medium_posts/data-manipulation-with-pandas-20.png": {
+"h": 505,
+"r": {
+"1440": 831,
+"720": 720
+},
+"w": 831
+},
+"/images/medium_posts/data-manipulation-with-pandas-21.png": {
+"h": 547,
+"r": {
+"1440": 842,
+"720": 720
+},
+"w": 842
+},
+"/images/medium_posts/data-manipulation-with-pandas-23.png": {
+"h": 52,
+"r": {
+"1440": 911,
+"720": 720
+},
+"w": 911
+},
+"/images/medium_posts/learning-types-in-machine-learning-03.png": {
+"h": 307,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/learning-types-in-machine-learning-05.png": {
+"h": 144,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/learning-types-in-machine-learning-06.png": {
+"h": 418,
+"r": {
+"720": 414
+},
+"w": 414
+},
+"/images/medium_posts/learning-types-in-machine-learning-07.png": {
+"h": 252,
+"r": {
+"720": 585
+},
+"w": 585
+},
+"/images/medium_posts/learning-types-in-machine-learning-08.png": {
+"h": 700,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/learning-types-in-machine-learning-10.jpg": {
+"h": 394,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/learning-types-in-machine-learning-11.png": {
+"h": 430,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/one-thought-on-the-humane-ai-pin-01.png": {
+"h": 619,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/one-thought-on-the-humane-ai-pin-02.png": {
+"h": 394,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/one-thought-on-the-humane-ai-pin-03.png": {
+"h": 394,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/one-thought-on-the-humane-ai-pin-04.png": {
+"h": 394,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/one-thought-on-the-humane-ai-pin-05.png": {
+"h": 700,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/one-thought-on-the-humane-ai-pin-06.png": {
+"h": 394,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/one-thought-on-the-humane-ai-pin-07.png": {
+"h": 437,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/supermarket-inventory-system-python-sqlite-01.png": {
+"h": 700,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/supermarket-inventory-system-python-sqlite-02.png": {
+"h": 700,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/supermarket-inventory-system-python-sqlite-03.png": {
+"h": 577,
+"r": {
+"720": 615
+},
+"w": 615
+},
+"/images/medium_posts/supermarket-inventory-system-python-sqlite-04.png": {
+"h": 625,
+"r": {
+"720": 586
+},
+"w": 586
+},
+"/images/medium_posts/supermarket-inventory-system-python-sqlite-05.png": {
+"h": 700,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/supermarket-inventory-system-python-sqlite-06.png": {
+"h": 700,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-01.png": {
+"h": 1024,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-02.png": {
+"h": 1000,
+"r": {
+"1440": 1000,
+"720": 720
+},
+"w": 1000
+},
+"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-03.png": {
+"h": 723,
+"r": {
+"1440": 844,
+"720": 720
+},
+"w": 844
+},
+"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-04.png": {
+"h": 875,
+"r": {
+"1440": 828,
+"720": 720
+},
+"w": 828
+},
+"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-05.png": {
+"h": 369,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-06.png": {
+"h": 220,
+"r": {
+"1440": 966,
+"720": 720
+},
+"w": 966
+},
+"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-07.png": {
+"h": 665,
+"r": {
+"1440": 783,
+"720": 720
+},
+"w": 783
+},
+"/images/medium_posts/web-scraping-part-ii-x-feed-selenium-01.png": {
+"h": 1024,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/web-scraping-part-ii-x-feed-selenium-02.png": {
+"h": 1024,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/web-scraping-part-ii-x-feed-selenium-04.png": {
+"h": 204,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/web-scraping-part-ii-x-feed-selenium-05.png": {
+"h": 446,
+"r": {
+"1440": 798,
+"720": 720
+},
+"w": 798
+},
+"/images/medium_posts/web-scraping-part-ii-x-feed-selenium-06.png": {
+"h": 500,
+"r": {
+"1440": 846,
+"720": 720
+},
+"w": 846
+},
+"/images/medium_posts/web-scraping-part-iii-instagram-github-01.png": {
+"h": 1024,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/web-scraping-part-iii-instagram-github-02.png": {
+"h": 1024,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/web-scraping-part-iii-instagram-github-03.png": {
+"h": 559,
+"r": {
+"1440": 901,
+"720": 720
+},
+"w": 901
+},
+"/images/medium_posts/web-scraping-part-iii-instagram-github-04.png": {
+"h": 630,
+"r": {
+"1440": 876,
+"720": 720
+},
+"w": 876
+},
+"/images/medium_posts/web-scraping-part-iii-instagram-github-05.png": {
+"h": 1024,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-01.jpeg": {
+"h": 1368,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-04.png": {
+"h": 1024,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-05.png": {
+"h": 352,
+"r": {
+"720": 261
+},
+"w": 261
+},
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-07.png": {
+"h": 142,
+"r": {
+"720": 457
+},
+"w": 457
+},
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-08.png": {
+"h": 53,
+"r": {
+"720": 450
+},
+"w": 450
+},
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-09.png": {
+"h": 809,
+"r": {
+"720": 629
+},
+"w": 629
+},
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-10.png": {
+"h": 267,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-16.png": {
+"h": 81,
+"r": {
+"1440": 898,
+"720": 720
+},
+"w": 898
+},
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-18.png": {
+"h": 600,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-19.png": {
+"h": 417,
+"r": {
+"720": 624
+},
+"w": 624
+},
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-20.png": {
+"h": 204,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-21.png": {
+"h": 87,
+"r": {
+"720": 148
+},
+"w": 148
+},
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-22.png": {
+"h": 727,
+"r": {
+"1440": 739,
+"720": 720
+},
+"w": 739
+},
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-23.png": {
+"h": 883,
+"r": {
+"1440": 864,
+"720": 720
+},
+"w": 864
+},
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-24.png": {
+"h": 773,
+"r": {
+"720": 443
+},
+"w": 443
+},
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-25.png": {
+"h": 500,
+"r": {
+"1440": 1024,
+"720": 720
+},
+"w": 1024
+},
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-26.png": {
+"h": 71,
+"r": {
+"720": 509
+},
+"w": 509
+},
+"/images/post-1/board_metrics.jpg": {
+"h": 734,
+"r": {
+"1440": 1440,
+"720": 720
+},
+"w": 1457
+},
+"/images/post-1/cell_center.png": {
+"h": 336,
+"r": {
+"720": 623
+},
+"w": 623
+},
+"/images/post-1/empty_and_walled_maze.jpg": {
+"h": 510,
+"r": {
+"1440": 1076,
+"720": 720
+},
+"w": 1076
+},
+"/images/post-1/finding_path_maze.png": {
+"h": 875,
+"r": {
+"1440": 1104,
+"720": 720
+},
+"w": 1104
+},
+"/images/post-1/floyd_warshall.jpg": {
+"h": 1028,
+"r": {
+"1440": 1131,
+"720": 720
+},
+"w": 1131
+},
+"/images/post-1/floyd_warshall_2.jpg": {
+"h": 1083,
+"r": {
+"1440": 1149,
+"720": 720
+},
+"w": 1149
+},
+"/images/post-1/floyd_warshall_3.jpg": {
+"h": 680,
+"r": {
+"1440": 1164,
+"720": 720
+},
+"w": 1164
+},
+"/images/post-1/general_process.jpg": {
+"h": 1295,
+"r": {
+"1440": 954,
+"720": 720
+},
+"w": 954
+},
+"/images/post-1/get_size.jpg": {
+"h": 513,
+"r": {
+"1440": 880,
+"720": 720
+},
+"w": 880
+},
+"/images/post-1/manhattan_distance.jpg": {
+"h": 1000,
+"r": {
+"1440": 1440,
+"720": 720
+},
+"w": 1572
+},
+"/images/post-1/what_is_pathfinding.jpg": {
+"h": 1024,
+"r": {
+"1440": 1024,
+"320": 320,
+"720": 720
+},
+"w": 1024
+},
+"/images/post-10/Post_IMAGE.png": {
+"h": 735,
+"r": {
+"1440": 1186,
+"320": 320,
+"720": 720
+},
+"w": 1186
+},
+"/images/post-10/how_lidar_works.png": {
+"h": 476,
+"r": {
+"720": 611
+},
+"w": 611
+},
+"/images/post-10/lidar_radar.png": {
+"h": 242,
+"r": {
+"720": 711
+},
+"w": 711
+},
+"/images/post-10/netcfg.png": {
+"h": 264,
+"r": {
+"720": 577
+},
+"w": 577
+},
+"/images/post-10/network_settings_1.png": {
+"h": 657,
+"r": {
+"1440": 917,
+"720": 720
+},
+"w": 917
+},
+"/images/post-10/network_settings_2.png": {
+"h": 480,
+"r": {
+"720": 690
+},
+"w": 690
+},
+"/images/post-10/node.png": {
+"h": 115,
+"r": {
+"720": 432
+},
+"w": 432
+},
+"/images/post-10/rvizss1.png": {
+"h": 350,
+"r": {
+"720": 418
+},
+"w": 418
+},
+"/images/post-10/rvizss2.png": {
+"h": 570,
+"r": {
+"720": 566
+},
+"w": 566
+},
+"/images/post-10/topic_list.png": {
+"h": 107,
+"r": {
+"720": 252
+},
+"w": 252
+},
+"/images/post-10/velo-1.png": {
+"h": 230,
+"r": {
+"720": 435
+},
+"w": 435
+},
+"/images/post-10/velodyne_packets.png": {
+"h": 602,
+"r": {
+"720": 312
+},
+"w": 312
+},
+"/images/post-10/velodyne_points.png": {
+"h": 595,
+"r": {
+"720": 452
+},
+"w": 452
+},
+"/images/post-10/vlp16_gui.png": {
+"h": 435,
+"r": {
+"1440": 806,
+"720": 720
+},
+"w": 806
+},
+"/images/post-10/vlp16_gui_1.png": {
+"h": 390,
+"r": {
+"720": 718
+},
+"w": 718
+},
+"/images/post-2/image_1.png": {
+"h": 267,
+"r": {
+"320": 320,
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_10.png": {
+"h": 359,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_11.png": {
+"h": 230,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_12.png": {
+"h": 618,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_13.png": {
+"h": 700,
+"r": {
+"720": 650
+},
+"w": 650
+},
+"/images/post-2/image_14.png": {
+"h": 692,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_15.png": {
+"h": 653,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_16.png": {
+"h": 223,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_17.png": {
+"h": 302,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_18.png": {
+"h": 589,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_19.png": {
+"h": 284,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_2.png": {
+"h": 284,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_20.png": {
+"h": 700,
+"r": {
+"720": 652
+},
+"w": 652
+},
+"/images/post-2/image_21.png": {
+"h": 171,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_22.png": {
+"h": 624,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_23.png": {
+"h": 348,
+"r": {
+"720": 659
+},
+"w": 659
+},
+"/images/post-2/image_24.png": {
+"h": 371,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_25.png": {
+"h": 371,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_26.png": {
+"h": 700,
+"r": {
+"720": 598
+},
+"w": 598
+},
+"/images/post-2/image_27.png": {
+"h": 218,
+"r": {
+"720": 690
+},
+"w": 690
+},
+"/images/post-2/image_28.png": {
+"h": 260,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_29.png": {
+"h": 334,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_3.png": {
+"h": 680,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_30.png": {
+"h": 430,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_31.png": {
+"h": 306,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_32.png": {
+"h": 700,
+"r": {
+"720": 624
+},
+"w": 624
+},
+"/images/post-2/image_33.png": {
+"h": 254,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_34.png": {
+"h": 411,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_35.png": {
+"h": 284,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_36.png": {
+"h": 461,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_37.png": {
+"h": 295,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_38.png": {
+"h": 400,
+"r": {
+"720": 600
+},
+"w": 600
+},
+"/images/post-2/image_39.png": {
+"h": 337,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_4.png": {
+"h": 435,
+"r": {
+"720": 607
+},
+"w": 607
+},
+"/images/post-2/image_40.png": {
+"h": 386,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_41.png": {
+"h": 427,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_42.png": {
+"h": 388,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_43.png": {
+"h": 259,
+"r": {
+"720": 685
+},
+"w": 685
+},
+"/images/post-2/image_44.png": {
+"h": 181,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_45.png": {
+"h": 271,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_46.png": {
+"h": 371,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_47.png": {
+"h": 268,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_5.png": {
+"h": 646,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_6.png": {
+"h": 348,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_7.png": {
+"h": 451,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-2/image_8.png": {
+"h": 700,
+"r": {
+"720": 660
+},
+"w": 660
+},
+"/images/post-2/image_9.png": {
+"h": 700,
+"r": {
+"720": 691
+},
+"w": 691
+},
+"/images/post-3/image_1.png": {
+"h": 109,
+"r": {
+"320": 320,
+"720": 400
+},
+"w": 400
+},
+"/images/post-3/image_10.png": {
+"h": 46,
+"r": {
+"720": 186
+},
+"w": 186
+},
+"/images/post-3/image_11.png": {
+"h": 61,
+"r": {
+"720": 192
+},
+"w": 192
+},
+"/images/post-3/image_12.png": {
+"h": 176,
+"r": {
+"720": 552
+},
+"w": 552
+},
+"/images/post-3/image_13.png": {
+"h": 380,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-3/image_14.png": {
+"h": 198,
+"r": {
+"720": 578
+},
+"w": 578
+},
+"/images/post-3/image_15.png": {
+"h": 508,
+"r": {
+"720": 647
+},
+"w": 647
+},
+"/images/post-3/image_16.png": {
+"h": 131,
+"r": {
+"720": 520
+},
+"w": 520
+},
+"/images/post-3/image_17.png": {
+"h": 420,
+"r": {
+"720": 438
+},
+"w": 438
+},
+"/images/post-3/image_18.png": {
+"h": 245,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-3/image_19.png": {
+"h": 386,
+"r": {
+"720": 627
+},
+"w": 627
+},
+"/images/post-3/image_2.png": {
+"h": 60,
+"r": {
+"720": 542
+},
+"w": 542
+},
+"/images/post-3/image_20.png": {
+"h": 440,
+"r": {
+"720": 687
+},
+"w": 687
+},
+"/images/post-3/image_3.png": {
+"h": 64,
+"r": {
+"720": 523
+},
+"w": 523
+},
+"/images/post-3/image_4.png": {
+"h": 64,
+"r": {
+"720": 523
+},
+"w": 523
+},
+"/images/post-3/image_5.png": {
+"h": 55,
+"r": {
+"720": 497
+},
+"w": 497
+},
+"/images/post-3/image_6.png": {
+"h": 120,
+"r": {
+"720": 544
+},
+"w": 544
+},
+"/images/post-3/image_7.png": {
+"h": 117,
+"r": {
+"720": 551
+},
+"w": 551
+},
+"/images/post-3/image_8.png": {
+"h": 154,
+"r": {
+"720": 436
+},
+"w": 436
+},
+"/images/post-3/image_9.png": {
+"h": 126,
+"r": {
+"720": 609
+},
+"w": 609
+},
+"/images/post-4/image_1.png": {
+"h": 325,
+"r": {
+"320": 320,
+"720": 576
+},
+"w": 576
+},
+"/images/post-4/image_2.png": {
+"h": 462,
+"r": {
+"720": 596
+},
+"w": 596
+},
+"/images/post-4/image_3.png": {
+"h": 700,
+"r": {
+"720": 546
+},
+"w": 546
+},
+"/images/post-4/image_4.png": {
+"h": 700,
+"r": {
+"720": 545
+},
+"w": 545
+},
+"/images/post-4/image_5.png": {
+"h": 298,
+"r": {
+"720": 554
+},
+"w": 554
+},
+"/images/post-4/image_6.png": {
+"h": 401,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-4/image_7.png": {
+"h": 279,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-4/image_8.png": {
+"h": 148,
+"r": {
+"720": 300
+},
+"w": 300
+},
+"/images/post-5/image_1.png": {
+"h": 349,
+"r": {
+"320": 320,
+"720": 626
+},
+"w": 626
+},
+"/images/post-5/image_10.png": {
+"h": 511,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-5/image_11.png": {
+"h": 414,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-5/image_12.png": {
+"h": 338,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-5/image_13.png": {
+"h": 472,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-5/image_14.png": {
+"h": 339,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-5/image_15.png": {
+"h": 556,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-5/image_16.png": {
+"h": 573,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-5/image_2.png": {
+"h": 330,
+"r": {
+"720": 628
+},
+"w": 628
+},
+"/images/post-5/image_3.png": {
+"h": 483,
+"r": {
+"720": 627
+},
+"w": 627
+},
+"/images/post-5/image_4.png": {
+"h": 398,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-5/image_5.png": {
+"h": 530,
+"r": {
+"720": 676
+},
+"w": 676
+},
+"/images/post-5/image_6.png": {
+"h": 390,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-5/image_7.png": {
+"h": 264,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-5/image_8.png": {
+"h": 210,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-5/image_9.png": {
+"h": 482,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-6/image_1.png": {
+"h": 442,
+"r": {
+"320": 320,
+"720": 700
+},
+"w": 700
+},
+"/images/post-6/image_10.png": {
+"h": 491,
+"r": {
+"720": 686
+},
+"w": 686
+},
+"/images/post-6/image_11.png": {
+"h": 458,
+"r": {
+"720": 589
+},
+"w": 589
+},
+"/images/post-6/image_12.png": {
+"h": 600,
+"r": {
+"720": 600
+},
+"w": 600
+},
+"/images/post-6/image_13.png": {
+"h": 190,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-6/image_14.png": {
+"h": 580,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-6/image_15.png": {
+"h": 422,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-6/image_16.png": {
+"h": 435,
+"r": {
+"720": 687
+},
+"w": 687
+},
+"/images/post-6/image_17.png": {
+"h": 486,
+"r": {
+"720": 699
+},
+"w": 699
+},
+"/images/post-6/image_18.png": {
+"h": 700,
+"r": {
+"720": 494
+},
+"w": 494
+},
+"/images/post-6/image_19.png": {
+"h": 300,
+"r": {
+"720": 662
+},
+"w": 662
+},
+"/images/post-6/image_2.png": {
+"h": 472,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-6/image_20.png": {
+"h": 321,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-6/image_21.png": {
+"h": 254,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-6/image_22.png": {
+"h": 223,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-6/image_23.png": {
+"h": 462,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-6/image_3.png": {
+"h": 390,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-6/image_4.png": {
+"h": 634,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-6/image_5.png": {
+"h": 285,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-6/image_6.png": {
+"h": 700,
+"r": {
+"720": 637
+},
+"w": 637
+},
+"/images/post-6/image_7.png": {
+"h": 360,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-6/image_8.png": {
+"h": 385,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-6/image_9.png": {
+"h": 388,
+"r": {
+"720": 700
+},
+"w": 700
+},
+"/images/post-7/wsl_application.png": {
+"h": 710,
+"r": {
+"1440": 1440,
+"720": 720
+},
+"w": 1501
+},
+"/images/post-7/wsl_different_distros.png": {
+"h": 522,
+"r": {
+"1440": 1258,
+"720": 720
+},
+"w": 1258
+},
+"/images/post-7/wsl_distros.png": {
+"h": 587,
+"r": {
+"1440": 994,
+"720": 720
+},
+"w": 994
+},
+"/images/post-7/wsl_list_online.png": {
+"h": 597,
+"r": {
+"1440": 981,
+"320": 320,
+"720": 720
+},
+"w": 981
+},
+"/images/post-7/wsl_version_and_distro_versions.png": {
+"h": 573,
+"r": {
+"1440": 949,
+"720": 720
+},
+"w": 949
+},
+"/images/post-8/black_square.png": {
+"h": 263,
+"r": {
+"320": 271
+},
+"w": 271
+},
+"/images/post-8/combined_output_hexagon.png": {
+"h": 924,
+"r": {
+"1440": 1440,
+"720": 720
+},
+"w": 1640
+},
+"/images/post-9/direct_download.png": {
+"h": 435,
+"r": {
+"1440": 1429,
+"720": 720
+},
+"w": 1429
+},
+"/images/post-9/nvidia_board.png": {
+"h": 693,
+"r": {
+"320": 320,
+"720": 716
+},
+"w": 716
+},
+"/images/post-9/nvidia_jetson_orin_nx.png": {
+"h": 661,
+"r": {
+"720": 666
+},
+"w": 666
+},
+"/images/sketch-library/altair.png": {
+"h": 700,
+"r": {
+"320": 320,
+"720": 525
+},
+"w": 525
+},
+"/images/sketch-library/baby_yoda.jpg": {
+"h": 598,
+"r": {
+"320": 320,
+"720": 700
+},
+"w": 700
+},
+"/images/sketch-library/back_to_black.png": {
+"h": 1536,
+"r": {
+"1440": 1440,
+"320": 320,
+"720": 720
+},
+"w": 2048
+},
+"/images/sketch-library/bbgd.png": {
+"h": 1536,
+"r": {
+"1440": 1440,
+"320": 320,
+"720": 720
+},
+"w": 2048
+},
+"/images/sketch-library/bc2000.jpg": {
+"h": 1111,
+"r": {
+"1440": 1440,
+"320": 320,
+"720": 720
+},
+"w": 1600
+},
+"/images/sketch-library/bd-1.png": {
+"h": 525,
+"r": {
+"320": 320,
+"720": 700
+},
+"w": 700
+},
+"/images/sketch-library/beach.png": {
+"h": 1536,
+"r": {
+"1440": 1440,
+"320": 320,
+"720": 720
+},
+"w": 2048
+},
+"/images/sketch-library/blue_knight.png": {
+"h": 922,
+"r": {
+"1440": 868,
+"320": 320,
+"720": 720
+},
+"w": 868
+},
+"/images/sketch-library/city.jpg": {
+"h": 1123,
+"r": {
+"1440": 1440,
+"320": 320,
+"720": 720
+},
+"w": 1519
+},
+"/images/sketch-library/conquerer.jpg": {
+"h": 1200,
+"r": {
+"1440": 1440,
+"320": 320,
+"720": 720
+},
+"w": 1600
+},
+"/images/sketch-library/creepy_lion.jpg": {
+"h": 1131,
+"r": {
+"1440": 1440,
+"320": 320,
+"720": 720
+},
+"w": 1518
+},
+"/images/sketch-library/cube.jpg": {
+"h": 1136,
+"r": {
+"1440": 890,
+"320": 320,
+"720": 720
+},
+"w": 890
+},
+"/images/sketch-library/emptiness_machine.jpeg": {
+"h": 1536,
+"r": {
+"1440": 1440,
+"320": 320,
+"720": 720
+},
+"w": 2048
+},
+"/images/sketch-library/last_dance.png": {
+"h": 1536,
+"r": {
+"1440": 1440,
+"320": 320,
+"720": 720
+},
+"w": 2048
+},
+"/images/sketch-library/muppet.jpg": {
+"h": 698,
+"r": {
+"320": 320,
+"720": 700
+},
+"w": 700
+},
+"/images/sketch-library/pink_panther.jpg": {
+"h": 700,
+"r": {
+"320": 320,
+"720": 693
+},
+"w": 693
+},
+"/images/sketch-library/pixel_cube.jpeg": {
+"h": 1262,
+"r": {
+"1440": 1255,
+"320": 320,
+"720": 720
+},
+"w": 1255
+},
+"/images/sketch-library/pixel_dream.jpg": {
+"h": 434,
+"r": {
+"320": 320,
+"720": 700
+},
+"w": 700
+},
+"/images/sketch-library/pixel_drone.jpeg": {
+"h": 1356,
+"r": {
+"1440": 1383,
+"320": 320,
+"720": 720
+},
+"w": 1383
+},
+"/images/sketch-library/pixel_jungle.jpeg": {
+"h": 1266,
+"r": {
+"1440": 1268,
+"320": 320,
+"720": 720
+},
+"w": 1268
+},
+"/images/sketch-library/random_thoughts.png": {
+"h": 1536,
+"r": {
+"1440": 1440,
+"320": 320,
+"720": 720
+},
+"w": 2048
+},
+"/images/sketch-library/ultron.jpg": {
+"h": 837,
+"r": {
+"1440": 1129,
+"320": 320,
+"720": 720
+},
+"w": 1129
+},
+"/images/sketch-library/www.png": {
+"h": 2048,
+"r": {
+"1440": 1440,
+"320": 320,
+"720": 720
+},
+"w": 1536
+},
+"/images/visual_thoughts/Mars_Express.png": {
+"h": 560,
+"r": {
+"1440": 1288,
+"320": 320,
+"720": 720
+},
+"w": 1288
+},
+"/images/visual_thoughts/adaptability.jpg": {
+"h": 1600,
+"r": {
+"1440": 1185,
+"320": 320,
+"720": 720
+},
+"w": 1185
+},
+"/images/visual_thoughts/after_storm.png": {
+"h": 681,
+"r": {
+"320": 320,
+"720": 676
+},
+"w": 676
+},
+"/images/visual_thoughts/ai.jpeg": {
+"h": 553,
+"r": {
+"1440": 937,
+"320": 320,
+"720": 720
+},
+"w": 937
+},
+"/images/visual_thoughts/alone.png": {
+"h": 787,
+"r": {
+"1440": 812,
+"320": 320,
+"720": 720
+},
+"w": 812
+},
+"/images/visual_thoughts/are_we_there.png": {
+"h": 415,
+"r": {
+"1440": 1360,
+"320": 320,
+"720": 720
+},
+"w": 1360
+},
+"/images/visual_thoughts/autumn_and_happiness.jpg": {
+"h": 1024,
+"r": {
+"1440": 1024,
+"320": 320,
+"720": 720
+},
+"w": 1024
+},
+"/images/visual_thoughts/chaos.jpg": {
+"h": 717,
+"r": {
+"1440": 1024,
+"320": 320,
+"720": 720
+},
+"w": 1024
+},
+"/images/visual_thoughts/child_licence.png": {
+"h": 862,
+"r": {
+"1440": 863,
+"320": 320,
+"720": 720
+},
+"w": 863
+},
+"/images/visual_thoughts/country_w_g_b_l.png": {
+"h": 783,
+"r": {
+"1440": 1425,
+"320": 320,
+"720": 720
+},
+"w": 1425
+},
+"/images/visual_thoughts/direction.jpeg": {
+"h": 552,
+"r": {
+"1440": 943,
+"320": 320,
+"720": 720
+},
+"w": 943
+},
+"/images/visual_thoughts/electicstate.jpg": {
+"h": 512,
+"r": {
+"1440": 1024,
+"320": 320,
+"720": 720
+},
+"w": 1024
+},
+"/images/visual_thoughts/find_or_make.png": {
+"h": 853,
+"r": {
+"1440": 869,
+"320": 320,
+"720": 720
+},
+"w": 869
+},
+"/images/visual_thoughts/fun_time.jpg": {
+"h": 2088,
+"r": {
+"1440": 1440,
+"320": 320,
+"720": 720
+},
+"w": 4640
+},
+"/images/visual_thoughts/hourglass_dalle3_patience_unpredictability.png": {
+"h": 1024,
+"r": {
+"1440": 1024,
+"320": 320,
+"720": 720
+},
+"w": 1024
+},
+"/images/visual_thoughts/learning_curve.png": {
+"h": 313,
+"r": {
+"320": 320,
+"720": 596
+},
+"w": 596
+},
+"/images/visual_thoughts/love.png": {
+"h": 802,
+"r": {
+"1440": 1425,
+"320": 320,
+"720": 720
+},
+"w": 1425
+},
+"/images/visual_thoughts/mesh.jpg": {
+"h": 2160,
+"r": {
+"1440": 1440,
+"320": 320,
+"720": 720
+},
+"w": 3840
+},
+"/images/visual_thoughts/mind_place.jpeg": {
+"h": 4096,
+"r": {
+"1440": 1440,
+"320": 320,
+"720": 720
+},
+"w": 3277
+},
+"/images/visual_thoughts/moravecs_paradox.png": {
+"h": 460,
+"r": {
+"320": 320,
+"720": 502
+},
+"w": 502
+},
+"/images/visual_thoughts/phases.jpg": {
+"h": 768,
+"r": {
+"1440": 1408,
+"320": 320,
+"720": 720
+},
+"w": 1408
+},
+"/images/visual_thoughts/problem.jpg": {
+"h": 1600,
+"r": {
+"1440": 1280,
+"320": 320,
+"720": 720
+},
+"w": 1280
+},
+"/images/visual_thoughts/ps30.png": {
+"h": 499,
+"r": {
+"320": 320,
+"720": 464
+},
+"w": 464
+},
+"/images/visual_thoughts/psoriasis.jpg": {
+"h": 768,
+"r": {
+"1440": 1408,
+"320": 320,
+"720": 720
+},
+"w": 1408
+},
+"/images/visual_thoughts/quit_smoking.png": {
+"h": 803,
+"r": {
+"1440": 807,
+"320": 320,
+"720": 720
+},
+"w": 807
+},
+"/images/visual_thoughts/rlfribtrlfh.png": {
+"h": 530,
+"r": {
+"320": 320,
+"720": 566
+},
+"w": 566
+},
+"/images/visual_thoughts/routine.png": {
+"h": 623,
+"r": {
+"320": 320,
+"720": 690
+},
+"w": 690
+},
+"/images/visual_thoughts/routine_v2.png": {
+"h": 793,
+"r": {
+"1440": 792,
+"320": 320,
+"720": 720
+},
+"w": 792
+},
+"/images/visual_thoughts/sacred.jpg": {
+"h": 768,
+"r": {
+"1440": 1408,
+"320": 320,
+"720": 720
+},
+"w": 1408
+},
+"/images/visual_thoughts/search.jpg": {
+"h": 713,
+"r": {
+"1440": 1024,
+"320": 320,
+"720": 720
+},
+"w": 1024
+},
+"/images/visual_thoughts/setup_upgrade_v2.png": {
+"h": 347,
+"r": {
+"320": 320,
+"720": 718
+},
+"w": 718
+},
+"/images/visual_thoughts/shaving.png": {
+"h": 370,
+"r": {
+"320": 320,
+"720": 592
+},
+"w": 592
+},
+"/images/visual_thoughts/sopranos.png": {
+"h": 366,
+"r": {
+"1440": 779,
+"320": 320,
+"720": 720
+},
+"w": 779
+},
+"/images/visual_thoughts/spirited_away_image.png": {
+"h": 500,
+"r": {
+"1440": 1302,
+"320": 320,
+"720": 720
+},
+"w": 1302
+},
+"/images/visual_thoughts/starsinthecanal.png": {
+"h": 817,
+"r": {
+"1440": 1438,
+"320": 320,
+"720": 720
+},
+"w": 1438
+},
+"/images/visual_thoughts/the_first_turkish_state.png": {
+"h": 807,
+"r": {
+"1440": 807,
+"320": 320,
+"720": 720
+},
+"w": 807
+},
+"/images/visual_thoughts/the_purpose.jpg": {
+"h": 768,
+"r": {
+"1440": 1408,
+"320": 320,
+"720": 720
+},
+"w": 1408
+},
+"/images/visual_thoughts/thought_exp.jpg": {
+"h": 768,
+"r": {
+"1440": 1408,
+"320": 320,
+"720": 720
+},
+"w": 1408
+},
+"/images/visual_thoughts/turing_test.png": {
+"h": 378,
+"r": {
+"320": 317
+},
+"w": 317
+},
+"/images/visual_thoughts/upgrade.png": {
+"h": 655,
+"r": {
+"1440": 1440,
+"320": 320,
+"720": 720
+},
+"w": 1454
+},
+"/images/visual_thoughts/voices.jpeg": {
+"h": 1024,
+"r": {
+"1440": 1024,
+"320": 320,
+"720": 720
+},
+"w": 1024
+},
+"/images/visual_thoughts/yoda_1.png": {
+"h": 610,
+"r": {
+"1440": 884,
+"720": 720
+},
+"w": 884
+},
+"/images/visual_thoughts/yoda_2.png": {
+"h": 532,
+"r": {
+"1440": 1023,
+"320": 320,
+"720": 720
+},
+"w": 1023
+}
+}

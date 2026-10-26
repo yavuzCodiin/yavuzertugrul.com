@@ -8,10 +8,10 @@ origin: medium
 medium_url: https://yavuzertugrul.medium.com/alphago-deciphering-the-art-of-intelligence-04e975c71281
 image: /images/medium_images/alphago.png
 image_color: true
+hero: false
 description: "How DeepMind beat a 9-dan Go champion, and what Move 37 said about machine intuition."
 ---
 
-## AlphaGo: Deciphering the Art of Intelligence
 
 <figure>
   <img src="{{ '/images/medium_posts/alphago-deciphering-the-art-of-intelligence-01.png' | relative_url }}" alt="“Human versus AlphaGo” created by author with Dall-E 3" loading="lazy">

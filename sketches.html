@@ -32,7 +32,13 @@ extra_js: [/assets/js/filters.js]
           data-lightbox="{{ piece.image | relative_url }}"
           role="button" tabindex="0" aria-label="{{ piece.title }} — open full size">
     <div class="tile__frame">
-      <img src="{{ piece.image | relative_url }}" alt="{{ piece.title }}"{% if piece.position %} style="object-position:{{ piece.position }}"{% endif %} loading="lazy">
+      {%- if piece.position %}{% capture tile_style %}object-position:{{ piece.position }}{% endcapture %}{% else %}{% assign tile_style = nil %}{% endif -%}
+      {%- if piece.span == 'feature' -%}
+        {%- assign tile_sizes = "(max-width: 1023px) 100vw, (max-width: 1279px) 66vw, 50vw" -%}
+      {%- else -%}
+        {%- assign tile_sizes = "(max-width: 1023px) 50vw, (max-width: 1279px) 33vw, 25vw" -%}
+      {%- endif -%}
+      {% include img.html src=piece.image alt=piece.title style=tile_style sizes=tile_sizes eager=forloop.first %}
     </div>
     <figcaption class="plaque">
       <span class="plaque__title">{{ piece.order | prepend: '0' | slice: -2, 2 }} — {{ piece.title | upcase }}</span>

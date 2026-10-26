@@ -21,7 +21,7 @@ description: "A collection of visual albums — general to specific: gallery →
   {%- endif -%}
   <a class="collection" href="{{ href | relative_url }}">
     <div class="collection__frame">
-      <img src="{{ c.cover | relative_url }}" alt="{{ c.title }}" loading="lazy">
+      {% include img.html src=c.cover alt=c.title sizes="(max-width: 1023px) 100vw, (max-width: 1279px) 50vw, 33vw" eager=forloop.first %}
     </div>
     <div class="collection__row">
       <span class="collection__title">{{ c.title }}</span>

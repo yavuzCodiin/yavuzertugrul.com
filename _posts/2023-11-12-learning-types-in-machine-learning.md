@@ -8,10 +8,10 @@ origin: medium
 medium_url: https://levelup.gitconnected.com/learning-types-in-machine-learning-3754fc3da961
 image: /images/medium_images/learning_types_in_ml.png
 image_color: true
+hero: false
 description: "Supervised, unsupervised, semi-supervised and reinforcement learning — what separates them and when each one fits."
 ---
 
-## Learning Types in Machine Learning
 
 <figure>
   <img src="{{ '/images/medium_posts/learning-types-in-machine-learning-01.png' | relative_url }}" alt="Figure" loading="lazy">

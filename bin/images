@@ -1,0 +1,151 @@
+#!/usr/bin/env python3
+"""Build responsive WebP derivatives for every image a template displays.
+
+    ./bin/images            build what is missing or out of date
+    ./bin/images --clean    also delete derivatives nothing references any more
+
+Why: listing pages show covers at 72–440 CSS px, but the originals are photos and
+iPad exports of 1–7 MB each. /writing/ alone pulled ~70 MB before this existed.
+
+What it does
+  1. Collects the image paths templates render — `image:` in _posts and _art,
+     `cover:` in _data/books.yml, `cover:`/`src:` in _data/albums.yml — plus
+     every image inside a post body. A body image no wider than 720 px whose
+     WebP copy would not be at least 20% lighter is left out and served as is.
+  2. Writes WebP copies into three buckets, never upscaled:
+         images/sized/320/<original path>.webp     thumbnails, covers
+         images/sized/720/...                      tiles, cards, phone heroes
+         images/sized/1440/...                     desktop heroes, feature tiles
+     A bucket holds the image at min(bucket, original width); a bucket that
+     would duplicate a smaller one is skipped. Book covers never render above
+     130 CSS px, so they only get the 320 bucket.
+  3. Records what exists in _data/images.json — original size, and for each
+     bucket the real pixel width it holds (srcset needs true widths).
+
+Body images are never rewritten in the markdown: _includes/body.html adds the
+srcset at build time for any body image the index knows about. Animated GIFs
+are not handled here — animated WebP came out larger than the GIF on screen
+recordings; bin/clip turns them into a looping MP4 instead.
+
+_includes/img.html reads that index. An image missing from it (say, added from
+another machine without running this) is served as the plain original, so a
+forgotten run costs speed, never a broken page.
+
+Needs Python 3 and Pillow:  python3 -m pip install --user pillow
+"""
+import json
+import os
+import re
+import sys
+import glob
+
+try:
+    from PIL import Image, ImageOps
+except ImportError:
+    sys.exit("Pillow is missing — run:  python3 -m pip install --user pillow")
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT_DIR = os.path.join(ROOT, "images", "sized")
+INDEX = os.path.join(ROOT, "_data", "images.json")
+WIDTHS = (320, 720, 1440)
+QUALITY = 80
+IMAGE_EXT = (".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff")
+BODY = (720, 1440)    # article column: ~350 px on a phone (720 @2x) up to ~1240 px
+MIN_GAIN = 0.8        # a same-size WebP must weigh at most 80% of the original
+# an <img src="…">, a Medium-style src="{{ '…' | relative_url }}" or a markdown ](…)
+BODY_RE = re.compile(r"""(?:src=["']?(?:\{\{\s*')?|\]\()(/images/(?!sized/)[^"')\s]+\.(?:png|jpe?g|webp))""", re.I)
+PATH_RE = re.compile(r'^\s*-?\s*(?:image|cover|src):\s*"?(/images/[^"\s#]+)', re.M)
+COVER_ONLY = (320,)   # book covers: largest render is the 130px book-note modal
+
+
+def referenced_paths():
+    """{web path: buckets wanted}. Covers that also appear elsewhere get all."""
+    sources = [(f, WIDTHS) for f in glob.glob(os.path.join(ROOT, "_posts", "*.md"))]
+    sources += [(f, WIDTHS) for f in glob.glob(os.path.join(ROOT, "_art", "*.md"))]
+    sources += [(os.path.join(ROOT, "_data", "albums.yml"), WIDTHS),
+                (os.path.join(ROOT, "_data", "books.yml"), COVER_ONLY)]
+    found = {}
+    for f, buckets in sources:
+        if not os.path.exists(f):
+            continue
+        text = open(f, encoding="utf-8").read()
+        if f.endswith(".md"):  # only the front matter of posts/art
+            m = re.match(r"^---\n(.*?)\n---", text, re.S)
+            text = m.group(1) if m else ""
+        for p in PATH_RE.findall(text):
+            if p.lower().endswith(IMAGE_EXT) and "/images/sized/" not in p:
+                found[p] = tuple(sorted(set(found.get(p, ())) | set(buckets)))
+
+    # images inside post bodies
+    for f in glob.glob(os.path.join(ROOT, "_posts", "*.md")):
+        text = open(f, encoding="utf-8").read()
+        body = re.split(r"^---\n.*?\n---\n", text, maxsplit=1, flags=re.S)[-1]
+        body = re.sub(r"<!--.*?-->", "", body, flags=re.S)   # commented-out images never render
+        for p in BODY_RE.findall(body):
+            found[p] = tuple(sorted(set(found.get(p, ())) | set(BODY)))
+    return dict(sorted(found.items()))
+
+
+def derivative_path(web_path, bucket):
+    rel = web_path[len("/images/"):]
+    return os.path.join(OUT_DIR, str(bucket), rel + ".webp")
+
+
+def build(web_path, buckets, index):
+    src = os.path.join(ROOT, web_path.lstrip("/"))
+    if not os.path.exists(src):
+        print(f"  ! missing source: {web_path}")
+        return 0
+    mtime = os.path.getmtime(src)
+    with Image.open(src) as im:
+        im = ImageOps.exif_transpose(im)
+        w, h = im.size
+        plan = {}                          # bucket -> real width it holds
+        for b in buckets:
+            real = min(b, w)
+            if real not in plan.values():
+                plan[b] = real
+        made = 0
+        for b, tw in plan.items():
+            dst = derivative_path(web_path, b)
+            if os.path.exists(dst) and os.path.getmtime(dst) >= mtime:
+                continue
+            os.makedirs(os.path.dirname(dst), exist_ok=True)
+            frame = im.convert("RGBA") if im.mode in ("P", "LA", "RGBA") else im.convert("RGB")
+            if tw < w:
+                frame = frame.resize((tw, round(h * tw / w)), Image.LANCZOS)
+            frame.save(dst, "WEBP", quality=QUALITY, method=6)
+            made += 1
+    if tuple(buckets) == BODY and w <= BODY[0]:
+        # one copy at full size — only worth serving if it is clearly lighter
+        dst = derivative_path(web_path, BODY[0])
+        if os.path.getsize(dst) > os.path.getsize(src) * MIN_GAIN:
+            os.remove(dst)
+            return 0
+    index[web_path] = {"w": w, "h": h, "r": {str(b): tw for b, tw in plan.items()}}
+    return made
+
+
+def main():
+    clean = "--clean" in sys.argv
+    paths = referenced_paths()
+    index, made = {}, 0
+    for p, buckets in paths.items():
+        made += build(p, buckets, index)
+    with open(INDEX, "w", encoding="utf-8") as f:
+        json.dump(index, f, ensure_ascii=False, indent=0, sort_keys=True)
+        f.write("\n")
+
+    removed = 0
+    if clean:
+        keep = {derivative_path(p, b) for p, meta in index.items() for b in meta["r"]}
+        for f in glob.glob(os.path.join(OUT_DIR, "**", "*.webp"), recursive=True):
+            if f not in keep:
+                os.remove(f)
+                removed += 1
+    print(f"images: {len(index)} referenced, {made} derivatives built"
+          + (f", {removed} stale removed" if clean else ""))
+
+
+if __name__ == "__main__":
+    main()

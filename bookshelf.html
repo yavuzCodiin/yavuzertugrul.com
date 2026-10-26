@@ -21,6 +21,7 @@ extra_js: [/assets/js/booknote.js]
 <div class="with-rail with-rail--book">
   <div>
     {%- for shelf in shelves %}
+    {%- assign shelf_first = forloop.first -%}
     <section class="shelf">
       <div class="shelf__head">
         <h4>{{ shelf.year }}</h4>
@@ -29,16 +30,26 @@ extra_js: [/assets/js/booknote.js]
       <div class="shelf__rows">
         <div class="shelf__row">
         {%- for book in shelf.books %}
+        {%- comment -%} The book-note modal shows the cover at 130px — the 320 derivative is plenty. {%- endcomment -%}
+        {%- assign cover_rel = book.cover | remove_first: '/images/' -%}
+        {%- if site.data.images[book.cover] -%}
+          {%- capture cover_modal %}/images/sized/320/{{ cover_rel }}.webp{% endcapture -%}
+        {%- else -%}
+          {%- assign cover_modal = book.cover -%}
+        {%- endif -%}
         <button type="button" class="book"
                 data-book
                 data-title="{{ book.title | escape }}"
                 data-author="{{ book.author | escape }}"
-                data-cover="{{ book.cover | relative_url }}"
+                data-cover="{{ cover_modal | relative_url }}"
                 data-rating="{{ book.rating }}"
                 data-note="{{ book.note | escape }}"
                 aria-label="{{ book.title | escape }} — book note">
           <span class="book__pages" aria-hidden="true"></span>
-          <img class="book__cover" src="{{ book.cover | relative_url }}" alt="{{ book.title | escape }}" loading="lazy">
+          {%- comment -%} Only the first row or two are above the fold — more high-priority requests would just compete. {%- endcomment -%}
+          {%- assign cover_eager = false -%}
+          {%- if shelf_first and forloop.index <= 6 -%}{%- assign cover_eager = true -%}{%- endif %}
+          {% include img.html src=book.cover alt=book.title class="book__cover" sizes="118px" eager=cover_eager %}
         </button>
         {%- assign chunk = forloop.index | modulo: 3 %}
         {%- if chunk == 0 and forloop.last != true %}
@@ -60,7 +71,7 @@ extra_js: [/assets/js/booknote.js]
     <div class="rail__block rail__block--reading">
       <h6>Currently reading</h6>
       <div class="reading">
-        <img src="{{ reading.cover | relative_url }}" alt="{{ reading.title }}">
+        {% include img.html src=reading.cover alt=reading.title sizes="72px" %}
         <div>
           <div class="reading__title">{{ reading.title }}</div>
           <div class="reading__author">{{ reading.author }}</div>

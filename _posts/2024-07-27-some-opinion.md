@@ -2,7 +2,7 @@
 title: "Some Opinion"
 date: 2024-07-27
 type: note
-topic: life
+topic: notes
 layout: note
 image: /images/visual_thoughts/country_w_g_b_l.png
 image_alt: "Some Opinion"

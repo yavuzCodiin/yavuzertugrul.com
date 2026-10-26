@@ -8,10 +8,10 @@ origin: medium
 medium_url: https://yavuzertugrul.medium.com/atomik-al%C4%B1%C5%9Fkanl%C4%B1klar-kitap-i%CC%87ncelemesi-79ff09faf6df
 image: /images/medium_images/Atomik_Alışkanlıklar.png
 image_color: true
+hero: false
 description: "[TR] James Clear'ın Atomic Habits kitabı üzerine notlar: küçük değişimlerin bileşik etkisi ve sistem kurmak."
 ---
 
-## [TR] Atomik Alışkanlıklar — Kitap İncelemesi
 
 Herkese selamlar! Bu yıl, önceki yıllardan farklı olarak, yaptığım her şeyi daha detaylı organize etmeye, bir yerde toplamaya ve bunları sizlerle paylaşmaya karar verdim. Gerçekten çok güzel hazırlanmış bir kitap olan “Atomik Alışkanlıklar”, okurken farkındalığınızı artıran ve içinizde bir değişim arzusu uyandıran bir eser. Her sayfada zamanınızı planlamanın, yeni alışkanlıklar edinmenin ve bunları sürdürmenin ne kadar önemli olduğunu ve aslında ne kadar çok zamanınız olduğunu fark ediyorsunuz. Bildiğiniz gibi, “Bir kitap okudum hayatım değişti” gibi bir söz vardır. Ben bu sözü şu şekilde yorumlamak istiyorum: “Bir kitap okudum ve hayatım rayına oturdu.” Aslında herkesin hayalleri, hedefleri ve planları var. Fakat bu planları düzenli bir program ile takip edip pes etmediğiniz takdirde onları daha gerçekçi hale getirebilirsiniz. Geleceğin meyveleri bugünün fedakarlıkları sayesinde olgunlaşıyor. O zaman o ağacı dikmek için en güzel zaman bugün değil mi? Emin olun onu izlemek ve ilk meyvesini yemek size “İyi ki bu ağacı dikmişim” dedirtecek. O zaman haydi başlayalım bakalım bu kitap neymiş.
 
