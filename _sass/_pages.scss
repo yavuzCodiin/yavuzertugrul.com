@@ -417,22 +417,26 @@ html[data-theme="paper"] .book__pages {
 .sitemap__name { font-family: var(--font-heading); font-weight: 800; font-size: 17px; }
 .sitemap__desc { font-size: 14.5px; color: #{$ink-70}; }
 
-.whoami { overflow-wrap: break-word; }
+.whoami { flex: 1 1 auto; display: flex; flex-direction: column; overflow-wrap: break-word; }
+// The floor runs to the very bottom of the page, however tall the screen is.
+.shell__main:has(> .content--scene) { display: flex; flex-direction: column; min-height: 100vh; }
+.content--scene { flex: 1 1 auto; display: flex; flex-direction: column; padding-bottom: 0; }
 .whoami__title {
   font-size: var(--type-whoami); line-height: 1.2; margin: 0 0 28px; max-width: 22ch;
 }
 .whoami .bullets { font-size: 15px; line-height: 26px; max-width: 52ch; gap: 12px; }
 .whoami .bullets li::before { margin-top: 9px; }
-// The scene runs edge to edge of the main column at any window width. The rex
+// The scene runs edge to edge of the main column at any window size. The rex
 // stops growing on wide screens (horizon.js); only the floor gets longer.
 .horizon {
   position: relative;
-  height: clamp(270px, 36vw, 640px);
+  flex: 1 1 auto;
+  min-height: clamp(270px, 36vw, 640px);
   margin: 32px calc(-1 * var(--content-pad-x)) 0;
   overflow: hidden;
   color: var(--color-text);
 }
-.horizon svg { display: block; width: 100%; height: 100%; }
+.horizon svg { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
 .horizon__grid { stroke: #{"color-mix(in srgb, var(--color-text) 62%, transparent)"}; stroke-width: 1; fill: none; }
 .horizon__rays line { opacity: .62; }
 .horizon__line { stroke: var(--color-accent); stroke-width: 1; opacity: .55; fill: none; }

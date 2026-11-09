@@ -90,12 +90,13 @@
     var rowsG = q('[data-rows]'), raysG = q('[data-rays]'), glow = q('[data-glow]'), line = q('[data-line]');
     var parts = { f: [part('thigh_f'), part('shin_f'), part('foot_f')], r: [part('thigh_r'), part('shin_r'), part('foot_r')] };
 
-    var ROWS = 27, RAYS = 41;
+    var ROWS = 31, RAYS = 41;
+    var NEAR = [0.22, 0.3, 0.42, 0.58]; // rows only a stretched panel ever shows
     var rows = [], rays = [];
     for (var i = 0; i < ROWS; i++) { var r = document.createElementNS(NS, 'line'); rowsG.appendChild(r); rows.push(r); }
     for (var j = 0; j < RAYS; j++) { var s = document.createElementNS(NS, 'line'); raysG.appendChild(s); rays.push(s); }
 
-    var W = 0, H = 0, horizon = 0, feet = 0, base = 0, scale = 1, cell = 1, far = 1;
+    var W = 0, H = 0, natural = 0, horizon = 0, feet = 0, base = 0, scale = 1, cell = 1, far = 1;
     var time = 0, shift = 0, last = 0, frame = 0;
     var visible = true;
 
@@ -103,20 +104,26 @@
       var box = fig.getBoundingClientRect();
       if (!box.width || !box.height) return;
       W = box.width; H = box.height;
+      // The scene is composed for the panel's natural height (its CSS min-height).
+      // When the page stretches it to reach the bottom of a tall screen, the extra
+      // is only more floor: the pair keeps its place and size.
+      natural = Math.min(H, parseFloat(getComputedStyle(fig).minHeight) || H);
       svg.setAttribute('viewBox', '0 0 ' + n(W) + ' ' + n(H));
-      horizon = H * 0.36;
-      feet = H * 0.816;
-      base = H * 1.09;
-      far = H * 0.906;
+      horizon = natural * 0.36;
+      feet = natural * 0.816;
+      base = natural * 1.09;
+      far = natural * 0.906;
       var fw = BOUNDS.right - BOUNDS.left, fh = BOUNDS.ground - BOUNDS.top;
-      scale = Math.min((W * 0.76) / fw, (H * 0.7) / fh);
+      scale = Math.min((W * 0.76) / fw, (natural * 0.7) / fh);
       // The floor is sized from the figure, so a wider window shows more floor, not bigger tiles.
       cell = Math.max(scale * 320, 84);
-      glow.setAttribute('cx', n(W / 2)); glow.setAttribute('cy', n(horizon + H * 0.02));
-      glow.setAttribute('rx', n(W * 0.64)); glow.setAttribute('ry', n(H * 0.17));
+      glow.setAttribute('cx', n(W / 2)); glow.setAttribute('cy', n(horizon + natural * 0.02));
+      glow.setAttribute('rx', n(W * 0.64)); glow.setAttribute('ry', n(natural * 0.17));
       line.setAttribute('d', 'M0 ' + n(horizon) + 'H' + n(W));
       var mask = q('[data-mask-rect]');
       mask.setAttribute('y', n(horizon)); mask.setAttribute('width', n(W)); mask.setAttribute('height', n(H - horizon));
+      var fade = svg.querySelector('#hz-fade');
+      fade.setAttribute('y1', n(horizon)); fade.setAttribute('y2', n(natural));
       var edge = q('[data-edge-rect]');
       edge.setAttribute('width', n(W)); edge.setAttribute('height', n(H));
       draw();
@@ -124,15 +131,16 @@
 
     function drawGrid() {
       var cx = W / 2;
+      var bottom = Math.max(H, base), reach = (bottom - horizon) / (base - horizon);
       rows.forEach(function (el, i) {
-        var y = horizon + far / (i + 0.75);
+        var y = horizon + far / (i < NEAR.length ? NEAR[i] : i - NEAR.length + 0.75);
         el.setAttribute('x1', 0); el.setAttribute('x2', n(W));
         el.setAttribute('y1', n(y)); el.setAttribute('y2', n(y));
-        el.setAttribute('opacity', n(Math.min(0.76, Math.max(0, (y - horizon - H * 0.04) / (H * 0.29)))));
+        el.setAttribute('opacity', n(Math.min(0.76, Math.max(0, (y - horizon - natural * 0.04) / (natural * 0.29)))));
       });
       rays.forEach(function (el, i) {
         el.setAttribute('x1', n(cx)); el.setAttribute('y1', n(horizon));
-        el.setAttribute('x2', n(cx + (i - 20 + shift) * cell)); el.setAttribute('y2', n(base));
+        el.setAttribute('x2', n(cx + (i - 20 + shift) * cell * reach)); el.setAttribute('y2', n(bottom));
       });
     }
 
