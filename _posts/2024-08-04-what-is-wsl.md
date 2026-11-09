@@ -110,45 +110,45 @@ When I first met with WSL I didn't have enough storage on Disk C: so I needed to
 First of all go and check [downloading distributions](https://learn.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions) from WSL documentation and you need to get link like this: **https://aka.ms/wslubuntu2204**
 
 1. Open Powershell and Set location to Disk D:
-    * ``` 
-        Set-Location D:
-    ```
+   ```
+   Set-Location D:
+   ```
 2. Create a directory for installation and change its name to WSL let's say
-    * ``` 
-        New-Item WSL -Type Directory
-        Set-Location .\WSL
-    ```
+   ```
+   New-Item WSL -Type Directory
+   Set-Location .\WSL
+   ```
 3. Using the URL above, we will download the appx package:
-    * ```
-        Invoke-WebRequest -Uri <appx_package_url> -OutFile Linux.appx -UseBasicParsing
-    ``` 
+   ```
+   Invoke-WebRequest -Uri <appx_package_url> -OutFile Linux.appx -UseBasicParsing
+   ```
 4. Make a backup and unpack:
-    * ```
-        Copy-Item .\Linux.appx .\Linux.zip
-        Expand-Archive .\Linux.zip
-    ``` 
+   ```
+   Copy-Item .\Linux.appx .\Linux.zip
+   Expand-Archive .\Linux.zip
+   ```
 5. Search for the installer:
-    * ```
-        Get-Childitem -Filter *.exe
-    ``` 
+   ```
+   Get-Childitem -Filter *.exe
+   ```
 6. You might find a file named <<distribution>>.exe. Run that file, and the WSL distribution should be installed in the unpack folder of the other drive.
 
 7. **If you don't see an executable, let's look for an .appx file that was just unpacked, that is the flavor you want, and unzip that, as follows:**
-    * ```
-        Set-Location Linux
+   ```
+   Set-Location Linux
 
-        Get-Childitem -Filter *.appx
+   Get-Childitem -Filter *.appx
 
-        ren .\Ubuntu_2204.1.7.0_x64.appx .\Ubuntu_2204.zip
+   ren .\Ubuntu_2204.1.7.0_x64.appx .\Ubuntu_2204.zip
 
-        Expand-Archive .\Ubuntu_2204.zip
+   Expand-Archive .\Ubuntu_2204.zip
 
-        Set-Location .\Ubuntu_2204
+   Set-Location .\Ubuntu_2204
 
-        Get-Childitem -Filter *.exe
+   Get-Childitem -Filter *.exe
 
-        .\ubuntu.exe
-    ``` 
+   .\ubuntu.exe
+   ```
 
 You can now delete everything except **ext4.vhdx** (for WSL2, rootfs for WSL1), and ubuntu.exe file which starts that distro and can change the default username.
 
@@ -230,24 +230,24 @@ wsl --distribution Ubuntu
 ## Creating Another Instance of Distribution 
 
 1. First of all we need to export existing distribution:
-    * ``` 
-        wsl --export Ubuntu-22.04 C:\path\to\ubuntu-22.04.tar
-    ```
+   ```
+   wsl --export Ubuntu-22.04 C:\path\to\ubuntu-22.04.tar
+   ```
 
 2. Secondly we will import what we export as a new instance:
-    * ``` 
-        wsl --import ros2_drone_22-04 C:\path\to\installation\directory C:\path\to\ubuntu-22.04.tar --version 2
-    ```
+   ```
+   wsl --import ros2_drone_22-04 C:\path\to\installation\directory C:\path\to\ubuntu-22.04.tar --version 2
+   ```
 
 3. Finally we can set up the new instance:
-    * ``` 
-        wsl -d ros2_drone_22-04
-    ``` 
+   ```
+   wsl -d ros2_drone_22-04
+   ```
 
 4. You can verify new instance by listing all WSL instances 
-    * ```
-        wsl --list --all
-    ```
+   ```
+   wsl --list --all
+   ```
 
 
 **Connect with me across the web, you can explore my digital world through the link on the image below, including more articles, projects, and personal interests.**

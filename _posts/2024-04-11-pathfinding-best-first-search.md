@@ -93,117 +93,117 @@ With `get_size` we get board's height and width.
 <img src="/images/post-1/get_size.jpg" width="450" height="250" alt="Get Size"/>
 
 ```
-    def get_size(self):
-        """
+def get_size(self):
+    """
 
-        Get the size of the board. This method returns the dimensions of the board as a list, where the first element is the number of rows (height) and the second element is the number of columns (width).
+    Get the size of the board. This method returns the dimensions of the board as a list, where the first element is the number of rows (height) and the second element is the number of columns (width).
 
-        Parameters:
-        ----------
-        self : object
-            The instance of the class from which this method is called. It must have a `board` attribute, which is a list of lists representing the grid.
+    Parameters:
+    ----------
+    self : object
+        The instance of the class from which this method is called. It must have a `board` attribute, which is a list of lists representing the grid.
 
-        Returns:
-        -------
-        list of int
-            A list containing two integers:
-            - The first integer represents the number of rows(height) in the board.
-            - The second integer represents the number of columns(width) in the board.
+    Returns:
+    -------
+    list of int
+        A list containing two integers:
+        - The first integer represents the number of rows(height) in the board.
+        - The second integer represents the number of columns(width) in the board.
 
-        """
-        return [len(self.board), len(self.board[0])]
+    """
+    return [len(self.board), len(self.board[0])]
 ```
 We will get our cell position located `at` specified position
 ```
-    def at(self, pos):
-        """
+def at(self, pos):
+    """
 
-        Retrieve the cell object at a specified position in the board.
+    Retrieve the cell object at a specified position in the board.
 
-        Parameters:
-        ----------
-        self : object
-            The instance of the class from which this method is called.
-        
-        pos : list or tuple of int
-            A list or tuple containing the [row_index, column_index] of the cell.
+    Parameters:
+    ----------
+    self : object
+        The instance of the class from which this method is called.
 
-        Returns:
-        -------
-        Cell
-          The cell object located at the specified position.
+    pos : list or tuple of int
+        A list or tuple containing the [row_index, column_index] of the cell.
 
-        """
-        return self.board[pos[0]][pos[1]]
+    Returns:
+    -------
+    Cell
+      The cell object located at the specified position.
+
+    """
+    return self.board[pos[0]][pos[1]]
 ```
 Simply cloning the board
 ```
-    def clone(self):
-        """
-        Clone the board.
-        
-        Parameters:
-        ----------
-        self : object
-            The instance of the class from which this method is called.
+def clone(self):
+    """
+    Clone the board.
 
-        Returns:
-        -------
-        Cell_Network
-          A copy of the board.
+    Parameters:
+    ----------
+    self : object
+        The instance of the class from which this method is called.
 
-        """
-        return Cell_Network(copy.deepcopy(self.board))
+    Returns:
+    -------
+    Cell_Network
+      A copy of the board.
+
+    """
+    return Cell_Network(copy.deepcopy(self.board))
 ```
 Clearing the board with specified count for example at the beginning we have infinite possibilities right, so we give count = math.inf to make count of each cell equals to infinity
 
 ```
-    def clear_count(self, count):
-        """
+def clear_count(self, count):
+    """
 
-        Clear the count of each cell
+    Clear the count of each cell
 
-        Parameters:
-        -----------
-          self (object):
-            The instance of the class from which this method is called.
+    Parameters:
+    -----------
+      self (object):
+        The instance of the class from which this method is called.
 
-          count (int): The number we want to give all the cell count.
-        
-        Returns:
-        --------
-          None  
-        
-        """
-        for o in self.board:
-            for i in o:
-                i.count = count
-                i.path_from = None
+      count (int): The number we want to give all the cell count.
+
+    Returns:
+    --------
+      None
+
+    """
+    for o in self.board:
+        for i in o:
+            i.count = count
+            i.path_from = None
 ```
 We need to make sure if the position is valid point, and that it appears within the boundaries of the board. 
 
 ```
-    def is_valid_point(self, pos):
-        """
+def is_valid_point(self, pos):
+    """
 
-        Check if the given position is within the bounds of the board.
-    
-        Parameters:
-        ----------
-        self : object
-            The instance of the class from which this method is called.
-        
-        pos : list or tuple of int
-            A list or tuple containing the [row_index, column_index] of the cell.
-    
-        Returns:
-        -------
-        bool
-          True if the position is within the bounds of the board, False otherwise.
+    Check if the given position is within the bounds of the board.
 
-        """
-        sz = self.get_size()
-        return (pos[0] >=0) and (pos[1] >= 0) and (pos[0] < sz[0]) and (pos[1] < sz[1])
+    Parameters:
+    ----------
+    self : object
+        The instance of the class from which this method is called.
+
+    pos : list or tuple of int
+        A list or tuple containing the [row_index, column_index] of the cell.
+
+    Returns:
+    -------
+    bool
+      True if the position is within the bounds of the board, False otherwise.
+
+    """
+    sz = self.get_size()
+    return (pos[0] >=0) and (pos[1] >= 0) and (pos[0] < sz[0]) and (pos[1] < sz[1])
 ```
 
 We create empty maze with `create_empty_maze` it takes width and height of maze and returns namespace with attributes like `board` which is created by combination of cells, also we have `start` and `end` positions.
@@ -550,94 +550,94 @@ class Finder:
 ```
 
 ```
-    def set_board(self, board):
-        """
+def set_board(self, board):
+    """
 
-        Set the board attribute of the instance.
+    Set the board attribute of the instance.
 
-        Parameters
-        ----------
-          self : object
-            The instance of the class from which this method is called.
-        
-          board : Board
-            The board object to be set for the instance.
+    Parameters
+    ----------
+      self : object
+        The instance of the class from which this method is called.
 
-        Returns
-        -------
-          None
+      board : Board
+        The board object to be set for the instance.
 
-        """
-        self.board = board
+    Returns
+    -------
+      None
+
+    """
+    self.board = board
 ```
 ```
-    def set_path(self, path):
-        """
+def set_path(self, path):
+    """
 
-        Set the path attribute of the instance.
+    Set the path attribute of the instance.
 
-        Parameters
-        ----------
-          self : object
-            The instance of the class from which this method is called.
-        
-          path : list of tuples/lists
-            The path to be set for the instance, typically a list of positions.
+    Parameters
+    ----------
+      self : object
+        The instance of the class from which this method is called.
 
-        Returns
-        -------
-          None
-        
-        """
-        self.path = path
+      path : list of tuples/lists
+        The path to be set for the instance, typically a list of positions.
+
+    Returns
+    -------
+      None
+
+    """
+    self.path = path
 ```
 ```
-    def run(self):
-        """
+def run(self):
+    """
 
-        Start the main event loop of the application.
+    Start the main event loop of the application.
 
-        This method calls the main_loop function, passing the current instance as an argument.
+    This method calls the main_loop function, passing the current instance as an argument.
 
-        Parameters
-        ----------
-          self : object
-            The instance of the class from which this method is called.
+    Parameters
+    ----------
+      self : object
+        The instance of the class from which this method is called.
 
-        Returns
-        -------
-          None
+    Returns
+    -------
+      None
 
-        """
-        main_loop(self)
+    """
+    main_loop(self)
 ```
 
 ```
-    def draw(self, surface):
-        """
-        Draw the board and path on the given surface.
+def draw(self, surface):
+    """
+    Draw the board and path on the given surface.
 
-        This method draws the board on the provided surface. If a path is set, it also draws the path.
-    
-        Parameters
-        ----------
-          self : object
-            The instance of the class from which this method is called.
-        
-          surface : pygame.Surface
-            The Pygame surface on which the board and path will be drawn.
-    
-        Returns
-        -------
-          None
-        
-        """
-        if self.board == None:
-            return
-        
-        draw_board(surface, surface.get_rect(), self.board)
-        if self.path != None:
-            draw_path(surface, surface.get_rect(), self.board, self.path)
+    This method draws the board on the provided surface. If a path is set, it also draws the path.
+
+    Parameters
+    ----------
+      self : object
+        The instance of the class from which this method is called.
+
+      surface : pygame.Surface
+        The Pygame surface on which the board and path will be drawn.
+
+    Returns
+    -------
+      None
+
+    """
+    if self.board == None:
+        return
+
+    draw_board(surface, surface.get_rect(), self.board)
+    if self.path != None:
+        draw_path(surface, surface.get_rect(), self.board, self.path)
 ```
 Next I will talk about metrics of board which we will use them to draw our cell, maze, path.
 
@@ -663,48 +663,48 @@ class BoardMetrics:
 This function will take position of the cell we will insert to board/maze and use it to get cell rectangle and create the board with them.
 
 ```
-    def cell_rect(self, pos):
-        """
+def cell_rect(self, pos):
+    """
 
-        This function takes position and returns rectangle object at that position as a list with its [x,y,w,h]
-        
-        Parameters:
-        -----------
-           pos (list): This parameter represents the position of the cell.
+    This function takes position and returns rectangle object at that position as a list with its [x,y,w,h]
 
-        Returns:
-        --------
-          list:
-            The new x-coordinate of the rectangle's top-left corner.
-            The new y-coordinate of the rectangle's top-left corner.
-            The original width of the rectangle.
-            The original height of the rectangle.
+    Parameters:
+    -----------
+       pos (list): This parameter represents the position of the cell.
 
-        """
-        return [self.left + pos[0]*self.cx, self.top + pos[1]*self.cy, self.cx - self.spacing, self.cy - self.spacing]
+    Returns:
+    --------
+      list:
+        The new x-coordinate of the rectangle's top-left corner.
+        The new y-coordinate of the rectangle's top-left corner.
+        The original width of the rectangle.
+        The original height of the rectangle.
+
+    """
+    return [self.left + pos[0]*self.cx, self.top + pos[1]*self.cy, self.cx - self.spacing, self.cy - self.spacing]
 ```
 
 To draw path from center of each cell we will use the following function.
 
 ```
-    def cell_center(self, pos):
-        """
+def cell_center(self, pos):
+    """
 
-        This function takes position and returns position of cell's center as a list 
-        
-        Parameters:
-        -----------
-          pos (list): This parameter represents the position of the cell
+    This function takes position and returns position of cell's center as a list
 
-        Returns:
-        --------
-          list:
-            x-coordinate of rectangle's center
-            y-coordinate of rectangle's center
+    Parameters:
+    -----------
+      pos (list): This parameter represents the position of the cell
 
-        """
-        rct = self.cell_rect(pos)
-        return [rct[0]+rct[2]/2, rct[1] + rct[3]/2]
+    Returns:
+    --------
+      list:
+        x-coordinate of rectangle's center
+        y-coordinate of rectangle's center
+
+    """
+    rct = self.cell_rect(pos)
+    return [rct[0]+rct[2]/2, rct[1] + rct[3]/2]
 ```
 
 <img src="/images/post-1/cell_center.png" width="1150" height="450" alt="Cell Center"/>

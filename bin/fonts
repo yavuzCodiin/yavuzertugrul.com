@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Subset Ioskeley Mono for the web:  ./bin/fonts
+"""Subset the self-hosted fonts for the web:  ./bin/fonts
 
-The full fonts (≈95 KB each, 1300+ code points incl. Cyrillic) live in
-_fonts-src/ — the leading underscore keeps them out of the published site.
-This writes subsets to fonts/ covering Latin (Turkish included), Greek,
-punctuation, arrows, maths, box drawing and geometric shapes: everything the
-site uses today plus room for future posts. Glyphs outside the subset fall back
-to the next font in the stack (ui-monospace), never to tofu.
+The full fonts live in _fonts-src/ — the leading underscore keeps them out of
+the published site. Ioskeley Mono (code) keeps Latin (Turkish included), Greek,
+punctuation, arrows, maths, box drawing and geometric shapes. Inter only sets
+text on devices without San Francisco, so it keeps a tighter set: Latin, Greek
+letters and common punctuation. Glyphs outside a subset fall back to the next
+font in the stack, never to tofu.
 
 Only the OpenType features browsers switch on by default are kept (calt, ccmp,
 locl, kern, mark, …), so the rendering is unchanged. What goes is Iosevka's
@@ -15,7 +15,7 @@ onum, zero — about half the glyphs, none of which this site can display
 without a font-feature-settings rule it does not have.
 Every name record is kept: the OFL 1.1 licence text and the copyright line
 travel with each file.
-Ioskeley Mono declares no Reserved Font Name, so subsetting is permitted.
+Neither font declares a Reserved Font Name, so subsetting is permitted.
 
 Needs fontTools + brotli:  python3 -m pip install --user fonttools brotli
 """
@@ -37,7 +37,24 @@ RANGES = [
     (0x2500, 0x25FF),  # box drawing, block elements, geometric shapes (● ▴ ▾)
     (0xFFFD, 0xFFFD),  # replacement character
 ]
-unicodes = [cp for lo, hi in RANGES for cp in range(lo, hi + 1)]
+TEXT_RANGES = [
+    (0x0020, 0x007E),  # Basic Latin
+    (0x00A0, 0x017F),  # Latin-1 Supplement, Latin Extended-A (ğ ş ı İ ç ö ü …)
+    (0x0391, 0x03C9),  # Greek letters (α π Ω in technical posts)
+    (0x2010, 0x2027),  # dashes, quotes, bullets, ellipsis
+    (0x2030, 0x203A),  # per mille, primes, angle quotes
+    (0x20AC, 0x20AC),  # euro
+    (0x2122, 0x2122),  # trade mark
+    (0x2190, 0x2199),  # arrows
+    (0x2212, 0x2212),  # minus
+    (0xFFFD, 0xFFFD),  # replacement character
+]
+
+
+def unicodes_for(name):
+    ranges = TEXT_RANGES if name.startswith("Inter") else RANGES
+    return [cp for lo, hi in ranges for cp in range(lo, hi + 1)]
+
 
 os.makedirs(os.path.join(ROOT, "fonts"), exist_ok=True)
 for src in sorted(glob.glob(os.path.join(ROOT, "_fonts-src", "*.woff2"))):
@@ -51,7 +68,7 @@ for src in sorted(glob.glob(os.path.join(ROOT, "_fonts-src", "*.woff2"))):
     opts.notdef_outline = True
     font = subset.load_font(src, opts)
     sub = subset.Subsetter(opts)
-    sub.populate(unicodes=unicodes)
+    sub.populate(unicodes=unicodes_for(os.path.basename(src)))
     sub.subset(font)
     subset.save_font(font, dst, opts)
     print(f"{os.path.basename(src):32s} {os.path.getsize(src)/1024:6.1f} KB → {os.path.getsize(dst)/1024:6.1f} KB")

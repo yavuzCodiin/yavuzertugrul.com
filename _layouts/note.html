@@ -23,7 +23,7 @@ section: writing
     {%- comment -%} Own photography stays in colour per the photography rule. {%- endcomment -%}
     <figure class="note-detail__figure">
       {%- assign fig_alt = page.image_alt | default: page.title -%}
-      {% include img.html src=page.image alt=fig_alt eager=true sizes="(max-width: 1023px) calc(100vw - 40px), 760px" %}
+      {% include img.html src=page.image alt=fig_alt eager=true sizes="(max-width: 1023px) calc(100vw - 40px), 700px" %}
     </figure>
     {%- endif %}
 
@@ -36,10 +36,10 @@ section: writing
     {%- endfor %}
     {%- else %}
     <div class="prose note-detail__text">
-      {% include body.html content=content sizes="(max-width: 1023px) calc(100vw - 40px), 760px" %}</div>
+      {% include body.html content=content sizes="(max-width: 1023px) calc(100vw - 40px), 700px" %}</div>
     {%- endif %}
   </article>
 
-  <div class="rule" style="margin:40px 0 20px;max-width:760px"></div>
+  <div class="rule" style="margin:40px 0 20px;max-width:700px"></div>
   <a class="more-link" href="{{ '/writing/' | relative_url }}">← Back to the stream</a>
 </main>

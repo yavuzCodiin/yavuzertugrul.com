@@ -22,6 +22,9 @@
   flex-direction: column;
   gap: 32px;
 }
+// The theme switch sits on the name's line, as it does in the phone top bar.
+.sidebar__top { display: flex; justify-content: space-between; align-items: flex-start; }
+.sidebar__top .theme-toggle { margin: 2px -6px 0 0; }
 .brand {
   display: block;
   text-decoration: none;
@@ -66,7 +69,7 @@
 .sidebar__foot {
   margin-top: auto;
   font-size: 13px;
-  color: #{$ink-55};
+  color: #{$ink-60};
 }
 
 // ── Content column ───────────────────────────────────────────────────────────
@@ -178,7 +181,7 @@ body.booknote-open { overflow: hidden; }
   font-size: 13px;
 }
 .menu__foot a { text-decoration: none; color: var(--color-text); }
-.menu__foot .menu__copy { margin-left: auto; color: #{$ink-55}; }
+.menu__foot .menu__copy { margin-left: auto; color: #{$ink-60}; }
 
 // ── Page footer ──────────────────────────────────────────────────────────────
 .site-foot { margin-top: auto; padding-top: 32px; }

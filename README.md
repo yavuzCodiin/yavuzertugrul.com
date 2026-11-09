@@ -1,9 +1,8 @@
 # yavuzertugrul.com
 
 Personal site of Yavuz Ertuğrul — Jekyll, GitHub Pages compatible, no JS framework.
-Built to the "Modernist" design system from the redesign handoff: **Ioskeley Mono**
-throughout, red-on-paper palette, visible 2px rules, zero border radius, sidebar
-navigation.
+Built on the "Modernist" layout from the redesign handoff: visible rules, zero border
+radius, sidebar navigation. Dark by default, with a light theme on a button.
 
 **Information architecture:** posts, Medium pieces and short notes are ONE stream at
 `/writing/`, sliced by eight topics. There is no separate Posts, Thoughts or Archive
@@ -63,7 +62,7 @@ _art/                  sketch metadata (output: false — rendered on /sketches/
 _data/                 topics · books · albums · cv · nav · sitemap · home
                        images.json — written by bin/images, never by hand
 writing.html           the stream;  writing/<topic>.html  one stub per topic
-fonts/                 Ioskeley Mono woff2 (400/500/700/800), subset by bin/fonts
+fonts/                 Inter (text) and Ioskeley Mono (code) woff2, subset by bin/fonts
 _fonts-src/            the full fonts bin/fonts subsets from (not published)
 images/                curated assets;  images/sized/  WebP copies from bin/images
 bin/new                create an entry;  bin/sync-vault  mirror an Obsidian vault
@@ -75,33 +74,49 @@ atom.xml               everything;  feed-longform.xml  long-form only
 
 ### Type
 
-The whole site is set in **Ioskeley Mono** — a free Berkeley Mono clone (OFL 1.1,
-github.com/ahatem/IoskeleyMono), self-hosted from `fonts/` in four weights, so the site
-makes no third-party font request. Archivo is gone. The files in `fonts/` are subsets
-(see "Speed"); the full originals stay in `_fonts-src/`.
+Text and interface use the system stack from stephango.com
+(`-apple-system, BlinkMacSystemFont, "Inter", …`): San Francisco on Apple devices, with
+nothing to download, and self-hosted **Inter** (OFL 1.1) everywhere else. **Ioskeley Mono**
+(OFL 1.1, github.com/ahatem/IoskeleyMono) sets code only. The site makes no third-party
+font request. The files in `fonts/` are subsets (see "Speed"); the full originals stay in
+`_fonts-src/`.
 
-Mono sets ~15% wider per character, so the display sizes step down from the Archivo
-original and letter-spacing never goes negative. The steps live in `_sass/_tokens.scss`
-as `--type-display` (40px page H1), `--type-hero` (40px About/Contact), `--type-post`
-(32px post H1) and `--type-whoami` (34px) — retune them in one place.
+`--type-read` (running text), `--type-display` (page H1) and `--type-post` (post and note
+H1) grow gently with the window and become fixed sizes on phones, at the end of
+`_sass/_pages.scss`. `--type-hero` (About/Contact) and `--type-whoami` stay fixed. All of
+them live in `_sass/_tokens.scss`.
 
 ### Design tokens
 
-`_sass/_tokens.scss` is the port of the handoff's
-`_ds/modernist-*/styles.css`. Two values differ from that sheet, because the handoff
-README states them explicitly as the final decision — both are commented in the file:
+`_sass/_tokens.scss` keeps the structure of the handoff's `_ds/modernist-*/styles.css`.
+The colours are Flexoki (stephango.com/flexoki): `:root` is the black theme and
+`html[data-theme="paper"]` overrides it for the light one.
 
-| Token | Token sheet | Here |
-| --- | --- | --- |
-| `--color-surface` | `#eae9e9` | `#ffffff` |
-| `--color-divider` | `color-mix(#201e1d 40%)` | `#201e1d` (full-ink 2px rules) |
+### Themes
 
-Revert those two lines if you prefer the softer sheet values — nothing else changes.
+Dark is the default for everyone, whatever the device is set to. Light is chosen with the
+button beside the name (top bar on phones) and remembered in `localStorage`. An inline
+script in `_layouts/default.html` applies the saved choice before the stylesheet, so the
+page never flashes the wrong theme.
+
+The change is a view transition: `assets/js/theme.js` paints two noisy masks once, and
+`_sass/_theme.scss` slides them over the old and new page with the accent colour showing
+through the gap. Browsers without view transitions, and visitors who ask for reduced
+motion, get an instant switch. The moon and sun in `_includes/theme-icons.html` are
+original drawings.
+
+### Whoami scene
+
+`_includes/horizon.html` holds the man and the rex as vector parts traced from the photo
+that used to be on the page, and `assets/js/horizon.js` walks them with inverse kinematics
+over a moving grid, so the planted foot stays on the floor. The scene stops when it is
+off-screen and stands still under reduced motion. The rex stops growing on wide windows;
+only the floor gets longer.
 
 ### Photography rule
 
 Editorial / hero photos get the `.grayscale` wrapper. **Always in colour:** your own
-artwork (sketches, gallery frames, thought images), book covers, the whoami photo, and
+artwork (sketches, gallery frames, thought images), book covers, and
 technical diagrams / screenshots. On a post, set `image_color: true` in the front matter
 to keep the hero in colour.
 
@@ -211,10 +226,12 @@ next to the GIF and prints the `{% include clip.html … %}` line to put where t
 was. The clip loops silently like the GIF, but downloads nothing until it scrolls near
 and pauses off-screen; reduced-motion visitors get a play button instead.
 
-**Fonts.** `./bin/fonts` rebuilds `fonts/` from `_fonts-src/`: Latin (with Turkish), Greek,
-punctuation, arrows, math and box drawing, keeping only the OpenType features that are on
-by default — 94 KB → 66 KB per weight, rendering pixel-identical. Run it only after
-changing a font file or if a post needs a script outside those ranges.
+**Fonts.** Apple devices download no text font at all. `./bin/fonts` rebuilds `fonts/` from
+`_fonts-src/`, keeping only the OpenType features that are on by default. Ioskeley Mono
+keeps Latin (with Turkish), Greek, punctuation, arrows, math and box drawing (94 KB → 66 KB
+per weight). Inter keeps Latin, Greek letters and common punctuation (about 24 KB per
+weight); if you change that set, change `$inter-range` in `_sass/_fonts.scss` to match.
+Run it only after changing a font file or if a post needs a script outside those ranges.
 
 The tools need Python 3 with `python3 -m pip install --user pillow fonttools brotli`, and
 ffmpeg (`brew install ffmpeg`) for clips. GitHub Pages never runs them — their output is
@@ -234,6 +251,8 @@ committed.
 | Sketch chip filtering, "Load more" | `assets/js/filters.js` |
 | Owner mode | `assets/js/owner.js` |
 | GIF-style clips: load near view, play on screen | `assets/js/clip.js` |
+| Light/dark switch and its transition | `assets/js/theme.js` |
+| Whoami scene | `assets/js/horizon.js` |
 
 Every overlay closes on ESC and on backdrop click. Nothing scrolls the page on load.
 

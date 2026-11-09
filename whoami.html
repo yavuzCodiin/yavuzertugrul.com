@@ -5,15 +5,12 @@ permalink: /whoami/
 hero_pad: true
 title: Whoami
 description: Still trying to figure — and hopefully will find one day.
+extra_js: [/assets/js/horizon.js]
 ---
 <div class="whoami">
   <div>
     <span class="kicker kicker--page">whoami</span>
     <h1 class="whoami__title">Still trying to figure — and hopefully will find one day.</h1>
-    {%- comment -%} Same photo twice: desktop shows the right-column figure, mobile shows this one between the H1 and the bullets (one network fetch either way). {%- endcomment -%}
-    <figure class="whoami__figure-m u-mobile">
-      <img src="{{ '/images/whoami/dinasaur.jpg' | relative_url }}" alt="Learning">
-    </figure>
     <ul class="bullets">
       <li><span>Curious, builder, and dreamer.</span></li>
       <li><span>Quick learner, thinks discipline &gt; motivation.</span></li>
@@ -21,8 +18,5 @@ description: Still trying to figure — and hopefully will find one day.
       <li><span>AI &amp; robotics enthusiast.</span></li>
     </ul>
   </div>
-  {%- comment -%} Own photo — stays in colour per the photography rule. {%- endcomment -%}
-  <figure class="u-desktop">
-    <img src="{{ '/images/whoami/dinasaur.jpg' | relative_url }}" alt="Learning">
-  </figure>
+  {% include horizon.html %}
 </div>

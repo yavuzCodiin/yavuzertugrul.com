@@ -1,6 +1,34 @@
-// ── Ioskeley Mono ────────────────────────────────────────────────────────────
-// Free Berkeley Mono clone, OFL 1.1 — github.com/ahatem/IoskeleyMono.
-// Self-hosted so the site has no third-party font request.
+// ── Self-hosted fonts ────────────────────────────────────────────────────────
+// No third-party font request. Inter (OFL 1.1, github.com/rsms/inter) is only
+// fetched on devices without San Francisco, because the stack in _tokens.scss
+// reaches it last. unicode-range matches the subset in bin/fonts, so an emoji on
+// a Mac does not pull Inter down just to find it has no such glyph.
+// Ioskeley Mono (OFL 1.1) is only fetched for code.
+$inter-range: "U+20-7E, U+A0-17F, U+391-3C9, U+2010-2027, U+2030-203A, U+20AC, U+2122, U+2190-2199, U+2212, U+FFFD";
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Regular.woff2') format('woff2');
+  unicode-range: #{$inter-range};
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Italic.woff2') format('woff2');
+  unicode-range: #{$inter-range};
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Medium.woff2') format('woff2');
+  unicode-range: #{$inter-range};
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-SemiBold.woff2') format('woff2');
+  unicode-range: #{$inter-range};
+  font-weight: 600; font-style: normal; font-display: swap;
+}
 @font-face {
   font-family: 'Ioskeley Mono';
   src: url('/fonts/IoskeleyMono-Regular.woff2') format('woff2');

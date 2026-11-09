@@ -1,19 +1,18 @@
 // ═══ Home ════════════════════════════════════════════════════════════════════
 .home__title {
-  font-size: var(--type-display); line-height: 1.12; margin: 0 0 16px;
+  font-size: var(--type-display); font-weight: 500; letter-spacing: -.02em; line-height: 1.2; margin: 0 0 16px;
 }
-.home__intro { font-size: 14.5px; line-height: 25px; max-width: 66ch; margin: 0 0 40px; color: #{$ink-78}; }
+.home__intro { font-size: var(--type-read); line-height: 1.5; max-width: 36em; margin: 0 0 40px; color: #{$ink-78}; }
 .home__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
 .home__latest {
   grid-column: 1 / -1;
   display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px;
   align-items: center;
 }
-.home__latest .card-title { font-size: 30px; line-height: 1.12; }
 .home__latest img { width: 100%; height: 280px; object-fit: cover; }
 .home__quotes { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
-.home__quote { margin: 0; font-size: 15px; line-height: 25px; }
-.home__quote-date { color: #{$ink-55}; font-size: 13px; }
+.home__quote { margin: 0; font-size: 16px; line-height: 1.5; }
+.home__quote-date { color: #{$ink-60}; font-size: 13px; }
 .home__quote-date::before { content: "\2014\00a0"; }
 .home__bottom {
   grid-column: 1 / -1;
@@ -25,83 +24,98 @@
 .home__art { padding: 0; overflow: hidden; }
 .home__art img { width: 100%; height: 150px; object-fit: cover; }
 .home__art-body { padding: 14px 20px; }
-.home__art-body .card-title { font-size: 18px; }
 .home__stat .stat__value { font-size: 19px; }
 .home__stat .stat { padding: 6px 0; }
 
 // ═══ Post detail ═════════════════════════════════════════════════════════════
 .post-head { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin: 0 0 20px; }
 .post__title {
-  font-size: var(--type-post); line-height: 1.18; margin: 0 0 14px; max-width: 30ch;
+  font-size: var(--type-post); font-weight: 500; letter-spacing: -.02em; line-height: 1.25; margin: 0 0 14px; max-width: 700px;
 }
 .post__meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin: 0 0 28px; }
 .post__date { font-feature-settings: 'tnum' 1; font-size: 14px; color: #{$ink-70}; }
 .post-grid { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 0 48px; }
 .post-grid > * { min-width: 0; }
+// One straight column: text, code and pictures share both edges.
+.post-grid > article { max-width: 700px; }
+@media (min-width: 1280px) {
+  .post-grid { grid-template-columns: minmax(0, 700px) 240px; gap: 0 64px; }
+}
 
 .post__hero { margin: 0 0 24px; }
 .post__hero img { width: 100%; height: 320px; object-fit: cover; }
 
 // Article body — typography for kramdown output
-.prose { font-size: 15px; line-height: 26px; min-width: 0; overflow-wrap: break-word; }
+.prose { font-size: var(--type-read); line-height: 1.5; min-width: 0; overflow-wrap: break-word; }
 // Migrated posts carry raw HTML with width/height attributes and <video>
 // elements sized to their source footage; without these they overflow the
 // column and slide under the sticky TOC rail.
 .prose video, .prose iframe, .prose embed, .prose object {
   display: block; width: 100%; max-width: 100%; height: auto; margin: 0 0 24px;
 }
-.prose img { height: auto; }
+// Two post images are transparent PNGs with dark line art.
+.prose img { height: auto; background: #fffcf0; }
 // Legacy side-by-side figure rows wrap instead of overflowing.
 .prose div[style*="flex"] { flex-wrap: wrap; gap: 20px; }
-.prose > * { max-width: 68ch; }
-.prose h2 { font-size: 24px; margin: 32px 0 10px; max-width: 34ch; }
+.prose > * { max-width: 100%; }
+.prose h1 { font-weight: 700; }
+.prose h2 { font-size: 1.3em; font-weight: 600; letter-spacing: -.015em; line-height: 1.3; margin: 1.7em 0 .5em; }
 .prose h2:first-child { margin-top: 0; }
-.prose h3 { font-size: 19px; margin: 24px 0 8px; max-width: 40ch; }
+.prose h3 { font-size: 1.1em; font-weight: 600; letter-spacing: -.01em; line-height: 1.3; margin: 1.5em 0 .4em; }
 // Migrated posts go four and five levels deep; without these they inherit the
 // base scale and read larger than the h3 above them.
-.prose h4 { font-size: 17px; margin: 22px 0 8px; max-width: 46ch; }
-.prose h5 { font-size: 15.5px; margin: 20px 0 6px; max-width: 52ch; }
+.prose h4, .prose h5 { font-size: 1em; font-weight: 600; line-height: 1.3; margin: 1.3em 0 .35em; }
 .prose h6 {
   font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
   margin: 20px 0 6px; color: var(--color-accent-700);
 }
 .prose h2 strong, .prose h3 strong, .prose h4 strong, .prose h5 strong { font-weight: inherit; }
-.prose p { margin: 0 0 16px; }
-.prose ul, .prose ol { margin: 0 0 16px; padding-left: 20px; }
-.prose li { margin-bottom: 6px; }
-.prose a { color: var(--color-accent); }
-.prose blockquote {
-  margin: 0 0 20px; padding-left: 16px;
-  border-left: 3px solid var(--color-accent);
-  color: #{$ink-78};
+.prose p { margin: 0 0 1em; }
+.prose ul, .prose ol { margin: 0 0 1em; padding-left: 1.3em; }
+// Tight and loose list items get the same rhythm.
+.prose li { margin: .32em 0; }
+.prose li > p { margin: 0 0 .32em; }
+.prose li > p:last-child { margin-bottom: 0; }
+.prose li ul, .prose li ol { margin: .32em 0 .1em; }
+.prose li::marker { color: #{$ink-45}; font-size: .8em; }
+.prose ul ul ul { list-style-type: circle; }
+// Links: ink with a hairline underline, colour only on hover.
+.prose a {
+  color: var(--color-text);
+  text-decoration-color: #{$ink-45};
+  text-decoration-thickness: 1px;
+  text-underline-offset: .17em;
 }
+.prose a:hover { color: var(--color-accent); text-decoration-color: currentColor; }
+.prose blockquote { margin: 1.5em 0; padding-left: 1.5em; border-left: 2px solid currentColor; }
 .prose figure, .prose img, .prose .highlight, .prose div.highlighter-rouge,
 .prose pre, .prose > div { max-width: 100%; }
-.prose figure { margin: 0 0 24px; }
+.prose figure { margin: 1.4em 0; }
 .prose figure img { width: 100%; }
 // Legacy wrappers from the old theme.
-.prose .image-container { margin: 0 0 24px; }
+.prose .image-container { margin: 1.4em 0; }
 .prose .image-container img { margin-inline: auto; }
-.prose figcaption { font-size: 11px; margin-top: var(--space-1); color: #{$ink-55}; }
+.prose figcaption { font-size: 12px; margin-top: 8px; color: #{$ink-60}; }
 .prose code, .prose code.highlighter-rouge {
-  font-family: var(--font-mono); font-size: 0.88em;
+  font-family: var(--font-mono); font-size: .8em;
+  font-variant-ligatures: none;
   background: var(--color-neutral-200);
-  padding: 1px 5px;
+  padding: .12em .34em;
   border: 0; margin: 0;
   overflow-wrap: break-word;
 }
-// Code blocks — flat neutral-200 panel with a 3px accent edge.
+// Code blocks — a calm neutral-200 panel; inside a list it sits on the bullet's text edge.
 // IMPORTANT: kramdown+rouge puts `highlighter-rouge` on inline <code> as well as
 // on the block wrapper <div>, so the panel must be scoped to `div.` — otherwise
 // every inline snippet gets the accent bar, block padding and bottom margin.
 .prose > pre,
 .prose div.highlighter-rouge {
   background: var(--color-neutral-200);
-  border-left: 3px solid var(--color-accent);
-  padding: 12px 16px;
-  margin: 0 0 24px;
+  padding: 14px 18px;
+  margin: 1.15em 0 1.35em;
   overflow-x: auto;
 }
+.prose li > div.highlighter-rouge, .prose li > pre { margin: .55em 0 .8em; }
 .prose div.highlighter-rouge .highlight,
 .prose div.highlighter-rouge pre {
   background: none; border: 0; padding: 0; margin: 0; overflow: visible;
@@ -110,7 +124,8 @@
   background: none; padding: 0;
 }
 .prose pre, .prose pre code, .prose .highlight, .prose .highlight code {
-  font-family: var(--font-mono); font-size: 13.5px; line-height: 22px;
+  font-family: var(--font-mono); font-size: 14px; line-height: 1.6;
+  font-variant-ligatures: none;
 }
 .prose table {
   display: block; width: max-content; max-width: 100%; overflow-x: auto;
@@ -146,7 +161,7 @@
 }
 .related a:last-child { border-bottom: 0; }
 .related a:hover { color: var(--color-accent-600); }
-.related__year { font-feature-settings: 'tnum' 1; color: #{$ink-55}; }
+.related__year { font-feature-settings: 'tnum' 1; color: #{$ink-60}; }
 
 // ── TOC rail ─────────────────────────────────────────────────────────────────
 .toc-rail { display: flex; flex-direction: column; gap: 24px; align-self: start; position: sticky; top: 24px; }
@@ -200,7 +215,7 @@
 .thought__body { padding: 20px 24px 22px; }
 .thought__head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 0 0 10px; }
 .thought__square { width: 8px; height: 8px; background: var(--color-accent); flex: none; }
-.thought__date { font-feature-settings: 'tnum' 1; font-size: 13px; color: #{$ink-55}; }
+.thought__date { font-feature-settings: 'tnum' 1; font-size: 13px; color: #{$ink-60}; }
 .thought__text { margin: 0; font-size: 15px; line-height: 26px; min-width: 0; overflow-wrap: break-word; }
 .thought__text img { margin: 12px 0 0; }
 .thought__text p:last-child { margin-bottom: 0; }
@@ -244,12 +259,12 @@
   letter-spacing: 0.03em;
 }
 .tile--feature .plaque__title { font-size: 13px; }
-.plaque__date { font-feature-settings: 'tnum' 1; font-size: 12px; color: #{$ink-55}; }
+.plaque__date { font-feature-settings: 'tnum' 1; font-size: 12px; color: #{$ink-60}; }
 .mosaic-foot {
   display: flex; justify-content: space-between; align-items: center;
   margin-top: 20px;
 }
-.mosaic-foot__count { font-size: 13px; font-feature-settings: 'tnum' 1; color: #{$ink-55}; }
+.mosaic-foot__count { font-size: 13px; font-feature-settings: 'tnum' 1; color: #{$ink-60}; }
 .tile.is-hidden { display: none; }
 
 // ═══ Bookshelf ═══════════════════════════════════════════════════════════════
@@ -259,7 +274,7 @@
   margin: 0 0 24px;
 }
 .shelf__head h4 { margin: 0; font-feature-settings: 'tnum' 1; }
-.shelf__count { font-size: 13px; font-feature-settings: 'tnum' 1; color: #{$ink-55}; }
+.shelf__count { font-size: 13px; font-feature-settings: 'tnum' 1; color: #{$ink-60}; }
 .shelf__rows { display: flex; gap: 28px; align-items: flex-end; flex-wrap: wrap; }
 // Groups of three exist for the mobile 3-per-row shelves; on desktop they are
 // layout-transparent so all covers share the one flex row.
@@ -270,8 +285,13 @@
 .book { position: relative; flex: 0 0 118px; background: none; border: 0; padding: 0; cursor: pointer; }
 .book__pages {
   position: absolute; top: 1%; left: 10px; width: 92%; height: 97%;
+  background: #b7b5ac;
+  border: 1px solid #575653;
+  box-shadow: inset -2px 0 0 #878580, inset -4px 0 0 #b7b5ac, inset -6px 0 0 #878580;
+}
+html[data-theme="paper"] .book__pages {
   background: #fff;
-  border: 1px solid var(--color-neutral-400);
+  border-color: var(--color-neutral-400);
   box-shadow:
     inset -2px 0 0 var(--color-neutral-300),
     inset -4px 0 0 #fff,
@@ -291,7 +311,7 @@
 .reading { display: flex; gap: 14px; }
 .reading img { width: 72px; aspect-ratio: 2 / 3; object-fit: cover; box-shadow: var(--shadow-md); }
 .reading__title { font-family: var(--font-heading); font-weight: 800; font-size: 16px; line-height: 1.2; }
-.reading__author { font-size: 13px; color: #{$ink-55}; margin-top: 4px; }
+.reading__author { font-size: 13px; color: #{$ink-60}; margin-top: 4px; }
 .reading .tag { margin-top: 10px; }
 .queue { display: flex; flex-direction: column; margin: 0 0 12px; }
 .queue__item {
@@ -320,7 +340,7 @@
   padding: 12px 2px 0;
 }
 .collection__title { font-family: var(--font-heading); font-weight: 800; font-size: 20px; }
-.collection__meta { font-feature-settings: 'tnum' 1; font-size: 13px; color: #{$ink-55}; }
+.collection__meta { font-feature-settings: 'tnum' 1; font-size: 13px; color: #{$ink-60}; }
 .collection__desc { margin: 6px 2px 0; font-size: 14px; line-height: 23px; color: #{$ink-70}; }
 
 .frames { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 16px; }
@@ -336,10 +356,10 @@
 .frame--tall .frame__box img { height: 300px; }
 .frame--wide:hover .frame__box img { transform: scale(1.03); }
 @media (min-width: 1024px) {
-  .page-title--album { font-size: 36px; margin-bottom: 14px; }
+  .page-title--album { margin-bottom: 14px; }
 }
 .album__related { display: flex; gap: 16px; margin-top: 24px; font-size: 14px; flex-wrap: wrap; }
-.album__related span { color: #{$ink-55}; }
+.album__related span { color: #{$ink-60}; }
 .album__related a { font-family: var(--font-heading); font-weight: 800; text-decoration: none; }
 
 // ═══ CV ══════════════════════════════════════════════════════════════════════
@@ -363,9 +383,9 @@
 .cv__job-head h3 { font-size: 22px; margin: 0; }
 .cv__dates {
   font-feature-settings: 'tnum' 1; font-size: 13px;
-  color: #{$ink-55}; white-space: nowrap;
+  color: #{$ink-60}; white-space: nowrap;
 }
-.cv__loc { font-size: 13px; color: #{$ink-55}; margin: 2px 0 14px; }
+.cv__loc { font-size: 13px; color: #{$ink-60}; margin: 2px 0 14px; }
 .cv__pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 48px; margin: 0 0 28px; }
 .cv__pair h4 { font-size: 17px; margin: 0; }
 .cv__pair p { font-size: 14px; line-height: 23px; margin: 8px 0 0; color: #{$ink-78}; }
@@ -377,8 +397,6 @@
 // ═══ About / Whoami / Contact ════════════════════════════════════════════════
 .kicker--page { margin-bottom: 20px; }
 .about__rule { max-width: 720px; margin: 0 0 8px; }
-.whoami__figure-m { margin: 0 0 20px; }
-.whoami__figure-m img { width: 100%; height: 240px; object-fit: cover; }
 .about__title {
   font-size: var(--type-hero); line-height: 1.15; margin: 0 0 40px; max-width: 26ch;
 }
@@ -399,36 +417,47 @@
 .sitemap__name { font-family: var(--font-heading); font-weight: 800; font-size: 17px; }
 .sitemap__desc { font-size: 14.5px; color: #{$ink-70}; }
 
-.whoami {
-  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 0 56px; align-items: center; min-height: 80vh;
-  // long unbroken words in the traits list must not push the photo off-screen
-  overflow-wrap: break-word;
-}
+.whoami { overflow-wrap: break-word; }
 .whoami__title {
   font-size: var(--type-whoami); line-height: 1.2; margin: 0 0 28px; max-width: 22ch;
 }
 .whoami .bullets { font-size: 15px; line-height: 26px; max-width: 52ch; gap: 12px; }
 .whoami .bullets li::before { margin-top: 9px; }
-.whoami img { width: 100%; height: 520px; object-fit: cover; }
+// The scene runs edge to edge of the main column at any window width. The rex
+// stops growing on wide screens (horizon.js); only the floor gets longer.
+.horizon {
+  position: relative;
+  height: clamp(270px, 36vw, 640px);
+  margin: 32px calc(-1 * var(--content-pad-x)) 0;
+  overflow: hidden;
+  color: var(--color-text);
+}
+.horizon svg { display: block; width: 100%; height: 100%; }
+.horizon__grid { stroke: #{"color-mix(in srgb, var(--color-text) 62%, transparent)"}; stroke-width: 1; fill: none; }
+.horizon__rays line { opacity: .62; }
+.horizon__line { stroke: var(--color-accent); stroke-width: 1; opacity: .55; fill: none; }
+.horizon__rope { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+.horizon__fig { fill: currentColor; }
+.horizon__legs path { fill: none; stroke: currentColor; stroke-width: 5.4; stroke-linecap: round; stroke-linejoin: round; }
+html[data-theme="paper"] .horizon__glow { opacity: .7; }
 
 .contact__title {
   font-size: var(--type-hero); line-height: 1.15; margin: 0 0 36px; max-width: 24ch;
 }
 .contact__poster {
-  background: var(--color-accent); color: #fff;
+  background: var(--color-accent-solid); color: #fff;
   padding: 44px 48px; max-width: 860px; margin: 0 0 40px;
 }
 .contact__poster-kicker {
   font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--color-accent-200); margin: 0 0 12px;
+  color: var(--color-on-solid-soft); margin: 0 0 12px;
 }
 .contact__email {
   font-family: var(--font-heading); font-weight: 800;
   font-size: clamp(24px, 2.6vw, 38px); line-height: 1.15; color: #fff; text-decoration: none; word-break: break-all;
 }
-.contact__email:hover { color: var(--color-accent-200); }
-.contact__poster p { margin: 14px 0 0; font-size: 14px; line-height: 23px; color: var(--color-accent-200); max-width: 52ch; }
+.contact__email:hover { color: var(--color-on-solid-soft); }
+.contact__poster p { margin: 14px 0 0; font-size: 14px; line-height: 23px; color: var(--color-on-solid-soft); max-width: 52ch; }
 .contact__rows { max-width: 860px; }
 .contact__row {
   display: grid; grid-template-columns: 160px minmax(0, 1fr) auto; gap: 24px;
@@ -438,7 +467,7 @@
 }
 .contact__row:last-child { border-bottom: 0; }
 .contact__row:hover { color: var(--color-accent-700); }
-.contact__label { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #{$ink-55}; }
+.contact__label { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #{$ink-60}; }
 .contact__value { font-family: var(--font-heading); font-weight: 800; font-size: 20px; }
 .contact__arrow { color: var(--color-accent); }
 
@@ -459,7 +488,6 @@
   .home__grid { grid-template-columns: minmax(0, 1fr); }
   .home__latest { grid-template-columns: minmax(0, 1fr); gap: 0; padding: 0; overflow: hidden; }
   .home__latest .home__latest-body { padding: 20px 24px; }
-  .home__latest .card-title { font-size: 24px; }
   .home__latest img { height: 220px; }
   .home__bottom { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .home__art { grid-column: 1 / -1; }
@@ -471,8 +499,6 @@
   .frame--wide, .frame--tall { grid-column: span 2; }
   .frame--wide .frame__box img, .frame--tall .frame__box img { height: 280px; }
 
-  .whoami { grid-template-columns: minmax(0, 1fr); gap: 28px; min-height: 0; align-items: start; }
-  .whoami img { height: 380px; }
   .cv__triple { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 32px; }
 }
 
@@ -481,13 +507,12 @@
   // Home is a curated reduction on mobile: no kicker row / pill, and only
   // four blocks — latest card, Thoughts, In numbers, Currently.
   .page-head--baseline { display: none; }
-  .home__title { font-size: 34px; line-height: 1.1; margin-left: 0; margin-bottom: 12px; }
-  .home__intro { font-size: 15px; line-height: 25px; margin-bottom: 24px; }
+  .home__title { margin-left: 0; margin-bottom: 12px; }
+  .home__intro { margin-bottom: 24px; }
   .home__grid { grid-template-columns: 1fr; gap: 16px; }
   .home__second, .home__art { display: none; }
   .home__latest { grid-template-columns: 1fr; gap: 0; padding: 0; overflow: hidden; }
   .home__latest .home__latest-body { padding: 16px 18px; }
-  .home__latest .card-title { font-size: 20px; line-height: 1.2; }
   .home__latest .card-body { display: none; }
   .home__latest img { height: 160px; order: -1; }
   .home__bottom { display: flex; flex-direction: column; gap: 16px; }
@@ -522,21 +547,11 @@
   .post-grid { grid-template-columns: 1fr; gap: 0; }
   .toc-rail { display: none; }
   .toc-mobile { display: block; }
-  .post__title { font-size: 26px; line-height: 1.18; margin: 12px 0 10px; margin-left: 0; max-width: none; }
+  .post__title { margin: 12px 0 10px; margin-left: 0; }
   .post__meta { gap: 8px; margin: 0 0 18px; }
   .post__date { font-size: 13px; }
   .post__hero { margin: 0 0 16px; }
   .post__hero img { height: 180px; }
-  .prose { font-size: 15px; line-height: 25px; }
-  .prose h2 { font-size: 20px; margin-bottom: 8px; }
-  .prose p { margin: 0 0 14px; }
-  .prose figure { margin: 0 0 16px; }
-  .prose figure:last-of-type { margin-bottom: 20px; }
-  .prose > * { max-width: none; }
-  .prose > pre, .prose div.highlighter-rouge { padding: 10px 12px; margin: 0 0 16px; }
-  .prose pre, .prose pre code, .prose .highlight, .prose .highlight code {
-    font-size: 12px; line-height: 19px;
-  }
   // End matter: each block carries its own 2px rule on mobile.
   .rule--endmatter { display: none; }
   .endmatter { grid-template-columns: 1fr; gap: 20px; }
@@ -599,7 +614,7 @@
 
   // The CV restacks on a phone — it never drops a section. Everything a
   // recruiter opens the link for (skills, bullets, awards) stays on the page.
-  .cv .page-title { font-size: 28px; margin-bottom: 4px; }
+  .cv .page-title { margin-bottom: 4px; }
   .cv .kicker { margin-bottom: 16px; }
   .cv__head { flex-direction: column; gap: 12px; }
   .cv__contact { font-size: 13px; line-height: 22px; margin: 10px 0 26px; }
@@ -631,8 +646,7 @@
 
   .kicker--page { font-size: 12px; margin-bottom: 14px; }
   .about__rule { margin-bottom: 0; }
-  .whoami { grid-template-columns: 1fr; gap: 0; min-height: 0; }
-  .whoami img { height: 240px; }
+  .horizon { margin: 28px -20px 0; }
   .whoami__title { font-size: 28px; line-height: 1.2; margin-left: 0; margin-bottom: 20px; max-width: none; }
   .whoami .bullets { font-size: 15px; line-height: 25px; gap: 10px; }
 
@@ -668,7 +682,7 @@
 .topic__glyph { color: var(--color-accent-700); display: block; }
 .topic__row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
 .topic__name { font-family: var(--font-heading); font-weight: 800; font-size: 15px; }
-.topic__count { font-feature-settings: 'tnum' 1; font-size: 13px; color: #{$ink-55}; }
+.topic__count { font-feature-settings: 'tnum' 1; font-size: 13px; color: #{$ink-60}; }
 
 // Stream + rail wrap instead of gridding, so the rail drops below on its own.
 .writing { display: flex; flex-wrap: wrap; gap: 40px 56px; }
@@ -688,7 +702,7 @@
   text-decoration: none; color: var(--color-text);
 }
 .year-group .entry:last-of-type { border-bottom: 0; }
-.entry__cover { width: 120px; height: 120px; object-fit: cover; }
+.entry__cover { width: 120px; height: 120px; object-fit: cover; background: #fffcf0; }
 .entry__plate {
   width: 120px; height: 120px;
   background: var(--color-neutral-200);
@@ -697,29 +711,29 @@
 }
 .entry__body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .entry__title {
-  font-family: var(--font-heading); font-weight: 800;
-  font-size: 18px; line-height: 1.25;
+  font-family: var(--font-heading); font-weight: 600;
+  font-size: 19px; letter-spacing: -.012em; line-height: 1.3;
 }
 .entry:hover .entry__title { color: var(--color-accent-600); }
 .entry__excerpt {
-  font-size: 13.5px; line-height: 23px; max-width: 60ch;
+  font-size: 15.5px; line-height: 1.5; max-width: 60ch;
   color: #{$ink-78};
 }
 .entry__meta { display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: auto; }
-.entry__date { font-feature-settings: 'tnum' 1; font-size: 12.5px; color: #{$ink-55}; }
+.entry__date { font-feature-settings: 'tnum' 1; font-size: 12.5px; color: #{$ink-60}; }
 .year-head { letter-spacing: 0.06em; }
 
 // ═══ Note detail ═════════════════════════════════════════════════════════════
 // NB: `.note` is taken — it is the post end-matter's numbered row (display:flex).
 // The note *page* uses its own block so the two never collide.
-.note-detail { max-width: 760px; }
+.note-detail { max-width: 700px; }
 .note-detail__title {
-  font-size: 30px; line-height: 1.2;
+  font-size: var(--type-post); font-weight: 500; letter-spacing: -.02em; line-height: 1.25;
   margin: 0 0 14px;
 }
 .note-detail__figure { margin: 0 0 24px; }
 .note-detail__figure img { width: 100%; max-height: 460px; object-fit: cover; }
-.note-detail__text { font-size: 15px; line-height: 26px; }
+.note-detail__text { font-size: var(--type-read); line-height: 1.5; }
 .note-detail__part + .note-detail__part { margin-top: 22px; }
 .note-detail__part-label {
   display: block;
@@ -755,10 +769,7 @@
     overflow: hidden;
   }
   .entry__plate svg { width: 22px; height: 22px; }
-  .entry__title { font-size: 15.5px; line-height: 1.3; }
-  .entry__excerpt { font-size: 13px; line-height: 21px; }
   .entry__meta { gap: 8px; }
-  .note-detail__title { font-size: 24px; }
   .note-detail__figure img { max-height: 260px; }
 }
 
@@ -767,4 +778,14 @@
   .entry { grid-template-columns: 72px minmax(0, 1fr); gap: 14px; }
   .entry__cover, .entry__plate { width: 72px; height: 72px; }
   .entry__plate svg { width: 20px; height: 20px; }
+}
+
+// Phones: running text and titles stop scaling with the window.
+@media (max-width: 767px) {
+  .prose, .note-detail__text { font-size: 17px; }
+  .post__title, .note-detail__title { font-size: 27px; }
+  .page-title, .home__title { font-size: 33px; }
+  .home__intro, .page-intro { font-size: 17px; }
+  .prose pre, .prose pre code, .prose .highlight, .prose .highlight code { font-size: 13px; }
+  .prose > pre, .prose div.highlighter-rouge { padding: 12px 14px; }
 }

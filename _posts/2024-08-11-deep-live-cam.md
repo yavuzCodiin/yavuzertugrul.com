@@ -27,20 +27,20 @@ After you are ready you can clone the repository to your local and then we need 
 
 ### How to solve black square problem
 * This can be solved via following;
-    * onnx runtime isnt compatible, onnxruntime==1.18.0 so check this maybe this can be the problem
-        * ```
-            pip install onnxruntime==1.18.0
-          ```
+    * onnx runtime isnt compatible, `onnxruntime==1.18.0` so check this maybe this can be the problem
+      ```
+      pip install onnxruntime==1.18.0
+      ```
 
     * try redownloading the models([GFPGANv1.4](https://huggingface.co/hacksider/deep-live-cam/resolve/main/GFPGANv1.4.pth) && [inswapper_128_fp16.onnx](https://huggingface.co/hacksider/deep-live-cam/resolve/main/inswapper_128_fp16.onnx))
 
     * The following solution solved my black square problem.
-    ```
-        pip uninstall onnxruntime
-        pip uninstall onnxruntime-gpu
-        pip uninstall onnxruntime-directml
-        pip install onnxruntime-directml==1.15.1
-    ```
+      ```
+      pip uninstall onnxruntime
+      pip uninstall onnxruntime-gpu
+      pip uninstall onnxruntime-directml
+      pip install onnxruntime-directml==1.15.1
+      ```
         * Btw this solution is for windows, and I tried on cpu directly.
 
 ## Test 

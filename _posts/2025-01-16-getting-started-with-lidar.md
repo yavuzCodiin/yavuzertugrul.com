@@ -117,49 +117,49 @@ ip a | grep etho
 
 ### Install ROS2 Humble
 * Set locale
-    ```bash
-    locale  # check for UTF-8
+  ```bash
+  locale  # check for UTF-8
 
-    sudo apt update
-    sudo apt install locales
-    sudo locale-gen en_US en_US.UTF-8
-    sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-    export LANG=en_US.UTF-8
+  sudo apt update
+  sudo apt install locales
+  sudo locale-gen en_US en_US.UTF-8
+  sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+  export LANG=en_US.UTF-8
 
-    locale  # verify settings
-    ```
+  locale  # verify settings
+  ```
 
 
 * Add apt repository & GPG key
-    ```bash
-    sudo apt install software-properties-common
-    sudo add-apt-repository universe
+  ```bash
+  sudo apt install software-properties-common
+  sudo add-apt-repository universe
 
-    sudo apt update
-    sudo apt install curl -y
-    sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+  sudo apt update
+  sudo apt install curl -y
+  sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
 
-    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
-    ```
+  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+  ```
     
 
 * Install ROS2 packages
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
+  ```bash
+  sudo apt update && sudo apt upgrade -y
+  ```
 
 
 * Install ROS2 Humble and Development tools(This has ROS, RViz, demos, tutorials etc.)
-    ```bash
-    sudo apt install ros-humble-desktop
-    sudo apt install ros-dev-tools
-    ```
+  ```bash
+  sudo apt install ros-humble-desktop
+  sudo apt install ros-dev-tools
+  ```
     
 
 * Source ROS2 in terminal (if you don't want to do this everytime you open terminal add this to bashrc and source it)
-    ```bash
-    source /opt/ros/humble/setup.bash
-    ```
+  ```bash
+  source /opt/ros/humble/setup.bash
+  ```
     
 
 
@@ -172,28 +172,28 @@ There are two ways to install
 
 
 * I will show you "building from source"
-    ```bash
-    mkdir -p ~/ros2-ws/src
-    cd ~/ros2-ws/src
-    git clone -b humble-devel https://github.com/ros-drivers/velodyne.git
-    cd ~/ros2-ws
-    rosdep install --from-paths src --ignore-src -y
-    colcon build
-    source install/setup.bash #also if you don't want to do this everytime source it in bash
-    ```
+  ```bash
+  mkdir -p ~/ros2-ws/src
+  cd ~/ros2-ws/src
+  git clone -b humble-devel https://github.com/ros-drivers/velodyne.git
+  cd ~/ros2-ws
+  rosdep install --from-paths src --ignore-src -y
+  colcon build
+  source install/setup.bash #also if you don't want to do this everytime source it in bash
+  ```
 
 
 also you can do this by installing deb package
 
 ```bash
-    sudo apt install ros-$ROS_DISTRO-velodyne
+sudo apt install ros-$ROS_DISTRO-velodyne
 ```
 
 
 ### Testing the Device & Visualizing the Data
 To visualize we will use RViz2
 ```bash
-    sudo apt install -y ros-humble-rviz2
+sudo apt install -y ros-humble-rviz2
 ```
 According to your need and device you can launch one of the nodes:
 
@@ -204,14 +204,14 @@ According to your need and device you can launch one of the nodes:
 Launch vlp-16 node:
 
 ```bash
-    ros2 launch velodyne velodyne-all-nodes-VLP16-launch.py
+ros2 launch velodyne velodyne-all-nodes-VLP16-launch.py
 ```
 
 
 Let's see topics:
 
 ```
-    ros2 topic list
+ros2 topic list
 ```
 
 <div class="image-container" style="text-align: center;">
@@ -219,8 +219,8 @@ Let's see topics:
 </div><br>
 
 ```bash
-    ros2 topic echo /velodyne_points
-    ros2 topic echo /velodyne_packets
+ros2 topic echo /velodyne_points
+ros2 topic echo /velodyne_packets
 ```
 
 
@@ -237,7 +237,7 @@ Let's see topics:
 ### Visualisation
 
 ```bash
-    ros2 run rviz2 rviz2 -f velodyne
+ros2 run rviz2 rviz2 -f velodyne
 ```
 or you can open rviz2 directly and change settings like fixed frame from `/map` to `/velodyne`
 

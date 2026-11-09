@@ -46,13 +46,13 @@ section: writing
       {%- if page.image and page.hero != false %}
       {%- assign hero_alt = page.image_alt | default: page.title -%}
       <figure class="post__hero{% unless page.image_color %} grayscale{% endunless %}">
-        {% include img.html src=page.image alt=hero_alt eager=true sizes="(max-width: 1023px) calc(100vw - 40px), (max-width: 1279px) calc(100vw - 392px), calc(100vw - 680px)" %}
+        {% include img.html src=page.image alt=hero_alt eager=true sizes="(max-width: 1023px) calc(100vw - 40px), 700px" %}
         {%- if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}
       </figure>
       {%- endif %}
 
       <div class="prose" id="post-body">
-        {% include body.html content=content sizes="(max-width: 1023px) calc(100vw - 40px), (max-width: 1279px) calc(100vw - 392px), calc(100vw - 680px)" %}
+        {% include body.html content=content sizes="(max-width: 1023px) calc(100vw - 40px), 700px" %}
       </div>
 
       {%- if page.notes or page.related %}

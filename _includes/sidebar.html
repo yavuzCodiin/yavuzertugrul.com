@@ -1,9 +1,12 @@
 <aside class="sidebar">
   <div class="sidebar__inner">
-    <a class="brand" href="{{ '/' | relative_url }}">
-      <span class="brand__name">Yavuz<br>Ertuğrul</span>
-      <span class="brand__kicker">{{ site.tagline }}</span>
-    </a>
+    <div class="sidebar__top">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand__name">Yavuz<br>Ertuğrul</span>
+        <span class="brand__kicker">{{ site.tagline }}</span>
+      </a>
+      {% include theme-toggle.html %}
+    </div>
 
     <nav class="sidebar__nav" aria-label="Main">
       {%- for item in site.data.nav -%}

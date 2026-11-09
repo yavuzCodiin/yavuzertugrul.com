@@ -97,19 +97,17 @@ I had some problems with tensorflow while installing I think version problems mo
 
 * First I upgraded pip with  
 ```
-    python.exe -m pip install --upgrade pip
+python.exe -m pip install --upgrade pip
 ```
 
 * Then I also installed transformers with pytorch.
-```
-pip install 'transformers[torch]'
-```
-
-* 
-```
-pip install requests ffmpeg ffmpeg-python`
-pip install pynput sounddevice scipy`
-```
+  ```
+  pip install 'transformers[torch]'
+  ```
+  ```
+  pip install requests ffmpeg ffmpeg-python`
+  pip install pynput sounddevice scipy`
+  ```
 
 
 Transformers is an important library developed by 🤗 that provides access to pre-trained transformer models and tools, it is a tool to communication between open source libraries from 🤗
@@ -169,26 +167,26 @@ You can find dozens of libraries in the Open Source ecosystem in 🤗. You can d
 
     * Download files with [PreTrainedModel.from_pretrained()](https://huggingface.co/docs/transformers/main/en/main_classes/model#transformers.PreTrainedModel.from_pretrained):
     
-         ```
-         from transformers import AutoModelForCTC, AutoProcessor
+      ```
+      from transformers import AutoModelForCTC, AutoProcessor
 
-         model = AutoModelForCTC.from_pretrained("facebook/wav2vec2-large-960h")
-         processor = AutoProcessor.from_pretrained("facebook/wav2vec2-large-960h")
-         ```
+      model = AutoModelForCTC.from_pretrained("facebook/wav2vec2-large-960h")
+      processor = AutoProcessor.from_pretrained("facebook/wav2vec2-large-960h")
+      ```
 
 * Download files by using [huggingface_hub](https://github.com/huggingface/huggingface_hub/tree/main/src/huggingface_hub) library:
 
     * Install library
-        ```
-        python -m pip install huggingface_hub 
-        ```
+      ```
+      python -m pip install huggingface_hub
+      ```
 
     * By using `hf_hub_download` function I can download a file to specific path:
-        ```
-        from huggingface_hub import hf_hub_download
+      ```
+      from huggingface_hub import hf_hub_download
 
-        hf_hub_download(repo_id="bigscience/T0_3B", filename="config.json", cache_dir="./your/path/bigscience_t0")
-        ```
+      hf_hub_download(repo_id="bigscience/T0_3B", filename="config.json", cache_dir="./your/path/bigscience_t0")
+      ```
     Once the file is downloaded and stored in the local cache, specify its local path to load and utilize it accordingly.
 
 

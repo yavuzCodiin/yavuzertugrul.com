@@ -1,0 +1,44 @@
+// ── Theme switch ─────────────────────────────────────────────────────────────
+// Icon only: the moon mask in the dark theme, the sun mask in the light one.
+.theme-toggle {
+  display: grid; place-items: center;
+  width: 44px; height: 44px; padding: 0;
+  background: none; border: 0; cursor: pointer;
+}
+.theme-toggle svg { grid-area: 1 / 1; width: 100%; height: 100%; display: block; }
+html[data-theme="paper"] .theme-toggle .is-moon,
+html:not([data-theme="paper"]) .theme-toggle .is-sun { display: none; }
+.theme-toggle:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-radius: 50%; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .theme-toggle svg { transition: transform 320ms cubic-bezier(.3, 1.5, .5, 1); }
+  .theme-toggle:hover svg { transform: rotate(-12deg) scale(1.08); }
+}
+.topbar .theme-toggle { width: 38px; }
+.topbar .theme-toggle svg { width: 32px; height: 32px; }
+
+// ── The develop ──────────────────────────────────────────────────────────────
+// theme.js sets the two masks and data-developing, then starts a view
+// transition. The old and new pages are masked a little apart; the accent
+// behind them shows through the gap as the wet edge of the front.
+html { --print-time: 1300ms; }
+html[data-developing]::view-transition { background: var(--color-accent); }
+html[data-developing]::view-transition-group(root) { animation: none; }
+html[data-developing]::view-transition-old(root),
+html[data-developing]::view-transition-new(root) {
+  mix-blend-mode: normal;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 270%; mask-size: 100% 270%;
+  animation: print-rise var(--print-time) cubic-bezier(.42, .02, .24, 1) both;
+}
+html[data-developing="down"]::view-transition-old(root),
+html[data-developing="down"]::view-transition-new(root) { animation-name: print-pour; }
+html[data-developing]::view-transition-old(root) { -webkit-mask-image: var(--print-old); mask-image: var(--print-old); }
+html[data-developing]::view-transition-new(root) { -webkit-mask-image: var(--print-new); mask-image: var(--print-new); }
+@keyframes print-rise {
+  from { -webkit-mask-position: 0 0; mask-position: 0 0; }
+  to { -webkit-mask-position: 0 100%; mask-position: 0 100%; }
+}
+@keyframes print-pour {
+  from { -webkit-mask-position: 0 100%; mask-position: 0 100%; }
+  to { -webkit-mask-position: 0 0; mask-position: 0 0; }
+}

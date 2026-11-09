@@ -4,6 +4,7 @@
     <span class="brand__kicker">{{ site.tagline }}</span>
   </a>
   <div class="topbar__actions">
+    {% include theme-toggle.html %}
     <button type="button" class="topbar__btn" data-search-open aria-label="Search">
       {% include icon.html name="search" size="18" %}
     </button>
