@@ -5,7 +5,7 @@ section: writing
 {%- assign topic = site.data.topics | where: "slug", page.topic | first -%}
 {%- capture raw_url -%}https://raw.githubusercontent.com/{{ site.repository }}/{{ site.repository_branch }}/{{ page.path }}{%- endcapture -%}
 
-<main class="content" id="main">
+<main class="content content--read content--read-narrow" id="main">
   <div class="post-head">
     <a class="kicker" href="{{ '/writing/' | append: page.topic | append: '/' | relative_url }}">← Writing / {{ topic.name }}</a>
     {% include search.html %}

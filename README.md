@@ -170,6 +170,15 @@ one, right after it or on the next line, in kramdown's `{: …}` form:
 In a row, `flex` is each picture's width ÷ height; the row shares its width out in those
 proportions, so nothing is cropped.
 
+A single picture can also be shown less tall than it is, as a window onto part of it:
+
+```markdown
+![](/images/posts/x/a.webp){: style="aspect-ratio: 1.6; object-position: 50% 0%"}
+```
+
+`aspect-ratio` is the window's width ÷ height; `object-position` says which part shows — `50% 0%`
+the top, `50% 100%` the bottom, the middle when it is left out. The file itself is not cut.
+
 **A note** — same `_posts/` folder, shorter body:
 
 ```yaml

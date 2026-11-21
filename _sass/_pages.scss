@@ -28,6 +28,16 @@
 .home__stat .stat { padding: 6px 0; }
 
 // ═══ Post detail ═════════════════════════════════════════════════════════════
+// A reading page (a post, a note) keeps its block — the text column, and for a post the contents
+// rail beside it — in the middle of the space next to the sidebar. Hugging the sidebar, it left
+// a wide screen with one long empty side. (Below 1280px a post has no rail, so both are one
+// column wide; on a phone the page is the column.)
+@media (min-width: 1024px) {
+  .content--read { max-width: calc(700px + 2 * var(--content-pad-x)); margin-left: auto; margin-right: auto; }
+}
+@media (min-width: 1280px) {
+  .content--read:not(.content--read-narrow) { max-width: calc(700px + 64px + 240px + 2 * var(--content-pad-x)); }
+}
 .post-head { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin: 0 0 20px; }
 .post__title {
   font-size: var(--type-post); font-weight: 500; letter-spacing: -.02em; line-height: 1.25; margin: 0 0 14px; max-width: 700px;
@@ -60,6 +70,10 @@
 // <figure> takes the same classes.
 .prose img.img-center, .prose figure.img-center { margin-left: auto; margin-right: auto; }
 .prose img.img-right, .prose figure.img-right { margin-left: auto; margin-right: 0; }
+// A picture can be given a shape of its own (`style="aspect-ratio: 1.6"`, width ÷ height): it is
+// then a window onto the picture — as wide as it would be, less tall — never squashed. The window
+// shows the picture's middle unless `object-position` says otherwise (`50% 0%` is its top).
+.prose img[style*="aspect-ratio"] { object-fit: cover; }
 // Pictures side by side: one paragraph of pictures marked `{: .img-row}`. Each picture carries
 // its own shape as `style="flex: <width ÷ height>"`, so the row shares its width out in those
 // proportions and every picture comes out the same height, uncropped. (Without that, the

@@ -5,7 +5,7 @@ section: writing
 {%- assign primary_tag = page.tags | first -%}
 {%- capture raw_url -%}https://raw.githubusercontent.com/{{ site.repository }}/{{ site.repository_branch }}/{{ page.path }}{%- endcapture -%}
 
-<main class="content" id="main">
+<main class="content content--read" id="main">
   <div class="post-head">
 {%- assign topic = site.data.topics | where: "slug", page.topic | first -%}
     <a class="kicker" href="{{ '/writing/' | append: page.topic | append: '/' | relative_url }}">← Writing / {{ topic.name }}</a>
