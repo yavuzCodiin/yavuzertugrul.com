@@ -1,5 +1,5 @@
 ---
-order: 5
+order: 6
 title: Pink Panther
 date: 2023-11-28
 image: /images/sketch-library/pink_panther.jpg

@@ -1,5 +1,5 @@
 ---
-order: 8
+order: 9
 title: Creepy Lion
 date: 2024-04-30
 image: /images/sketch-library/creepy_lion.jpg

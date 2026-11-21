@@ -1,8 +1,7 @@
 ---
-order: 21
+order: 22
 title: WWW
-# TODO(owner): date and category are placeholders — set the real ones.
-date: 2024-09-15
+date: 2024-09-14
 image: /images/sketch-library/www.webp
 category: Abstract
 ---

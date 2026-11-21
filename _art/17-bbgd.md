@@ -1,7 +1,6 @@
 ---
-order: 17
+order: 18
 title: BBGD
-# TODO(owner): date and category are placeholders — set the real ones.
 date: 2023-12-16
 image: /images/sketch-library/bbgd.webp
 category: Abstract

@@ -2285,6 +2285,15 @@
 },
 "w": 2048
 },
+"/images/sketch-library/fox.jpg": {
+"h": 1111,
+"r": {
+"1440": 1440,
+"320": 320,
+"720": 720
+},
+"w": 1600
+},
 "/images/sketch-library/last_dance.webp": {
 "h": 1536,
 "r": {

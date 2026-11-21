@@ -1,8 +1,7 @@
 ---
-order: 20
+order: 21
 title: Conquerer
-# TODO(owner): date and category are placeholders — set the real ones.
-date: 2024-07-06
+date: 2024-08-20
 image: /images/sketch-library/conquerer.jpg
 category: Characters
 ---
