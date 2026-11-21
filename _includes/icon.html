@@ -3,12 +3,19 @@
   Usage: {% include icon.html name="search" size="13" %}
 
   A name listed in _data/glyphs.yml is drawn from the path data there — that is how a
-  topic gets an icon this file does not carry. Every other name is one of the cases below.
+  topic gets an icon this file does not carry. A name starting with "filled-" is a
+  silhouette: filled in the text colour, holes cut by the even-odd rule. Any other name
+  there is drawn as strokes, like the cases below. Every name not listed is one of those cases.
 {%- endcomment -%}
 {%- assign s = include.size | default: 16 -%}
 {%- assign drawn = site.data.glyphs[include.name] -%}
 {%- if drawn -%}
+{%- assign kind = include.name | slice: 0, 7 -%}
+{%- if kind == "filled-" -%}
+<svg width="{{ s }}" height="{{ s }}" viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" stroke="none" aria-hidden="true">{% for d in drawn %}<path d="{{ d | escape }}"></path>{% endfor %}</svg>
+{%- else -%}
 <svg width="{{ s }}" height="{{ s }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{% for d in drawn %}<path d="{{ d | escape }}"></path>{% endfor %}</svg>
+{%- endif -%}
 {%- else -%}
 {%- case include.name -%}
 {%- when "search" -%}

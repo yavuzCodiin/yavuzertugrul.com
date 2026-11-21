@@ -184,7 +184,8 @@ thinking about thinking — purpose, patience, discipline; `notes` is gear, setu
 opinions and everything else. Each topic's `description` in that file is the filing rule.
 Adding a topic = one entry in that file, a `writing/<slug>.html` stub, and a glyph: either
 a case in `_includes/icon.html`, or path data in `_data/glyphs.yml` under a name that says
-where the drawing came from (`lucide-camera`, `custom-…`) — the include draws both.
+where the drawing came from (`lucide-camera`, `custom-…` for strokes, `filled-…` for a
+silhouette) — the include draws them all.
 
 **A sketch** — `_art/NN-slug.md`, front matter only:
 
