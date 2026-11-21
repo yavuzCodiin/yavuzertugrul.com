@@ -155,6 +155,21 @@ related: [asr-research-test]               # optional — post slugs
 
 The table of contents builds itself from the `##` / `###` headings — no config needed.
 
+**Pictures in a body.** `![alt](/images/…)` fills the column. Three things can be said about
+one, right after it or on the next line, in kramdown's `{: …}` form:
+
+```markdown
+![](/images/posts/x/a.webp){: width="340"}                 at most 340 px wide, at the left
+![](/images/posts/x/a.webp){: width="340" .img-center}     …centred   (.img-right: at the right)
+
+![](/images/posts/x/a.webp){: style="flex: 1.5"}
+![](/images/posts/x/b.webp){: style="flex: 0.75"}
+{: .img-row}                                               side by side, the same height
+```
+
+In a row, `flex` is each picture's width ÷ height; the row shares its width out in those
+proportions, so nothing is cropped.
+
 **A note** — same `_posts/` folder, shorter body:
 
 ```yaml

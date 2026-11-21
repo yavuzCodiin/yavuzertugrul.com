@@ -55,6 +55,17 @@
 }
 // Two post images are transparent PNGs with dark line art.
 .prose img { height: auto; background: #fffcf0; }
+// A picture in a text may be narrower than its column (`![](…){: width="340"}`); these two
+// classes say where it then sits — without one it stays at the left edge. A captioned
+// <figure> takes the same classes.
+.prose img.img-center, .prose figure.img-center { margin-left: auto; margin-right: auto; }
+.prose img.img-right, .prose figure.img-right { margin-left: auto; margin-right: 0; }
+// Pictures side by side: one paragraph of pictures marked `{: .img-row}`. Each picture carries
+// its own shape as `style="flex: <width ÷ height>"`, so the row shares its width out in those
+// proportions and every picture comes out the same height, uncropped. (Without that, the
+// pictures simply get equal widths.)
+.prose .img-row { display: flex; align-items: flex-start; gap: 12px; }
+.prose .img-row > img { flex: 1 1 0; width: 0; min-width: 0; height: auto; margin: 0; }
 // Legacy side-by-side figure rows wrap instead of overflowing.
 .prose div[style*="flex"] { flex-wrap: wrap; gap: 20px; }
 .prose > * { max-width: 100%; }
