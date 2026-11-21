@@ -23,7 +23,7 @@ It will be really useful and advantageous for me to see, analyze, and simulate D
     <img src="/images/post-6/image_1.png" alt="circuits" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-6/image_2.png" alt="circuits" loading="lazy" />
+    <img src="/images/post-6/image_2.webp" alt="circuits" loading="lazy" />
 </div>
 
 ## Step-Up(Boost) Converter
@@ -31,22 +31,22 @@ It will be really useful and advantageous for me to see, analyze, and simulate D
 ### DESIGN
 
 <div class="image-container">
-    <img src="/images/post-6/image_3.png" alt="Step-Up(Boost) Converter" loading="lazy" />
+    <img src="/images/post-6/image_3.webp" alt="Step-Up(Boost) Converter" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-6/image_4.png" alt="Step-Up(Boost) Converter" loading="lazy" />
+    <img src="/images/post-6/image_4.webp" alt="Step-Up(Boost) Converter" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-6/image_5.png" alt="Step-Up(Boost) Converter" loading="lazy" />
+    <img src="/images/post-6/image_5.webp" alt="Step-Up(Boost) Converter" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-6/image_6.png" alt="Step-Up(Boost) Converter" loading="lazy" />
+    <img src="/images/post-6/image_6.webp" alt="Step-Up(Boost) Converter" loading="lazy" />
 </div>
 
 ### SIMULATIONS
 
 <div class="image-container">
-    <img src="/images/post-6/image_7.png" alt="Simulations" loading="lazy" />
+    <img src="/images/post-6/image_7.webp" alt="Simulations" loading="lazy" />
 </div>
 
 ##  Step-Up(Boost) Converter With PID Controller
@@ -54,25 +54,25 @@ It will be really useful and advantageous for me to see, analyze, and simulate D
 ### DESIGN
 
 <div class="image-container">
-    <img src="/images/post-6/image_8.png" alt="Step-Up(Boost) Converter With PID Controller" loading="lazy" />
+    <img src="/images/post-6/image_8.webp" alt="Step-Up(Boost) Converter With PID Controller" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-6/image_9.png" alt="Step-Up(Boost) Converter With PID Controller" loading="lazy" />
+    <img src="/images/post-6/image_9.webp" alt="Step-Up(Boost) Converter With PID Controller" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-6/image_10.png" alt="Step-Up(Boost) Converter With PID Controller" loading="lazy" />
+    <img src="/images/post-6/image_10.webp" alt="Step-Up(Boost) Converter With PID Controller" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-6/image_11.png" alt="Step-Up(Boost) Converter With PID Controller" loading="lazy" />
+    <img src="/images/post-6/image_11.webp" alt="Step-Up(Boost) Converter With PID Controller" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-6/image_12.png" alt="Step-Up(Boost) Converter With PID Controller" loading="lazy" />
+    <img src="/images/post-6/image_12.webp" alt="Step-Up(Boost) Converter With PID Controller" loading="lazy" />
 </div>
 
 ### SIMULATIONS
 
 <div class="image-container">
-    <img src="/images/post-6/image_13.png" alt="Simulation" loading="lazy" />
+    <img src="/images/post-6/image_13.webp" alt="Simulation" loading="lazy" />
 </div>
 
 ##  Interleaved Step-Up(Boost Converter)
@@ -80,41 +80,41 @@ It will be really useful and advantageous for me to see, analyze, and simulate D
 ### DESIGN
 
 <div class="image-container">
-    <img src="/images/post-6/image_14.png" alt="Interleaved Step-Up(Boost Converter)" loading="lazy" />
+    <img src="/images/post-6/image_14.webp" alt="Interleaved Step-Up(Boost Converter)" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-6/image_15.png" alt="Interleaved Step-Up(Boost Converter)" loading="lazy" />
+    <img src="/images/post-6/image_15.webp" alt="Interleaved Step-Up(Boost Converter)" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-6/image_16.png" alt="Interleaved Step-Up(Boost Converter)" loading="lazy" />
+    <img src="/images/post-6/image_16.webp" alt="Interleaved Step-Up(Boost Converter)" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-6/image_17.png" alt="Interleaved Step-Up(Boost Converter)" loading="lazy" />
+    <img src="/images/post-6/image_17.webp" alt="Interleaved Step-Up(Boost Converter)" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-6/image_18.png" alt="Interleaved Step-Up(Boost Converter)" loading="lazy" />
+    <img src="/images/post-6/image_18.webp" alt="Interleaved Step-Up(Boost Converter)" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-6/image_19.png" alt="Interleaved Step-Up(Boost Converter)" loading="lazy" />
+    <img src="/images/post-6/image_19.webp" alt="Interleaved Step-Up(Boost Converter)" loading="lazy" />
 </div>
 
 ### SIMULATIONS
 
 <div class="image-container">
-    <img src="/images/post-6/image_20.png" alt="Simulations" loading="lazy" />
+    <img src="/images/post-6/image_20.webp" alt="Simulations" loading="lazy" />
 </div>
 
 ##  CONCLUSION 
 
 <div class="image-container">
-    <img src="/images/post-6/image_21.png" alt="CONCLUSION" loading="lazy" />
+    <img src="/images/post-6/image_21.webp" alt="CONCLUSION" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-6/image_22.png" alt="CONCLUSION" loading="lazy" />
+    <img src="/images/post-6/image_22.webp" alt="CONCLUSION" loading="lazy" />
 </div>
 
 ## REFERENCES
 
 <div class="image-container">
-    <img src="/images/post-6/image_23.png" alt="REFERENCES" loading="lazy" />
+    <img src="/images/post-6/image_23.webp" alt="REFERENCES" loading="lazy" />
 </div>

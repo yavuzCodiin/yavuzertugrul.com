@@ -24,7 +24,7 @@ In today’s world, there’s a resource more important than oil, with the power
 A DataFrame is essentially a table, much like the ones you’d see in Excel. It’s a way to store and organize your data, with rows and columns clearly laid out. Each column in a DataFrame represents a specific variable, and each row contains a set of values corresponding to those variables, much like a record.
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-02.png' | relative_url }}" alt="DataFrame Example — Unless otherwise stated, the screenshots are provided by the author and this applies to the remaining images as well." loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-02.webp' | relative_url }}" alt="DataFrame Example — Unless otherwise stated, the screenshots are provided by the author and this applies to the remaining images as well." loading="lazy">
   <figcaption>DataFrame Example — Unless otherwise stated, the screenshots are provided by the author and this applies to the remaining images as well.</figcaption>
 </figure>
 
@@ -43,7 +43,7 @@ I explained Pandas and did some analysis using it, you can find more information
 These functions show the first and last five rows by default, offering a quick glimpse of your data. For a deeper look, adjust the parameters to see more rows, making it easy to get a sense of your dataset without examining every detail.
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-03.png' | relative_url }}" alt="head & tail method" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-03.webp' | relative_url }}" alt="head & tail method" loading="lazy">
   <figcaption>head & tail method</figcaption>
 </figure>
 
@@ -52,7 +52,7 @@ These functions show the first and last five rows by default, offering a quick g
 This method provides quick summary of dataset, including number of entries, columns, the data type of each column, and the amount of memory used.
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-04.png' | relative_url }}" alt="info method — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-04.webp' | relative_url }}" alt="info method — Screenshot by author" loading="lazy">
   <figcaption>info method — Screenshot by author</figcaption>
 </figure>
 
@@ -61,7 +61,7 @@ This method provides quick summary of dataset, including number of entries, colu
 Provides summary of central tendencies, shape, statistics like mean, median, min, max, standard deviation and quartiles for each numeric column in dataset
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-05.png' | relative_url }}" alt="describe method" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-05.webp' | relative_url }}" alt="describe method" loading="lazy">
   <figcaption>describe method</figcaption>
 </figure>
 
@@ -73,7 +73,7 @@ Provides summary of central tendencies, shape, statistics like mean, median, min
 - **index**: Gives the index (row labels).
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-06.png' | relative_url }}" alt="shape, values, columns, index attributes" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-06.webp' | relative_url }}" alt="shape, values, columns, index attributes" loading="lazy">
   <figcaption>shape, values, columns, index attributes</figcaption>
 </figure>
 
@@ -88,7 +88,7 @@ df.sort_values(by=["Menu_Price"], ascending=False)
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-07.png' | relative_url }}" alt="Sorting menu prices from highest to lowest" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-07.webp' | relative_url }}" alt="Sorting menu prices from highest to lowest" loading="lazy">
   <figcaption>Sorting menu prices from highest to lowest</figcaption>
 </figure>
 
@@ -101,7 +101,7 @@ df[df["Reviews"]>80]
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-08.png' | relative_url }}" alt="Subsetting reviews higher than 80" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-08.webp' | relative_url }}" alt="Subsetting reviews higher than 80" loading="lazy">
   <figcaption>Subsetting reviews higher than 80</figcaption>
 </figure>
 
@@ -110,7 +110,7 @@ df[ (df["Menu_Price"]<45) & (df["Cuisine_Type"]=="Italian") ]
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-09.png' | relative_url }}" alt="Subsetting menu prices less than 45 and italian cuisines" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-09.webp' | relative_url }}" alt="Subsetting menu prices less than 45 and italian cuisines" loading="lazy">
   <figcaption>Subsetting menu prices less than 45 and italian cuisines</figcaption>
 </figure>
 
@@ -121,7 +121,7 @@ df[df["Cuisine_Type"].isin(["Italian","American"])]
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-10.png' | relative_url }}" alt="Subsetting Italian and American cuisines" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-10.webp' | relative_url }}" alt="Subsetting Italian and American cuisines" loading="lazy">
   <figcaption>Subsetting Italian and American cuisines</figcaption>
 </figure>
 
@@ -134,7 +134,7 @@ df["Monthly_Revenue_pps"] = df["Monthly_Revenue"] / df["Number_of_Customers"]
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-11.png' | relative_url }}" alt="Adding Monthly_Revenue_pps column" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-11.webp' | relative_url }}" alt="Adding Monthly_Revenue_pps column" loading="lazy">
   <figcaption>Adding Monthly_Revenue_pps column</figcaption>
 </figure>
 
@@ -151,7 +151,7 @@ print("Mean:{}\nMedian:{}\nMin:{}\nMax:{}\n".format(df["Monthly_Revenue"].mean()
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-12.png' | relative_url }}" alt="mean,median,min,max on Monthly Revenue" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-12.webp' | relative_url }}" alt="mean,median,min,max on Monthly Revenue" loading="lazy">
   <figcaption>mean,median,min,max on Monthly Revenue</figcaption>
 </figure>
 
@@ -164,7 +164,7 @@ df["Cuisine_Type"].value_counts()
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-13.png' | relative_url }}" alt="Figure" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-13.webp' | relative_url }}" alt="Figure" loading="lazy">
 </figure>
 
 ## Grouped Summary Statistics
@@ -176,7 +176,7 @@ df.groupby("Cuisine_Type")["Monthly_Revenue"].agg(["min","max","sum"])
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-14.png' | relative_url }}" alt="Monthly Revenue for each cuisine type" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-14.webp' | relative_url }}" alt="Monthly Revenue for each cuisine type" loading="lazy">
   <figcaption>Monthly Revenue for each cuisine type</figcaption>
 </figure>
 
@@ -187,7 +187,7 @@ df.groupby(["Cuisine_Type","Menu_Price"])[["Reviews","Monthly_Revenue"]].mean()
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-15.png' | relative_url }}" alt="Monthly Revenue and Reviews for each Cuisine Type and Menu Price" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-15.webp' | relative_url }}" alt="Monthly Revenue and Reviews for each Cuisine Type and Menu Price" loading="lazy">
   <figcaption>Monthly Revenue and Reviews for each Cuisine Type and Menu Price</figcaption>
 </figure>
 
@@ -200,7 +200,7 @@ df.pivot_table(values="Monthly_Revenue", columns="Cuisine_Type")
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-16.png' | relative_url }}" alt="Pivot Table" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-16.webp' | relative_url }}" alt="Pivot Table" loading="lazy">
   <figcaption>Pivot Table</figcaption>
 </figure>
 
@@ -217,7 +217,7 @@ grouped_df = df.groupby(["Cuisine_Type","Menu_Price"])[["Monthly_Revenue"]].mean
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-17.png' | relative_url }}" alt="loc[]" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-17.webp' | relative_url }}" alt="loc[]" loading="lazy">
   <figcaption>loc[]</figcaption>
 </figure>
 
@@ -228,7 +228,7 @@ df.iloc[1]
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-18.png' | relative_url }}" alt="iloc[]" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-18.webp' | relative_url }}" alt="iloc[]" loading="lazy">
   <figcaption>iloc[]</figcaption>
 </figure>
 
@@ -241,7 +241,7 @@ df.loc[(df['Menu_Price'] > 46) & (df['Cuisine_Type'] == "Italian")]
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-19.png' | relative_url }}" alt="selecting sliced part with loc[]" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-19.webp' | relative_url }}" alt="selecting sliced part with loc[]" loading="lazy">
   <figcaption>selecting sliced part with loc[]</figcaption>
 </figure>
 
@@ -261,7 +261,7 @@ fig = plt.figure(figsize =(10, 6))plt.hist(df["Monthly_Revenue"],bins=5,alpha=0.
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-20.png' | relative_url }}" alt="Monthly Revenue Bar Plot" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-20.webp' | relative_url }}" alt="Monthly Revenue Bar Plot" loading="lazy">
   <figcaption>Monthly Revenue Bar Plot</figcaption>
 </figure>
 
@@ -272,7 +272,7 @@ plt.figure(figsize=(10,6))sns.boxplot(x='Cuisine_Type', y='Average_Customer_Spen
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-21.png' | relative_url }}" alt="Average Customer Spending by Cuisine Type Box Plot" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-21.webp' | relative_url }}" alt="Average Customer Spending by Cuisine Type Box Plot" loading="lazy">
   <figcaption>Average Customer Spending by Cuisine Type Box Plot</figcaption>
 </figure>
 
@@ -283,7 +283,7 @@ plt.scatter(df["Number_of_Customers"], df["Monthly_Revenue"], color='red')plt.xl
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-22.png' | relative_url }}" alt="Monthly Revenue vs Number of Customers Scatter Plot" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-22.webp' | relative_url }}" alt="Monthly Revenue vs Number of Customers Scatter Plot" loading="lazy">
   <figcaption>Monthly Revenue vs Number of Customers Scatter Plot</figcaption>
 </figure>
 
@@ -326,7 +326,7 @@ ex_data = [[81, 40, 5, 22.9, 1, 90]] column_names = ['Number_of_Customers', 'Men
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-23.png' | relative_url }}" alt="sample data from dataset" loading="lazy">
+  <img src="{{ '/images/medium_posts/data-manipulation-with-pandas-23.webp' | relative_url }}" alt="sample data from dataset" loading="lazy">
   <figcaption>sample data from dataset</figcaption>
 </figure>
 

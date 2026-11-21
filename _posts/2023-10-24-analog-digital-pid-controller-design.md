@@ -29,48 +29,48 @@ The following equation represents the analog PID in the time domain
 
 
 <div class="image-container">
-    <img src="/images/post-3/image_2.png" alt="calc" loading="lazy" />
+    <img src="/images/post-3/image_2.webp" alt="calc" loading="lazy" />
 </div>
 
 where e(t) is the error of the system and m(t) is the output of the analog PID controller. The Laplace representation of this controller results in the following transfer function:
 
 <div class="image-container">
-    <img src="/images/post-3/image_3.png" alt="calc" loading="lazy" />
+    <img src="/images/post-3/image_3.webp" alt="calc" loading="lazy" />
 </div>
 
 This representation is called the ideal PID Controller. Another form of the PID Controller is the parallel representation that has the following transfer function:
 
 <div class="image-container">
-    <img src="/images/post-3/image_4.png" alt="calc" loading="lazy" />
+    <img src="/images/post-3/image_4.webp" alt="calc" loading="lazy" />
 </div>
 
 You can relate the parameters of these controllers from the following Equations:
 
 <div class="image-container">
-    <img src="/images/post-3/image_5.png" alt="calc" loading="lazy" />
+    <img src="/images/post-3/image_5.webp" alt="calc" loading="lazy" />
 </div>
 
 𝐾𝑝, 𝐾𝑖 and 𝐾𝑑 are the analog PID parameters in the parallel form and K, 𝑇𝑖 and 𝑇𝑑 are the analog PID parameters in the ideal form. The approximations used to obtain the discrete representation of the analog PID controller are
 
 <div class="image-container">
-    <img src="/images/post-3/image_6.png" alt="calc" loading="lazy" />
+    <img src="/images/post-3/image_6.webp" alt="calc" loading="lazy" />
 </div>
 
 where T is the sampling time.
 Then, the digital PID controller has the following equation:
 
 <div class="image-container">
-    <img src="/images/post-3/image_7.png" alt="calc" loading="lazy" />
+    <img src="/images/post-3/image_7.webp" alt="calc" loading="lazy" />
 </div>
 
 <div class="image-container">
-    <img src="/images/post-3/image_8.png" alt="calc" loading="lazy" />
+    <img src="/images/post-3/image_8.webp" alt="calc" loading="lazy" />
 </div>
 
 Then, the digital PID controller has the following transfer function:
 
 <div class="image-container">
-    <img src="/images/post-3/image_9.png" alt="calc" loading="lazy" />
+    <img src="/images/post-3/image_9.webp" alt="calc" loading="lazy" />
 </div>
 
 PID controllers, which are usually recognized as the most often used controllers in the control sector, play a crucial role in the field of control systems. Using the mathematical formulas and powerful Matlab Simulink program, we examine the theory, the simulation and testing of analog and various digital PID controllers in this research. Different approaches can be used while designing analog and digital controllers, however for the sake of this study, we’ll concentrate on one particular methodology. In our approach, an analog PID controller is first designed, and the digital PID controller is then calibrated using the obtained parameters. We can bridge the gap between analog and digital control systems by utilizing this method.
@@ -92,10 +92,10 @@ By achieving these aims and objectives, we aim to advance our knowledge and unde
 Speed Control System Parallel PID Controller Representation:
 
 <div class="image-container">
-    <img src="/images/post-3/image_10.png" alt="calc" loading="lazy" />
+    <img src="/images/post-3/image_10.webp" alt="calc" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-3/image_11.png" alt="calc" loading="lazy" />
+    <img src="/images/post-3/image_11.webp" alt="calc" loading="lazy" />
 </div>
 
 * 𝐾𝑝, 𝐾𝑖 ,𝐾𝑑 𝑎𝑟𝑒 𝑡ℎ𝑒 𝑎𝑛𝑎𝑙𝑜𝑔 𝑃𝐼𝐷 𝑝𝑎𝑟𝑎𝑚𝑒𝑡𝑒𝑟𝑠 𝑖𝑛 𝑡ℎ𝑒 𝒑𝒂𝒓𝒂𝒍𝒍𝒆𝒍 𝒇𝒐𝒓𝒎 𝒂𝒏𝒅 𝐾, 𝑇𝑖 , 𝑇𝑑 𝑎𝑟𝑒 𝑎𝑛𝑎𝑙𝑜𝑔 𝑃𝐼𝐷 𝑝𝑎𝑟𝑎𝑚𝑒𝑡𝑒𝑟𝑠 𝑖𝑛 𝑡ℎ𝑒 𝒊𝒅𝒆𝒂𝒍 𝒇𝒐𝒓𝒎
@@ -105,37 +105,37 @@ Speed Control System Parallel PID Controller Representation:
 #### 1) Let’s obtain the Analog PID parameters from the analog PID Controller by using 2.3 & 2.4
 
 <div class="image-container">
-    <img src="/images/post-3/image_12.png" alt="calc" loading="lazy" />
+    <img src="/images/post-3/image_12.webp" alt="calc" loading="lazy" />
 </div>
 
 #### 2) We simulate the Analog PID Controller and plot the system output.
 
 <div class="image-container">
-    <img src="/images/post-3/image_13.png" alt="seperate and together" loading="lazy" />
+    <img src="/images/post-3/image_13.webp" alt="seperate and together" loading="lazy" />
 </div>
 
 ### Digital PID Controller
 
 <div class="image-container">
-    <img src="/images/post-3/image_14.png" alt="seperate and together" loading="lazy" />
+    <img src="/images/post-3/image_14.webp" alt="seperate and together" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-3/image_15.png" alt="seperate and together" loading="lazy" />
+    <img src="/images/post-3/image_15.webp" alt="seperate and together" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-3/image_16.png" alt="seperate and together" loading="lazy" />
+    <img src="/images/post-3/image_16.webp" alt="seperate and together" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-3/image_17.png" alt="seperate and together" loading="lazy" />
+    <img src="/images/post-3/image_17.webp" alt="seperate and together" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-3/image_18.png" alt="seperate and together" loading="lazy" />
+    <img src="/images/post-3/image_18.webp" alt="seperate and together" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-3/image_19.png" alt="seperate and together" loading="lazy" />
+    <img src="/images/post-3/image_19.webp" alt="seperate and together" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-3/image_20.png" alt="seperate and together" loading="lazy" />
+    <img src="/images/post-3/image_20.webp" alt="seperate and together" loading="lazy" />
 </div>
 <!-- TODO(owner): image_21.png never existed in the repo (post-3 has image_1–20) —
      this figure was broken on the old site too. Add the file or delete this block.

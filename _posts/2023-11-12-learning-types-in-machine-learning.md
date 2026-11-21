@@ -36,7 +36,7 @@ In supervised learning, the algorithm learns from labeled training data, helping
 Supervised learning can be separated into two types of problems when data mining — classification and regression:
 
 <figure>
-  <img src="{{ '/images/medium_posts/learning-types-in-machine-learning-03.png' | relative_url }}" alt="Figure" loading="lazy">
+  <img src="{{ '/images/medium_posts/learning-types-in-machine-learning-03.webp' | relative_url }}" alt="Figure" loading="lazy">
 </figure>
 
 ## a) Classification
@@ -44,7 +44,7 @@ Supervised learning can be separated into two types of problems when data mining
 It uses an algorithm to accurately assign test data into specific categories. It recognizes specific entities within the dataset and attempts to draw some conclusions on how those entities should be labeled or defined. Common classification algorithms are linear classifiers, support vector machines (SVM), decision trees, k-nearest neighbor, and random forest.
 
 <figure>
-  <img src="{{ '/images/medium_posts/learning-types-in-machine-learning-04.png' | relative_url }}" alt="Figure" loading="lazy">
+  <img src="{{ '/images/medium_posts/learning-types-in-machine-learning-04.webp' | relative_url }}" alt="Figure" loading="lazy">
 </figure>
 
 ## b) Regression
@@ -52,13 +52,13 @@ It uses an algorithm to accurately assign test data into specific categories. It
 Regression is used to understand the relationship between dependent and independent variables. It is commonly used to make projections, such as for sales revenue for a given business. [Linear regression](https://en.wikipedia.org/wiki/Linear_regression), [logistical regression](https://en.wikipedia.org/wiki/Logistic_regression), and [polynomial regression](https://en.wikipedia.org/wiki/Polynomial_regression) are popular regression algorithms.
 
 <figure>
-  <img src="{{ '/images/medium_posts/learning-types-in-machine-learning-05.png' | relative_url }}" alt="Figure" loading="lazy">
+  <img src="{{ '/images/medium_posts/learning-types-in-machine-learning-05.webp' | relative_url }}" alt="Figure" loading="lazy">
 </figure>
 
 ## 2) Unsupervised Learning
 
 <figure>
-  <img src="{{ '/images/medium_posts/learning-types-in-machine-learning-06.png' | relative_url }}" alt="Figure" loading="lazy">
+  <img src="{{ '/images/medium_posts/learning-types-in-machine-learning-06.webp' | relative_url }}" alt="Figure" loading="lazy">
 </figure>
 
 - No Labels or Annotation: The data used in unsupervised learning doesn’t come with output labels or annotations. The algorithm must make sense of the data without guidance on the desired output.
@@ -89,7 +89,7 @@ Anomaly Detection: Identifying unusual credit card transactions to detect fraud.
 - Applications: Fraud detection, system health monitoring, outlier detection in data cleaning.
 
 <figure>
-  <img src="{{ '/images/medium_posts/learning-types-in-machine-learning-07.png' | relative_url }}" alt="Figure" loading="lazy">
+  <img src="{{ '/images/medium_posts/learning-types-in-machine-learning-07.webp' | relative_url }}" alt="Figure" loading="lazy">
 </figure>
 
 ## 3) Reinforcement Learning
@@ -104,7 +104,7 @@ Reinforcement Learning (RL) is a type of machine learning that is inspired by be
 - Model of the Environment: Used for planning by predicting the next state and reward.
 
 <figure>
-  <img src="{{ '/images/medium_posts/learning-types-in-machine-learning-08.png' | relative_url }}" alt="Figure" loading="lazy">
+  <img src="{{ '/images/medium_posts/learning-types-in-machine-learning-08.webp' | relative_url }}" alt="Figure" loading="lazy">
 </figure>
 
 It’s about taking suitable action to maximize reward in a particular situation. It is employed by various software and machines to find the best possible behavior or path it should take in a specific situation.
@@ -112,7 +112,7 @@ It’s about taking suitable action to maximize reward in a particular situation
 Self-driving cars where the algorithm learns to make specific maneuvers and decisions based on the driving environment. Another example is automated trading systems that learn to make profitable trades.
 
 <figure>
-  <img src="{{ '/images/medium_posts/learning-types-in-machine-learning-09.png' | relative_url }}" alt="Figure" loading="lazy">
+  <img src="{{ '/images/medium_posts/learning-types-in-machine-learning-09.webp' | relative_url }}" alt="Figure" loading="lazy">
 </figure>
 
 Value-Based Algorithms:
@@ -141,5 +141,5 @@ Model-Based Algorithms:
 - Dyna-Q: A combination of model-free and model-based methods, where a learned model is used for planning and improving the policy.
 
 <figure>
-  <img src="{{ '/images/medium_posts/learning-types-in-machine-learning-11.png' | relative_url }}" alt="Figure" loading="lazy">
+  <img src="{{ '/images/medium_posts/learning-types-in-machine-learning-11.webp' | relative_url }}" alt="Figure" loading="lazy">
 </figure>

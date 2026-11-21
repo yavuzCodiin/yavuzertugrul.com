@@ -141,7 +141,7 @@ topic: robotics                            # a slug from _data/topics.yml — dr
 tags: [Robotics, ROS2]                     # free-form, shown on the entry row
 origin: medium                             # optional — adds the outline "medium" chip
 description: One line for cards, search and social previews.
-image: /images/post-10/Post_IMAGE.png
+image: /images/post-10/Post_IMAGE.jpg
 image_color: true                          # optional — skip the grayscale wrapper
 hero: false                                # optional — the image is already the first figure
                                            #   of the body: keep it for the list thumbnail and
@@ -220,6 +220,13 @@ into `srcset`, so each screen gets the smallest copy that is still sharp. The ma
 never rewritten: keep writing `<img src="/images/…">` or `![](…)` as usual. Forgetting the
 run costs speed, never correctness — an image missing from the index is served as the
 original. `./bin/images --clean` also deletes copies nothing uses any more.
+
+**The originals are kept light too.** A PNG is the heaviest way to keep a photo or a
+painting, and the original is what the lightbox and a wide screen load. So originals are
+WebP: lossless (pixel for pixel the same) for artwork, screenshots and flat graphics, and
+high-quality lossy only for photo-like images, where it cannot be told apart. The one
+exception is a post's `image:` — it is also the picture link previews show, and not every
+service takes WebP there — which stays JPEG, or PNG if it is flat or see-through.
 
 **Animated GIF → `./bin/clip images/…/name.gif`.** A screen-recording GIF is the heaviest
 thing a page can carry (the pathfinding demo: 7.4 MB as GIF, 0.75 MB as MP4, and animated

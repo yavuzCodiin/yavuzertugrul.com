@@ -7,7 +7,7 @@ topic: robotics
 tags: [Robotics, ROS2, Lidar]
 permalink: "/Lidar_part_1"
 description: "Hardware setup, ROS2 Humble install, Velodyne driver and RViz2 visualisation — a full step-by-step field guide."
-image: /images/post-10/Post_IMAGE.png
+image: /images/post-10/Post_IMAGE.jpg
 notes:
   - Tested on ROS2 Humble, JetPack 5.x — driver versions matter.
   - The interface box must be powered before the ethernet link comes up.
@@ -27,7 +27,7 @@ Remote sensing technology which uses laser light to measure distances to objects
 *  **Range:** Lidar can detect objects at longer ranges<br>
 *  **Interference:** Lidar is less susceptible to interference from other sources, making it more suitable for applications in complex environments.
 <div class="image-container" style="text-align: center;">
-    <img src="/images/post-10/lidar_radar.png" alt="Lidar and Radar" loading="lazy" />
+    <img src="/images/post-10/lidar_radar.webp" alt="Lidar and Radar" loading="lazy" />
 </div>
 Many of you have probably encountered a Lidar system without even realizing it. Lidar technology plays a crucial role in autonomous vehicles, with companies such as Zoox, Cruise, and Waymo equipping their self-driving cars with multiple units. Beyond the automotive industry, Lidar is widely used in topographic mapping and surveying, with organizations like Geosurvey and Leica relying heavily on this technology.
 
@@ -35,7 +35,7 @@ Many of you have probably encountered a Lidar system without even realizing it. 
 ## How Lidar Works?
 
 <div class="image-container" style="text-align: center;">
-    <img src="/images/post-10/how_lidar_works.png" alt="How Lidar Works Illustration" loading="lazy" />
+    <img src="/images/post-10/how_lidar_works.webp" alt="How Lidar Works Illustration" loading="lazy" />
 </div>
 
 
@@ -66,10 +66,10 @@ sudo apt install -y git python3-pip python3-colcon-common-extensions
 
 <div style="display: flex; justify-content: center; gap: 20px;">
     <div class="image-container" style="width: 45%;">
-        <img src="/images/post-10/network_settings_1.png" alt="Network Config" loading="lazy" style="width: 100%; height: auto;"/>
+        <img src="/images/post-10/network_settings_1.webp" alt="Network Config" loading="lazy" style="width: 100%; height: auto;"/>
     </div>
     <div class="image-container" style="width: 45%;">
-        <img src="/images/post-10/network_settings_2.png" alt="Network Config" loading="lazy" style="width: 100%; height: auto;"/>
+        <img src="/images/post-10/network_settings_2.webp" alt="Network Config" loading="lazy" style="width: 100%; height: auto;"/>
     </div>
 </div>
 
@@ -92,7 +92,7 @@ sudo nano /etc/netplan/01-netcfg.yaml
 
 
 <div class="image-container" style="text-align: center;">
-    <img src="/images/post-10/netcfg.png" alt="netcfg.yaml" loading="lazy" />
+    <img src="/images/post-10/netcfg.webp" alt="netcfg.yaml" loading="lazy" />
 </div><br>
 to confirm 
 
@@ -107,10 +107,10 @@ ip a | grep etho
 
 <div style="display: flex; justify-content: center; gap: 20px;">
     <div class="image-container" style="width: 45%;">
-        <img src="/images/post-10/vlp16_gui.png" alt="VLP-16 GUI" loading="lazy" style="width: 100%; height: auto;"/>
+        <img src="/images/post-10/vlp16_gui.webp" alt="VLP-16 GUI" loading="lazy" style="width: 100%; height: auto;"/>
     </div>
     <div class="image-container" style="width: 45%;">
-        <img src="/images/post-10/vlp16_gui_1.png" alt="VLP-16 GUI" loading="lazy" style="width: 100%; height: auto;"/>
+        <img src="/images/post-10/vlp16_gui_1.webp" alt="VLP-16 GUI" loading="lazy" style="width: 100%; height: auto;"/>
     </div>
 </div>
 
@@ -199,7 +199,7 @@ According to your need and device you can launch one of the nodes:
 
 
 <div class="image-container" style="text-align: center;">
-    <img src="/images/post-10/node.png" alt="Node" loading="lazy" />
+    <img src="/images/post-10/node.webp" alt="Node" loading="lazy" />
 </div><br>
 Launch vlp-16 node:
 
@@ -215,7 +215,7 @@ ros2 topic list
 ```
 
 <div class="image-container" style="text-align: center;">
-    <img src="/images/post-10/topic_list.png" alt="Topic List" loading="lazy" />
+    <img src="/images/post-10/topic_list.webp" alt="Topic List" loading="lazy" />
 </div><br>
 
 ```bash
@@ -226,10 +226,10 @@ ros2 topic echo /velodyne_packets
 
 <div style="display: flex; justify-content: center; gap: 20px;">
     <div class="image-container" style="width: 45%;">
-        <img src="/images/post-10/velodyne_points.png" alt="Velodyne Points echo" loading="lazy" style="width: 100%; height: auto;"/>
+        <img src="/images/post-10/velodyne_points.webp" alt="Velodyne Points echo" loading="lazy" style="width: 100%; height: auto;"/>
     </div>
     <div class="image-container" style="width: 31%;">
-        <img src="/images/post-10/velodyne_packets.png" alt="Velodyne Packets echo" loading="lazy" style="width: 100%; height: auto;"/>
+        <img src="/images/post-10/velodyne_packets.webp" alt="Velodyne Packets echo" loading="lazy" style="width: 100%; height: auto;"/>
     </div>
 </div>
 
@@ -244,19 +244,19 @@ or you can open rviz2 directly and change settings like fixed frame from `/map` 
 
 <div style="display: flex; justify-content: center; gap: 20px;">
     <div class="image-container" style="width: 45%;">
-        <img src="/images/post-10/rvizss1.png" alt="Rviz2 GUI" loading="lazy" style="width: 100%; height: auto;"/>
+        <img src="/images/post-10/rvizss1.webp" alt="Rviz2 GUI" loading="lazy" style="width: 100%; height: auto;"/>
     </div>
     <div class="image-container" style="width: 38%;">
-        <img src="/images/post-10/rvizss2.png" alt="Rviz2 GUI" loading="lazy" style="width: 100%; height: auto;"/>
+        <img src="/images/post-10/rvizss2.webp" alt="Rviz2 GUI" loading="lazy" style="width: 100%; height: auto;"/>
     </div>
 </div>
 
 
 <div class="image-container" style="text-align: center; width: 80%; margin: 0 auto;">
-    <img src="/images/post-10/velo-1.png" alt="Velo" loading="lazy" style="width: 100%; height: auto;" />
+    <img src="/images/post-10/velo-1.webp" alt="Velo" loading="lazy" style="width: 100%; height: auto;" />
 </div><br>
 
 
 **Connect with me across the web, you can explore my digital world through the link on the image below, including more articles, projects, and personal interests.**
 
-[![linktree_yavuzertugrul](images/post-7/image.png)](https://linktr.ee/yavuzertugrul?utm_source=linktree_profile_share&ltsid=ca29e9eb-5683-4ea5-8d64-4369abf718df)
+[![linktree_yavuzertugrul](images/post-7/image.webp)](https://linktr.ee/yavuzertugrul?utm_source=linktree_profile_share&ltsid=ca29e9eb-5683-4ea5-8d64-4369abf718df)

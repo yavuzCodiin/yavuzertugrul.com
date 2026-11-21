@@ -6,7 +6,7 @@ topic: scraping
 tags: [Scraping]
 origin: medium
 medium_url: https://levelup.gitconnected.com/web-scraping-series-part-iv-world-coins-with-scrapy-data-analysis-with-pandas-6222bb8d6aa7
-image: /images/medium_images/World_Coins_with_Scrapy_&_Data_Analysis_with_Pandas.png
+image: /images/medium_images/World_Coins_with_Scrapy_&_Data_Analysis_with_Pandas.jpg
 image_color: true
 description: "Scrapy for the crawl, pandas for the analysis — antique coin data from collection to chart."
 ---
@@ -69,7 +69,7 @@ C:\Users\USER\AppData\Local\Programs\Python
 then you need to add find Edit the system environment variables click on Environment Variables and add this path to there.
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-03.png' | relative_url }}" alt="Edit the system environment variables — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-03.webp' | relative_url }}" alt="Edit the system environment variables — Screenshot by author" loading="lazy">
   <figcaption>Edit the system environment variables — Screenshot by author</figcaption>
 </figure>
 
@@ -137,7 +137,7 @@ scrapy startproject "project_name"
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-05.png' | relative_url }}" alt="folder project_darphane(Mint Office) — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-05.webp' | relative_url }}" alt="folder project_darphane(Mint Office) — Screenshot by author" loading="lazy">
   <figcaption>folder project_darphane(Mint Office) — Screenshot by author</figcaption>
 </figure>
 
@@ -201,7 +201,7 @@ import pandas as pdimport numpy as npdf_exe = pd.DataFrame(    {        "One": 1
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-07.png' | relative_url }}" alt="Output of df_exe DataFrame — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-07.webp' | relative_url }}" alt="Output of df_exe DataFrame — Screenshot by author" loading="lazy">
   <figcaption>Output of df_exe DataFrame — Screenshot by author</figcaption>
 </figure>
 
@@ -210,7 +210,7 @@ df_exe[df_exe["Catalog"]=="Mirror"]
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-08.png' | relative_url }}" alt="Output of selecting specific row — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-08.webp' | relative_url }}" alt="Output of selecting specific row — Screenshot by author" loading="lazy">
   <figcaption>Output of selecting specific row — Screenshot by author</figcaption>
 </figure>
 
@@ -221,14 +221,14 @@ We will explore more with the project so for now we are done with it for detaile
 > Part 1: Getting the Data
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-09.png' | relative_url }}" alt="Vcoin — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-09.webp' | relative_url }}" alt="Vcoin — Screenshot by author" loading="lazy">
   <figcaption>Vcoin — Screenshot by author</figcaption>
 </figure>
 
 When I check the website I see the structure is like this and I decided to get the **seller name, money, **and **price **of it so I checked its html structure to see what to extract.
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-10.png' | relative_url }}" alt="view page source — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-10.webp' | relative_url }}" alt="view page source — Screenshot by author" loading="lazy">
   <figcaption>view page source — Screenshot by author</figcaption>
 </figure>
 
@@ -237,7 +237,7 @@ scrapy shell "https://www.vcoins.com/en/coins/world-1945.aspx"
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-11.png' | relative_url }}" alt="Scrapy shell — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-11.webp' | relative_url }}" alt="Scrapy shell — Screenshot by author" loading="lazy">
   <figcaption>Scrapy shell — Screenshot by author</figcaption>
 </figure>
 
@@ -246,7 +246,7 @@ response.css("div.item-link a::text").extract()
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-12.png' | relative_url }}" alt="Seller — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-12.webp' | relative_url }}" alt="Seller — Screenshot by author" loading="lazy">
   <figcaption>Seller — Screenshot by author</figcaption>
 </figure>
 
@@ -255,7 +255,7 @@ response.css("p.description a::text").extract()
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-13.png' | relative_url }}" alt="Money — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-13.webp' | relative_url }}" alt="Money — Screenshot by author" loading="lazy">
   <figcaption>Money — Screenshot by author</figcaption>
 </figure>
 
@@ -264,7 +264,7 @@ response.css("div.prices span.newitemsprice::text").extract()[::2]
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-14.png' | relative_url }}" alt="Price_Symbol — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-14.webp' | relative_url }}" alt="Price_Symbol — Screenshot by author" loading="lazy">
   <figcaption>Price_Symbol — Screenshot by author</figcaption>
 </figure>
 
@@ -273,14 +273,14 @@ response.css("div.prices span.newitemsprice::text").extract()[1::2]
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-15.png' | relative_url }}" alt="Price— Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-15.webp' | relative_url }}" alt="Price— Screenshot by author" loading="lazy">
   <figcaption>Price— Screenshot by author</figcaption>
 </figure>
 
 These are data of one page, and I want my spider to search all the pages available and return the data so I will check pagination part on the bottom.
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-16.png' | relative_url }}" alt="pagination — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-16.webp' | relative_url }}" alt="pagination — Screenshot by author" loading="lazy">
   <figcaption>pagination — Screenshot by author</figcaption>
 </figure>
 
@@ -289,7 +289,7 @@ It will go until there is nothing.
 I first done this project with getting text output, then for **csv(comma separated values)** output for data analysis. I won’t show code of text part but here is output.
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-17.png' | relative_url }}" alt="Output data as .text — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-17.webp' | relative_url }}" alt="Output data as .text — Screenshot by author" loading="lazy">
   <figcaption>Output data as .text — Screenshot by author</figcaption>
 </figure>
 
@@ -328,7 +328,7 @@ def start_requests(self):        self.file = open('money.csv', 'w', newline='', 
 **| Output**
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-18.png' | relative_url }}" alt="CSV output — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-18.webp' | relative_url }}" alt="CSV output — Screenshot by author" loading="lazy">
   <figcaption>CSV output — Screenshot by author</figcaption>
 </figure>
 
@@ -341,7 +341,7 @@ import pandas as pdimport numpy as nptest = pd.read_csv("money.csv",index_col="C
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-19.png' | relative_url }}" alt="Output as DataFrame — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-19.webp' | relative_url }}" alt="Output as DataFrame — Screenshot by author" loading="lazy">
   <figcaption>Output as DataFrame — Screenshot by author</figcaption>
 </figure>
 
@@ -350,7 +350,7 @@ test.shapetest.info()test.describe()
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-20.png' | relative_url }}" alt="Outputs of shape attribute, info and describe method — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-20.webp' | relative_url }}" alt="Outputs of shape attribute, info and describe method — Screenshot by author" loading="lazy">
   <figcaption>Outputs of shape attribute, info and describe method — Screenshot by author</figcaption>
 </figure>
 
@@ -359,7 +359,7 @@ test.isnull().sum()
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-21.png' | relative_url }}" alt="Output of NaN search — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-21.webp' | relative_url }}" alt="Output of NaN search — Screenshot by author" loading="lazy">
   <figcaption>Output of NaN search — Screenshot by author</figcaption>
 </figure>
 
@@ -368,7 +368,7 @@ test.drop_duplicates().sort_values(by="Price",ascending=False).head(25)
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-22.png' | relative_url }}" alt="Output sorted via Price —screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-22.webp' | relative_url }}" alt="Output sorted via Price —screenshot by author" loading="lazy">
   <figcaption>Output sorted via Price —screenshot by author</figcaption>
 </figure>
 
@@ -377,7 +377,7 @@ test.drop_duplicates().sort_values(by="Price",ascending=False).head(25)
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-23.png' | relative_url }}" alt="Extracting the Year & Sorting by Year — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-23.webp' | relative_url }}" alt="Extracting the Year & Sorting by Year — Screenshot by author" loading="lazy">
   <figcaption>Extracting the Year & Sorting by Year — Screenshot by author</figcaption>
 </figure>
 
@@ -388,7 +388,7 @@ def clean_price(price):    price = price.replace('US$', '').replace('€', '').r
 - This is not correct thing to do but I wanted to show you clean process I haven’t decide how to correctly sort my values because there are different currencies.
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-24.png' | relative_url }}" alt="Cleaned Price Data — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-24.webp' | relative_url }}" alt="Cleaned Price Data — Screenshot by author" loading="lazy">
   <figcaption>Cleaned Price Data — Screenshot by author</figcaption>
 </figure>
 
@@ -397,7 +397,7 @@ test[test["Money"].apply(lambda x : x.startswith("Elizabeth"))]test[test["Seller
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-25.png' | relative_url }}" alt="Search through Dataset — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-25.webp' | relative_url }}" alt="Search through Dataset — Screenshot by author" loading="lazy">
   <figcaption>Search through Dataset — Screenshot by author</figcaption>
 </figure>
 
@@ -406,7 +406,7 @@ test[test["Money"].isin(["Elizabeth II 1966 Gillick Sovereign MS64"])]
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-26.png' | relative_url }}" alt="Specific Search — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-26.webp' | relative_url }}" alt="Specific Search — Screenshot by author" loading="lazy">
   <figcaption>Specific Search — Screenshot by author</figcaption>
 </figure>
 

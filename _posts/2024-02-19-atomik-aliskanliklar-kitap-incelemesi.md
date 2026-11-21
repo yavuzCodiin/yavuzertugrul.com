@@ -18,7 +18,7 @@ Herkese selamlar! Bu yıl, önceki yıllardan farklı olarak, yaptığım her ş
 Bu yazıyı bölümler halinde hazırladım ve her bölümde aldığım notları paylaştım, şimdiden iyi okumalar dilerim.
 
 <figure>
-  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-01.png' | relative_url }}" alt="Dall-E 3 ile yazar tarafından oluşturulmuştur. ❤" loading="lazy">
+  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-01.webp' | relative_url }}" alt="Dall-E 3 ile yazar tarafından oluşturulmuştur. ❤" loading="lazy">
   <figcaption>Dall-E 3 ile yazar tarafından oluşturulmuştur. ❤</figcaption>
 </figure>
 
@@ -57,7 +57,7 @@ Kendimden de örnek vermem gerekir ise bir hedef koyduğumda ve ona ulaştığı
 Alışkanlıklarımız yer ettiği zaman hiç peşimizi bırakmayacak gibi gözükür hele istenmeyenler. Ne kadar çaba harcarsak da abur cubur yemek, çok fazla içerik tüketmek, sigara içmek gibi alışkanlıkları hiç bırakamayacağız sanarız.
 
 <figure>
-  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-03.png' | relative_url }}" alt="Davranışsal Değişimin 3 Katmanı — Çizim yazara ait" loading="lazy">
+  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-03.webp' | relative_url }}" alt="Davranışsal Değişimin 3 Katmanı — Çizim yazara ait" loading="lazy">
   <figcaption>Davranışsal Değişimin 3 Katmanı — Çizim yazara ait</figcaption>
 </figure>
 
@@ -108,7 +108,7 @@ Bizler o kadar çok alışkanlığımızı bilinçsiz yaparız ki artık otomati
 Alışkanlıklarımızı takip etmek onları ele almak gerektiğini düşünüyorum. Davranış değişikliği süreci her zaman farkındalık ile başlar, iyi olanlar her ne kadar güzel olsa da istemediğimiz kötü alışkanlıklarımızdan da kurtulmak için başlangıç olarak alışkanlıklarımızın ne olduğunu öğrenmeliyiz.
 
 <figure>
-  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-04.png' | relative_url }}" alt="Alışkanlık takibi için kullandığım şablon — Notion" loading="lazy">
+  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-04.webp' | relative_url }}" alt="Alışkanlık takibi için kullandığım şablon — Notion" loading="lazy">
   <figcaption>Alışkanlık takibi için kullandığım şablon — Notion</figcaption>
 </figure>
 
@@ -247,7 +247,7 @@ Bu şekilde gerekliliklerimizle isteklerimizi istifleyerek onları yapma ihtimal
 Neye dönüşmek istiyorsak etrafımızı o insanlarla çevrelemeliyiz bu önemli bir nokta, insan olarak sürü halinde yaşamak, uyum sağlamak, başkaları ile bağ kurmak onların onayını saygısını kazanmak isteriz. Nerd fitness adında bir spor salonu var burada spor salonuna gitmeyi genelde istemeyen, rahat hissetmeyen “nerd” olarak adlandırılan insanlar bir araya gelerek spor yapıyorlar, buradaki ana amaç ortak ilgi bulunca bir sürünün parçası olarak hissedince daha mutlu oluyorlar ve daha çok spor yapıyorlar.
 
 <figure>
-  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-11.png' | relative_url }}" alt="İncelemek isterseniz Nerd Fitness" loading="lazy">
+  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-11.webp' | relative_url }}" alt="İncelemek isterseniz Nerd Fitness" loading="lazy">
   <figcaption>İncelemek isterseniz Nerd Fitness</figcaption>
 </figure>
 
@@ -289,7 +289,7 @@ Bazen daha güçlü veya başarılı gördüğümüz kişileri taklit etme eğil
 Dönem sonunda hangi grup daha iyi notlara sahip oluyor dersiniz? Daha iyi fotoğraflara ve notlara nicelik grubu sahip oluyor, bu öğrenciler dönemi fotoğraflar çekerek, farklı kompozisyon ve ışıklarla deneyler yaparak, çeşitli yöntemler deneyerek ve hatalarından ders çıkararak geçirirken, nitelik grubu kusursuzluk üzerine uğraşıp bir tane fotoğraf çekiyor.
 
 <figure>
-  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-12.png' | relative_url }}" alt="Alışkanlık Çizgisi — Atomik Alışkanlıklar" loading="lazy">
+  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-12.webp' | relative_url }}" alt="Alışkanlık Çizgisi — Atomik Alışkanlıklar" loading="lazy">
   <figcaption>Alışkanlık Çizgisi — Atomik Alışkanlıklar</figcaption>
 </figure>
 
@@ -328,7 +328,7 @@ Tam tersi olarakta abur cubur gibi yiyecekleri gözlerden ırak ve ulaşırken e
 Kitabın bu bölümü çok kafama yatmamış olsa da sizlerle birkaç bir şey paylaşacağım.
 
 <figure>
-  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-13.png' | relative_url }}" alt="Karar Anları — Atomik Alışkanlıklar" loading="lazy">
+  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-13.webp' | relative_url }}" alt="Karar Anları — Atomik Alışkanlıklar" loading="lazy">
   <figcaption>Karar Anları — Atomik Alışkanlıklar</figcaption>
 </figure>
 
@@ -341,7 +341,7 @@ Kitap burada iki dakika kuralı diye bir şeyden bahsediyor, yeni bir alışkanl
 Her gün 5–10 dakika bile olsa yürümeye çalışıyorum belki ilerleyen zamanlarda 30 dakika 1 saate çıkar amacım bu alışkanlığı 5 dakika bile olsa sürdürmek.
 
 <figure>
-  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-14.png' | relative_url }}" alt="Alışkanlık Şekillendirme Örnekleri — Atomik Alışkanlıklar" loading="lazy">
+  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-14.webp' | relative_url }}" alt="Alışkanlık Şekillendirme Örnekleri — Atomik Alışkanlıklar" loading="lazy">
   <figcaption>Alışkanlık Şekillendirme Örnekleri — Atomik Alışkanlıklar</figcaption>
 </figure>
 
@@ -352,19 +352,19 @@ Her gün 5–10 dakika bile olsa yürümeye çalışıyorum belki ilerleyen zama
 Mesela 3. bölümde paylaştığım alışkanlıklarımın takibini otomatikleştirmem gibi çoğu ihtiyacımı ikinci beynim olarak kullandığım Notion üzerinde otomatikleştiriyorum.
 
 <figure>
-  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-15.png' | relative_url }}" alt="Figure" loading="lazy">
+  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-15.webp' | relative_url }}" alt="Figure" loading="lazy">
 </figure>
 
 <figure>
-  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-16.png' | relative_url }}" alt="Figure" loading="lazy">
+  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-16.webp' | relative_url }}" alt="Figure" loading="lazy">
 </figure>
 
 <figure>
-  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-17.png' | relative_url }}" alt="Figure" loading="lazy">
+  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-17.webp' | relative_url }}" alt="Figure" loading="lazy">
 </figure>
 
 <figure>
-  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-18.png' | relative_url }}" alt="Second Brain — Notion" loading="lazy">
+  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-18.webp' | relative_url }}" alt="Second Brain — Notion" loading="lazy">
   <figcaption>Second Brain — Notion</figcaption>
 </figure>
 
@@ -409,7 +409,7 @@ Başka bir örnek vermek gerekirse bunu yaparken bir şeyin eksikliğinden mahru
 3. bölümde alışkanlıklarımı Notion üzerinde bir alışkanlık takip edicisi ile otomatik bir şekilde takip ettiğimden bahsetmiştim aslında orada mantığım şuydu ilk olarak edinmek istediğim alışkanlıkların her birisi için kart oluşturuyorum ve bu alışkanlığın tam olarak ne olduğunu detaylandırmaya çalışıyorum. Burada ana amacım şu aslında yanlış şeyi ölçmemek, ilk başlarda her gün kod yazıp yazmadığımın takibini yapıyordum, ama bunu takip etmemin bir anlamı olmadığını daha da detaylandırmam gerektiğini fark ettim ve kod kısmını üçe ayırıp detaylandırdım, proje, algoritma, ve öğrenme olarak bunları takip etmenin şuan daha mantıklı olduğu kanaatindeyim, bir şeyi ölçebiliyor olmam onun en önemli şey olduğu anlamına gelmiyor, başka örnek vermem gerekirse anlamlı işler çıkarmak yerine uzun saatler çalışmaya odaklanırız veya on bin adım atmayı sağlıklı olmaktan daha fazla önem veririz gibi.
 
 <figure>
-  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-19.png' | relative_url }}" alt="Alışkanlık Takip Sistemi — Notion" loading="lazy">
+  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-19.webp' | relative_url }}" alt="Alışkanlık Takip Sistemi — Notion" loading="lazy">
   <figcaption>Alışkanlık Takip Sistemi — Notion</figcaption>
 </figure>
 
@@ -440,7 +440,7 @@ Yaz okulunda, sıkışık bir takvimde Fizik II ve Calculus II’yi geçmem gere
 Kendimizle bir alışkanlık sözleşmesi imzalamamız ise tam olarak burada devreye giriyor. Nasıl ki emniyet kemeri takma alışkanlığımız 39 yıl içerisinde yasa sayesinde %88'e ulaştıysa, kendi hayatımızda da bu tarz sözleşmeler yaparak alışkanlıklarımızı güçlendirebiliriz. Söz gelimi, bir eylemi yapmazsam belirli bir bedel ödemeyi kabul edersem, bu beni o eylemi gerçekleştirmek için daha da motive eder. Sonuçta, davranışlarımız ve alışkanlıklarımız için aldığımız sonuçlar ve cezalar arasında gecikme olmaması gerekiyor ki, gerçek bir değişim yaratabilelim. Yani, harekete geçmek ve sonuçları hızla deneyimlemek, bizi istikrarlı bir yolda tutar.
 
 <figure>
-  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-20.png' | relative_url }}" alt="İyi Alışkanlık ve Kötü Alışkanlık — Atomik Alışkanlıklar" loading="lazy">
+  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-20.webp' | relative_url }}" alt="İyi Alışkanlık ve Kötü Alışkanlık — Atomik Alışkanlıklar" loading="lazy">
   <figcaption>İyi Alışkanlık ve Kötü Alışkanlık — Atomik Alışkanlıklar</figcaption>
 </figure>
 
@@ -453,7 +453,7 @@ Böylece 4 yasa hakkında da konuşmuş olduk yukarıdaki resimde detaylıca inc
 Alışkanlıklarımızın hayatımızda belirleyici bir konumda olduğu aşikar ve bunu her geçen gün daha iyi anlıyorum. Kişilik özelliklerimiz bizim kim olduğumuzu, nelerden hoşlandığımızı ve nasıl bir yol izleyeceğimizi belirliyor. Yaratıcı, açık fikirli olabiliriz ya da daha temkinli ve tutarlı, işte bu farklılıklar, hangi alışkanlıkların bize uygun olduğunu ve hangilerinin bizi sıkıntıya sokabileceğini gösteriyor. Her alışkanlık için, keyif alabileceğimiz bir versiyon var ve asıl mesele bu versiyonu keşfedebilmekte.
 
 <figure>
-  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-21.png' | relative_url }}" alt="Dall-E 3 ile yazar tarafından oluşturulmuştur ❤" loading="lazy">
+  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-21.webp' | relative_url }}" alt="Dall-E 3 ile yazar tarafından oluşturulmuştur ❤" loading="lazy">
   <figcaption>Dall-E 3 ile yazar tarafından oluşturulmuştur ❤</figcaption>
 </figure>
 
@@ -466,7 +466,7 @@ Sonuçta, herkesin kazanmaya çalıştığı alışkanlığı kazanmak yerine, k
 > Goldilock Kuralı’na göre insanlar motivasyonlarının zirvesine, var olan becerilerinin sınırındaki görevlerde çalışırken ulaşırlar.
 
 <figure>
-  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-22.png' | relative_url }}" alt="Goldiloks Kuralı — Atomik Alışkanlıklar" loading="lazy">
+  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-22.webp' | relative_url }}" alt="Goldiloks Kuralı — Atomik Alışkanlıklar" loading="lazy">
   <figcaption>Goldiloks Kuralı — Atomik Alışkanlıklar</figcaption>
 </figure>
 
@@ -489,7 +489,7 @@ Edindiğim alışkanlıklar ustalığımın temelini yaratır. Satrançta taşla
 Fakat alışkanlıkların getirilerinin bir bedeli vardır, başlangıçta her tekrar akıcılığı, hızı ve beceriyi geliştirir. Ama daha sonra, bir alışkanlık otomatikleştikçe geri bildirime duyarsızlaşırız. Bilinçisiz tekrara düşeriz. Hata yapmak bu noktada kolaylaşır. Otomatik pilottayken bir şeyi “**yeterince iyi**” yapabildiğimizde onu nasıl daha iyi yapabileceğimizi düşünmeyi bırakır ve küçük hatalara dikkat etmemeye başlarız.
 
 <figure>
-  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-23.png' | relative_url }}" alt="Bir Alışkanlıkta ve Alanda Ustalaşmak Grafik — Atomik Alışkanlıklar" loading="lazy">
+  <img src="{{ '/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-23.webp' | relative_url }}" alt="Bir Alışkanlıkta ve Alanda Ustalaşmak Grafik — Atomik Alışkanlıklar" loading="lazy">
   <figcaption>Bir Alışkanlıkta ve Alanda Ustalaşmak Grafik — Atomik Alışkanlıklar</figcaption>
 </figure>
 

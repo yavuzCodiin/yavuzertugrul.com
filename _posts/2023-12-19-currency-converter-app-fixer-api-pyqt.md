@@ -6,14 +6,14 @@ topic: scraping
 tags: [Python]
 origin: medium
 medium_url: https://levelup.gitconnected.com/currency-converter-app-with-apilayers-fixer-api-and-pyqt-framework-43b2e4292d09
-image: /images/medium_images/currency_converter_app.png
+image: /images/medium_images/currency_converter_app.jpg
 image_color: true
 hero: false
 description: "A desktop currency converter on APILayer's Fixer API, with a PyQt front end."
 ---
 
 <figure>
-  <img src="{{ '/images/medium_posts/currency-converter-app-fixer-api-pyqt-01.png' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
+  <img src="{{ '/images/medium_posts/currency-converter-app-fixer-api-pyqt-01.webp' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
   <figcaption>created with Dall-E 3 by author with ❤</figcaption>
 </figure>
 
@@ -59,7 +59,7 @@ Accessing and using the [Fixer.io](http://fixer.io/) API is pretty straightforwa
 > Note: For the most current and detailed information about Fixer.io’s offerings and the specific differences between their free and premium plans, I recommend checking their official website or contacting their support team, as the features and limitations can change over time.
 
 <figure>
-  <img src="{{ '/images/medium_posts/currency-converter-app-fixer-api-pyqt-02.png' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
+  <img src="{{ '/images/medium_posts/currency-converter-app-fixer-api-pyqt-02.webp' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
   <figcaption>created with Dall-E 3 by author with ❤</figcaption>
 </figure>
 
@@ -88,7 +88,7 @@ First of all, let’s go over the documentation together on how to use this API
 [data.fixer.io/api/latest?access_key=](http://data.fixer.io/api/latest?access_key=2c0ec96ab61399c54904f4b267b02427){**your API key is going here**} with running API Requst we get these dictionary like output:
 
 <figure>
-  <img src="{{ '/images/medium_posts/currency-converter-app-fixer-api-pyqt-03.png' | relative_url }}" alt="JSON Output of API Request — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/currency-converter-app-fixer-api-pyqt-03.webp' | relative_url }}" alt="JSON Output of API Request — Screenshot by author" loading="lazy">
   <figcaption>JSON Output of API Request — Screenshot by author</figcaption>
 </figure>
 
@@ -115,7 +115,7 @@ For more detail I recommend you to check their documentation I am putting the li
 ## What is Qt and PyQt5 ?
 
 <figure>
-  <img src="{{ '/images/medium_posts/currency-converter-app-fixer-api-pyqt-06.png' | relative_url }}" alt="Currency Converter App — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/currency-converter-app-fixer-api-pyqt-06.webp' | relative_url }}" alt="Currency Converter App — Screenshot by author" loading="lazy">
   <figcaption>Currency Converter App — Screenshot by author</figcaption>
 </figure>
 
@@ -126,7 +126,7 @@ Now, imagine if you had a special guidebook that translated all these instructio
 PyQt5 is one of the latest edition of this guidebook. It’s updated with the newest rides and attractions. Using PyQt5, I can easily choose and enjoy the most advanced features in the Qt amusement park, but with the simplicity and comfort of Python. Whether I want build complex application or create a simple app, PyQt5 makes the experience straightforward and fun.
 
 <figure>
-  <img src="{{ '/images/medium_posts/currency-converter-app-fixer-api-pyqt-07.png' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
+  <img src="{{ '/images/medium_posts/currency-converter-app-fixer-api-pyqt-07.webp' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
   <figcaption>created with Dall-E 3 by author with ❤</figcaption>
 </figure>
 
@@ -142,7 +142,7 @@ If you are just starting out, PyQt5 is an invaluable resource. It allows you to 
 > Importing and Initiating
 
 <figure>
-  <img src="{{ '/images/medium_posts/currency-converter-app-fixer-api-pyqt-09.png' | relative_url }}" alt="Designing GUI with QtDesigner — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/currency-converter-app-fixer-api-pyqt-09.webp' | relative_url }}" alt="Designing GUI with QtDesigner — Screenshot by author" loading="lazy">
   <figcaption>Designing GUI with QtDesigner — Screenshot by author</figcaption>
 </figure>
 
@@ -169,7 +169,7 @@ def update_conversion_rate(self):        api_key = "YOUR API KEY GOES HERE"     
 > Converting the Currency
 
 <figure>
-  <img src="{{ '/images/medium_posts/currency-converter-app-fixer-api-pyqt-10.png' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
+  <img src="{{ '/images/medium_posts/currency-converter-app-fixer-api-pyqt-10.webp' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
   <figcaption>created with Dall-E 3 by author with ❤</figcaption>
 </figure>
 
@@ -196,7 +196,7 @@ if __name__ == '__main__':    app = QtWidgets.QApplication(sys.argv)    window =
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/currency-converter-app-fixer-api-pyqt-11.png' | relative_url }}" alt="Currency Converter App — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/currency-converter-app-fixer-api-pyqt-11.webp' | relative_url }}" alt="Currency Converter App — Screenshot by author" loading="lazy">
   <figcaption>Currency Converter App — Screenshot by author</figcaption>
 </figure>
 

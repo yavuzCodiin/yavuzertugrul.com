@@ -6,7 +6,7 @@ topic: scraping
 tags: [Scraping]
 origin: medium
 medium_url: https://levelup.gitconnected.com/web-scraping-series-part-ii-x-feed-selenium-c10ceb4b1a12
-image: /images/medium_images/x_feed_selenium.png
+image: /images/medium_images/x_feed_selenium.jpg
 image_color: true
 hero: false
 description: "When the page renders in JavaScript, requests stops being enough — driving an X feed with Selenium."
@@ -18,7 +18,7 @@ Welcome back to our Web Scraping Series. In second part, we’re focusing on X, 
 Let’s Start with what is **Selenium:**
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-ii-x-feed-selenium-01.png' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-ii-x-feed-selenium-01.webp' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
   <figcaption>created with Dall-E 3 by author with ❤</figcaption>
 </figure>
 
@@ -35,7 +35,7 @@ Selenium simply automates web browsers. It is an open-source suite of tools and 
 For more information related with Selenium you can check this [unofficial documentation](https://selenium-python.readthedocs.io/index.html)
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-ii-x-feed-selenium-02.png' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-ii-x-feed-selenium-02.webp' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
   <figcaption>created with Dall-E 3 by author with ❤</figcaption>
 </figure>
 
@@ -65,7 +65,7 @@ from selenium import webdriverfrom selenium.webdriver.common.by import By# Set u
 With this simple code I can obtain top 50 global song related data of youtube with its name and video link, I only printed them for now but we can store them in various ways from text to excel.
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-ii-x-feed-selenium-03.png' | relative_url }}" alt="Output of Youtube Scraping — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-ii-x-feed-selenium-03.webp' | relative_url }}" alt="Output of Youtube Scraping — Screenshot by author" loading="lazy">
   <figcaption>Output of Youtube Scraping — Screenshot by author</figcaption>
 </figure>
 
@@ -80,12 +80,12 @@ XPath and CSS Selectors are two ways to find and select specific parts of a web 
 It’s a way to navigate through the HTML structure. It allows us to find elements by specifying a path through the structure. For example, we can tell Selenium to find a button and click it inside a certain section of the page.
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-ii-x-feed-selenium-04.png' | relative_url }}" alt="Finding XPath — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-ii-x-feed-selenium-04.webp' | relative_url }}" alt="Finding XPath — Screenshot by author" loading="lazy">
   <figcaption>Finding XPath — Screenshot by author</figcaption>
 </figure>
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-ii-x-feed-selenium-05.png' | relative_url }}" alt="Copying XPath — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-ii-x-feed-selenium-05.webp' | relative_url }}" alt="Copying XPath — Screenshot by author" loading="lazy">
   <figcaption>Copying XPath — Screenshot by author</figcaption>
 </figure>
 
@@ -150,7 +150,7 @@ Here is a video of how we can scrape data with automated browser.
 [https://medium.com/media/04cd71fd0a93bc425f9329819557556a/href](https://medium.com/media/04cd71fd0a93bc425f9329819557556a/href)
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-ii-x-feed-selenium-06.png' | relative_url }}" alt="Output of the Search Input “robotics news” — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-ii-x-feed-selenium-06.webp' | relative_url }}" alt="Output of the Search Input “robotics news” — Screenshot by author" loading="lazy">
   <figcaption>Output of the Search Input “robotics news” — Screenshot by author</figcaption>
 </figure>
 

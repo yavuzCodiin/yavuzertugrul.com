@@ -293,7 +293,7 @@
 },
 "w": 233
 },
-"/images/ggallery/ai_gen.png": {
+"/images/ggallery/ai_gen.webp": {
 "h": 500,
 "r": {
 "320": 320,
@@ -301,7 +301,7 @@
 },
 "w": 489
 },
-"/images/ggallery/gaming.png": {
+"/images/ggallery/gaming.webp": {
 "h": 301,
 "r": {
 "320": 320,
@@ -309,7 +309,7 @@
 },
 "w": 412
 },
-"/images/ggallery/photography.png": {
+"/images/ggallery/photography.webp": {
 "h": 641,
 "r": {
 "320": 320,
@@ -325,7 +325,7 @@
 },
 "w": 559
 },
-"/images/medium_images/BeautifulSoup_imdb.png": {
+"/images/medium_images/BeautifulSoup_imdb.jpg": {
 "h": 1024,
 "r": {
 "1440": 1024,
@@ -334,7 +334,7 @@
 },
 "w": 1024
 },
-"/images/medium_images/World_Coins_with_Scrapy_&_Data_Analysis_with_Pandas.png": {
+"/images/medium_images/World_Coins_with_Scrapy_&_Data_Analysis_with_Pandas.jpg": {
 "h": 677,
 "r": {
 "320": 320,
@@ -350,7 +350,7 @@
 },
 "w": 668
 },
-"/images/medium_images/currency_converter_app.png": {
+"/images/medium_images/currency_converter_app.jpg": {
 "h": 1024,
 "r": {
 "1440": 1024,
@@ -367,7 +367,7 @@
 },
 "w": 526
 },
-"/images/medium_images/github_instagram_selenium.png": {
+"/images/medium_images/github_instagram_selenium.jpg": {
 "h": 1024,
 "r": {
 "1440": 1024,
@@ -376,7 +376,7 @@
 },
 "w": 1024
 },
-"/images/medium_images/humane.png": {
+"/images/medium_images/humane.jpg": {
 "h": 587,
 "r": {
 "320": 320,
@@ -400,7 +400,7 @@
 },
 "w": 665
 },
-"/images/medium_images/x_feed_selenium.png": {
+"/images/medium_images/x_feed_selenium.jpg": {
 "h": 671,
 "r": {
 "320": 320,
@@ -408,77 +408,77 @@
 },
 "w": 672
 },
-"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-01.png": {
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-01.webp": {
 "h": 700,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-02.png": {
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-02.webp": {
 "h": 487,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-03.png": {
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-03.webp": {
 "h": 317,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-04.png": {
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-04.webp": {
 "h": 360,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-05.png": {
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-05.webp": {
 "h": 402,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-06.png": {
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-06.webp": {
 "h": 328,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-07.png": {
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-07.webp": {
 "h": 345,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-08.png": {
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-08.webp": {
 "h": 321,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-09.png": {
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-09.webp": {
 "h": 392,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-10.png": {
+"/images/medium_posts/alphago-deciphering-the-art-of-intelligence-10.webp": {
 "h": 309,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-01.png": {
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-01.webp": {
 "h": 560,
 "r": {
 "720": 564
@@ -492,14 +492,7 @@
 },
 "w": 459
 },
-"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-03.png": {
-"h": 319,
-"r": {
-"720": 376
-},
-"w": 376
-},
-"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-04.png": {
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-04.webp": {
 "h": 933,
 "r": {
 "1440": 940,
@@ -555,7 +548,7 @@
 },
 "w": 1024
 },
-"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-11.png": {
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-11.webp": {
 "h": 854,
 "r": {
 "1440": 827,
@@ -563,21 +556,21 @@
 },
 "w": 827
 },
-"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-12.png": {
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-12.webp": {
 "h": 269,
 "r": {
 "720": 350
 },
 "w": 350
 },
-"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-13.png": {
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-13.webp": {
 "h": 290,
 "r": {
 "720": 268
 },
 "w": 268
 },
-"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-14.png": {
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-14.webp": {
 "h": 718,
 "r": {
 "1440": 957,
@@ -585,7 +578,7 @@
 },
 "w": 957
 },
-"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-15.png": {
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-15.webp": {
 "h": 501,
 "r": {
 "1440": 1024,
@@ -593,7 +586,7 @@
 },
 "w": 1024
 },
-"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-16.png": {
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-16.webp": {
 "h": 549,
 "r": {
 "1440": 1024,
@@ -601,7 +594,7 @@
 },
 "w": 1024
 },
-"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-17.png": {
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-17.webp": {
 "h": 569,
 "r": {
 "1440": 1024,
@@ -609,7 +602,7 @@
 },
 "w": 1024
 },
-"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-18.png": {
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-18.webp": {
 "h": 494,
 "r": {
 "1440": 1024,
@@ -617,42 +610,42 @@
 },
 "w": 1024
 },
-"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-19.png": {
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-19.webp": {
 "h": 238,
 "r": {
 "720": 476
 },
 "w": 476
 },
-"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-20.png": {
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-20.webp": {
 "h": 540,
 "r": {
 "720": 592
 },
 "w": 592
 },
-"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-21.png": {
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-21.webp": {
 "h": 555,
 "r": {
 "720": 557
 },
 "w": 557
 },
-"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-22.png": {
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-22.webp": {
 "h": 582,
 "r": {
 "720": 698
 },
 "w": 698
 },
-"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-23.png": {
+"/images/medium_posts/atomik-aliskanliklar-kitap-incelemesi-23.webp": {
 "h": 178,
 "r": {
 "720": 448
 },
 "w": 448
 },
-"/images/medium_posts/currency-converter-app-fixer-api-pyqt-01.png": {
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-01.webp": {
 "h": 1024,
 "r": {
 "1440": 1024,
@@ -660,7 +653,7 @@
 },
 "w": 1024
 },
-"/images/medium_posts/currency-converter-app-fixer-api-pyqt-02.png": {
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-02.webp": {
 "h": 891,
 "r": {
 "1440": 1024,
@@ -668,7 +661,7 @@
 },
 "w": 1024
 },
-"/images/medium_posts/currency-converter-app-fixer-api-pyqt-03.png": {
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-03.webp": {
 "h": 894,
 "r": {
 "1440": 1024,
@@ -692,7 +685,7 @@
 },
 "w": 1024
 },
-"/images/medium_posts/currency-converter-app-fixer-api-pyqt-06.png": {
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-06.webp": {
 "h": 609,
 "r": {
 "1440": 749,
@@ -700,7 +693,7 @@
 },
 "w": 749
 },
-"/images/medium_posts/currency-converter-app-fixer-api-pyqt-07.png": {
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-07.webp": {
 "h": 870,
 "r": {
 "1440": 1024,
@@ -716,7 +709,7 @@
 },
 "w": 974
 },
-"/images/medium_posts/currency-converter-app-fixer-api-pyqt-09.png": {
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-09.webp": {
 "h": 306,
 "r": {
 "1440": 1024,
@@ -724,7 +717,7 @@
 },
 "w": 1024
 },
-"/images/medium_posts/currency-converter-app-fixer-api-pyqt-10.png": {
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-10.webp": {
 "h": 942,
 "r": {
 "1440": 1024,
@@ -732,14 +725,14 @@
 },
 "w": 1024
 },
-"/images/medium_posts/currency-converter-app-fixer-api-pyqt-11.png": {
+"/images/medium_posts/currency-converter-app-fixer-api-pyqt-11.webp": {
 "h": 392,
 "r": {
 "720": 697
 },
 "w": 697
 },
-"/images/medium_posts/data-manipulation-with-pandas-02.png": {
+"/images/medium_posts/data-manipulation-with-pandas-02.webp": {
 "h": 329,
 "r": {
 "1440": 850,
@@ -747,7 +740,7 @@
 },
 "w": 850
 },
-"/images/medium_posts/data-manipulation-with-pandas-03.png": {
+"/images/medium_posts/data-manipulation-with-pandas-03.webp": {
 "h": 423,
 "r": {
 "1440": 849,
@@ -755,7 +748,7 @@
 },
 "w": 849
 },
-"/images/medium_posts/data-manipulation-with-pandas-05.png": {
+"/images/medium_posts/data-manipulation-with-pandas-05.webp": {
 "h": 260,
 "r": {
 "1440": 984,
@@ -763,14 +756,14 @@
 },
 "w": 984
 },
-"/images/medium_posts/data-manipulation-with-pandas-07.png": {
+"/images/medium_posts/data-manipulation-with-pandas-07.webp": {
 "h": 269,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/data-manipulation-with-pandas-08.png": {
+"/images/medium_posts/data-manipulation-with-pandas-08.webp": {
 "h": 343,
 "r": {
 "1440": 888,
@@ -778,7 +771,7 @@
 },
 "w": 888
 },
-"/images/medium_posts/data-manipulation-with-pandas-09.png": {
+"/images/medium_posts/data-manipulation-with-pandas-09.webp": {
 "h": 354,
 "r": {
 "1440": 824,
@@ -786,7 +779,7 @@
 },
 "w": 824
 },
-"/images/medium_posts/data-manipulation-with-pandas-10.png": {
+"/images/medium_posts/data-manipulation-with-pandas-10.webp": {
 "h": 329,
 "r": {
 "1440": 897,
@@ -794,7 +787,7 @@
 },
 "w": 897
 },
-"/images/medium_posts/data-manipulation-with-pandas-11.png": {
+"/images/medium_posts/data-manipulation-with-pandas-11.webp": {
 "h": 172,
 "r": {
 "1440": 932,
@@ -802,35 +795,7 @@
 },
 "w": 932
 },
-"/images/medium_posts/data-manipulation-with-pandas-12.png": {
-"h": 144,
-"r": {
-"720": 286
-},
-"w": 286
-},
-"/images/medium_posts/data-manipulation-with-pandas-13.png": {
-"h": 128,
-"r": {
-"720": 357
-},
-"w": 357
-},
-"/images/medium_posts/data-manipulation-with-pandas-14.png": {
-"h": 181,
-"r": {
-"720": 414
-},
-"w": 414
-},
-"/images/medium_posts/data-manipulation-with-pandas-15.png": {
-"h": 390,
-"r": {
-"720": 434
-},
-"w": 434
-},
-"/images/medium_posts/data-manipulation-with-pandas-16.png": {
+"/images/medium_posts/data-manipulation-with-pandas-16.webp": {
 "h": 240,
 "r": {
 "1440": 900,
@@ -838,14 +803,7 @@
 },
 "w": 900
 },
-"/images/medium_posts/data-manipulation-with-pandas-17.png": {
-"h": 387,
-"r": {
-"720": 227
-},
-"w": 227
-},
-"/images/medium_posts/data-manipulation-with-pandas-19.png": {
+"/images/medium_posts/data-manipulation-with-pandas-19.webp": {
 "h": 506,
 "r": {
 "1440": 1011,
@@ -853,7 +811,7 @@
 },
 "w": 1011
 },
-"/images/medium_posts/data-manipulation-with-pandas-20.png": {
+"/images/medium_posts/data-manipulation-with-pandas-20.webp": {
 "h": 505,
 "r": {
 "1440": 831,
@@ -861,7 +819,7 @@
 },
 "w": 831
 },
-"/images/medium_posts/data-manipulation-with-pandas-21.png": {
+"/images/medium_posts/data-manipulation-with-pandas-21.webp": {
 "h": 547,
 "r": {
 "1440": 842,
@@ -869,7 +827,7 @@
 },
 "w": 842
 },
-"/images/medium_posts/data-manipulation-with-pandas-23.png": {
+"/images/medium_posts/data-manipulation-with-pandas-23.webp": {
 "h": 52,
 "r": {
 "1440": 911,
@@ -877,35 +835,35 @@
 },
 "w": 911
 },
-"/images/medium_posts/learning-types-in-machine-learning-03.png": {
+"/images/medium_posts/learning-types-in-machine-learning-03.webp": {
 "h": 307,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/learning-types-in-machine-learning-05.png": {
+"/images/medium_posts/learning-types-in-machine-learning-05.webp": {
 "h": 144,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/learning-types-in-machine-learning-06.png": {
+"/images/medium_posts/learning-types-in-machine-learning-06.webp": {
 "h": 418,
 "r": {
 "720": 414
 },
 "w": 414
 },
-"/images/medium_posts/learning-types-in-machine-learning-07.png": {
+"/images/medium_posts/learning-types-in-machine-learning-07.webp": {
 "h": 252,
 "r": {
 "720": 585
 },
 "w": 585
 },
-"/images/medium_posts/learning-types-in-machine-learning-08.png": {
+"/images/medium_posts/learning-types-in-machine-learning-08.webp": {
 "h": 700,
 "r": {
 "720": 700
@@ -919,105 +877,84 @@
 },
 "w": 700
 },
-"/images/medium_posts/learning-types-in-machine-learning-11.png": {
+"/images/medium_posts/learning-types-in-machine-learning-11.webp": {
 "h": 430,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/one-thought-on-the-humane-ai-pin-01.png": {
+"/images/medium_posts/one-thought-on-the-humane-ai-pin-01.webp": {
 "h": 619,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/one-thought-on-the-humane-ai-pin-02.png": {
+"/images/medium_posts/one-thought-on-the-humane-ai-pin-02.webp": {
 "h": 394,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/one-thought-on-the-humane-ai-pin-03.png": {
+"/images/medium_posts/one-thought-on-the-humane-ai-pin-03.webp": {
 "h": 394,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/one-thought-on-the-humane-ai-pin-04.png": {
+"/images/medium_posts/one-thought-on-the-humane-ai-pin-04.webp": {
 "h": 394,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/one-thought-on-the-humane-ai-pin-05.png": {
-"h": 700,
-"r": {
-"720": 700
-},
-"w": 700
-},
-"/images/medium_posts/one-thought-on-the-humane-ai-pin-06.png": {
+"/images/medium_posts/one-thought-on-the-humane-ai-pin-06.webp": {
 "h": 394,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/one-thought-on-the-humane-ai-pin-07.png": {
+"/images/medium_posts/one-thought-on-the-humane-ai-pin-07.webp": {
 "h": 437,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/supermarket-inventory-system-python-sqlite-01.png": {
+"/images/medium_posts/supermarket-inventory-system-python-sqlite-01.webp": {
 "h": 700,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/supermarket-inventory-system-python-sqlite-02.png": {
+"/images/medium_posts/supermarket-inventory-system-python-sqlite-02.webp": {
 "h": 700,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/supermarket-inventory-system-python-sqlite-03.png": {
-"h": 577,
-"r": {
-"720": 615
-},
-"w": 615
-},
-"/images/medium_posts/supermarket-inventory-system-python-sqlite-04.png": {
-"h": 625,
-"r": {
-"720": 586
-},
-"w": 586
-},
-"/images/medium_posts/supermarket-inventory-system-python-sqlite-05.png": {
+"/images/medium_posts/supermarket-inventory-system-python-sqlite-05.webp": {
 "h": 700,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/supermarket-inventory-system-python-sqlite-06.png": {
+"/images/medium_posts/supermarket-inventory-system-python-sqlite-06.webp": {
 "h": 700,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-01.png": {
+"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-01.webp": {
 "h": 1024,
 "r": {
 "1440": 1024,
@@ -1033,7 +970,7 @@
 },
 "w": 1000
 },
-"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-03.png": {
+"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-03.webp": {
 "h": 723,
 "r": {
 "1440": 844,
@@ -1041,7 +978,7 @@
 },
 "w": 844
 },
-"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-04.png": {
+"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-04.webp": {
 "h": 875,
 "r": {
 "1440": 828,
@@ -1049,7 +986,7 @@
 },
 "w": 828
 },
-"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-05.png": {
+"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-05.webp": {
 "h": 369,
 "r": {
 "1440": 1024,
@@ -1057,7 +994,7 @@
 },
 "w": 1024
 },
-"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-06.png": {
+"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-06.webp": {
 "h": 220,
 "r": {
 "1440": 966,
@@ -1065,7 +1002,7 @@
 },
 "w": 966
 },
-"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-07.png": {
+"/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-07.webp": {
 "h": 665,
 "r": {
 "1440": 783,
@@ -1073,7 +1010,7 @@
 },
 "w": 783
 },
-"/images/medium_posts/web-scraping-part-ii-x-feed-selenium-01.png": {
+"/images/medium_posts/web-scraping-part-ii-x-feed-selenium-01.webp": {
 "h": 1024,
 "r": {
 "1440": 1024,
@@ -1081,7 +1018,7 @@
 },
 "w": 1024
 },
-"/images/medium_posts/web-scraping-part-ii-x-feed-selenium-02.png": {
+"/images/medium_posts/web-scraping-part-ii-x-feed-selenium-02.webp": {
 "h": 1024,
 "r": {
 "1440": 1024,
@@ -1089,7 +1026,7 @@
 },
 "w": 1024
 },
-"/images/medium_posts/web-scraping-part-ii-x-feed-selenium-04.png": {
+"/images/medium_posts/web-scraping-part-ii-x-feed-selenium-04.webp": {
 "h": 204,
 "r": {
 "1440": 1024,
@@ -1097,7 +1034,7 @@
 },
 "w": 1024
 },
-"/images/medium_posts/web-scraping-part-ii-x-feed-selenium-05.png": {
+"/images/medium_posts/web-scraping-part-ii-x-feed-selenium-05.webp": {
 "h": 446,
 "r": {
 "1440": 798,
@@ -1105,7 +1042,7 @@
 },
 "w": 798
 },
-"/images/medium_posts/web-scraping-part-ii-x-feed-selenium-06.png": {
+"/images/medium_posts/web-scraping-part-ii-x-feed-selenium-06.webp": {
 "h": 500,
 "r": {
 "1440": 846,
@@ -1113,7 +1050,7 @@
 },
 "w": 846
 },
-"/images/medium_posts/web-scraping-part-iii-instagram-github-01.png": {
+"/images/medium_posts/web-scraping-part-iii-instagram-github-01.webp": {
 "h": 1024,
 "r": {
 "1440": 1024,
@@ -1121,7 +1058,7 @@
 },
 "w": 1024
 },
-"/images/medium_posts/web-scraping-part-iii-instagram-github-02.png": {
+"/images/medium_posts/web-scraping-part-iii-instagram-github-02.webp": {
 "h": 1024,
 "r": {
 "1440": 1024,
@@ -1129,7 +1066,7 @@
 },
 "w": 1024
 },
-"/images/medium_posts/web-scraping-part-iii-instagram-github-03.png": {
+"/images/medium_posts/web-scraping-part-iii-instagram-github-03.webp": {
 "h": 559,
 "r": {
 "1440": 901,
@@ -1137,7 +1074,7 @@
 },
 "w": 901
 },
-"/images/medium_posts/web-scraping-part-iii-instagram-github-04.png": {
+"/images/medium_posts/web-scraping-part-iii-instagram-github-04.webp": {
 "h": 630,
 "r": {
 "1440": 876,
@@ -1145,7 +1082,7 @@
 },
 "w": 876
 },
-"/images/medium_posts/web-scraping-part-iii-instagram-github-05.png": {
+"/images/medium_posts/web-scraping-part-iii-instagram-github-05.webp": {
 "h": 1024,
 "r": {
 "1440": 1024,
@@ -1169,35 +1106,14 @@
 },
 "w": 1024
 },
-"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-05.png": {
-"h": 352,
-"r": {
-"720": 261
-},
-"w": 261
-},
-"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-07.png": {
-"h": 142,
-"r": {
-"720": 457
-},
-"w": 457
-},
-"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-08.png": {
-"h": 53,
-"r": {
-"720": 450
-},
-"w": 450
-},
-"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-09.png": {
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-09.webp": {
 "h": 809,
 "r": {
 "720": 629
 },
 "w": 629
 },
-"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-10.png": {
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-10.webp": {
 "h": 267,
 "r": {
 "1440": 1024,
@@ -1205,7 +1121,7 @@
 },
 "w": 1024
 },
-"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-16.png": {
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-16.webp": {
 "h": 81,
 "r": {
 "1440": 898,
@@ -1213,7 +1129,7 @@
 },
 "w": 898
 },
-"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-18.png": {
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-18.webp": {
 "h": 600,
 "r": {
 "1440": 1024,
@@ -1221,14 +1137,7 @@
 },
 "w": 1024
 },
-"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-19.png": {
-"h": 417,
-"r": {
-"720": 624
-},
-"w": 624
-},
-"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-20.png": {
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-20.webp": {
 "h": 204,
 "r": {
 "1440": 1024,
@@ -1236,14 +1145,7 @@
 },
 "w": 1024
 },
-"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-21.png": {
-"h": 87,
-"r": {
-"720": 148
-},
-"w": 148
-},
-"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-22.png": {
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-22.webp": {
 "h": 727,
 "r": {
 "1440": 739,
@@ -1251,7 +1153,7 @@
 },
 "w": 739
 },
-"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-23.png": {
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-23.webp": {
 "h": 883,
 "r": {
 "1440": 864,
@@ -1259,27 +1161,13 @@
 },
 "w": 864
 },
-"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-24.png": {
-"h": 773,
-"r": {
-"720": 443
-},
-"w": 443
-},
-"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-25.png": {
+"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-25.webp": {
 "h": 500,
 "r": {
 "1440": 1024,
 "720": 720
 },
 "w": 1024
-},
-"/images/medium_posts/web-scraping-part-iv-world-coins-scrapy-pandas-26.png": {
-"h": 71,
-"r": {
-"720": 509
-},
-"w": 509
 },
 "/images/post-1/board_metrics.jpg": {
 "h": 734,
@@ -1289,13 +1177,6 @@
 },
 "w": 1457
 },
-"/images/post-1/cell_center.png": {
-"h": 336,
-"r": {
-"720": 623
-},
-"w": 623
-},
 "/images/post-1/empty_and_walled_maze.jpg": {
 "h": 510,
 "r": {
@@ -1304,7 +1185,7 @@
 },
 "w": 1076
 },
-"/images/post-1/finding_path_maze.png": {
+"/images/post-1/finding_path_maze.webp": {
 "h": 875,
 "r": {
 "1440": 1104,
@@ -1369,7 +1250,7 @@
 },
 "w": 1024
 },
-"/images/post-10/Post_IMAGE.png": {
+"/images/post-10/Post_IMAGE.jpg": {
 "h": 735,
 "r": {
 "1440": 1186,
@@ -1378,28 +1259,28 @@
 },
 "w": 1186
 },
-"/images/post-10/how_lidar_works.png": {
+"/images/post-10/how_lidar_works.webp": {
 "h": 476,
 "r": {
 "720": 611
 },
 "w": 611
 },
-"/images/post-10/lidar_radar.png": {
+"/images/post-10/lidar_radar.webp": {
 "h": 242,
 "r": {
 "720": 711
 },
 "w": 711
 },
-"/images/post-10/netcfg.png": {
+"/images/post-10/netcfg.webp": {
 "h": 264,
 "r": {
 "720": 577
 },
 "w": 577
 },
-"/images/post-10/network_settings_1.png": {
+"/images/post-10/network_settings_1.webp": {
 "h": 657,
 "r": {
 "1440": 917,
@@ -1407,63 +1288,63 @@
 },
 "w": 917
 },
-"/images/post-10/network_settings_2.png": {
+"/images/post-10/network_settings_2.webp": {
 "h": 480,
 "r": {
 "720": 690
 },
 "w": 690
 },
-"/images/post-10/node.png": {
+"/images/post-10/node.webp": {
 "h": 115,
 "r": {
 "720": 432
 },
 "w": 432
 },
-"/images/post-10/rvizss1.png": {
+"/images/post-10/rvizss1.webp": {
 "h": 350,
 "r": {
 "720": 418
 },
 "w": 418
 },
-"/images/post-10/rvizss2.png": {
+"/images/post-10/rvizss2.webp": {
 "h": 570,
 "r": {
 "720": 566
 },
 "w": 566
 },
-"/images/post-10/topic_list.png": {
+"/images/post-10/topic_list.webp": {
 "h": 107,
 "r": {
 "720": 252
 },
 "w": 252
 },
-"/images/post-10/velo-1.png": {
+"/images/post-10/velo-1.webp": {
 "h": 230,
 "r": {
 "720": 435
 },
 "w": 435
 },
-"/images/post-10/velodyne_packets.png": {
+"/images/post-10/velodyne_packets.webp": {
 "h": 602,
 "r": {
 "720": 312
 },
 "w": 312
 },
-"/images/post-10/velodyne_points.png": {
+"/images/post-10/velodyne_points.webp": {
 "h": 595,
 "r": {
 "720": 452
 },
 "w": 452
 },
-"/images/post-10/vlp16_gui.png": {
+"/images/post-10/vlp16_gui.webp": {
 "h": 435,
 "r": {
 "1440": 806,
@@ -1471,14 +1352,14 @@
 },
 "w": 806
 },
-"/images/post-10/vlp16_gui_1.png": {
+"/images/post-10/vlp16_gui_1.webp": {
 "h": 390,
 "r": {
 "720": 718
 },
 "w": 718
 },
-"/images/post-2/image_1.png": {
+"/images/post-2/image_1.jpg": {
 "h": 267,
 "r": {
 "320": 320,
@@ -1486,189 +1367,189 @@
 },
 "w": 700
 },
-"/images/post-2/image_10.png": {
+"/images/post-2/image_10.webp": {
 "h": 359,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_11.png": {
+"/images/post-2/image_11.webp": {
 "h": 230,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_12.png": {
+"/images/post-2/image_12.webp": {
 "h": 618,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_13.png": {
+"/images/post-2/image_13.webp": {
 "h": 700,
 "r": {
 "720": 650
 },
 "w": 650
 },
-"/images/post-2/image_14.png": {
+"/images/post-2/image_14.webp": {
 "h": 692,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_15.png": {
+"/images/post-2/image_15.webp": {
 "h": 653,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_16.png": {
+"/images/post-2/image_16.webp": {
 "h": 223,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_17.png": {
+"/images/post-2/image_17.webp": {
 "h": 302,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_18.png": {
+"/images/post-2/image_18.webp": {
 "h": 589,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_19.png": {
+"/images/post-2/image_19.webp": {
 "h": 284,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_2.png": {
+"/images/post-2/image_2.webp": {
 "h": 284,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_20.png": {
+"/images/post-2/image_20.webp": {
 "h": 700,
 "r": {
 "720": 652
 },
 "w": 652
 },
-"/images/post-2/image_21.png": {
+"/images/post-2/image_21.webp": {
 "h": 171,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_22.png": {
+"/images/post-2/image_22.webp": {
 "h": 624,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_23.png": {
+"/images/post-2/image_23.webp": {
 "h": 348,
 "r": {
 "720": 659
 },
 "w": 659
 },
-"/images/post-2/image_24.png": {
+"/images/post-2/image_24.webp": {
 "h": 371,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_25.png": {
+"/images/post-2/image_25.webp": {
 "h": 371,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_26.png": {
+"/images/post-2/image_26.webp": {
 "h": 700,
 "r": {
 "720": 598
 },
 "w": 598
 },
-"/images/post-2/image_27.png": {
+"/images/post-2/image_27.webp": {
 "h": 218,
 "r": {
 "720": 690
 },
 "w": 690
 },
-"/images/post-2/image_28.png": {
+"/images/post-2/image_28.webp": {
 "h": 260,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_29.png": {
+"/images/post-2/image_29.webp": {
 "h": 334,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_3.png": {
+"/images/post-2/image_3.webp": {
 "h": 680,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_30.png": {
+"/images/post-2/image_30.webp": {
 "h": 430,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_31.png": {
+"/images/post-2/image_31.webp": {
 "h": 306,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_32.png": {
+"/images/post-2/image_32.webp": {
 "h": 700,
 "r": {
 "720": 624
 },
 "w": 624
 },
-"/images/post-2/image_33.png": {
+"/images/post-2/image_33.webp": {
 "h": 254,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_34.png": {
+"/images/post-2/image_34.webp": {
 "h": 411,
 "r": {
 "720": 700
@@ -1682,7 +1563,7 @@
 },
 "w": 700
 },
-"/images/post-2/image_36.png": {
+"/images/post-2/image_36.webp": {
 "h": 461,
 "r": {
 "720": 700
@@ -1696,112 +1577,112 @@
 },
 "w": 700
 },
-"/images/post-2/image_38.png": {
+"/images/post-2/image_38.webp": {
 "h": 400,
 "r": {
 "720": 600
 },
 "w": 600
 },
-"/images/post-2/image_39.png": {
+"/images/post-2/image_39.webp": {
 "h": 337,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_4.png": {
+"/images/post-2/image_4.webp": {
 "h": 435,
 "r": {
 "720": 607
 },
 "w": 607
 },
-"/images/post-2/image_40.png": {
+"/images/post-2/image_40.webp": {
 "h": 386,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_41.png": {
+"/images/post-2/image_41.webp": {
 "h": 427,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_42.png": {
+"/images/post-2/image_42.webp": {
 "h": 388,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_43.png": {
+"/images/post-2/image_43.webp": {
 "h": 259,
 "r": {
 "720": 685
 },
 "w": 685
 },
-"/images/post-2/image_44.png": {
+"/images/post-2/image_44.webp": {
 "h": 181,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_45.png": {
+"/images/post-2/image_45.webp": {
 "h": 271,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_46.png": {
+"/images/post-2/image_46.webp": {
 "h": 371,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_47.png": {
+"/images/post-2/image_47.webp": {
 "h": 268,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_5.png": {
+"/images/post-2/image_5.webp": {
 "h": 646,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_6.png": {
+"/images/post-2/image_6.webp": {
 "h": 348,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_7.png": {
+"/images/post-2/image_7.webp": {
 "h": 451,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-2/image_8.png": {
+"/images/post-2/image_8.webp": {
 "h": 700,
 "r": {
 "720": 660
 },
 "w": 660
 },
-"/images/post-2/image_9.png": {
+"/images/post-2/image_9.webp": {
 "h": 700,
 "r": {
 "720": 691
@@ -1816,133 +1697,105 @@
 },
 "w": 400
 },
-"/images/post-3/image_10.png": {
+"/images/post-3/image_10.webp": {
 "h": 46,
 "r": {
 "720": 186
 },
 "w": 186
 },
-"/images/post-3/image_11.png": {
+"/images/post-3/image_11.webp": {
 "h": 61,
 "r": {
 "720": 192
 },
 "w": 192
 },
-"/images/post-3/image_12.png": {
-"h": 176,
-"r": {
-"720": 552
-},
-"w": 552
-},
-"/images/post-3/image_13.png": {
+"/images/post-3/image_13.webp": {
 "h": 380,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-3/image_14.png": {
-"h": 198,
-"r": {
-"720": 578
-},
-"w": 578
-},
-"/images/post-3/image_15.png": {
-"h": 508,
-"r": {
-"720": 647
-},
-"w": 647
-},
-"/images/post-3/image_16.png": {
+"/images/post-3/image_16.webp": {
 "h": 131,
 "r": {
 "720": 520
 },
 "w": 520
 },
-"/images/post-3/image_17.png": {
-"h": 420,
-"r": {
-"720": 438
-},
-"w": 438
-},
-"/images/post-3/image_18.png": {
+"/images/post-3/image_18.webp": {
 "h": 245,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-3/image_19.png": {
+"/images/post-3/image_19.webp": {
 "h": 386,
 "r": {
 "720": 627
 },
 "w": 627
 },
-"/images/post-3/image_2.png": {
+"/images/post-3/image_2.webp": {
 "h": 60,
 "r": {
 "720": 542
 },
 "w": 542
 },
-"/images/post-3/image_20.png": {
+"/images/post-3/image_20.webp": {
 "h": 440,
 "r": {
 "720": 687
 },
 "w": 687
 },
-"/images/post-3/image_3.png": {
+"/images/post-3/image_3.webp": {
 "h": 64,
 "r": {
 "720": 523
 },
 "w": 523
 },
-"/images/post-3/image_4.png": {
+"/images/post-3/image_4.webp": {
 "h": 64,
 "r": {
 "720": 523
 },
 "w": 523
 },
-"/images/post-3/image_5.png": {
+"/images/post-3/image_5.webp": {
 "h": 55,
 "r": {
 "720": 497
 },
 "w": 497
 },
-"/images/post-3/image_6.png": {
+"/images/post-3/image_6.webp": {
 "h": 120,
 "r": {
 "720": 544
 },
 "w": 544
 },
-"/images/post-3/image_7.png": {
+"/images/post-3/image_7.webp": {
 "h": 117,
 "r": {
 "720": 551
 },
 "w": 551
 },
-"/images/post-3/image_8.png": {
+"/images/post-3/image_8.webp": {
 "h": 154,
 "r": {
 "720": 436
 },
 "w": 436
 },
-"/images/post-3/image_9.png": {
+"/images/post-3/image_9.webp": {
 "h": 126,
 "r": {
 "720": 609
@@ -1957,49 +1810,42 @@
 },
 "w": 576
 },
-"/images/post-4/image_2.png": {
-"h": 462,
-"r": {
-"720": 596
-},
-"w": 596
-},
-"/images/post-4/image_3.png": {
+"/images/post-4/image_3.webp": {
 "h": 700,
 "r": {
 "720": 546
 },
 "w": 546
 },
-"/images/post-4/image_4.png": {
+"/images/post-4/image_4.webp": {
 "h": 700,
 "r": {
 "720": 545
 },
 "w": 545
 },
-"/images/post-4/image_5.png": {
+"/images/post-4/image_5.webp": {
 "h": 298,
 "r": {
 "720": 554
 },
 "w": 554
 },
-"/images/post-4/image_6.png": {
+"/images/post-4/image_6.webp": {
 "h": 401,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-4/image_7.png": {
+"/images/post-4/image_7.webp": {
 "h": 279,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-4/image_8.png": {
+"/images/post-4/image_8.webp": {
 "h": 148,
 "r": {
 "720": 300
@@ -2014,105 +1860,105 @@
 },
 "w": 626
 },
-"/images/post-5/image_10.png": {
+"/images/post-5/image_10.webp": {
 "h": 511,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-5/image_11.png": {
+"/images/post-5/image_11.webp": {
 "h": 414,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-5/image_12.png": {
+"/images/post-5/image_12.webp": {
 "h": 338,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-5/image_13.png": {
+"/images/post-5/image_13.webp": {
 "h": 472,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-5/image_14.png": {
+"/images/post-5/image_14.webp": {
 "h": 339,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-5/image_15.png": {
+"/images/post-5/image_15.webp": {
 "h": 556,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-5/image_16.png": {
+"/images/post-5/image_16.webp": {
 "h": 573,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-5/image_2.png": {
+"/images/post-5/image_2.webp": {
 "h": 330,
 "r": {
 "720": 628
 },
 "w": 628
 },
-"/images/post-5/image_3.png": {
+"/images/post-5/image_3.webp": {
 "h": 483,
 "r": {
 "720": 627
 },
 "w": 627
 },
-"/images/post-5/image_4.png": {
+"/images/post-5/image_4.webp": {
 "h": 398,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-5/image_5.png": {
+"/images/post-5/image_5.webp": {
 "h": 530,
 "r": {
 "720": 676
 },
 "w": 676
 },
-"/images/post-5/image_6.png": {
+"/images/post-5/image_6.webp": {
 "h": 390,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-5/image_7.png": {
+"/images/post-5/image_7.webp": {
 "h": 264,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-5/image_8.png": {
+"/images/post-5/image_8.webp": {
 "h": 210,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-5/image_9.png": {
+"/images/post-5/image_9.webp": {
 "h": 482,
 "r": {
 "720": 700
@@ -2127,161 +1973,126 @@
 },
 "w": 700
 },
-"/images/post-6/image_10.png": {
-"h": 491,
-"r": {
-"720": 686
-},
-"w": 686
-},
-"/images/post-6/image_11.png": {
-"h": 458,
-"r": {
-"720": 589
-},
-"w": 589
-},
-"/images/post-6/image_12.png": {
+"/images/post-6/image_12.webp": {
 "h": 600,
 "r": {
 "720": 600
 },
 "w": 600
 },
-"/images/post-6/image_13.png": {
+"/images/post-6/image_13.webp": {
 "h": 190,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-6/image_14.png": {
+"/images/post-6/image_14.webp": {
 "h": 580,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-6/image_15.png": {
+"/images/post-6/image_15.webp": {
 "h": 422,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-6/image_16.png": {
-"h": 435,
-"r": {
-"720": 687
-},
-"w": 687
-},
-"/images/post-6/image_17.png": {
-"h": 486,
-"r": {
-"720": 699
-},
-"w": 699
-},
-"/images/post-6/image_18.png": {
+"/images/post-6/image_18.webp": {
 "h": 700,
 "r": {
 "720": 494
 },
 "w": 494
 },
-"/images/post-6/image_19.png": {
-"h": 300,
-"r": {
-"720": 662
-},
-"w": 662
-},
-"/images/post-6/image_2.png": {
+"/images/post-6/image_2.webp": {
 "h": 472,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-6/image_20.png": {
+"/images/post-6/image_20.webp": {
 "h": 321,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-6/image_21.png": {
+"/images/post-6/image_21.webp": {
 "h": 254,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-6/image_22.png": {
+"/images/post-6/image_22.webp": {
 "h": 223,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-6/image_23.png": {
+"/images/post-6/image_23.webp": {
 "h": 462,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-6/image_3.png": {
+"/images/post-6/image_3.webp": {
 "h": 390,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-6/image_4.png": {
+"/images/post-6/image_4.webp": {
 "h": 634,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-6/image_5.png": {
+"/images/post-6/image_5.webp": {
 "h": 285,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-6/image_6.png": {
+"/images/post-6/image_6.webp": {
 "h": 700,
 "r": {
 "720": 637
 },
 "w": 637
 },
-"/images/post-6/image_7.png": {
+"/images/post-6/image_7.webp": {
 "h": 360,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-6/image_8.png": {
+"/images/post-6/image_8.webp": {
 "h": 385,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-6/image_9.png": {
+"/images/post-6/image_9.webp": {
 "h": 388,
 "r": {
 "720": 700
 },
 "w": 700
 },
-"/images/post-7/wsl_application.png": {
+"/images/post-7/wsl_application.webp": {
 "h": 710,
 "r": {
 "1440": 1440,
@@ -2289,7 +2100,7 @@
 },
 "w": 1501
 },
-"/images/post-7/wsl_different_distros.png": {
+"/images/post-7/wsl_different_distros.webp": {
 "h": 522,
 "r": {
 "1440": 1258,
@@ -2297,7 +2108,7 @@
 },
 "w": 1258
 },
-"/images/post-7/wsl_distros.png": {
+"/images/post-7/wsl_distros.webp": {
 "h": 587,
 "r": {
 "1440": 994,
@@ -2314,7 +2125,7 @@
 },
 "w": 981
 },
-"/images/post-7/wsl_version_and_distro_versions.png": {
+"/images/post-7/wsl_version_and_distro_versions.webp": {
 "h": 573,
 "r": {
 "1440": 949,
@@ -2322,14 +2133,14 @@
 },
 "w": 949
 },
-"/images/post-8/black_square.png": {
+"/images/post-8/black_square.jpg": {
 "h": 263,
 "r": {
 "320": 271
 },
 "w": 271
 },
-"/images/post-8/combined_output_hexagon.png": {
+"/images/post-8/combined_output_hexagon.webp": {
 "h": 924,
 "r": {
 "1440": 1440,
@@ -2337,7 +2148,7 @@
 },
 "w": 1640
 },
-"/images/post-9/direct_download.png": {
+"/images/post-9/direct_download.webp": {
 "h": 435,
 "r": {
 "1440": 1429,
@@ -2353,14 +2164,14 @@
 },
 "w": 716
 },
-"/images/post-9/nvidia_jetson_orin_nx.png": {
+"/images/post-9/nvidia_jetson_orin_nx.webp": {
 "h": 661,
 "r": {
 "720": 666
 },
 "w": 666
 },
-"/images/sketch-library/altair.png": {
+"/images/sketch-library/altair.webp": {
 "h": 700,
 "r": {
 "320": 320,
@@ -2376,7 +2187,7 @@
 },
 "w": 700
 },
-"/images/sketch-library/back_to_black.png": {
+"/images/sketch-library/back_to_black.webp": {
 "h": 1536,
 "r": {
 "1440": 1440,
@@ -2385,7 +2196,7 @@
 },
 "w": 2048
 },
-"/images/sketch-library/bbgd.png": {
+"/images/sketch-library/bbgd.webp": {
 "h": 1536,
 "r": {
 "1440": 1440,
@@ -2403,7 +2214,7 @@
 },
 "w": 1600
 },
-"/images/sketch-library/bd-1.png": {
+"/images/sketch-library/bd-1.webp": {
 "h": 525,
 "r": {
 "320": 320,
@@ -2411,7 +2222,7 @@
 },
 "w": 700
 },
-"/images/sketch-library/beach.png": {
+"/images/sketch-library/beach.webp": {
 "h": 1536,
 "r": {
 "1440": 1440,
@@ -2420,7 +2231,7 @@
 },
 "w": 2048
 },
-"/images/sketch-library/blue_knight.png": {
+"/images/sketch-library/blue_knight.webp": {
 "h": 922,
 "r": {
 "1440": 868,
@@ -2474,7 +2285,7 @@
 },
 "w": 2048
 },
-"/images/sketch-library/last_dance.png": {
+"/images/sketch-library/last_dance.webp": {
 "h": 1536,
 "r": {
 "1440": 1440,
@@ -2534,7 +2345,7 @@
 },
 "w": 1268
 },
-"/images/sketch-library/random_thoughts.png": {
+"/images/sketch-library/random_thoughts.webp": {
 "h": 1536,
 "r": {
 "1440": 1440,
@@ -2552,7 +2363,7 @@
 },
 "w": 1129
 },
-"/images/sketch-library/www.png": {
+"/images/sketch-library/www.webp": {
 "h": 2048,
 "r": {
 "1440": 1440,
@@ -2561,7 +2372,7 @@
 },
 "w": 1536
 },
-"/images/visual_thoughts/Mars_Express.png": {
+"/images/visual_thoughts/Mars_Express.jpg": {
 "h": 560,
 "r": {
 "1440": 1288,
@@ -2668,7 +2479,7 @@
 },
 "w": 1024
 },
-"/images/visual_thoughts/find_or_make.png": {
+"/images/visual_thoughts/find_or_make.jpg": {
 "h": 853,
 "r": {
 "1440": 869,
@@ -2703,7 +2514,7 @@
 },
 "w": 596
 },
-"/images/visual_thoughts/love.png": {
+"/images/visual_thoughts/love.jpg": {
 "h": 802,
 "r": {
 "1440": 1425,
@@ -2756,7 +2567,7 @@
 },
 "w": 1280
 },
-"/images/visual_thoughts/ps30.png": {
+"/images/visual_thoughts/ps30.jpg": {
 "h": 499,
 "r": {
 "320": 320,
@@ -2773,7 +2584,7 @@
 },
 "w": 1408
 },
-"/images/visual_thoughts/quit_smoking.png": {
+"/images/visual_thoughts/quit_smoking.jpg": {
 "h": 803,
 "r": {
 "1440": 807,
@@ -2782,7 +2593,7 @@
 },
 "w": 807
 },
-"/images/visual_thoughts/rlfribtrlfh.png": {
+"/images/visual_thoughts/rlfribtrlfh.jpg": {
 "h": 530,
 "r": {
 "320": 320,
@@ -2798,7 +2609,7 @@
 },
 "w": 690
 },
-"/images/visual_thoughts/routine_v2.png": {
+"/images/visual_thoughts/routine_v2.jpg": {
 "h": 793,
 "r": {
 "1440": 792,
@@ -2841,7 +2652,7 @@
 },
 "w": 592
 },
-"/images/visual_thoughts/sopranos.png": {
+"/images/visual_thoughts/sopranos.jpg": {
 "h": 366,
 "r": {
 "1440": 779,
@@ -2920,7 +2731,7 @@
 },
 "w": 1024
 },
-"/images/visual_thoughts/yoda_1.png": {
+"/images/visual_thoughts/yoda_1.webp": {
 "h": 610,
 "r": {
 "1440": 884,
@@ -2928,7 +2739,7 @@
 },
 "w": 884
 },
-"/images/visual_thoughts/yoda_2.png": {
+"/images/visual_thoughts/yoda_2.jpg": {
 "h": 532,
 "r": {
 "1440": 1023,

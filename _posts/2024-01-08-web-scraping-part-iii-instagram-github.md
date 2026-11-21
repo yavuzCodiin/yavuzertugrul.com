@@ -6,7 +6,7 @@ topic: scraping
 tags: [Scraping]
 origin: medium
 medium_url: https://levelup.gitconnected.com/web-scraping-series-part-iii-practice-with-instagram-github-99359590198f
-image: /images/medium_images/github_instagram_selenium.png
+image: /images/medium_images/github_instagram_selenium.jpg
 image_color: true
 hero: false
 description: "Two practical Selenium targets: an Instagram non-follower finder and a GitHub repository scraper."
@@ -19,7 +19,7 @@ Welcome back to our web scraping series. In this third part, I will try to show 
 These are unofficial ways to interact with these websites you can also check both [GitHub REST API](https://docs.github.com/en/rest?apiVersion=2022-11-28) & [Instagram’s API](https://developers.facebook.com/products/instagram/apis/)** **through these links.
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iii-instagram-github-01.png' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iii-instagram-github-01.webp' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
   <figcaption>created with Dall-E 3 by author with ❤</figcaption>
 </figure>
 
@@ -36,7 +36,7 @@ So if you want to catch up you can read previous two parts:
 ## GitHub Repository Scraper
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iii-instagram-github-02.png' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iii-instagram-github-02.webp' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
   <figcaption>created with Dall-E 3 by author with ❤</figcaption>
 </figure>
 
@@ -75,12 +75,12 @@ from selenium import webdriverfrom selenium.webdriver.common.by import Byfrom se
 First I have done this process by saving data to text file which you can guess it was messy then I tried to save the data into excel workbook which is much better.
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iii-instagram-github-03.png' | relative_url }}" alt="Saving Data to .txt file — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iii-instagram-github-03.webp' | relative_url }}" alt="Saving Data to .txt file — Screenshot by author" loading="lazy">
   <figcaption>Saving Data to .txt file — Screenshot by author</figcaption>
 </figure>
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iii-instagram-github-04.png' | relative_url }}" alt="Saving Data to .xlsx file — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iii-instagram-github-04.webp' | relative_url }}" alt="Saving Data to .xlsx file — Screenshot by author" loading="lazy">
   <figcaption>Saving Data to .xlsx file — Screenshot by author</figcaption>
 </figure>
 
@@ -91,7 +91,7 @@ Here is a video of how we can scrape data with selenium.
 ## Instagram Non-Follower Finder
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-iii-instagram-github-05.png' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-iii-instagram-github-05.webp' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
   <figcaption>created with Dall-E 3 by author with ❤</figcaption>
 </figure>
 

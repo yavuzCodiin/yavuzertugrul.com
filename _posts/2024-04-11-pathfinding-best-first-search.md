@@ -452,7 +452,7 @@ def backtrack_to_start(board, end):
     return path
 ```
 
-<img src="/images/post-1/finding_path_maze.png" width="1150" height="550" alt="Shortest Path"/>
+<img src="/images/post-1/finding_path_maze.webp" width="1150" height="550" alt="Shortest Path"/>
 
 ### Drawing Maze and Path
 Until here we created structure of our maze, then we created our shortest path finding algorithm now we will visualize them.
@@ -707,7 +707,7 @@ def cell_center(self, pos):
     return [rct[0]+rct[2]/2, rct[1] + rct[3]/2]
 ```
 
-<img src="/images/post-1/cell_center.png" width="1150" height="450" alt="Cell Center"/>
+<img src="/images/post-1/cell_center.webp" width="1150" height="450" alt="Cell Center"/>
 
 Until here we calculated board metrics, with them we created cell rectangle, and we found its center to visualize the path, now we will use all of them to draw complete board, and path.
 

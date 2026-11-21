@@ -79,7 +79,7 @@ This is my first time getting into application side of artificial intelligence, 
 
 
 <div class="image-container" style="text-align: center;">
-    <img src="/images/post-9/nvidia_jetson_orin_nx.png" width="1150" height="550" alt="nvidia_jetson_orin_nx" loading="lazy" />
+    <img src="/images/post-9/nvidia_jetson_orin_nx.webp" width="1150" height="550" alt="nvidia_jetson_orin_nx" loading="lazy" />
 </div>
 
 After providing you some sources that I use/d and giving some comparison about Pytorch vs TensorFlow now let's do some local installation and some test, btw I used Jetson Orin NX 8 GB version for my tests. `Up to 70 TOPS, designed for AI and edge applications with a focus on efficiency and low power consumption.`
@@ -160,7 +160,7 @@ You can find dozens of libraries in the Open Source ecosystem in 🤗. You can d
 * By directly downloading them from model page
 
 <div class="image-container" style="text-align: center;">
-    <img src="/images/post-9/direct_download.png" alt="direct_download" loading="lazy" />
+    <img src="/images/post-9/direct_download.webp" alt="direct_download" loading="lazy" />
 </div>
 
 * By using [PreTrainedModel.from_pretrained()](https://huggingface.co/docs/transformers/main/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) & [PreTrainedModel.save_pretrained()](https://huggingface.co/docs/transformers/main/en/main_classes/model#transformers.PreTrainedModel.save_pretrained)
@@ -316,4 +316,4 @@ if __name__ == "__main__":
 
 
 **Connect with me across the web, you can explore my digital world through the link on the image below, including more articles, projects, and personal interests.**
-[![linktree_yavuzertugrul](images/post-7/image.png)](https://linktr.ee/yavuzertugrul?utm_source=linktree_profile_share&ltsid=ca29e9eb-5683-4ea5-8d64-4369abf718df)
+[![linktree_yavuzertugrul](images/post-7/image.webp)](https://linktr.ee/yavuzertugrul?utm_source=linktree_profile_share&ltsid=ca29e9eb-5683-4ea5-8d64-4369abf718df)

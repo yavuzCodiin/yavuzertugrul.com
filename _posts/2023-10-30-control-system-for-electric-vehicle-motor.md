@@ -11,23 +11,23 @@ image_color: true
 ---
 
 <div class="image-container">
-    <img src="/images/post-4/image_2.png" alt="Project" loading="lazy" />
+    <img src="/images/post-4/image_2.webp" alt="Project" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-4/image_3.png" alt="Project" loading="lazy" />
+    <img src="/images/post-4/image_3.webp" alt="Project" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-4/image_4.png" alt="Project" loading="lazy" />
+    <img src="/images/post-4/image_4.webp" alt="Project" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-4/image_5.png" alt="Project" loading="lazy" />
+    <img src="/images/post-4/image_5.webp" alt="Project" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-4/image_6.png" alt="Project" loading="lazy" />
+    <img src="/images/post-4/image_6.webp" alt="Project" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-4/image_7.png" alt="Project" loading="lazy" />
+    <img src="/images/post-4/image_7.webp" alt="Project" loading="lazy" />
 </div>
 <div class="image-container">
-    <img src="/images/post-4/image_8.png" alt="Project" loading="lazy" />
+    <img src="/images/post-4/image_8.webp" alt="Project" loading="lazy" />
 </div>

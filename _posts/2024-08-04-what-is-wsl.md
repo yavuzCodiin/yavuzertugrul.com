@@ -67,7 +67,7 @@ wsl -l -v
 ```
 
 <div class="image-container">
-    <img src="/images/post-7/wsl_version_and_distro_versions.png" alt="wsl_version_and_distro_versions" loading="lazy" />
+    <img src="/images/post-7/wsl_version_and_distro_versions.webp" alt="wsl_version_and_distro_versions" loading="lazy" />
 </div>
 
 For example to set distribution to version to you need to run following command (e.g wsl --set-version Ubuntu-20.04 2)
@@ -79,7 +79,7 @@ wsl --set-version <distro name> <version no>
 Okey after understanding and installing WSL now let's check how to use it. If you have Windows 11 you already have Windows Terminal, but if you are using Windows 10 I recommend you to install Windows Terminal to use all terminals from one application.
 
 <div class="image-container">
-    <img src="/images/post-7/wsl_distros.png" alt="wsl_distros" loading="lazy" />
+    <img src="/images/post-7/wsl_distros.webp" alt="wsl_distros" loading="lazy" />
 </div>
 
 As you can see in the picture above I have two linux distributions and according to my need I can use them easily. 
@@ -87,13 +87,13 @@ As you can see in the picture above I have two linux distributions and according
 Below I have two distributions opened at the same time ready to be used for different applications as well.
 
 <div class="image-container">
-    <img src="/images/post-7/wsl_different_distros.png" alt="22_04_and_20_04" loading="lazy" />
+    <img src="/images/post-7/wsl_different_distros.webp" alt="22_04_and_20_04" loading="lazy" />
 </div>
 
 What I really like about this is I am developing program in both distributions for ROS(Robot Operating System)(ROS1 or ROS2) and not all ROS distributions work with Ubuntu 22.04 or 20.04 etc. so I need another distribution to work with it and WSL solved my problem since I am also okey with headless development, I don't need GUI but if you need there are also solutions. You can check this [video](https://www.youtube.com/watch?v=IL7Jd9rjgrM&t=683s)
 
 <div class="image-container">
-    <img src="/images/post-7/wsl_application.png" alt="wsl_application" loading="lazy" />
+    <img src="/images/post-7/wsl_application.webp" alt="wsl_application" loading="lazy" />
 </div>
 
 As you can see above I opened Rviz2 in WSL Ubuntu 22.04. Rviz2 is 3D visualization tool used in ROS2 environment, and it is running on full Linux.
@@ -252,4 +252,4 @@ wsl --distribution Ubuntu
 
 **Connect with me across the web, you can explore my digital world through the link on the image below, including more articles, projects, and personal interests.**
 
-[![linktree_yavuzertugrul](images/post-7/image.png)](https://linktr.ee/yavuzertugrul?utm_source=linktree_profile_share&ltsid=ca29e9eb-5683-4ea5-8d64-4369abf718df)
+[![linktree_yavuzertugrul](images/post-7/image.webp)](https://linktr.ee/yavuzertugrul?utm_source=linktree_profile_share&ltsid=ca29e9eb-5683-4ea5-8d64-4369abf718df)

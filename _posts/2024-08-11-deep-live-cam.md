@@ -6,7 +6,7 @@ topic: ai
 tags: [AI]
 permalink: "/deep_live_cam"
 description: "Testing Deep Live Cam — real-time face swap on live video."
-image: /images/post-8/black_square.png
+image: /images/post-8/black_square.jpg
 image_color: true
 hero: false
 ---
@@ -18,7 +18,7 @@ While I was browsing through the repositories of github I saw this deep live cam
 While I was trying to install it from [here](https://github.com/hacksider/Deep-Live-Cam) I had problems. I recommend you to be strict about following instructions, for example I had 3 different python versions 3.12, 3.11, and 3.9 so I thought python part is fine but when I tried to install required packages/modules I had a lot of problems after I solved the problems related with this another problem come up now I had black square on my face like this
 
 <div class="image-container" style="text-align: center;">
-    <img src="/images/post-8/black_square.png" alt="black_square_problem" loading="lazy" />
+    <img src="/images/post-8/black_square.jpg" alt="black_square_problem" loading="lazy" />
 </div>
 
 on live and direct test and finally I decided to install python 3.10 as repo recommends, and my development platform is windows so I also installed [ffmpeg](https://www.youtube.com/watch?v=OlNWCpFdVMA), pip, git etc. and visual studio 2022 runtimes.
@@ -53,7 +53,7 @@ python run.py --execution-provider cpu
 I combined all the outputs together in the first image, and in the second image I tried to show live demo.
 
 <div class="image-container" style="text-align: center;">
-    <img src="/images/post-8/combined_output_hexagon.png" alt="combined_output_hexagon" loading="lazy" />
+    <img src="/images/post-8/combined_output_hexagon.webp" alt="combined_output_hexagon" loading="lazy" />
 </div>
 
 <br>
@@ -67,4 +67,4 @@ I combined all the outputs together in the first image, and in the second image 
 
 **Connect with me across the web, you can explore my digital world through the link on the image below, including more articles, projects, and personal interests.**
 
-[![linktree_yavuzertugrul](images/post-7/image.png)](https://linktr.ee/yavuzertugrul?utm_source=linktree_profile_share&ltsid=ca29e9eb-5683-4ea5-8d64-4369abf718df)
+[![linktree_yavuzertugrul](images/post-7/image.webp)](https://linktr.ee/yavuzertugrul?utm_source=linktree_profile_share&ltsid=ca29e9eb-5683-4ea5-8d64-4369abf718df)

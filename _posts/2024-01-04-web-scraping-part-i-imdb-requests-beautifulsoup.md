@@ -6,7 +6,7 @@ topic: scraping
 tags: [Scraping]
 origin: medium
 medium_url: https://levelup.gitconnected.com/web-scraping-series-part-i-imdbs-most-popular-movies-with-requests-and-beautifulsoup-19dfcc0f524a
-image: /images/medium_images/BeautifulSoup_imdb.png
+image: /images/medium_images/BeautifulSoup_imdb.jpg
 image_color: true
 hero: false
 description: "Scraping IMDb's most popular movies with requests and BeautifulSoup — the series starts with static pages."
@@ -18,7 +18,7 @@ So, if you ask me about the most important skill of this century, I would defini
 We can manipulate data to suit our interests. I really enjoy watching movies, and the genre doesn’t matter much to me; if I like a movie, I’ll watch it. So, it’s not too hard for me to choose. However, if you’re solely an action movie fan, you probably don’t want to spend time on too many romantic or calm movies, right? For instance, if you want to watch a movie but are unsure which one to pick, we can scrape data to analyze it by title, genre, duration, release year, description, and so on. Then, we can easily make a decision.
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-01.png' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-01.webp' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
   <figcaption>created with Dall-E 3 by author with ❤</figcaption>
 </figure>
 
@@ -40,7 +40,7 @@ The Python **requests **module is a powerful yet simple tool for sending HTTP re
 For example, let me give you one example about how we can scrape. So with the following lines of code, we can scrape [https://www.reddit.com/](https://www.reddit.com/) ‘s main page and I only want to extract hyperlinks from this page and the result is:
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-03.png' | relative_url }}" alt="Code and Output of Scraping Reddit — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-03.webp' | relative_url }}" alt="Code and Output of Scraping Reddit — Screenshot by author" loading="lazy">
   <figcaption>Code and Output of Scraping Reddit — Screenshot by author</figcaption>
 </figure>
 
@@ -93,12 +93,12 @@ def fetch_movies(url, headers):    # Send a GET request to the URL with specifie
 If I need to find the name, I check the page structure and find how it is stored then I can scrape it, so here is how we can find it:
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-04.png' | relative_url }}" alt="Inspect the page — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-04.webp' | relative_url }}" alt="Inspect the page — Screenshot by author" loading="lazy">
   <figcaption>Inspect the page — Screenshot by author</figcaption>
 </figure>
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-05.png' | relative_url }}" alt="Inspect the page — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-05.webp' | relative_url }}" alt="Inspect the page — Screenshot by author" loading="lazy">
   <figcaption>Inspect the page — Screenshot by author</figcaption>
 </figure>
 
@@ -119,12 +119,12 @@ url = "https://www.imdb.com/chart/moviemeter"# Headers to mimic a browser reques
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-06.png' | relative_url }}" alt="Filtering the movies we scraped — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-06.webp' | relative_url }}" alt="Filtering the movies we scraped — Screenshot by author" loading="lazy">
   <figcaption>Filtering the movies we scraped — Screenshot by author</figcaption>
 </figure>
 
 <figure>
-  <img src="{{ '/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-07.png' | relative_url }}" alt="Filtering the movies we scraped — Screenshot by author" loading="lazy">
+  <img src="{{ '/images/medium_posts/web-scraping-part-i-imdb-requests-beautifulsoup-07.webp' | relative_url }}" alt="Filtering the movies we scraped — Screenshot by author" loading="lazy">
   <figcaption>Filtering the movies we scraped — Screenshot by author</figcaption>
 </figure>
 

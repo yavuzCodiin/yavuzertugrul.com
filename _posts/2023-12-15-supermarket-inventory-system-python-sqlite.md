@@ -14,7 +14,7 @@ description: "Building a small inventory system end to end with Python and SQLit
 
 
 <figure>
-  <img src="{{ '/images/medium_posts/supermarket-inventory-system-python-sqlite-01.png' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
+  <img src="{{ '/images/medium_posts/supermarket-inventory-system-python-sqlite-01.webp' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
   <figcaption>created with Dall-E 3 by author with ❤</figcaption>
 </figure>
 
@@ -83,7 +83,7 @@ While the core of SQL is standardized, many database systems, like MySQL, Postgr
 SQLite3 is a lightweight, self-contained SQL database engine known for its simplicity and minimal setup requirements. Unlike traditional client-server database systems, SQLite3 embeds right into applications, running as an integral part of the program accessing the database. This makes it an ideal choice for environments where simplicity and minimal configuration are essential, such as in mobile applications, small to medium-sized web applications, and standalone software.
 
 <figure>
-  <img src="{{ '/images/medium_posts/supermarket-inventory-system-python-sqlite-02.png' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
+  <img src="{{ '/images/medium_posts/supermarket-inventory-system-python-sqlite-02.webp' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
   <figcaption>created with Dall-E 3 by author with ❤</figcaption>
 </figure>
 
@@ -154,12 +154,12 @@ class SuperMarket():    def __init__(self):        self.create_connection()
 - To see my database and table I am currently using DB Browser for SQLite but in the past I used extensions for VsCode to see from inside VsCode without another application.
 
 <figure>
-  <img src="{{ '/images/medium_posts/supermarket-inventory-system-python-sqlite-03.png' | relative_url }}" alt="DB Browser for SQLite — Database Structure" loading="lazy">
+  <img src="{{ '/images/medium_posts/supermarket-inventory-system-python-sqlite-03.webp' | relative_url }}" alt="DB Browser for SQLite — Database Structure" loading="lazy">
   <figcaption>DB Browser for SQLite — Database Structure</figcaption>
 </figure>
 
 <figure>
-  <img src="{{ '/images/medium_posts/supermarket-inventory-system-python-sqlite-04.png' | relative_url }}" alt="DB Browser for SQLite — Browse Data" loading="lazy">
+  <img src="{{ '/images/medium_posts/supermarket-inventory-system-python-sqlite-04.webp' | relative_url }}" alt="DB Browser for SQLite — Browse Data" loading="lazy">
   <figcaption>DB Browser for SQLite — Browse Data</figcaption>
 </figure>
 
@@ -226,7 +226,7 @@ def filter_products(self,min_price,max_price):        query = "SELECT * FROM sup
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/supermarket-inventory-system-python-sqlite-05.png' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
+  <img src="{{ '/images/medium_posts/supermarket-inventory-system-python-sqlite-05.webp' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
   <figcaption>created with Dall-E 3 by author with ❤</figcaption>
 </figure>
 
@@ -259,7 +259,7 @@ while True:    choice = int(input("Enter your choice: "))        if choice == 1:
 ```
 
 <figure>
-  <img src="{{ '/images/medium_posts/supermarket-inventory-system-python-sqlite-06.png' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
+  <img src="{{ '/images/medium_posts/supermarket-inventory-system-python-sqlite-06.webp' | relative_url }}" alt="created with Dall-E 3 by author with ❤" loading="lazy">
   <figcaption>created with Dall-E 3 by author with ❤</figcaption>
 </figure>
 
