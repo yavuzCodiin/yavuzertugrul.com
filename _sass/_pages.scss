@@ -667,7 +667,7 @@ html[data-theme="paper"] .horizon__glow { opacity: .7; }
 }
 
 // ═══ Writing — the unified stream ════════════════════════════════════════════
-// Topic tiles: 2×4 grid, 1px border at 25% ink, accent glyph, count right.
+// Topic tiles: four across, 1px border at 25% ink, accent glyph, count right.
 .topics {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

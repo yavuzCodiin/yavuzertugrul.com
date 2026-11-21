@@ -1,4 +1,4 @@
-# The eight topics of the Writing stream. Every entry in _posts/ carries exactly
+# The topics of the Writing stream. Every entry in _posts/ carries exactly
 # one `topic:` from this list, so the tile grid partitions the whole stream and
 # the counts always add up to the entry total.
 #
@@ -7,7 +7,8 @@
 # everything on that subject. Life / Mind / Notes are the personal subjects.
 #
 # `description` doubles as the intro line on /writing/<slug>/ and as the rule for
-# filing a new entry. `glyph` names an icon in _includes/icon.html (Lucide).
+# filing a new entry. `glyph` names an icon: one of the cases in _includes/icon.html, or
+# a name in _data/glyphs.yml (path data, drawn by the same include).
 
 - slug: robotics
   name: Robotics

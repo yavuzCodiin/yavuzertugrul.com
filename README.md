@@ -5,7 +5,7 @@ Built on the "Modernist" layout from the redesign handoff: visible rules, zero b
 radius, sidebar navigation. Dark by default, with a light theme on a button.
 
 **Information architecture:** posts, Medium pieces and short notes are ONE stream at
-`/writing/`, sliced by eight topics. There is no separate Posts, Thoughts or Archive
+`/writing/`, sliced by topic. There is no separate Posts, Thoughts or Archive
 page — `/posts/`, `/thoughts/` and `/archive/` redirect to `/writing/`.
 
 This is a **fresh repository**. The previous repo must not be carried over as-is —
@@ -137,7 +137,7 @@ title: Full title as published
 short_title: Shorter title for list rows   # optional
 date: 2025-01-16
 type: post                                 # post | note
-topic: robotics                            # one of the eight — drives the breadcrumb
+topic: robotics                            # a slug from _data/topics.yml — drives the breadcrumb
 tags: [Robotics, ROS2]                     # free-form, shown on the entry row
 origin: medium                             # optional — adds the outline "medium" chip
 description: One line for cards, search and social previews.
@@ -182,8 +182,9 @@ the file with today's date, a slug and the right front matter, then opens `$EDIT
 posts. Of the personal three, `life` is days, habits, health, films and games; `mind` is
 thinking about thinking — purpose, patience, discipline; `notes` is gear, setups,
 opinions and everything else. Each topic's `description` in that file is the filing rule.
-Adding a topic = one entry in that file, a `writing/<slug>.html` stub, and a glyph in
-`_includes/icon.html`.
+Adding a topic = one entry in that file, a `writing/<slug>.html` stub, and a glyph: either
+a case in `_includes/icon.html`, or path data in `_data/glyphs.yml` under a name that says
+where the drawing came from (`lucide-camera`, `custom-…`) — the include draws both.
 
 **A sketch** — `_art/NN-slug.md`, front matter only:
 
