@@ -40,6 +40,11 @@ sass:
 
 permalink: /:title
 
+# An entry is published whatever its date says. GitHub Pages already builds that way
+# (its classic build turns `future` on unless a site turns it off); saying it here
+# makes a local build show the same entries as the live site.
+future: true
+
 collections:
   # Notes are not a collection any more — they live in _posts with `type: note`
   # so posts and notes share one stream (see README "Writing").

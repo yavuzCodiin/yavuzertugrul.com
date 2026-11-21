@@ -52,6 +52,18 @@ Metadata stripping is lossless: JPEG APP1/APP13/COM segments and PNG text/eXIf c
 are dropped without re-encoding, and every file's decoded dimensions were compared
 before and after. ICC colour profiles are deliberately kept.
 
+**Colour profiles, for anything added later.** As of 2026-11-21 three of the 448 source
+images carry a profile, and all three are plain sRGB. A standard profile (sRGB, Display
+P3, Adobe RGB and the like) may stay. A **device profile may not**: a screenshot embeds
+the profile of the monitor it was taken on, which names the display and can carry its
+serial number. Convert such an image to sRGB before it is committed. `bin/images` does
+not check this (it only writes the light WebP copies), so for an image added by hand:
+
+```bash
+sips -g profile images/path/to/shot.png    # "sRGB…" or "Display P3" is fine; a monitor's name is not
+sips -m "/System/Library/ColorSync/Profiles/sRGB Profile.icc" images/path/to/shot.png   # convert in place
+```
+
 `.gitignore` was hardened and live-tested: `.env`, `private/`, `*.pdf`, `id_rsa` and
 friends are all ignored. Re-run the test any time with:
 

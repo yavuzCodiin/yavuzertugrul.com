@@ -65,7 +65,7 @@ writing.html           the stream;  writing/<topic>.html  one stub per topic
 fonts/                 Inter (text) and Ioskeley Mono (code) woff2, subset by bin/fonts
 _fonts-src/            the full fonts bin/fonts subsets from (not published)
 images/                curated assets;  images/sized/  WebP copies from bin/images
-bin/new                create an entry;  bin/sync-vault  mirror an Obsidian vault
+bin/new                create an entry;  bin/sync-vault  mirror an outside folder
 bin/images · bin/clip · bin/fonts   the speed tools — see "Speed" below
 _templates/            front-matter templates for post and note
 search.json            build-time search index
@@ -295,22 +295,25 @@ and nothing linked to them; notes now live at root-level `/<slug>` like every ot
 
 ---
 
-## Editor pipeline
+## Writing workflow
 
 The goal is arslan.io's "managing friction" argument: every step between writing and
-publishing costs writing. The flow this repo is built for:
+publishing costs writing. So the flow is short:
 
-1. **Obsidian** holds the vault; **word-smith** (github.com/sadsnake1/word-smith) sits on
-   top as the distraction-free editor. Entries are plain markdown with Jekyll front matter.
-2. **Write inside the repository**, so there is no copy step. Do **not** symlink
+1. **Entries are plain markdown with Jekyll front matter**, written in whatever editor
+   you like. `./bin/new` fills in `_templates/post.md` or `_templates/note.md`, so a new
+   entry never means remembering front matter.
+2. **Entries live in the repository**, so there is no copy step. Do **not** symlink
    `_posts/` or `images/` to a folder outside it: git commits a symlink as a link, not the
    files behind it, so GitHub Pages would build the site with no posts at all. If you
-   would rather keep the vault separate, `./bin/sync-vault ~/Obsidian/Site` mirrors
-   `entries/` → `_posts/` and `images/` → `images/` before you commit.
-3. **Publish = commit + push.** The obsidian-git plugin can do it on a timer; GitHub Pages
-   builds. No local Jekyll run is needed for routine publishing.
-4. `_templates/post.md` and `_templates/note.md` double as Obsidian Templater templates,
-   so a new entry never means remembering front matter.
+   would rather write in a separate folder, `./bin/sync-vault /path/to/folder` mirrors its
+   `entries/` → `_posts/` and `images/` → `images/` before you commit. It is a true
+   mirror: an entry missing from that folder is removed from `_posts/`.
+3. **Publish = commit + push.** GitHub Pages builds; no local Jekyll run is needed for
+   routine publishing.
+4. **A date never holds an entry back.** `future: true` in `_config.yml` (also what
+   GitHub Pages does by default) publishes an entry even when its date is still ahead —
+   so a date typed too far ahead goes live at once, under that date.
 
 Templates and layouts are deliberately stable: writing should never require touching
 layout code.
