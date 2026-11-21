@@ -30,7 +30,7 @@ extra_js: [/assets/js/filters.js]
   <figure class="tile{% if piece.span == 'feature' %} tile--feature{% elsif piece.span == 'tall' %} tile--tall{% endif %}{% if forloop.index > visible %} is-hidden{% endif %}"
           data-tags="{{ piece.category }}"
           data-lightbox="{{ piece.image | relative_url }}"
-          role="button" tabindex="0" aria-label="{{ piece.title }} — open full size">
+          role="button" tabindex="0" aria-label="{{ piece.title | escape }} — open full size">
     <div class="tile__frame">
       {%- if piece.position %}{% capture tile_style %}object-position:{{ piece.position }}{% endcapture %}{% else %}{% assign tile_style = nil %}{% endif -%}
       {%- if piece.span == 'feature' -%}
