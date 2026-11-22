@@ -4,6 +4,7 @@ date: 2024-01-04
 type: post
 topic: scraping
 tags: [Scraping]
+series: Web Scraping
 origin: medium
 medium_url: https://levelup.gitconnected.com/web-scraping-series-part-i-imdbs-most-popular-movies-with-requests-and-beautifulsoup-19dfcc0f524a
 image: /images/medium_images/BeautifulSoup_imdb.jpg
@@ -136,6 +137,6 @@ import requestsfrom bs4 import BeautifulSoupdef fetch_movies(url, headers):    r
 
 Thank you for taking the time to read through this piece. I’m glad to share these insights and hope they’ve been informative. If you enjoyed this article and are looking forward to more content like this, feel free to stay connected by following my Medium profile. Your support is greatly appreciated. Until the next article, take care and stay safe! For all my links in one place, including more articles, projects, and personal interests, check out.
 
-[yavuzertugrul | Twitter, Instagram | Linktree](https://linktr.ee/yavuzertugrul?utm_source=linktree_profile_share<sid=61298622-5c0b-4978-8520-bb12b9a718d0)
+[yavuzertugrul \| Twitter, Instagram \| Linktree](https://linktr.ee/yavuzertugrul)
 
 [Web Scraping Series Part I — IMDb’s Most Popular Movies with Requests and BeautifulSoup](https://levelup.gitconnected.com/web-scraping-series-part-i-imdbs-most-popular-movies-with-requests-and-beautifulsoup-19dfcc0f524a) was originally published in [Level Up Coding](https://levelup.gitconnected.com) on Medium, where people are continuing the conversation by highlighting and responding to this story.

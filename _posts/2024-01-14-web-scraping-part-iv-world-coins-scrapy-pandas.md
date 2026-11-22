@@ -4,6 +4,7 @@ date: 2024-01-14
 type: post
 topic: scraping
 tags: [Scraping]
+series: Web Scraping
 origin: medium
 medium_url: https://levelup.gitconnected.com/web-scraping-series-part-iv-world-coins-with-scrapy-data-analysis-with-pandas-6222bb8d6aa7
 image: /images/medium_images/World_Coins_with_Scrapy_&_Data_Analysis_with_Pandas.jpg
@@ -414,6 +415,6 @@ Thank you for taking the time to read through this piece. I’m glad to share th
 
 Connect with me across the web, you can explore my digital world through the link below, including more articles, projects, and personal interests, check out.
 
-[yavuzertugrul | Twitter, Instagram | Linktree](https://linktr.ee/yavuzertugrul?utm_source=linktree_profile_share<sid=06fba266-ed7b-4e66-8241-84c67a637a88)
+[yavuzertugrul \| Twitter, Instagram \| Linktree](https://linktr.ee/yavuzertugrul)
 
 [Web Scraping Series Part IV — World Coins with Scrapy & Data Analysis with Pandas](https://levelup.gitconnected.com/web-scraping-series-part-iv-world-coins-with-scrapy-data-analysis-with-pandas-6222bb8d6aa7) was originally published in [Level Up Coding](https://levelup.gitconnected.com) on Medium, where people are continuing the conversation by highlighting and responding to this story.

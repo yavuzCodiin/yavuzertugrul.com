@@ -4,6 +4,9 @@ section: writing
 ---
 {%- assign topic = site.data.topics | where: "slug", page.topic | first -%}
 {%- capture raw_url -%}https://raw.githubusercontent.com/{{ site.repository }}/{{ site.repository_branch }}/{{ page.path }}{%- endcapture -%}
+{%- comment -%} An entry in another language than the site's marks its own title and text (see default.html). {%- endcomment -%}
+{%- assign lang_attr = '' -%}
+{%- if page.lang %}{% capture lang_attr %} lang="{{ page.lang }}"{% endcapture %}{% endif -%}
 
 <main class="content content--read content--read-narrow" id="main">
   <div class="post-head">
@@ -12,7 +15,7 @@ section: writing
   </div>
 
   <article class="note-detail">
-    <h1 class="note-detail__title">{{ page.title }}</h1>
+    <h1 class="note-detail__title"{{ lang_attr }}>{{ page.title }}</h1>
     <div class="post__meta">
       <span class="post__date">{{ page.date | date: "%d %b %Y" }}</span>
       {% include tag.html label="note" variant="outline" %}
@@ -21,7 +24,7 @@ section: writing
 
     {%- if page.image %}
     {%- comment -%} Own photography stays in colour per the photography rule. {%- endcomment -%}
-    <figure class="note-detail__figure">
+    <figure class="note-detail__figure"{{ lang_attr }}>
       {%- assign fig_alt = page.image_alt | default: page.title -%}
       {% include img.html src=page.image alt=fig_alt eager=true sizes="(max-width: 1023px) calc(100vw - 40px), 700px" %}
     </figure>
@@ -29,13 +32,13 @@ section: writing
 
     {%- if page.parts %}
     {%- for part in page.parts %}
-    <div class="note-detail__part">
+    <div class="note-detail__part"{{ lang_attr }}>
       <span class="note-detail__part-label">{{ part.label }}</span>
       <p class="note-detail__text">{{ part.text }}</p>
     </div>
     {%- endfor %}
     {%- else %}
-    <div class="prose note-detail__text">
+    <div class="prose note-detail__text"{{ lang_attr }}>
       {% include body.html content=content sizes="(max-width: 1023px) calc(100vw - 40px), 700px" %}</div>
     {%- endif %}
   </article>

@@ -346,6 +346,6 @@ Thank you for taking the time to read through this piece. I’m glad to share th
 
 Connect with me across the web, you can explore my digital world through the link below, including more articles, projects, and personal interests, check out.
 
-[yavuzertugrul | Twitter, Instagram | Linktree](https://linktr.ee/yavuzertugrul)
+[yavuzertugrul \| Twitter, Instagram \| Linktree](https://linktr.ee/yavuzertugrul)
 
 [Data Manipulation with Pandas](https://levelup.gitconnected.com/data-manipulation-with-pandas-d1be327c1096) was originally published in [Level Up Coding](https://levelup.gitconnected.com) on Medium, where people are continuing the conversation by highlighting and responding to this story.

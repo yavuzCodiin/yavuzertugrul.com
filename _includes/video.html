@@ -1,0 +1,14 @@
+{%- comment -%}
+  An ordinary video in a text — with its sound and the browser's controls, it
+  plays only when the reader presses play. (A short silent loop standing in for
+  a GIF is clip.html.) preload="none" means nothing but the poster downloads
+  until then, and playsinline keeps it in the page on an iPhone instead of
+  jumping to full screen. Like every video in a text it fills the column.
+
+  include.src     the video file (.mp4)
+  include.poster  still frame shown until it plays
+  include.width   pixel size of the video — with height it reserves the space,
+  include.height  so the page does not jump when the poster arrives
+  include.alt     what the video shows
+{%- endcomment -%}
+<video src="{{ include.src | relative_url }}" poster="{{ include.poster | relative_url }}" width="{{ include.width }}" height="{{ include.height }}" style="aspect-ratio: {{ include.width }} / {{ include.height }}" controls playsinline preload="none" aria-label="{{ include.alt | escape }}"></video>

@@ -4,6 +4,7 @@ date: 2024-02-19
 type: post
 topic: mind
 tags: [Books]
+lang: tr
 origin: medium
 medium_url: https://yavuzertugrul.medium.com/atomik-al%C4%B1%C5%9Fkanl%C4%B1klar-kitap-i%CC%87ncelemesi-79ff09faf6df
 image: /images/medium_images/Atomik_Alışkanlıklar.png
@@ -538,4 +539,4 @@ Biraz uzun bir yazı oldu ama bu kitabı okurken çok fazla aydınlanma anı ya�
 
 Beni ve dijital dünyamı daha yakından tanımak isterseniz, aşağıdaki linkten beni takip edebilirsiniz. Orada yazılarım, projelerim ve kişisel ilgi alanlarımla alakalı içerikleri bulabilirsiniz, göz atmayı unutmayın.
 
-[yavuzertugrul | Twitter, Instagram | Linktree](https://linktr.ee/yavuzertugrul)
+[yavuzertugrul \| Twitter, Instagram \| Linktree](https://linktr.ee/yavuzertugrul)

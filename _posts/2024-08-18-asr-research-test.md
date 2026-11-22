@@ -315,5 +315,6 @@ if __name__ == "__main__":
 
 
 
-**Connect with me across the web, you can explore my digital world through the link on the image below, including more articles, projects, and personal interests.**
-[![linktree_yavuzertugrul](images/post-7/image.webp)](https://linktr.ee/yavuzertugrul?utm_source=linktree_profile_share&ltsid=ca29e9eb-5683-4ea5-8d64-4369abf718df)
+**Connect with me across the web, you can explore my digital world through the link below, including more articles, projects, and personal interests.**
+
+[yavuzertugrul \| Twitter, Instagram \| Linktree](https://linktr.ee/yavuzertugrul)

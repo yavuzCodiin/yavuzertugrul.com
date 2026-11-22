@@ -4,6 +4,25 @@ section: writing
 ---
 {%- assign primary_tag = page.tags | first -%}
 {%- capture raw_url -%}https://raw.githubusercontent.com/{{ site.repository }}/{{ site.repository_branch }}/{{ page.path }}{%- endcapture -%}
+{%- comment -%} An entry in another language than the site's marks its own title and text (see default.html). {%- endcomment -%}
+{%- assign lang_attr = '' -%}
+{%- if page.lang %}{% capture lang_attr %} lang="{{ page.lang }}"{% endcapture %}{% endif -%}
+{%- comment -%}
+  A series: every post with the same `series:` name, in date order (by title
+  within a day). With two parts or more, a line under the meta says which part
+  this is and links to the list of all of them at the end of the article.
+  Reset on every page: Jekyll keeps a layout's variables from one page to the next.
+{%- endcomment -%}
+{%- assign series_parts = "" | split: "" -%}
+{%- assign series_n = nil -%}
+{%- if page.series -%}
+  {%- assign series_days = site.posts | where: "series", page.series | group_by_exp: "p", "p.date | date: '%Y%m%d%H%M%S'" | sort: "name" -%}
+  {%- for day in series_days -%}
+    {%- assign day_parts = day.items | sort: "title" -%}
+    {%- for p in day_parts -%}{%- assign series_parts = series_parts | push: p -%}{%- endfor -%}
+  {%- endfor -%}
+  {%- for p in series_parts -%}{%- if p.url == page.url -%}{%- assign series_n = forloop.index -%}{%- endif -%}{%- endfor -%}
+{%- endif -%}
 
 <main class="content content--read" id="main">
   <div class="post-head">
@@ -12,7 +31,7 @@ section: writing
     {% include search.html %}
   </div>
 
-  <h1 class="post__title">{{ page.title }}</h1>
+  <h1 class="post__title"{{ lang_attr }}>{{ page.title }}</h1>
 
   <div class="post__meta">
     <span class="post__date">{{ page.date | date: "%d %b %Y" }}</span>
@@ -24,6 +43,9 @@ section: writing
       {%- endif -%}
     {%- endfor -%}
     {%- if page.origin == "medium" %}{% include tag.html label="medium" variant="outline" %}{% endif -%}
+    {%- if series_parts.size > 1 %}
+    <a class="post__series" href="#series">Part {{ series_n }} of {{ series_parts.size }} · {{ page.series }} series</a>
+    {%- endif %}
   </div>
 
   <div class="post-grid">
@@ -34,7 +56,7 @@ section: writing
           <span>On this page</span><span data-toc-arrow>▴</span>
         </button>
         <div class="toc-mobile__body">
-          <nav class="toc" data-toc-target aria-label="On this page (mobile)"></nav>
+          <nav class="toc" data-toc-target aria-label="On this page (mobile)"{{ lang_attr }}></nav>
         </div>
       </div>
 
@@ -45,15 +67,35 @@ section: writing
       {%- endcomment -%}
       {%- if page.image and page.hero != false %}
       {%- assign hero_alt = page.image_alt | default: page.title -%}
-      <figure class="post__hero{% unless page.image_color %} grayscale{% endunless %}">
+      <figure class="post__hero{% unless page.image_color %} grayscale{% endunless %}"{{ lang_attr }}>
         {% include img.html src=page.image alt=hero_alt eager=true sizes="(max-width: 1023px) calc(100vw - 40px), 700px" %}
         {%- if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}
       </figure>
       {%- endif %}
 
-      <div class="prose" id="post-body">
+      <div class="prose" id="post-body"{{ lang_attr }}>
         {% include body.html content=content sizes="(max-width: 1023px) calc(100vw - 40px), 700px" %}
       </div>
+
+      {%- if series_parts.size > 1 %}
+      <nav class="series" id="series" aria-labelledby="series-title">
+        <h6 id="series-title">{{ page.series }} — a series in {{ series_parts.size }} parts</h6>
+        <ol class="series__parts">
+          {%- for p in series_parts %}
+          {%- assign part_title = p.short_title | default: p.title %}
+          <li class="series__part"{% if p.url == page.url %} aria-current="page"{% endif %}>
+            <span class="series__n">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+            {%- if p.url == page.url %}
+            <span class="series__title">{{ part_title }}</span>
+            <span class="series__here">You are here</span>
+            {%- else %}
+            <a class="series__title" href="{{ p.url | relative_url }}">{{ part_title }}</a>
+            {%- endif %}
+          </li>
+          {%- endfor %}
+        </ol>
+      </nav>
+      {%- endif %}
 
       {%- if page.notes or page.related %}
       <div class="rule rule--endmatter" style="margin:32px 0 24px"></div>
@@ -94,7 +136,7 @@ section: writing
     <aside class="toc-rail">
       <div class="rail__block">
         <h6>On this page</h6>
-        <nav class="toc" data-toc-target aria-label="On this page"></nav>
+        <nav class="toc" data-toc-target aria-label="On this page"{{ lang_attr }}></nav>
       </div>
       {% include owner-box.html compact=true raw_url=raw_url %}
     </aside>

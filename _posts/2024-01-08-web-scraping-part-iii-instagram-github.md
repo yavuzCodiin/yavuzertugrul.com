@@ -4,6 +4,7 @@ date: 2024-01-08
 type: post
 topic: scraping
 tags: [Scraping]
+series: Web Scraping
 origin: medium
 medium_url: https://levelup.gitconnected.com/web-scraping-series-part-iii-practice-with-instagram-github-99359590198f
 image: /images/medium_images/github_instagram_selenium.jpg
@@ -153,6 +154,6 @@ Here is a video of how we can scrape data with selenium and find non-followers.
 
 [https://medium.com/media/d4f33ed7811df98e6f9ebb2b55e9136a/href](https://medium.com/media/d4f33ed7811df98e6f9ebb2b55e9136a/href)Thank you for taking the time to read through this piece. I’m glad to share these insights and hope they’ve been informative. If you enjoyed this article and are looking forward to more content like this, feel free to stay connected by following my Medium profile. Your support is greatly appreciated. Until the next article, take care and stay safe! For all my links in one place, including more articles, projects, and personal interests, check out.
 
-[yavuzertugrul | Twitter, Instagram | Linktree](https://linktr.ee/yavuzertugrul?utm_source=linktree_profile_share<sid=e03f8f65-ddc2-43cd-b894-6dcbdd2ac94b)
+[yavuzertugrul \| Twitter, Instagram \| Linktree](https://linktr.ee/yavuzertugrul)
 
 [Web Scraping Series Part III— Practice with Instagram & GitHub](https://levelup.gitconnected.com/web-scraping-series-part-iii-practice-with-instagram-github-99359590198f) was originally published in [Level Up Coding](https://levelup.gitconnected.com) on Medium, where people are continuing the conversation by highlighting and responding to this story.

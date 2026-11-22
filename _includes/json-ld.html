@@ -1,0 +1,62 @@
+{%- comment -%}
+  Structured data for search engines (JSON-LD), from _layouts/default.html,
+  which sets is_entry, meta_description, og_image, page_lang and ui_lang first.
+
+  A post or note is a BlogPosting; the home page names the site and its author.
+  Every value goes through jsonify, and every "<" is then written "\u003c" (the
+  same character in JSON): nothing a title or an opening paragraph says — not
+  "</script>", nor "<!--" followed by "<script", which makes a browser read on
+  past the element's end — can end the <script> early or swallow the page. `sameAs` lists only profiles
+  the site itself links to (`social:` in _config.yml) — never add one that the
+  site does not show.
+{%- endcomment -%}
+{%- assign _ld = nil -%}
+{%- if is_entry -%}
+{%- capture _ld -%}
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ meta_description | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "image": {{ og_image | absolute_url | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+  "inLanguage": {{ page_lang | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }},
+    "url": {{ '/' | absolute_url | jsonify }}
+  }
+}
+{%- endcapture -%}
+{%- elsif page.section == 'home' -%}
+{%- assign _ld_same_as = "" | split: "" | push: site.social.github_url | push: site.social.linkedin_url | push: site.social.medium_url | push: site.social.linktree_url -%}
+{%- capture _ld -%}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": {{ '/#website' | absolute_url | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "inLanguage": {{ ui_lang | jsonify }},
+      "author": { "@id": {{ '/#person' | absolute_url | jsonify }} }
+    },
+    {
+      "@type": "Person",
+      "@id": {{ '/#person' | absolute_url | jsonify }},
+      "name": {{ site.author.name | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }},
+      "jobTitle": {{ site.data.cv.role | jsonify }},
+      "sameAs": {{ _ld_same_as | jsonify }}
+    }
+  ]
+}
+{%- endcapture -%}
+{%- endif -%}
+{%- if _ld %}
+  <script type="application/ld+json">{{ _ld | replace: '<', '\u003c' }}</script>
+{%- endif -%}

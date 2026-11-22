@@ -292,11 +292,7 @@ import sqlite3import timeclass Product():    def __init__(self, name, price, qua
 
 Thank you for taking the time to read through this piece. I’m glad to share these insights and hope they’ve been informative. If you enjoyed this article and are looking forward to more content like this, feel free to stay connected by following my Medium profile. Your support is greatly appreciated. Until the next article, take care and stay safe! For all my links in one place, including more articles, projects, and personal interests, check out.
 
-## yavuzertugrul || Linktree
-
-## METU grad, ex-ACROME Robotics Engineer, Drawing Pixel_art, Gaming, Writing.
-
-linktr.ee
+[yavuzertugrul \| Twitter, Instagram \| Linktree](https://linktr.ee/yavuzertugrul)
 
 > Lately, I’ve been listening to a lot of Infected Mushroom, and it has a special effect on me. Their music reminds me of my humble university years. I particularly enjoy this track — I’m ending this writing with a recommendation for your ears. Hope you enjoy it as much as I do.
 

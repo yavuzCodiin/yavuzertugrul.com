@@ -53,9 +53,12 @@ _config.yml            collections (art), permalinks, defaults
 _layouts/              default · page · post · note · topic · album · collection
 _includes/             sidebar · topbar+menu · search pill · search dialog
                        lightbox · book-note · owner-box · tag · icon · site-footer
-                       img (responsive <img>) · body (post/note body) · clip
+                       img (responsive <img>) · body (post/note body) · clip · video
+                       json-ld (structured data for search engines)
 _sass/                 _tokens · _base · _layout · _components · _pages
 assets/css/main.scss   the only stylesheet
+assets/share-card.jpg  the picture a shared link shows when its page has none
+favicon.ico            the tab icon;  apple-touch-icon.png  the home-screen icon
 assets/js/             menu · search · tocspy · lightbox · booknote · owner · filters · clip
 _posts/                ALL writing — long posts AND notes (`type: post|note`)
 _art/                  sketch metadata (output: false — rendered on /sketches/)
@@ -125,6 +128,32 @@ to keep the hero in colour.
 There is **no cv.pdf download** — owner decision. The CV exists only as the `/cv/` page,
 which deliberately shows no phone number and no location (see SECURITY.md).
 
+### Share card
+
+What a shared link shows (LinkedIn, WhatsApp, X, Slack…) comes from the page head in
+`_layouts/default.html`: the title, the description, and a picture. The picture is the
+entry's own `image:` (its size is read from `_data/images.json`); every page without one —
+the home page, the section pages, notes without a picture — shows `assets/share-card.jpg`:
+the name, ROBOTICS · AI and the site's icon (the robot hand, see Favicon) on the dark paper,
+1200 × 630, set in the site's own Inter. `_includes/json-ld.html` adds the same facts for
+search engines.
+
+To replace the card, save a new 1200 × 630 JPEG over `assets/share-card.jpg` and nothing else
+needs to change; keep it under about 200 KB, as some apps drop a heavy preview picture. A
+card of another size also needs its numbers changed in `_layouts/default.html`. Keep it out of
+`images/` — it is part of the site, not of an entry. Services cache previews, so an old link
+can show the old card for a while (LinkedIn's Post Inspector re-reads a page on request).
+
+### Favicon
+
+The site's icon is a blue robot hand making a V sign in front of a yellow disc, with three
+coral lights on its wrist cuff. `assets/icon.svg` is the drawing (512 × 512); it is used as it
+is only on the share card. `favicon.ico` holds 16, 32 and 48 px versions that are not shrunk
+from it but drawn pixel by pixel for their size — at 16 px a shrunk drawing turns to mush — so
+the V, the fingers and the lights still read in a browser tab (a retina screen shows the 32).
+Redrawing the icon means redrawing those three as well. `apple-touch-icon.png` (180 px) is the
+drawing on the dark paper, because iOS paints a transparent background black.
+
 ---
 
 ## Adding content
@@ -140,6 +169,8 @@ type: post                                 # post | note
 topic: robotics                            # a slug from _data/topics.yml — drives the breadcrumb
 tags: [Robotics, ROS2]                     # free-form, shown on the entry row
 origin: medium                             # optional — adds the outline "medium" chip
+lang: tr                                   # optional — the entry's language when it is not English
+series: Web Scraping                       # optional — posts with the same name are one series
 description: One line for cards, search and social previews.
 image: /images/post-10/Post_IMAGE.jpg
 image_color: true                          # optional — skip the grayscale wrapper
@@ -154,6 +185,19 @@ related: [asr-research-test]               # optional — post slugs
 ```
 
 The table of contents builds itself from the `##` / `###` headings — no config needed.
+
+**Description.** Without a `description:`, previews and search results use the entry's own
+opening words (for a note in `parts:`, the first part), cut after a whole word near 160
+characters. Add one where that opening reads badly cut off.
+
+**Another language.** `lang: tr` (on a post or a note) says the entry is in Turkish: the page,
+its title and its text are marked Turkish — screen readers switch voice, browsers offer a
+translation, a shared link says `tr_TR` — while the menus and labels around it stay English.
+
+**A series.** Posts that share a `series:` name are its parts, in date order (by title on the
+same day). Each part gets a line under its date — "Part 2 of 4 · Web Scraping series" — that
+jumps to a box after the text listing every part, with the one being read named rather than
+linked. It takes two parts to make a series.
 
 **Pictures in a body.** `![alt](/images/…)` fills the column. Three things can be said about
 one, right after it or on the next line, in kramdown's `{: …}` form:
@@ -258,6 +302,23 @@ WebP came out larger than the GIF). The script writes `name.mp4` and `name.poste
 next to the GIF and prints the `{% include clip.html … %}` line to put where the `<img>`
 was. The clip loops silently like the GIF, but downloads nothing until it scrolls near
 and pauses off-screen; reduced-motion visitors get a play button instead.
+
+**A video with sound → `_includes/video.html`.** A video meant to be watched, not a GIF
+stand-in: it has the browser's controls and plays only when pressed.
+
+```liquid
+{% include video.html src="/images/posts/x/a.mp4" poster="/images/posts/x/a.poster.jpg" width="1280" height="720" alt="What the video shows" %}
+```
+
+Until it is played nothing but the poster downloads, and `width`/`height` hold its place, so
+the page does not jump; it fills the column. A phone video records where it was filmed, so
+convert it before committing — the first line makes a web MP4 without that metadata, the
+second takes the poster from one second in:
+
+```bash
+ffmpeg -i in.mov -map_metadata -1 -c:v libx264 -crf 23 -preset slow -pix_fmt yuv420p -c:a aac -movflags +faststart a.mp4
+ffmpeg -ss 1 -i a.mp4 -frames:v 1 -q:v 3 a.poster.jpg
+```
 
 **Fonts.** Apple devices download no text font at all. `./bin/fonts` rebuilds `fonts/` from
 `_fonts-src/`, keeping only the OpenType features that are on by default. Ioskeley Mono

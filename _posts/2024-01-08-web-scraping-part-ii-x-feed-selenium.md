@@ -4,6 +4,7 @@ date: 2024-01-08
 type: post
 topic: scraping
 tags: [Scraping]
+series: Web Scraping
 origin: medium
 medium_url: https://levelup.gitconnected.com/web-scraping-series-part-ii-x-feed-selenium-c10ceb4b1a12
 image: /images/medium_images/x_feed_selenium.jpg
@@ -162,6 +163,6 @@ from selenium import webdriverimport timefrom selenium.webdriver.common.by impor
 
 Thank you for taking the time to read through this piece. I’m glad to share these insights and hope they’ve been informative. If you enjoyed this article and are looking forward to more content like this, feel free to stay connected by following my Medium profile. Your support is greatly appreciated. Until the next article, take care and stay safe! For all my links in one place, including more articles, projects, and personal interests, check out.
 
-[yavuzertugrul | Twitter, Instagram | Linktree](https://linktr.ee/yavuzertugrul?utm_source=linktree_profile_share<sid=1de72305-76db-4dda-abda-e6d3ed0c977c)
+[yavuzertugrul \| Twitter, Instagram \| Linktree](https://linktr.ee/yavuzertugrul)
 
 [Web Scraping Series Part II — X Feed & Selenium](https://levelup.gitconnected.com/web-scraping-series-part-ii-x-feed-selenium-c10ceb4b1a12) was originally published in [Level Up Coding](https://levelup.gitconnected.com) on Medium, where people are continuing the conversation by highlighting and responding to this story.
