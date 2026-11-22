@@ -17,7 +17,6 @@ extra_js: [/assets/js/filters.js]
 </div>
 <p class="page-intro page-intro--20"><span class="u-desktop">Digital art, drawn on the iPad — {{ total }} pieces. Click any tile for full size.</span><span class="u-mobile">Digital art — {{ total }} pieces. Tap a tile for full size.</span></p>
 
-{%- comment -%} Placeholder taxonomy — the owner finalises the categories. {%- endcomment -%}
 <div class="chips chips--scroll chips--24" data-filter-group="#mosaic">
   <button type="button" class="tag tag-solid" data-filter="all" aria-pressed="true">All · {{ total }}</button>
   {%- for cat in categories %}

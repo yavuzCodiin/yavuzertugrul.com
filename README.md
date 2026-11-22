@@ -317,9 +317,7 @@ and nothing linked to them; notes now live at root-level `/<slug>` like every ot
 - [ ] **Note excerpts** — the stream auto-truncates the note body for the one-line
       excerpt. Add a `description:` to any entry whose opening sentence reads badly
       cut off.
-- [ ] **Sketch dates & categories** — all 23 pieces are in `_art/`; dates and the
-      Characters/Pixel art/Scenes/Abstract taxonomy are placeholders (the 15 newly added
-      ones are marked with a TODO comment). Set the real ones.
+- [x] **Sketch dates & categories** — set by the owner for every piece (November 2026).
 - [ ] **Books** — fill `rating:` (0–5) and `note:` per entry in `_data/books.yml` (they feed
       the book-note modal), fix the few `TODO(owner)` title/author guesses, and replace the
       two placeholder `want_to_read` lines.
