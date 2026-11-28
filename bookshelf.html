@@ -90,6 +90,7 @@ extra_js: [/assets/js/booknote.js]
       </div>
     </div>
 
+    {%- if site.data.books.want_to_read and site.data.books.want_to_read.size > 0 %}
     <div class="rail__block rail__block--queue">
       <h6>Want to read</h6>
       <div class="queue">
@@ -100,8 +101,8 @@ extra_js: [/assets/js/booknote.js]
         </div>
         {%- endfor %}
       </div>
-      <a class="btn btn-ghost btn-ghost--sm" href="https://github.com/{{ site.repository }}/edit/{{ site.repository_branch }}/_data/books.yml">+ Add to queue</a>
     </div>
+    {%- endif %}
   </aside>
 </div>
 

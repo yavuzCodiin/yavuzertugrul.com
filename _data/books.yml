@@ -1,7 +1,7 @@
 # Bookshelf — the full library from the old site, in shelf order (newest first).
-# Titles/authors were identified from the covers; entries marked TODO need the
-# owner's confirmation. `rating` (0-5) and `note` feed the book-note modal and
-# are still owner placeholders throughout.
+# Titles and authors were read off the covers. `rating` (0-5) and `note` feed the
+# book-note modal; a book without them shows "No note yet." `want_to_read` is the
+# queue in the side column; an empty queue hides that block.
 
 meta:
   intro_lead: "Thousands books to read, thousands lives to live — welcome to my library."
@@ -12,9 +12,7 @@ currently_reading:
   author: Franz Kafka
   cover: /images/bookshelf_library/2025/dönüsüm.jpg
 
-want_to_read:
-  - The first book you queue up
-  - "…listed in your reading order"
+want_to_read: []
 
 shelves:
   - year: "2025"
@@ -56,16 +54,16 @@ shelves:
 
   - year: "2023"
     books:
-      - title: Eski Çağın Büyük Komutanları
-        author: ""  # TODO(owner): author
+      - title: Eski Çağ'ın Büyük Komutanları
+        author: Andrew Roberts
         cover: /images/bookshelf_library/read_2023/eski_cagın_buyuk_komutanları.jpeg
       - title: "Tesla: Portrait with Masks"
         author: Vladimir Pištalo
         cover: /images/bookshelf_library/read_2023/tesla_portrait_with_masks.png
-      - title: How Google Works  # TODO(owner): verify title
-        author: Eric Schmidt & Jonathan Rosenberg
+      - title: Are You Smart Enough to Work at Google?
+        author: William Poundstone
         cover: /images/bookshelf_library/read_2023/google_smart_book.jpg
-      - title: Artificial Intelligence (HBR Insights)  # TODO(owner): verify title
+      - title: Artificial Intelligence (HBR Insights)
         author: Harvard Business Review
         cover: /images/bookshelf_library/read_2023/ai_harvard.jpg
       - title: The Quest for Artificial Intelligence
@@ -75,13 +73,13 @@ shelves:
         author: Aeschylus
         cover: /images/bookshelf_library/read_2023/Prometheus_Bound.jpg
       - title: Geleceği Görenler
-        author: ""  # TODO(owner): author
+        author: Fırat Demirel
         cover: /images/bookshelf_library/read_2023/gelecegi_görenler.jpg
       - title: Permanent Record
         author: Edward Snowden
         cover: /images/bookshelf_library/read_2023/snowden.jpeg
       - title: Elon Musk
-        author: Ashlee Vance  # TODO(owner): or the Walter Isaacson biography?
+        author: Ashlee Vance
         cover: /images/bookshelf_library/read_2023/elon_musk.jpg
 
   - year: "Before 2023"
@@ -135,7 +133,7 @@ shelves:
         author: Herwig Wolfram
         cover: /images/bookshelf_library/read_before_2023/the_roman_empire_and_its_germanic_people.jpg
       - title: Avrupa Tarihi Üzerine Yazılar
-        author: ""  # TODO(owner): author
+        author: Önder Kaya
         cover: /images/bookshelf_library/read_before_2023/avrupa_tarihi_üzerine_yazılar.jpeg
       - title: Inferno
         author: Dan Brown

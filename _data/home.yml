@@ -5,10 +5,11 @@ intro: >-
   Notes, thoughts, learning experiences, research and projects — from SLAM
   pipelines on Jetson boards to book covers and digital sketches.
 
+# The "Currently" card: these lines, then two that keep themselves up to date —
+# "On the shelf" (the book being read, from _data/books.yml) and "Drawing" (the
+# newest sketch in _art/).
 currently:
   - Robotics SWE at Kindhelm — edge AI, SLAM, sensor fusion.
-  - "On the shelf: Dönüşüm — Franz Kafka."
-  - "Building: Obsidian-driven publishing for this blog."
 
 # The second card on the home grid — pick any post by slug.
 second_post: asr-research-test

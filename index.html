@@ -85,6 +85,15 @@ title: Home
         {%- for line in h.currently %}
         <li><span>{{ line }}</span></li>
         {%- endfor %}
+        {%- comment -%} These two follow the bookshelf and the sketches by themselves (the newest by date). {%- endcomment -%}
+        {%- assign reading = site.data.books.currently_reading -%}
+        {%- if reading and reading.title %}
+        <li><span>On the shelf: {{ reading.title }}{% if reading.author and reading.author != '' %} — {{ reading.author }}{% endif %}.</span></li>
+        {%- endif -%}
+        {%- assign drawing = site.art | sort: "date" | last -%}
+        {%- if drawing %}
+        <li><span>Drawing: {{ drawing.title }}.</span></li>
+        {%- endif %}
       </ul>
     </div>
 
