@@ -108,7 +108,8 @@ Remember me for faster sign in
 First of all I imported required modules for my project:
 
 ```
-import sqlite3import time
+import sqlite3
+import time
 ```
 
 2 Classes: first one for product and second one for Supermarket Operations
@@ -123,7 +124,14 @@ I planned as my Product class will have `name, price, quantity`parameters.
 - `__str__` is another special method in Python, used to provide a human-readable representation of the object. When you print an instance of the `Product` class or use the `str()` function on it, this method is called. It returns a formatted string that includes the product’s name, price, and quantity, making it easier to understand what the product object represents when printed.
 
 ```
-class Product():    def __init__(self, name, price, quantity):        self.name = name        self.price = price        self.quantity = quantity    def __str__(self):        return "Product Name: {}\nPrice: {}\nNumber: {}".format(self.name, self.price, self.quantity)
+class Product():
+    def __init__(self, name, price, quantity):
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+
+    def __str__(self):
+        return "Product Name: {}\nPrice: {}\nNumber: {}".format(self.name, self.price, self.quantity)
 ```
 
 ## SuperMarket Class
@@ -148,7 +156,9 @@ Committing Changes with self.conn.commit():
 Whenever you execute a command that changes the data in the database (like adding, updating, or deleting a product), you need to commit these changes. `self.conn.commit()` ensures that these changes are saved in the database file.
 
 ```
-class SuperMarket():    def __init__(self):        self.create_connection()
+class SuperMarket():
+    def __init__(self):
+        self.create_connection()
 ```
 
 - To see my database and table I am currently using DB Browser for SQLite but in the past I used extensions for VsCode to see from inside VsCode without another application.
@@ -172,7 +182,10 @@ add_product()
 The `add_product` method is adding new products into our store. When I have a new item to place on our virtual shelves, this method takes a `Product` object, gently unpacks its details, and places them into the `supermarket` table of our `supermarket.db` database. It's like telling our digital inventory, 'Hey, here's something new for you!
 
 ```
-def add_product(self, product):        query = "INSERT INTO supermarket values(?, ?, ?)"        self.cursor.execute(query,(product.name, product.price, product.quantity))        self.conn.commit()
+def add_product(self, product):
+    query = "INSERT INTO supermarket values(?, ?, ?)"
+    self.cursor.execute(query,(product.name, product.price, product.quantity))
+    self.conn.commit()
 ```
 
 > remove_product()
@@ -182,7 +195,10 @@ remove_product()
 Think of `remove_product` as the method that helps to take item from shelves. Whenever a product is no longer available or needed, this method steps in. I just give it the name of the product, and it carefully removes all traces of that product from our database. It’s our way of keeping things tidy and up-to-date.
 
 ```
-def remove_product(self,name):        query = "DELETE FROM supermarket WHERE name =?"        self.cursor.execute(query,(name,))        self.conn.commit()
+def remove_product(self,name):
+    query = "DELETE FROM supermarket WHERE name =?"
+    self.cursor.execute(query,(name,))
+    self.conn.commit()
 ```
 
 > list_product()
@@ -192,7 +208,15 @@ list_product()
 The `list_product` function is showing all the products we have in the store. It fetches the entire list of products from our database and displays them. This is incredibly handy when I need to quickly check what’s in stock and get an overview of our inventory.
 
 ```
-def list_products(self):        query = "SELECT * FROM supermarket"        self.cursor.execute(query)        rows = self.cursor.fetchall()        if rows:             for row in rows:                print("Product Name: {}\nProduct Price: {} $\nProduct Quantity: {}\n ".format(row[0],row[1],row[2]))        else:            print("No products in the supermarket")
+def list_products(self):
+    query = "SELECT * FROM supermarket"
+    self.cursor.execute(query)
+    rows = self.cursor.fetchall()
+    if rows:
+        for row in rows:
+            print("Product Name: {}\nProduct Price: {} $\nProduct Quantity: {}\n ".format(row[0],row[1],row[2]))
+    else:
+        print("No products in the supermarket")
 ```
 
 > update_product()
@@ -202,7 +226,10 @@ update_product()
 Whenever a product’s details need a refresh — maybe the price has changed, or we got a new batch with different quantities — I turn to `update_product`. This method lets me update the existing details of a product in our database, ensuring our inventory is always accurate and current.
 
 ```
-def update_product(self, product):        query = "UPDATE supermarket SET price =?, quantity =? WHERE name =?"        self.cursor.execute(query, (product.price, product.quantity, product.name))        self.conn.commit()
+def update_product(self, product):
+    query = "UPDATE supermarket SET price =?, quantity =? WHERE name =?"
+    self.cursor.execute(query, (product.price, product.quantity, product.name))
+    self.conn.commit()
 ```
 
 > search_product()
@@ -212,7 +239,15 @@ search_product()
 When I need to find a specific product, `search_product` is my go-to method. I just provide the product's name, and it dives into our database, and fetching all information about that product.
 
 ```
-def search_product(self, name):        query = "SELECT * FROM supermarket WHERE name =?"        self.cursor.execute(query,(name,))        rows = self.cursor.fetchall()        if rows:            for row in rows:                print("Product Name: {}\nProduct Price: {} $\nProduct Quantity: {}\n ".format(row[0],row[1],row[2]))        else:            print("Product not found")
+def search_product(self, name):
+    query = "SELECT * FROM supermarket WHERE name =?"
+    self.cursor.execute(query,(name,))
+    rows = self.cursor.fetchall()
+    if rows:
+        for row in rows:
+            print("Product Name: {}\nProduct Price: {} $\nProduct Quantity: {}\n ".format(row[0],row[1],row[2]))
+    else:
+        print("Product not found")
 ```
 
 > filter_product()
@@ -222,7 +257,15 @@ filter_product()
 For times when I need to view products within a certain price range — maybe to plan a sale or analyze our stock — I use `filter_products`.
 
 ```
-def filter_products(self,min_price,max_price):        query = "SELECT * FROM supermarket WHERE price >=? AND price <=?"        self.cursor.execute(query,(min_price,max_price))        rows = self.cursor.fetchall()        if rows:            for row in rows:                print("Product Name: {}\nProduct Price: {} $\nProduct Quantity: {}\n ".format(row[0],row[1],row[2]))        else:            print("No products found")
+def filter_products(self,min_price,max_price):
+    query = "SELECT * FROM supermarket WHERE price >=? AND price <=?"
+    self.cursor.execute(query,(min_price,max_price))
+    rows = self.cursor.fetchall()
+    if rows:
+        for row in rows:
+            print("Product Name: {}\nProduct Price: {} $\nProduct Quantity: {}\n ".format(row[0],row[1],row[2]))
+    else:
+        print("No products found")
 ```
 
 <figure>
@@ -237,7 +280,15 @@ create_connection() & close_connection()
 These two methods are the essential start and end points of our interaction with the database. `create_connection` opens up the pathway to our database for any action we need to take. And once we’re done, `close_connection` neatly wraps things up, ensuring everything is left in order.
 
 ```
-def create_connection(self):        self.conn = sqlite3.connect('supermarket.db')        self.cursor = self.conn.cursor()        query = "Create Table if not exists supermarket(name TEXT, price FLOAT, quantity INT)"        self.cursor.execute(query)        self.conn.commit()    def close_connection(self):        self.conn.close()
+def create_connection(self):
+    self.conn = sqlite3.connect('supermarket.db')
+    self.cursor = self.conn.cursor()
+    query = "Create Table if not exists supermarket(name TEXT, price FLOAT, quantity INT)"
+    self.cursor.execute(query)
+    self.conn.commit()
+
+def close_connection(self):
+    self.conn.close()
 ```
 
 ## The Loop
@@ -247,7 +298,17 @@ def create_connection(self):        self.conn = sqlite3.connect('supermarket.db'
 `Choice` table
 
 ```
-print("""           1.Add product           2.Remove product          3.List All Products          4.Update Product          5.Search Product          6.Filter Product by price          7.Exit          """)supermarket = SuperMarket()
+print("""
+          1. Add product
+          2.Remove product
+          3.List All Products
+          4.Update Product
+          5.Search Product
+          6.Filter Product by price
+          7.Exit
+          """)
+
+supermarket = SuperMarket()
 ```
 
 > While loop
@@ -255,7 +316,53 @@ print("""           1.Add product           2.Remove product          3.List All
 `While` loop
 
 ```
-while True:    choice = int(input("Enter your choice: "))        if choice == 1:        name = input("Enter product name: ")        price = float(input("Enter product price: "))        quantity = int(input("Enter product quantity: "))        new_product = Product(name, price, quantity)        print("{} is being added".format(name))        time.sleep(2)        supermarket.add_product(new_product)        print("{} is added".format(name))    elif choice == 2:        name = input("Enter product name: ")        print("{} is being removed\n".format(name))        time.sleep(2)        supermarket.remove_product(name)        print("{} is removed\n".format(name))    elif choice == 3:        print("Listing products...")        time.sleep(2)        supermarket.list_products()        print("Products are listed")    elif choice == 4:        name = input("Enter product name to update: ")        price = float(input("Enter product price to update: "))        quantity = int(input("Enter product quantity to update: "))        new_product = Product(name, price, quantity)        print("{} is being updated\n".format(name))        time.sleep(2)        supermarket.update_product(new_product)        print("{} is updated\n".format(name))    elif choice == 5:        name = input("Enter item name for searching products")         print("{} is being searched\n".format(name))        time.sleep(2)        supermarket.search_product(name)        print("{} are listed\n".format(name))    elif choice == 6:        print("Please select filter range for product you want to see")        min_price = int(input("Enter minimum price: "))        max_price = int(input("Enter maximum price: "))        supermarket.filter_products(min_price,max_price)    elif choice == 7:        break    else:        print("Invalid choice")
+while True:
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        name = input("Enter product name: ")
+        price = float(input("Enter product price: "))
+        quantity = int(input("Enter product quantity: "))
+        new_product = Product(name, price, quantity)
+        print("{} is being added".format(name))
+        time.sleep(2)
+        supermarket.add_product(new_product)
+        print("{} is added".format(name))
+    elif choice == 2:
+        name = input("Enter product name: ")
+        print("{} is being removed\n".format(name))
+        time.sleep(2)
+        supermarket.remove_product(name)
+        print("{} is removed\n".format(name))
+    elif choice == 3:
+        print("Listing products...")
+        time.sleep(2)
+        supermarket.list_products()
+        print("Products are listed")
+    elif choice == 4:
+        name = input("Enter product name to update: ")
+        price = float(input("Enter product price to update: "))
+        quantity = int(input("Enter product quantity to update: "))
+        new_product = Product(name, price, quantity)
+        print("{} is being updated\n".format(name))
+        time.sleep(2)
+        supermarket.update_product(new_product)
+        print("{} is updated\n".format(name))
+    elif choice == 5:
+        name = input("Enter item name for searching products")
+        print("{} is being searched\n".format(name))
+        time.sleep(2)
+        supermarket.search_product(name)
+        print("{} are listed\n".format(name))
+    elif choice == 6:
+        print("Please select filter range for product you want to see")
+        min_price = int(input("Enter minimum price: "))
+        max_price = int(input("Enter maximum price: "))
+        supermarket.filter_products(min_price,max_price)
+    elif choice == 7:
+        break
+    else:
+        print("Invalid choice")
 ```
 
 <figure>
@@ -287,7 +394,135 @@ I made this Supermarket Project to show how you can manage a store’s products 
 ## The Code
 
 ```
-import sqlite3import timeclass Product():    def __init__(self, name, price, quantity):        self.name = name        self.price = price        self.quantity = quantity    def __str__(self):        return "Product Name: {}\nPrice: {}\nNumber: {}".format(self.name, self.price, self.quantity)class SuperMarket():    def __init__(self):        self.create_connection()    def create_connection(self):        self.conn = sqlite3.connect('supermarket.db')        self.cursor = self.conn.cursor()        query = "Create Table if not exists supermarket(name TEXT, price FLOAT, quantity INT)"        self.cursor.execute(query)        self.conn.commit()    def close_connection(self):        self.conn.close()    def add_product(self, product):        query = "INSERT INTO supermarket values(?, ?, ?)"        self.cursor.execute(query,(product.name, product.price, product.quantity))        self.conn.commit()        def remove_product(self,name):        query = "DELETE FROM supermarket WHERE name =?"        self.cursor.execute(query,(name,))        self.conn.commit()         def list_products(self):        query = "SELECT * FROM supermarket"        self.cursor.execute(query)        rows = self.cursor.fetchall()        if rows:             for row in rows:                print("Product Name: {}\nProduct Price: {} $\nProduct Quantity: {}\n ".format(row[0],row[1],row[2]))        else:            print("No products in the supermarket")        def update_product(self, product):        query = "UPDATE supermarket SET price =?, quantity =? WHERE name =?"        self.cursor.execute(query, (product.price, product.quantity, product.name))        self.conn.commit()     def search_product(self, name):        query = "SELECT * FROM supermarket WHERE name =?"        self.cursor.execute(query,(name,))        rows = self.cursor.fetchall()        if rows:            for row in rows:                print("Product Name: {}\nProduct Price: {} $\nProduct Quantity: {}\n ".format(row[0],row[1],row[2]))        else:            print("Product not found")    def filter_products(self,min_price,max_price):        query = "SELECT * FROM supermarket WHERE price >=? AND price <=?"        self.cursor.execute(query,(min_price,max_price))        rows = self.cursor.fetchall()        if rows:            for row in rows:                print("Product Name: {}\nProduct Price: {} $\nProduct Quantity: {}\n ".format(row[0],row[1],row[2]))        else:            print("No products found")     print("""           1. Add product           2.Remove product          3.List All Products          4.Update Product          5.Search Product          6.Filter Product by price          7.Exit          """)supermarket = SuperMarket()while True:    choice = int(input("Enter your choice: "))        if choice == 1:        name = input("Enter product name: ")        price = float(input("Enter product price: "))        quantity = int(input("Enter product quantity: "))        new_product = Product(name, price, quantity)        print("{} is being added".format(name))        time.sleep(2)        supermarket.add_product(new_product)        print("{} is added".format(name))    elif choice == 2:        name = input("Enter product name: ")        print("{} is being removed\n".format(name))        time.sleep(2)        supermarket.remove_product(name)        print("{} is removed\n".format(name))    elif choice == 3:        supermarket.list_products()        print("Listing products")        print("Products are listed")    elif choice == 4:        name = input("Enter product name to update: ")        price = float(input("Enter product price to update: "))        quantity = int(input("Enter product quantity to update: "))        new_product = Product(name, price, quantity)        print("{} is being updated\n".format(name))        time.sleep(2)        supermarket.update_product(new_product)        print("{} is updated\n".format(name))    elif choice == 5:        name = input("Enter item name for searching products")         print("{} is being searched\n".format(name))        time.sleep(2)        supermarket.search_product(name)        print("{} are listed\n".format(name))    elif choice == 6:        print("Please select filter range for product you want to see")        min_price = int(input("Enter minimum price: "))        max_price = int(input("Enter maximum price: "))        supermarket.filter_products(min_price,max_price)    elif choice == 7:        break    else:        print("Invalid choice")
+import sqlite3
+import time
+
+class Product():
+    def __init__(self, name, price, quantity):
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+
+    def __str__(self):
+        return "Product Name: {}\nPrice: {}\nNumber: {}".format(self.name, self.price, self.quantity)
+
+class SuperMarket():
+    def __init__(self):
+        self.create_connection()
+
+    def create_connection(self):
+        self.conn = sqlite3.connect('supermarket.db')
+        self.cursor = self.conn.cursor()
+        query = "Create Table if not exists supermarket(name TEXT, price FLOAT, quantity INT)"
+        self.cursor.execute(query)
+        self.conn.commit()
+
+    def close_connection(self):
+        self.conn.close()
+
+    def add_product(self, product):
+        query = "INSERT INTO supermarket values(?, ?, ?)"
+        self.cursor.execute(query,(product.name, product.price, product.quantity))
+        self.conn.commit()
+
+    def remove_product(self,name):
+        query = "DELETE FROM supermarket WHERE name =?"
+        self.cursor.execute(query,(name,))
+        self.conn.commit()
+
+    def list_products(self):
+        query = "SELECT * FROM supermarket"
+        self.cursor.execute(query)
+        rows = self.cursor.fetchall()
+        if rows:
+            for row in rows:
+                print("Product Name: {}\nProduct Price: {} $\nProduct Quantity: {}\n ".format(row[0],row[1],row[2]))
+        else:
+            print("No products in the supermarket")
+
+    def update_product(self, product):
+        query = "UPDATE supermarket SET price =?, quantity =? WHERE name =?"
+        self.cursor.execute(query, (product.price, product.quantity, product.name))
+        self.conn.commit()
+
+    def search_product(self, name):
+        query = "SELECT * FROM supermarket WHERE name =?"
+        self.cursor.execute(query,(name,))
+        rows = self.cursor.fetchall()
+        if rows:
+            for row in rows:
+                print("Product Name: {}\nProduct Price: {} $\nProduct Quantity: {}\n ".format(row[0],row[1],row[2]))
+        else:
+            print("Product not found")
+
+    def filter_products(self,min_price,max_price):
+        query = "SELECT * FROM supermarket WHERE price >=? AND price <=?"
+        self.cursor.execute(query,(min_price,max_price))
+        rows = self.cursor.fetchall()
+        if rows:
+            for row in rows:
+                print("Product Name: {}\nProduct Price: {} $\nProduct Quantity: {}\n ".format(row[0],row[1],row[2]))
+        else:
+            print("No products found")
+
+print("""
+          1. Add product
+          2.Remove product
+          3.List All Products
+          4.Update Product
+          5.Search Product
+          6.Filter Product by price
+          7.Exit
+          """)
+
+supermarket = SuperMarket()
+
+while True:
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        name = input("Enter product name: ")
+        price = float(input("Enter product price: "))
+        quantity = int(input("Enter product quantity: "))
+        new_product = Product(name, price, quantity)
+        print("{} is being added".format(name))
+        time.sleep(2)
+        supermarket.add_product(new_product)
+        print("{} is added".format(name))
+    elif choice == 2:
+        name = input("Enter product name: ")
+        print("{} is being removed\n".format(name))
+        time.sleep(2)
+        supermarket.remove_product(name)
+        print("{} is removed\n".format(name))
+    elif choice == 3:
+        supermarket.list_products()
+        print("Listing products")
+        print("Products are listed")
+    elif choice == 4:
+        name = input("Enter product name to update: ")
+        price = float(input("Enter product price to update: "))
+        quantity = int(input("Enter product quantity to update: "))
+        new_product = Product(name, price, quantity)
+        print("{} is being updated\n".format(name))
+        time.sleep(2)
+        supermarket.update_product(new_product)
+        print("{} is updated\n".format(name))
+    elif choice == 5:
+        name = input("Enter item name for searching products")
+        print("{} is being searched\n".format(name))
+        time.sleep(2)
+        supermarket.search_product(name)
+        print("{} are listed\n".format(name))
+    elif choice == 6:
+        print("Please select filter range for product you want to see")
+        min_price = int(input("Enter minimum price: "))
+        max_price = int(input("Enter maximum price: "))
+        supermarket.filter_products(min_price,max_price)
+    elif choice == 7:
+        break
+    else:
+        print("Invalid choice")
 ```
 
 Thank you for taking the time to read through this piece. I’m glad to share these insights and hope they’ve been informative. If you enjoyed this article and are looking forward to more content like this, feel free to stay connected by following my Medium profile. Your support is greatly appreciated. Until the next article, take care and stay safe! For all my links in one place, including more articles, projects, and personal interests, check out.
@@ -295,5 +530,3 @@ Thank you for taking the time to read through this piece. I’m glad to share th
 [yavuzertugrul \| Twitter, Instagram \| Linktree](https://linktr.ee/yavuzertugrul)
 
 > Lately, I’ve been listening to a lot of Infected Mushroom, and it has a special effect on me. Their music reminds me of my humble university years. I particularly enjoy this track — I’m ending this writing with a recommendation for your ears. Hope you enjoy it as much as I do.
-
-Lately, I’ve been listening to a lot of Infected Mushroom, and it has a special effect on me. Their music reminds me of my humble university years. I particularly enjoy this track — I’m ending this writing with a recommendation for your ears. Hope you enjoy it as much as I do.
